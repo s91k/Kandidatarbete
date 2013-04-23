@@ -40,11 +40,6 @@
 /torcs-1.3.4/src/modules/graphic/ssggraph/Release
 /torcs-1.3.4/src/modules/track/Release
 
-/torcs-1.3.4/src/tools/accc/Release
-/torcs-1.3.4/src/tools/nfs2ac/Release
-/torcs-1.3.4/src/tools/nfsperf/Release
-/torcs-1.3.4/src/tools/trackgen/Release
-
 /torcs-1.3.4/export/lib/client.lib
 /torcs-1.3.4/export/lib/learning.lib
 /torcs-1.3.4/export/lib/robottools.lib
@@ -72,4 +67,22 @@
 /torcs-1.3.4/runtime/modules/simu/simuv2.dll
 /torcs-1.3.4/src/libs/learning/Release
 /torcs-1.3.4/src/libs/client/Release
+/torcs-1.3.4/src/tools/accc/Release
+/torcs-1.3.4/src/tools/nfs2ac/Release
+/torcs-1.3.4/src/tools/nfsperf/Release
 /torcs-1.3.4/src/tools/trackgen/Release
+/torcs-1.3.4/src/tools/trackgen/Release/trackgen.log
+/torcs-1.3.4/src/tools/nfsperf/Release/nfsperf.log
+/torcs-1.3.4/src/tools/nfs2ac/Release/nfs2ac.log
+/torcs-1.3.4/src/tools/accc/Release/accc.log
+
+/torcs-1.3.4/src/modules/track/Release/track.log
+/torcs-1.3.4/src/modules/graphic/ssggraph/Release/ssggraphlib.log
+
+/torcs-1.3.4/src/libs/client/Release/client.log
+/torcs-1.3.4/src/libs/learning/Release/learning.log
+
+/torcs-1.3.4/src/windows/Release/wtorcs.log
+
+/torcs-1.3.4/src/drivers/damned/Release/damned.log
+/torcs-1.3.4/src/drivers/human/Release/human.log
