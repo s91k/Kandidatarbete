@@ -1,0 +1,1793 @@
+ track
+
+ Timestamp is 5176604f (Tue Apr 23 12:19:59 2013)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0001a1d0H .text                   CODE
+ 0002:00000000 00000174H .idata$5                DATA
+ 0002:00000174 00000004H .CRT$XCA                DATA
+ 0002:00000178 00000004H .CRT$XCZ                DATA
+ 0002:0000017c 00000004H .CRT$XIA                DATA
+ 0002:00000180 00000014H .CRT$XIC                DATA
+ 0002:00000194 00000004H .CRT$XIZ                DATA
+ 0002:00000198 00000004H .CRT$XPA                DATA
+ 0002:0000019c 00000008H .CRT$XPX                DATA
+ 0002:000001a4 00000004H .CRT$XPXA               DATA
+ 0002:000001a8 00000004H .CRT$XPZ                DATA
+ 0002:000001ac 00000004H .CRT$XTA                DATA
+ 0002:000001b0 00000004H .CRT$XTZ                DATA
+ 0002:000001c0 0000c6d8H .rdata                  DATA
+ 0002:0000c8a0 0000000cH .rdata$sxdata           DATA
+ 0002:0000c8ac 00000004H .rtc$IAA                DATA
+ 0002:0000c8b0 00000004H .rtc$IZZ                DATA
+ 0002:0000c8b4 00000004H .rtc$TAA                DATA
+ 0002:0000c8b8 00000004H .rtc$TZZ                DATA
+ 0002:0000c8c0 00000334H .xdata$x                DATA
+ 0002:0000cbf4 0000003cH .idata$2                DATA
+ 0002:0000cc30 00000014H .idata$3                DATA
+ 0002:0000cc44 00000174H .idata$4                DATA
+ 0002:0000cdb8 000006b8H .idata$6                DATA
+ 0002:0000d470 00000042H .edata                  DATA
+ 0003:00000000 00001300H .data                   DATA
+ 0003:00001300 00002398H .bss                    DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       __except_list              00000000     <absolute>
+ 0000:00000003       ___safe_se_handler_count   00000003     <absolute>
+ 0000:00000000       ___ImageBase               10000000     <linker-defined>
+ 0001:00000000       ?TrackShutdown@@YAXXZ      10001000 f   track.obj
+ 0001:000000f0       ?TrackBuildv1@@YAPAUtTrack@@PAD@Z 100010f0 f   track.obj
+ 0001:000001a0       ?TrackBuildEx@@YAPAUtTrack@@PAD@Z 100011a0 f   track.obj
+ 0001:000005c0       ?ReadTrack3@@YAXPAUtTrack@@PAXPAPAURoadCam@@H@Z 100015c0 f   track3.obj
+ 0001:00005eb0       ?ReadTrack4@@YAXPAUtTrack@@PAXPAPAURoadCam@@H@Z 10006eb0 f   track4.obj
+ 0001:0000b890       ?DllEntryPoint@@YGHPAUHINSTANCE__@@KPAX@Z 1000c890 f   trackitf.obj
+ 0001:0000b8f0       _track                     1000c8f0 f   trackitf.obj
+ 0001:0000b930       ?TrackLocal2Global@@YAXPAUtTrkLocPos@@PAM1@Z 1000c930 f   trackutil.obj
+ 0001:0000b950       ?TrackGlobal2Local@@YAXPAUtrackSeg@@MMPAUtTrkLocPos@@H@Z 1000c950 f   trackutil.obj
+ 0001:0000b980       ?TrackHeightL@@YAMPAUtTrkLocPos@@@Z 1000c980 f   trackutil.obj
+ 0001:0000b990       ?TrackHeightG@@YAMPAUtrackSeg@@MM@Z 1000c990 f   trackutil.obj
+ 0001:0000b9c0       ?TrackSideNormal@@YAXPAUtrackSeg@@MMHPAUt3Dd@@@Z 1000c9c0 f   trackutil.obj
+ 0001:0000b9f0       ?TrackSurfaceNormal@@YAXPAUtTrkLocPos@@PAUt3Dd@@@Z 1000c9f0 f   trackutil.obj
+ 0001:0000ba00       ?TrackSpline@@YAMMMMMM@Z   1000ca00 f   trackutil.obj
+ 0001:0000ba80       ?_tgf_win_calloc@@YAPAXII@Z 1000ca80 f   tgf:tgf.dll
+ 0001:0000ba86       ?_tgf_win_free@@YAXPAX@Z   1000ca86 f   tgf:tgf.dll
+ 0001:0000ba8c       ?_tgf_win_strdup@@YAPADPBD@Z 1000ca8c f   tgf:tgf.dll
+ 0001:0000ba92       ?GfParmReadFile@@YAPAXPBDH@Z 1000ca92 f   tgf:tgf.dll
+ 0001:0000ba98       ?GfParmGetStr@@YAPBDPAXPBD11@Z 1000ca98 f   tgf:tgf.dll
+ 0001:0000ba9e       ?GfParmGetNum@@YAMPAXPBD11M@Z 1000ca9e f   tgf:tgf.dll
+ 0001:0000baa4       ?GfParmReleaseHandle@@YAXPAX@Z 1000caa4 f   tgf:tgf.dll
+ 0001:0000baaa       ?GfParmGetEltNb@@YAHPAXPBD@Z 1000caaa f   tgf:tgf.dll
+ 0001:0000bab0       ?_tgf_win_malloc@@YAPAXI@Z 1000cab0 f   tgf:tgf.dll
+ 0001:0000bab6       ?GfParmGetCurStr@@YAPBDPAXPBD11@Z 1000cab6 f   tgf:tgf.dll
+ 0001:0000babc       ?GfParmGetCurNum@@YAMPAXPBD11M@Z 1000cabc f   tgf:tgf.dll
+ 0001:0000bac2       ?GfParmSetCurNum@@YAHPAXPBD11M@Z 1000cac2 f   tgf:tgf.dll
+ 0001:0000bac8       ?GfParmListSeekFirst@@YAHPAXPBD@Z 1000cac8 f   tgf:tgf.dll
+ 0001:0000bace       ?GfParmListSeekNext@@YAHPAXPBD@Z 1000cace f   tgf:tgf.dll
+ 0001:0000bad4       ?GfParmListGetCurEltName@@YAPADPAXPBD@Z 1000cad4 f   tgf:tgf.dll
+ 0001:0000bada       ?GfHashCreate@@YAPAXH@Z    1000cada f   tgf:tgf.dll
+ 0001:0000bae0       ?GfHashAddStr@@YAHPAXPBDPBX@Z 1000cae0 f   tgf:tgf.dll
+ 0001:0000bae6       ?GfHashGetStr@@YAPBXPAXPBD@Z 1000cae6 f   tgf:tgf.dll
+ 0001:0000baec       ?GfHashRelease@@YAXPAXP6AXPBX@Z@Z 1000caec f   tgf:tgf.dll
+ 0001:0000baf2       ?RtTrackGetWidth@@YAMPAUtrackSeg@@M@Z 1000caf2 f   robottools:robottools.dll
+ 0001:0000baf8       ?RtTrackLocal2Global@@YAXPAUtTrkLocPos@@PAM1H@Z 1000caf8 f   robottools:robottools.dll
+ 0001:0000bafe       ?RtTrackGlobal2Local@@YAXPAUtrackSeg@@MMPAUtTrkLocPos@@H@Z 1000cafe f   robottools:robottools.dll
+ 0001:0000bb04       ?RtTrackHeightL@@YAMPAUtTrkLocPos@@@Z 1000cb04 f   robottools:robottools.dll
+ 0001:0000bb0a       ?RtTrackHeightG@@YAMPAUtrackSeg@@MM@Z 1000cb0a f   robottools:robottools.dll
+ 0001:0000bb10       ?RtTrackSideNormalG@@YAXPAUtrackSeg@@MMHPAUt3Dd@@@Z 1000cb10 f   robottools:robottools.dll
+ 0001:0000bb16       ?RtTrackSurfaceNormalL@@YAXPAUtTrkLocPos@@PAUt3Dd@@@Z 1000cb16 f   robottools:robottools.dll
+ 0001:0000bb1c       __snprintf                 1000cb1c f   LIBCMT:snprintf.obj
+ 0001:0000bbd0       _strrchr                   1000cbd0 f   LIBCMT:strrchr.obj
+ 0001:0000bd10       __ftol2_sse                1000cd10 f   LIBCMT:ftol2.obj
+ 0001:0000bd19       __ftol2_pentium4           1000cd19 f   LIBCMT:ftol2.obj
+ 0001:0000bd2c       __ftol2_sse_excpt          1000cd2c f   LIBCMT:ftol2.obj
+ 0001:0000bd46       __ftol2                    1000cd46 f   LIBCMT:ftol2.obj
+ 0001:0000bdbb       __fpmath                   1000cdbb f   LIBCMT:fpinit.obj
+ 0001:0000bdd2       __cfltcvt_init             1000cdd2 f   LIBCMT:fpinit.obj
+ 0001:0000be32       ??0_LocaleUpdate@@QAE@PAUlocaleinfo_struct@@@Z 1000ce32 f i LIBCMT:strtol.obj
+ 0001:0000c0de       _strtol                    1000d0de f   LIBCMT:strtol.obj
+ 0001:0000c108       __get_printf_count_output  1000d108 f   LIBCMT:printf.obj
+ 0001:0000c11d       _printf                    1000d11d f   LIBCMT:printf.obj
+ 0001:0000c1c9       _strtok                    1000d1c9 f   LIBCMT:strtok.obj
+ 0001:0000c290       _atan2                     1000d290 f   LIBCMT:87ctriga.obj
+ 0001:0000c29a       __CIatan2                  1000d29a f   LIBCMT:87ctriga.obj
+ 0001:0000c2b0       __libm_sse2_cos_precise    1000d2b0 f   LIBCMT:cos_sse2_precise.obj
+ 0001:0000c470       __libm_sse2_sin_precise    1000d470 f   LIBCMT:sin_sse2_precise.obj
+ 0001:0000c640       __libm_sse2_sqrt_precise   1000d640 f   LIBCMT:sqrt_sse2_precise.obj
+ 0001:0000c740       __libm_sse2_tan_precise    1000d740 f   LIBCMT:tan_sse2_precise.obj
+ 0001:0000c9b0       _memcpy                    1000d9b0 f   LIBCMT:memcpy.obj
+ 0001:0000cff4       ___crtCorExitProcess       1000dff4 f   LIBCMT:crt0dat.obj
+ 0001:0000d026       ___crtExitProcess          1000e026 f   LIBCMT:crt0dat.obj
+ 0001:0000d03c       ___freeCrtMemory           1000e03c f   LIBCMT:crt0dat.obj
+ 0001:0000d14c       __amsg_exit                1000e14c f   LIBCMT:crt0dat.obj
+ 0001:0000d168       __cexit                    1000e168 f   LIBCMT:crt0dat.obj
+ 0001:0000d177       __cinit                    1000e177 f   LIBCMT:crt0dat.obj
+ 0001:0000d208       __exit                     1000e208 f   LIBCMT:crt0dat.obj
+ 0001:0000d21c       __init_pointers            1000e21c f   LIBCMT:crt0dat.obj
+ 0001:0000d270       __initterm_e               1000e270 f   LIBCMT:crt0dat.obj
+ 0001:0000d292       __lockexit                 1000e292 f   LIBCMT:crt0dat.obj
+ 0001:0000d29b       __unlockexit               1000e29b f   LIBCMT:crt0dat.obj
+ 0001:0000d3d3       _exit                      1000e3d3 f   LIBCMT:crt0dat.obj
+ 0001:0000d3e7       __CRT_INIT@12              1000e3e7 f   LIBCMT:dllcrt0.obj
+ 0001:0000d559       __DllMainCRTStartup@12     1000e559 f   LIBCMT:dllcrt0.obj
+ 0001:0000d68a       ___DllXcptFilter           1000e68a f   LIBCMT:dllcrt0.obj
+ 0001:0000d6b0       __CIsqrt                   1000e6b0 f   LIBCMT:sqrt.obj
+ 0001:0000d6c4       _sqrt                      1000e6c4     LIBCMT:sqrt.obj
+ 0001:0000d770       _asin                      1000e770 f   LIBCMT:asin.obj
+ 0001:0000d7b0       __CIasin                   1000e7b0 f   LIBCMT:asin.obj
+ 0001:0000d7eb       __CIasin_default           1000e7eb f   LIBCMT:asin.obj
+ 0001:0000d7ff       __asin_default             1000e7ff     LIBCMT:asin.obj
+ 0001:0000d8c0       _acos                      1000e8c0 f   LIBCMT:acos.obj
+ 0001:0000d900       __CIacos                   1000e900 f   LIBCMT:acos.obj
+ 0001:0000d93b       __CIacos_default           1000e93b f   LIBCMT:acos.obj
+ 0001:0000d94f       __acos_default             1000e94f     LIBCMT:acos.obj
+ 0001:0000da10       _sin                       1000ea10 f   LIBCMT:sin.obj
+ 0001:0000da50       __CIsin                    1000ea50 f   LIBCMT:sin.obj
+ 0001:0000da8b       __CIsin_default            1000ea8b f   LIBCMT:sin.obj
+ 0001:0000da9f       __sin_default              1000ea9f     LIBCMT:sin.obj
+ 0001:0000db40       _cos                       1000eb40 f   LIBCMT:cos.obj
+ 0001:0000db80       __CIcos                    1000eb80 f   LIBCMT:cos.obj
+ 0001:0000dbbb       __CIcos_default            1000ebbb f   LIBCMT:cos.obj
+ 0001:0000dbcf       __cos_default              1000ebcf     LIBCMT:cos.obj
+ 0001:0000dc70       _tan                       1000ec70 f   LIBCMT:tan.obj
+ 0001:0000dcb0       __CItan                    1000ecb0 f   LIBCMT:tan.obj
+ 0001:0000dceb       __CItan_default            1000eceb f   LIBCMT:tan.obj
+ 0001:0000dcff       __tan_default              1000ecff     LIBCMT:tan.obj
+ 0001:0000dd9d       ___initstdio               1000ed9d f   LIBCMT:_file.obj
+ 0001:0000de10       ___endstdio                1000ee10 f   LIBCMT:_file.obj
+ 0001:0000de37       ___iob_func                1000ee37 f   LIBCMT:_file.obj
+ 0001:0000de3d       __lock_file                1000ee3d f   LIBCMT:_file.obj
+ 0001:0000de7c       __lock_file2               1000ee7c f   LIBCMT:_file.obj
+ 0001:0000deac       __unlock_file              1000eeac f   LIBCMT:_file.obj
+ 0001:0000dee6       __unlock_file2             1000eee6 f   LIBCMT:_file.obj
+ 0001:0000df13       __call_reportfault         1000ef13 f   LIBCMT:invarg.obj
+ 0001:0000e036       __initp_misc_invarg        1000f036 f   LIBCMT:invarg.obj
+ 0001:0000e043       __invalid_parameter        1000f043 f   LIBCMT:invarg.obj
+ 0001:0000e06e       __invalid_parameter_noinfo 1000f06e f   LIBCMT:invarg.obj
+ 0001:0000e07e       __invoke_watson            1000f07e f   LIBCMT:invarg.obj
+ 0001:0000e0a9       __flsbuf                   1000f0a9 f   LIBCMT:_flsbuf.obj
+ 0001:0000e1f6       __output_l                 1000f1f6 f   LIBCMT:output.obj
+ 0001:0000ee68       ___doserrno                1000fe68 f   LIBCMT:dosmap.obj
+ 0001:0000ee7b       __dosmaperr                1000fe7b f   LIBCMT:dosmap.obj
+ 0001:0000ee9c       __errno                    1000fe9c f   LIBCMT:dosmap.obj
+ 0001:0000eeaf       __get_errno_from_oserr     1000feaf f   LIBCMT:dosmap.obj
+ 0001:0000eef0       ___isa_available_init      1000fef0 f   LIBCMT:cpu_disp.obj
+ 0001:0000f029       __cfltcvt                  10010029 f   LIBCMT:cvt.obj
+ 0001:0000f04a       __cfltcvt_l                1001004a f   LIBCMT:cvt.obj
+ 0001:0000f0d0       __cftoa_l                  100100d0 f   LIBCMT:cvt.obj
+ 0001:0000f42a       __cftoe                    1001042a f   LIBCMT:cvt.obj
+ 0001:0000f597       __cftoe_l                  10010597 f   LIBCMT:cvt.obj
+ 0001:0000f74d       __cftof_l                  1001074d f   LIBCMT:cvt.obj
+ 0001:0000f80c       __cftog_l                  1001080c f   LIBCMT:cvt.obj
+ 0001:0000f909       __cropzeros                10010909 f   LIBCMT:cvt.obj
+ 0001:0000f91a       __cropzeros_l              1001091a f   LIBCMT:cvt.obj
+ 0001:0000f998       __fassign                  10010998 f   LIBCMT:cvt.obj
+ 0001:0000f9b0       __fassign_l                100109b0 f   LIBCMT:cvt.obj
+ 0001:0000f9f0       __forcdecpt                100109f0 f   LIBCMT:cvt.obj
+ 0001:0000fa01       __forcdecpt_l              10010a01 f   LIBCMT:cvt.obj
+ 0001:0000fa73       __positive                 10010a73 f   LIBCMT:cvt.obj
+ 0001:0000fab5       __setdefaultprecision      10010ab5 f   LIBCMT:fp8.obj
+ 0001:0000fadc       __initp_misc_cfltcvt_tab   10010adc f   LIBCMT:cmiscdat.obj
+ 0001:0000fafb       ___addlocaleref            10010afb f   LIBCMT:localref.obj
+ 0001:0000fb8b       ___freetlocinfo            10010b8b f   LIBCMT:localref.obj
+ 0001:0000fce5       ___removelocaleref         10010ce5 f   LIBCMT:localref.obj
+ 0001:0000fd80       ___updatetlocinfo          10010d80 f   LIBCMT:localref.obj
+ 0001:0000fdfc       __updatetlocinfoEx_nolock  10010dfc f   LIBCMT:localref.obj
+ 0001:0000fe47       ___initmbctable            10010e47 f   LIBCMT:mbctype.obj
+ 0001:00010102       ___updatetmbcinfo          10011102 f   LIBCMT:mbctype.obj
+ 0001:000101a7       __setmbcp                  100111a7 f   LIBCMT:mbctype.obj
+ 0001:00010355       __setmbcp_nolock           10011355 f   LIBCMT:mbctype.obj
+ 0001:0001054a       __isctype_l                1001154a f   LIBCMT:isctype.obj
+ 0001:000105f9       __freefls@4                100115f9 f   LIBCMT:tidtable.obj
+ 0001:00010730       __freeptd                  10011730 f   LIBCMT:tidtable.obj
+ 0001:00010766       __getptd                   10011766 f   LIBCMT:tidtable.obj
+ 0001:0001077e       __getptd_noexit            1001177e f   LIBCMT:tidtable.obj
+ 0001:000107ed       __initptd                  100117ed f   LIBCMT:tidtable.obj
+ 0001:000108a0       __mtinit                   100118a0 f   LIBCMT:tidtable.obj
+ 0001:00010916       __mtterm                   10011916 f   LIBCMT:tidtable.obj
+ 0001:00010933       __locterm                  10011933 f   LIBCMT:wsetloca.obj
+ 0001:00010985       __ftbuf                    10011985 f   LIBCMT:_sftbuf.obj
+ 0001:000109b6       __stbuf                    100119b6 f   LIBCMT:_sftbuf.obj
+ 0001:00010a60       __SEH_prolog4              10011a60 f   LIBCMT:sehprolg4.obj
+ 0001:00010aa5       __SEH_epilog4              10011aa5 f   LIBCMT:sehprolg4.obj
+ 0001:00010ac0       __except_handler4          10011ac0 f   LIBCMT:chandler4.obj
+ 0001:00010c55       ___raise_securityfailure   10011c55 f   LIBCMT:gs_report.obj
+ 0001:00010c92       ___report_gsfailure        10011c92 f   LIBCMT:gs_report.obj
+ 0001:00010d8b       ___report_rangecheckfailure 10011d8b f   LIBCMT:gs_report.obj
+ 0001:00010d97       ___report_securityfailure  10011d97 f   LIBCMT:gs_report.obj
+ 0001:00010e65       @__security_check_cookie@4 10011e65 f   LIBCMT:secchk.obj
+ 0001:00010e9c       __fFATN2                   10011e9c     LIBCMT:87triga.obj
+ 0001:00010eec       __rtpiby2                  10011eec     LIBCMT:87triga.obj
+ 0001:00010f30       __cintrindisp2             10011f30 f   LIBCMT:87cdisp.obj
+ 0001:00010f6e       __cintrindisp1             10011f6e f   LIBCMT:87cdisp.obj
+ 0001:00010fab       __ctrandisp2               10011fab f   LIBCMT:87cdisp.obj
+ 0001:0001113a       __ctrandisp1               1001213a f   LIBCMT:87cdisp.obj
+ 0001:0001116d       __fload                    1001216d f   LIBCMT:87cdisp.obj
+ 0001:000111a9       ___libm_error_support      100121a9 f   LIBCMT:libm_error.obj
+ 0001:00011491       __RTC_Initialize           10012491 f   LIBCMT:initsect.obj
+ 0001:000114b1       __RTC_Terminate            100124b1 f   LIBCMT:initsect.obj
+ 0001:000114d1       __lock                     100124d1 f   LIBCMT:mlock.obj
+ 0001:00011505       __mtdeletelocks            10012505 f   LIBCMT:mlock.obj
+ 0001:00011559       __mtinitlocknum            10012559 f   LIBCMT:mlock.obj
+ 0001:00011600       __mtinitlocks              10012600 f   LIBCMT:mlock.obj
+ 0001:00011635       __unlock                   10012635 f   LIBCMT:mlock.obj
+ 0001:0001164a       ___crtFlsAlloc             1001264a f   LIBCMT:winapisupp.obj
+ 0001:00011668       ___crtFlsFree              10012668 f   LIBCMT:winapisupp.obj
+ 0001:00011687       ___crtFlsGetValue          10012687 f   LIBCMT:winapisupp.obj
+ 0001:000116a6       ___crtFlsSetValue          100126a6 f   LIBCMT:winapisupp.obj
+ 0001:000116c8       ___crtIsPackagedApp        100126c8 f   LIBCMT:winapisupp.obj
+ 0001:00011706       ___crtLoadWinApiPointers   10012706 f   LIBCMT:winapisupp.obj
+ 0001:00011945       ___crtTerminateProcess     10012945 f   LIBCMT:winapisupp.obj
+ 0001:0001195a       ___crtUnhandledException   1001295a f   LIBCMT:winapisupp.obj
+ 0001:00011970       __FF_MSGBANNER             10012970 f   LIBCMT:crt0msg.obj
+ 0001:000119a9       __GET_RTERRMSG             100129a9 f   LIBCMT:crt0msg.obj
+ 0001:000119cd       __NMSG_WRITE               100129cd f   LIBCMT:crt0msg.obj
+ 0001:00011b90       __FindPESection            10012b90 f   LIBCMT:pesect.obj
+ 0001:00011be0       __IsNonwritableInCurrentImage 10012be0 f   LIBCMT:pesect.obj
+ 0001:00011ca0       __ValidateImageBase        10012ca0 f   LIBCMT:pesect.obj
+ 0001:00011cd1       ___onexitinit              10012cd1 f   LIBCMT:onexit.obj
+ 0001:00011d00       __onexit                   10012d00 f   LIBCMT:onexit.obj
+ 0001:00011df6       _atexit                    10012df6 f   LIBCMT:onexit.obj
+ 0001:00011e0b       _free                      10012e0b f   LIBCMT:free.obj
+ 0001:00011e43       __calloc_crt               10012e43 f   LIBCMT:crtheap.obj
+ 0001:00011e8d       __malloc_crt               10012e8d f   LIBCMT:crtheap.obj
+ 0001:00011ed6       __realloc_crt              10012ed6 f   LIBCMT:crtheap.obj
+ 0001:00011f22       ?terminate@@YAXXZ          10012f22 f   LIBCMT:hooks.obj
+ 0001:00011f56       __initp_eh_hooks           10012f56 f   LIBCMT:hooks.obj
+ 0001:00011f67       __callnewh                 10012f67 f   LIBCMT:handler.obj
+ 0001:00011f8d       __initp_heap_handler       10012f8d f   LIBCMT:handler.obj
+ 0001:00011f9a       __initp_misc_purevirt      10012f9a f   LIBCMT:inithelp.obj
+ 0001:00011fa7       __initp_misc_rand_s        10012fa7 f   LIBCMT:rand_s.obj
+ 0001:00011fb4       ___get_sigabrt             10012fb4 f   LIBCMT:winsig.obj
+ 0001:00011fc1       __initp_misc_winsig        10012fc1 f   LIBCMT:winsig.obj
+ 0001:00011fdd       _raise                     10012fdd f   LIBCMT:winsig.obj
+ 0001:000121ce       __XcptFilter               100131ce f   LIBCMT:winxfltr.obj
+ 0001:00012329       ___CppXcptFilter           10013329 f   LIBCMT:winxfltr.obj
+ 0001:00012347       __heap_init                10013347 f   LIBCMT:heapinit.obj
+ 0001:0001235c       __heap_term                1001335c f   LIBCMT:heapinit.obj
+ 0001:00012364       __ioinit                   10013364 f   LIBCMT:ioinit.obj
+ 0001:00012612       __ioterm                   10013612 f   LIBCMT:ioinit.obj
+ 0001:00012664       __setargv                  10013664 f   LIBCMT:stdargv.obj
+ 0001:00012891       __setenvp                  10013891 f   LIBCMT:stdenvp.obj
+ 0001:00012972       ___security_init_cookie    10013972 f   LIBCMT:gs_support.obj
+ 0001:00012a0c       _DllMain@12                10013a0c f   LIBCMT:dllmain.obj
+ 0001:00012a12       ___crtGetEnvironmentStringsA 10013a12 f   LIBCMT:a_env.obj
+ 0001:00012aa0       __trandisp1                10013aa0 f   LIBCMT:87disp.obj
+ 0001:00012b07       __trandisp2                10013b07 f   LIBCMT:87disp.obj
+ 0001:00012b93       __rttospopde               10013b93     LIBCMT:87disp.obj
+ 0001:00012b98       __rttospop                 10013b98     LIBCMT:87disp.obj
+ 0001:00012b9a       __rtnospop                 10013b9a     LIBCMT:87disp.obj
+ 0001:00012b9c       __rttosnpop                10013b9c     LIBCMT:87disp.obj
+ 0001:00012b9d       __rtnospopde               10013b9d     LIBCMT:87disp.obj
+ 0001:00012ba4       __rtzeropop                10013ba4     LIBCMT:87disp.obj
+ 0001:00012ba6       __rtzeronpop               10013ba6     LIBCMT:87disp.obj
+ 0001:00012bab       __rtonepop                 10013bab     LIBCMT:87disp.obj
+ 0001:00012bad       __rtonenpop                10013bad     LIBCMT:87disp.obj
+ 0001:00012bb2       __tosnan1                  10013bb2     LIBCMT:87disp.obj
+ 0001:00012bdd       __nosnan2                  10013bdd     LIBCMT:87disp.obj
+ 0001:00012bdf       __tosnan2                  10013bdf     LIBCMT:87disp.obj
+ 0001:00012c07       __nan2                     10013c07     LIBCMT:87disp.obj
+ 0001:00012c46       __rtindfpop                10013c46     LIBCMT:87disp.obj
+ 0001:00012c48       __rtindfnpop               10013c48     LIBCMT:87disp.obj
+ 0001:00012c59       __rttosnpopde              10013c59     LIBCMT:87disp.obj
+ 0001:00012c63       __rtchsifneg               10013c63     LIBCMT:87disp.obj
+ 0001:00012c70       __startTwoArgErrorHandling 10013c70 f   LIBCMT:genexcep.obj
+ 0001:00012c87       __startOneArgErrorHandling 10013c87 f   LIBCMT:genexcep.obj
+ 0001:00012cd0       __twoToTOS                 10013cd0 f   LIBCMT:common.obj
+ 0001:00012ce5       __load_CW                  10013ce5 f   LIBCMT:common.obj
+ 0001:00012cfc       __convertTOStoQNaN         10013cfc f   LIBCMT:common.obj
+ 0001:00012d15       __fload_withFB             10013d15 f   LIBCMT:common.obj
+ 0001:00012d58       __checkTOS_withFB          10013d58 f   LIBCMT:common.obj
+ 0001:00012d6e       __fast_exit                10013d6e f   LIBCMT:common.obj
+ 0001:00012d7b       __math_exit                10013d7b f   LIBCMT:common.obj
+ 0001:00012da5       __check_overflow_exit      10013da5 f   LIBCMT:common.obj
+ 0001:00012db9       __check_range_exit         10013db9 f   LIBCMT:common.obj
+ 0001:00012e5c       __sse2_mathfcns_init       10013e5c f   LIBCMT:mathfcns.obj
+ 0001:00012e70       __CIasin_pentium4          10013e70 f   LIBCMT:asin_pentium4.obj
+ 0001:00012e88       __asin_pentium4            10013e88     LIBCMT:asin_pentium4.obj
+ 0001:000133f0       __CIacos_pentium4          100143f0 f   LIBCMT:acos_pentium4.obj
+ 0001:00013408       __acos_pentium4            10014408     LIBCMT:acos_pentium4.obj
+ 0001:00013950       __CIsin_pentium4           10014950 f   LIBCMT:sin_pentium4.obj
+ 0001:00013968       __sin_pentium4             10014968     LIBCMT:sin_pentium4.obj
+ 0001:00013b20       __CIcos_pentium4           10014b20 f   LIBCMT:cos_pentium4.obj
+ 0001:00013b38       __cos_pentium4             10014b38     LIBCMT:cos_pentium4.obj
+ 0001:00013cd0       __CItan_pentium4           10014cd0 f   LIBCMT:tan_pentium4.obj
+ 0001:00013ce8       __tan_pentium4             10014ce8     LIBCMT:tan_pentium4.obj
+ 0001:00013f30       __fileno                   10014f30 f   LIBCMT:fileno.obj
+ 0001:00013f54       __fcloseall                10014f54 f   LIBCMT:closeall.obj
+ 0001:00013ff1       __fflush_nolock            10014ff1 f   LIBCMT:fflush.obj
+ 0001:00014037       __flush                    10015037 f   LIBCMT:fflush.obj
+ 0001:0001409b       __flushall                 1001509b f   LIBCMT:fflush.obj
+ 0001:00014188       __crt_debugger_hook        10015188 f   LIBCMT:dbghook.obj
+ 0001:00014190       _memset                    10015190 f   LIBCMT:memset.obj
+ 0001:00014220       __isatty                   10015220 f   LIBCMT:isatty.obj
+ 0001:00014274       __write                    10015274 f   LIBCMT:write.obj
+ 0001:00014356       __write_nolock             10015356 f   LIBCMT:write.obj
+ 0001:00014b80       __lseeki64                 10015b80 f   LIBCMT:lseeki64.obj
+ 0001:00014c7c       __lseeki64_nolock          10015c7c f   LIBCMT:lseeki64.obj
+ 0001:00014ced       __getbuf                   10015ced f   LIBCMT:_getbuf.obj
+ 0001:00014d33       __isleadbyte_l             10015d33 f i LIBCMT:_wctype.obj
+ 0001:00014d69       _isleadbyte                10015d69 f i LIBCMT:_wctype.obj
+ 0001:00014d80       _strlen                    10015d80 f   LIBCMT:strlen.obj
+ 0001:00014e0b       __wctomb_s_l               10015e0b f   LIBCMT:wctomb.obj
+ 0001:00014f2d       _wctomb_s                  10015f2d f   LIBCMT:wctomb.obj
+ 0001:00014f50       __aulldvrm                 10015f50 f   LIBCMT:ulldvrm.obj
+ 0001:00014fe5       __isdigit_l                10015fe5 f i LIBCMT:_ctype.obj
+ 0001:00015035       _isdigit                   10016035 f i LIBCMT:_ctype.obj
+ 0001:00015060       __tolower_l                10016060 f   LIBCMT:tolower.obj
+ 0001:000151a1       _tolower                   100161a1 f   LIBCMT:tolower.obj
+ 0001:000151cd       _strcpy_s                  100161cd f   LIBCMT:strcpy_s.obj
+ 0001:00015230       _memmove                   10016230 f   LIBCMT:memmove.obj
+ 0001:00015874       __fptostr                  10016874 f   LIBCMT:_fptostr.obj
+ 0001:00015924       __atodbl_l                 10016924 f   LIBCMT:atodbl.obj
+ 0001:000159b0       __atoflt_l                 100169b0 f   LIBCMT:atodbl.obj
+ 0001:00015a3c       ___dtold                   10016a3c f   LIBCMT:cfout.obj
+ 0001:00015b02       __fltout2                  10016b02 f   LIBCMT:cfout.obj
+ 0001:00015b90       __alldvrm                  10016b90 f   LIBCMT:lldvrm.obj
+ 0001:00015c70       __aullshr                  10016c70 f   LIBCMT:ullshr.obj
+ 0001:00015c8f       __controlfp_s              10016c8f f   LIBCMT:contrlfp.obj
+ 0001:00015cec       __fptrap                   10016cec f   LIBCMT:crt0fp.obj
+ 0001:00015cf5       ___free_lconv_mon          10016cf5 f   LIBCMT:initmon.obj
+ 0001:00015df1       ___free_lconv_num          10016df1 f   LIBCMT:initnum.obj
+ 0001:00015e58       ___free_lc_time            10016e58 f   LIBCMT:inittime.obj
+ 0001:000163c1       ___crtLCMapStringA         100173c1 f   LIBCMT:a_map.obj
+ 0001:00016405       __freea                    10017405 f i LIBCMT:a_map.obj
+ 0001:0001650f       ___crtGetStringTypeA       1001750f f   LIBCMT:a_str.obj
+ 0001:0001654d       _wcscat_s                  1001754d f   LIBCMT:wcscat_s.obj
+ 0001:000165b9       _wcscpy_s                  100175b9 f   LIBCMT:wcscpy_s.obj
+ 0001:00016615       _wcslen                    10017615 f   LIBCMT:wcslen.obj
+ 0001:0001662e       _wcsncpy_s                 1001762e f   LIBCMT:wcsncpy_s.obj
+ 0001:000166ec       _GetTableIndexFromLocaleName 100176ec f   LIBCMT:winapinls.obj
+ 0001:0001673a       ___crtDownlevelLocaleNameToLCID 1001773a f   LIBCMT:winapinls.obj
+ 0001:00016764       ___crtLCMapStringEx        10017764 f   LIBCMT:winapinls.obj
+ 0001:000167b0       ___wcsnicmp_ascii          100177b0 f   LIBCMT:winapinls.obj
+ 0001:00016820       __local_unwind4            10017820 f   LIBCMT:exsup4.obj
+ 0001:000168f6       __seh_longjmp_unwind4@4    100178f6 f   LIBCMT:exsup4.obj
+ 0001:00016912       @_EH4_CallFilterFunc@8     10017912 f   LIBCMT:exsup4.obj
+ 0001:00016929       @_EH4_TransferToHandler@8  10017929 f   LIBCMT:exsup4.obj
+ 0001:00016942       @_EH4_GlobalUnwind2@8      10017942 f   LIBCMT:exsup4.obj
+ 0001:0001695b       @_EH4_LocalUnwind@16       1001795b f   LIBCMT:exsup4.obj
+ 0001:00016972       __87except                 10017972 f   LIBCMT:87except.obj
+ 0001:00016a7b       __matherr                  10017a7b f   LIBCMT:matherr.obj
+ 0001:00016a7e       __set_error_mode           10017a7e f   LIBCMT:errmode.obj
+ 0001:00016abe       ___crtMessageBoxW          10017abe f   LIBCMT:crtmboxw.obj
+ 0001:00016ca0       __msize                    10017ca0 f   LIBCMT:msize.obj
+ 0001:00016cd1       _malloc                    10017cd1 f   LIBCMT:malloc.obj
+ 0001:00016d63       _realloc                   10017d63 f   LIBCMT:realloc.obj
+ 0001:00016e0e       __calloc_impl              10017e0e f   LIBCMT:calloc_impl.obj
+ 0001:00016e88       _abort                     10017e88 f   LIBCMT:abort.obj
+ 0001:00016f21       __ismbblead                10017f21 f   LIBCMT:ismbbyte.obj
+ 0001:00016f37       __fclose_nolock            10017f37 f   LIBCMT:fclose.obj
+ 0001:00016fa3       _fclose                    10017fa3 f   LIBCMT:fclose.obj
+ 0001:0001701a       __commit                   1001801a f   LIBCMT:commit.obj
+ 0001:00017100       __VEC_memset               10018100 f   LIBCMT:p4_memset.obj
+ 0001:000171c8       ___lock_fhandle            100181c8 f   LIBCMT:osfinfo.obj
+ 0001:00017254       __free_osfhnd              10018254 f   LIBCMT:osfinfo.obj
+ 0001:000172da       __get_osfhandle            100182da f   LIBCMT:osfinfo.obj
+ 0001:00017341       __unlock_fhandle           10018341 f   LIBCMT:osfinfo.obj
+ 0001:00017367       __mbtowc_l                 10018367 f   LIBCMT:mbtowc.obj
+ 0001:0001745a       _mbtowc                    1001845a f   LIBCMT:mbtowc.obj
+ 0001:00017472       __putwch_nolock            10018472 f   LIBCMT:putwch.obj
+ 0001:000174c0       __alloca_probe             100184c0     LIBCMT:chkstk.obj
+ 0001:000174c0       __chkstk                   100184c0 f   LIBCMT:chkstk.obj
+ 0001:000174eb       __ld12tod                  100184eb f   LIBCMT:intrncvt.obj
+ 0001:00017a5b       __ld12tof                  10018a5b f   LIBCMT:intrncvt.obj
+ 0001:00017fcb       ___strgtold12_l            10018fcb f   LIBCMT:strgtold.obj
+ 0001:00018747       _$I10_OUTPUT               10019747 f   LIBCMT:x10fout.obj
+ 0001:000191b4       __control87                1001a1b4 f i LIBCMT:ieee87.obj
+ 0001:00019550       __alloca_probe_16          1001a550 f   LIBCMT:alloca16.obj
+ 0001:00019566       __alloca_probe_8           1001a566     LIBCMT:alloca16.obj
+ 0001:00019580       __global_unwind2           1001a580 f   LIBCMT:exsup.obj
+ 0001:000195e5       __local_unwind2            1001a5e5 f   LIBCMT:exsup.obj
+ 0001:00019669       __abnormal_termination     1001a669 f   LIBCMT:exsup.obj
+ 0001:0001968c       __NLG_Notify1              1001a68c f   LIBCMT:exsup.obj
+ 0001:00019695       __NLG_Notify               1001a695 f   LIBCMT:exsup.obj
+ 0001:000196ac       __NLG_Dispatch2            1001a6ac     LIBCMT:exsup.obj
+ 0001:000196ac       __NLG_Dispatch             1001a6ac     LIBCMT:exsup.obj
+ 0001:000196b4       __NLG_Call                 1001a6b4 f   LIBCMT:exsup.obj
+ 0001:000196b6       __NLG_Return2              1001a6b6     LIBCMT:exsup.obj
+ 0001:000196b7       __handle_exc               1001a6b7 f   LIBCMT:fpexcept.obj
+ 0001:00019893       __raise_exc                1001a893 f   LIBCMT:fpexcept.obj
+ 0001:000198b4       __raise_exc_ex             1001a8b4 f   LIBCMT:fpexcept.obj
+ 0001:00019b99       __set_errno_from_matherr   1001ab99 f   LIBCMT:fpexcept.obj
+ 0001:00019bc6       ___set_fpsr_sse2           1001abc6 f   LIBCMT:fpctrl.obj
+ 0001:00019c3c       __clrfp                    1001ac3c f   LIBCMT:fpctrl.obj
+ 0001:00019c4b       __ctrlfp                   1001ac4b f   LIBCMT:fpctrl.obj
+ 0001:00019c74       __set_statfp               1001ac74 f   LIBCMT:fpctrl.obj
+ 0001:00019cca       __statfp                   1001acca f   LIBCMT:fpctrl.obj
+ 0001:00019cd8       __close                    1001acd8 f   LIBCMT:close.obj
+ 0001:00019da2       __close_nolock             1001ada2 f   LIBCMT:close.obj
+ 0001:00019e3c       __freebuf                  1001ae3c f   LIBCMT:_freebuf.obj
+ 0001:00019e6c       ___termconout              1001ae6c f   LIBCMT:initcon.obj
+ 0001:00019e83       ___initconout              1001ae83 f   LIBCMT:initcon.obj
+ 0001:00019ea2       ___mtold12                 1001aea2 f   LIBCMT:mantold.obj
+ 0001:0001a084       __decomp                   1001b084 f   LIBCMT:util.obj
+ 0001:0001a156       __set_exp                  1001b156 f   LIBCMT:util.obj
+ 0001:0001a190       __allmul                   1001b190 f   LIBCMT:llmul.obj
+ 0001:0001a1c4       _IsProcessorFeaturePresent@4 1001b1c4 f   kernel32:KERNEL32.dll
+ 0001:0001a1ca       _RtlUnwind@16              1001b1ca f   kernel32:KERNEL32.dll
+ 0002:00000000       __imp__UnhandledExceptionFilter@4 1001c000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__CreateFileW@28      1001c004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__CloseHandle@4       1001c008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__RaiseException@16   1001c00c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__WriteConsoleW@20    1001c010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__SetStdHandle@8      1001c014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__FlushFileBuffers@4  1001c018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__HeapReAlloc@16      1001c01c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__HeapAlloc@12        1001c020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__HeapSize@12         1001c024     kernel32:KERNEL32.dll
+ 0002:00000028       __imp__LoadLibraryW@4      1001c028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__OutputDebugStringW@4 1001c02c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__RtlUnwind@16        1001c030     kernel32:KERNEL32.dll
+ 0002:00000034       __imp__LCMapStringW@24     1001c034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp__GetStringTypeW@16   1001c038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__SetFilePointerEx@20 1001c03c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__GetConsoleMode@8    1001c040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__GetConsoleCP@0      1001c044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__WideCharToMultiByte@32 1001c048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__FreeEnvironmentStringsW@4 1001c04c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__GetEnvironmentStringsW@0 1001c050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__EncodePointer@4     1001c054     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__DecodePointer@4     1001c058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__GetLastError@0      1001c05c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__InterlockedDecrement@4 1001c060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__ExitProcess@4       1001c064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp__GetModuleHandleExW@12 1001c068     kernel32:KERNEL32.dll
+ 0002:0000006c       __imp__GetProcAddress@8    1001c06c     kernel32:KERNEL32.dll
+ 0002:00000070       __imp__MultiByteToWideChar@24 1001c070     kernel32:KERNEL32.dll
+ 0002:00000074       __imp__GetCommandLineA@0   1001c074     kernel32:KERNEL32.dll
+ 0002:00000078       __imp__GetCurrentThreadId@0 1001c078     kernel32:KERNEL32.dll
+ 0002:0000007c       __imp__EnterCriticalSection@4 1001c07c     kernel32:KERNEL32.dll
+ 0002:00000080       __imp__LeaveCriticalSection@4 1001c080     kernel32:KERNEL32.dll
+ 0002:00000084       __imp__IsDebuggerPresent@0 1001c084     kernel32:KERNEL32.dll
+ 0002:00000088       __imp__IsProcessorFeaturePresent@4 1001c088     kernel32:KERNEL32.dll
+ 0002:0000008c       __imp__InterlockedIncrement@4 1001c08c     kernel32:KERNEL32.dll
+ 0002:00000090       __imp__IsValidCodePage@4   1001c090     kernel32:KERNEL32.dll
+ 0002:00000094       __imp__GetACP@0            1001c094     kernel32:KERNEL32.dll
+ 0002:00000098       __imp__GetOEMCP@0          1001c098     kernel32:KERNEL32.dll
+ 0002:0000009c       __imp__GetCPInfo@8         1001c09c     kernel32:KERNEL32.dll
+ 0002:000000a0       __imp__SetLastError@4      1001c0a0     kernel32:KERNEL32.dll
+ 0002:000000a4       __imp__InitializeCriticalSectionAndSpinCount@8 1001c0a4     kernel32:KERNEL32.dll
+ 0002:000000a8       __imp__DeleteCriticalSection@4 1001c0a8     kernel32:KERNEL32.dll
+ 0002:000000ac       __imp__SetUnhandledExceptionFilter@4 1001c0ac     kernel32:KERNEL32.dll
+ 0002:000000b0       __imp__GetCurrentProcess@0 1001c0b0     kernel32:KERNEL32.dll
+ 0002:000000b4       __imp__TerminateProcess@8  1001c0b4     kernel32:KERNEL32.dll
+ 0002:000000b8       __imp__TlsAlloc@0          1001c0b8     kernel32:KERNEL32.dll
+ 0002:000000bc       __imp__TlsGetValue@4       1001c0bc     kernel32:KERNEL32.dll
+ 0002:000000c0       __imp__TlsSetValue@8       1001c0c0     kernel32:KERNEL32.dll
+ 0002:000000c4       __imp__TlsFree@4           1001c0c4     kernel32:KERNEL32.dll
+ 0002:000000c8       __imp__GetStartupInfoW@4   1001c0c8     kernel32:KERNEL32.dll
+ 0002:000000cc       __imp__GetModuleHandleW@4  1001c0cc     kernel32:KERNEL32.dll
+ 0002:000000d0       __imp__GetStdHandle@4      1001c0d0     kernel32:KERNEL32.dll
+ 0002:000000d4       __imp__WriteFile@20        1001c0d4     kernel32:KERNEL32.dll
+ 0002:000000d8       __imp__GetModuleFileNameW@12 1001c0d8     kernel32:KERNEL32.dll
+ 0002:000000dc       __imp__HeapFree@12         1001c0dc     kernel32:KERNEL32.dll
+ 0002:000000e0       __imp__Sleep@4             1001c0e0     kernel32:KERNEL32.dll
+ 0002:000000e4       __imp__LoadLibraryExW@12   1001c0e4     kernel32:KERNEL32.dll
+ 0002:000000e8       __imp__GetProcessHeap@0    1001c0e8     kernel32:KERNEL32.dll
+ 0002:000000ec       __imp__GetFileType@4       1001c0ec     kernel32:KERNEL32.dll
+ 0002:000000f0       __imp__GetModuleFileNameA@12 1001c0f0     kernel32:KERNEL32.dll
+ 0002:000000f4       __imp__QueryPerformanceCounter@4 1001c0f4     kernel32:KERNEL32.dll
+ 0002:000000f8       __imp__GetCurrentProcessId@0 1001c0f8     kernel32:KERNEL32.dll
+ 0002:000000fc       __imp__GetSystemTimeAsFileTime@4 1001c0fc     kernel32:KERNEL32.dll
+ 0002:00000100       \177KERNEL32_NULL_THUNK_DATA 1001c100     kernel32:KERNEL32.dll
+ 0002:00000104       __imp_?RtTrackSurfaceNormalL@@YAXPAUtTrkLocPos@@PAUt3Dd@@@Z 1001c104     robottools:robottools.dll
+ 0002:00000108       __imp_?RtTrackSideNormalG@@YAXPAUtrackSeg@@MMHPAUt3Dd@@@Z 1001c108     robottools:robottools.dll
+ 0002:0000010c       __imp_?RtTrackHeightG@@YAMPAUtrackSeg@@MM@Z 1001c10c     robottools:robottools.dll
+ 0002:00000110       __imp_?RtTrackHeightL@@YAMPAUtTrkLocPos@@@Z 1001c110     robottools:robottools.dll
+ 0002:00000114       __imp_?RtTrackGlobal2Local@@YAXPAUtrackSeg@@MMPAUtTrkLocPos@@H@Z 1001c114     robottools:robottools.dll
+ 0002:00000118       __imp_?RtTrackLocal2Global@@YAXPAUtTrkLocPos@@PAM1H@Z 1001c118     robottools:robottools.dll
+ 0002:0000011c       __imp_?RtTrackGetWidth@@YAMPAUtrackSeg@@M@Z 1001c11c     robottools:robottools.dll
+ 0002:00000120       \177robottools_NULL_THUNK_DATA 1001c120     robottools:robottools.dll
+ 0002:00000124       __imp_?GfHashRelease@@YAXPAXP6AXPBX@Z@Z 1001c124     tgf:tgf.dll
+ 0002:00000128       __imp_?GfHashGetStr@@YAPBXPAXPBD@Z 1001c128     tgf:tgf.dll
+ 0002:0000012c       __imp_?GfHashAddStr@@YAHPAXPBDPBX@Z 1001c12c     tgf:tgf.dll
+ 0002:00000130       __imp_?GfHashCreate@@YAPAXH@Z 1001c130     tgf:tgf.dll
+ 0002:00000134       __imp_?GfParmListGetCurEltName@@YAPADPAXPBD@Z 1001c134     tgf:tgf.dll
+ 0002:00000138       __imp_?GfParmListSeekNext@@YAHPAXPBD@Z 1001c138     tgf:tgf.dll
+ 0002:0000013c       __imp_?GfParmListSeekFirst@@YAHPAXPBD@Z 1001c13c     tgf:tgf.dll
+ 0002:00000140       __imp_?GfParmSetCurNum@@YAHPAXPBD11M@Z 1001c140     tgf:tgf.dll
+ 0002:00000144       __imp_?GfParmGetCurNum@@YAMPAXPBD11M@Z 1001c144     tgf:tgf.dll
+ 0002:00000148       __imp_?GfParmGetCurStr@@YAPBDPAXPBD11@Z 1001c148     tgf:tgf.dll
+ 0002:0000014c       __imp_?_tgf_win_malloc@@YAPAXI@Z 1001c14c     tgf:tgf.dll
+ 0002:00000150       __imp_?GfParmGetEltNb@@YAHPAXPBD@Z 1001c150     tgf:tgf.dll
+ 0002:00000154       __imp_?GfParmReleaseHandle@@YAXPAX@Z 1001c154     tgf:tgf.dll
+ 0002:00000158       __imp_?GfParmGetNum@@YAMPAXPBD11M@Z 1001c158     tgf:tgf.dll
+ 0002:0000015c       __imp_?GfParmGetStr@@YAPBDPAXPBD11@Z 1001c15c     tgf:tgf.dll
+ 0002:00000160       __imp_?GfParmReadFile@@YAPAXPBDH@Z 1001c160     tgf:tgf.dll
+ 0002:00000164       __imp_?_tgf_win_strdup@@YAPADPBD@Z 1001c164     tgf:tgf.dll
+ 0002:00000168       __imp_?_tgf_win_free@@YAXPAX@Z 1001c168     tgf:tgf.dll
+ 0002:0000016c       __imp_?_tgf_win_calloc@@YAPAXII@Z 1001c16c     tgf:tgf.dll
+ 0002:00000170       \177tgf_NULL_THUNK_DATA    1001c170     tgf:tgf.dll
+ 0002:00000174       ___xc_a                    1001c174     LIBCMT:crt0init.obj
+ 0002:00000178       ___xc_z                    1001c178     LIBCMT:crt0init.obj
+ 0002:0000017c       ___xi_a                    1001c17c     LIBCMT:crt0init.obj
+ 0002:00000194       ___xi_z                    1001c194     LIBCMT:crt0init.obj
+ 0002:00000198       ___xp_a                    1001c198     LIBCMT:crt0init.obj
+ 0002:000001a8       ___xp_z                    1001c1a8     LIBCMT:crt0init.obj
+ 0002:000001ac       ___xt_a                    1001c1ac     LIBCMT:crt0init.obj
+ 0002:000001b0       ___xt_z                    1001c1b0     LIBCMT:crt0init.obj
+ 0002:000001c8       ??_C@_07NIPDDFPO@no?5name?$AA@ 1001c1c8     track.obj
+ 0002:000001d0       ??_C@_04MEMAJGDJ@name?$AA@ 1001c1d0     track.obj
+ 0002:000001d8       ??_C@_06OENKJGA@Header?$AA@ 1001c1d8     track.obj
+ 0002:000001e0       ??_C@_07CPCPJPKL@version?$AA@ 1001c1e0     track.obj
+ 0002:000001e8       ??_C@_05IGKADHGO@width?$AA@ 1001c1e8     track.obj
+ 0002:000001f0       ??_C@_0L@BGJCGHGC@Main?5Track?$AA@ 1001c1f0     track.obj
+ 0002:000001fc       ??_C@_04CGFJFPFD@none?$AA@ 1001c1fc     track.obj
+ 0002:00000204       ??_C@_06LIPPPFCI@author?$AA@ 1001c204     track.obj
+ 0002:0000020c       ??_C@_04JBAOFDKM@road?$AA@ 1001c20c     track.obj
+ 0002:00000214       ??_C@_08MBJIKOEN@category?$AA@ 1001c214     track.obj
+ 0002:00000220       ??_C@_0P@OAFBEPHL@background?4png?$AA@ 1001c220     track.obj
+ 0002:00000230       ??_C@_0BB@GJJHFDCI@background?5image?$AA@ 1001c230     track.obj
+ 0002:00000244       ??_C@_07PEMABHH@Graphic?$AA@ 1001c244     track.obj
+ 0002:0000024c       ??_C@_0BA@MEJAHLHK@background?5type?$AA@ 1001c24c     track.obj
+ 0002:0000025c       ??_C@_0BD@FIIAIEJN@background?5color?5R?$AA@ 1001c25c     track.obj
+ 0002:00000270       ??_C@_0BD@GPDFGCIJ@background?5color?5G?$AA@ 1001c270     track.obj
+ 0002:00000284       ??_C@_0BD@BCECJGMM@background?5color?5B?$AA@ 1001c284     track.obj
+ 0002:00000298       ??_C@_0BE@IHFMMIF@Environment?5Mapping?$AA@ 1001c298     track.obj
+ 0002:000002ac       ??_C@_05GFOLEBJA@?$CFs?1?$CFs?$AA@ 1001c2ac     track.obj
+ 0002:000002b4       ??_C@_08OEOPGIOB@?$CFs?1?$CFs?1?$CFd?$AA@ 1001c2b4     track.obj
+ 0002:000002c0       ??_C@_07HJBPHNJO@env?4png?$AA@ 1001c2c0     track.obj
+ 0002:000002c8       ??_C@_0O@LPJJHDF@env?5map?5image?$AA@ 1001c2c8     track.obj
+ 0002:000002d8       ??_C@_06LNLHEAAG@height?$AA@ 1001c2d8     track.obj
+ 0002:000002e0       ??_C@_0BD@CJEECLOI@Graphic?1Turn?5Marks?$AA@ 1001c2e0     track.obj
+ 0002:000002f4       ??_C@_0P@EOFNILFK@vertical?5space?$AA@ 1001c2f4     track.obj
+ 0002:00000304       ??_C@_0BB@BJHGGKOO@horizontal?5space?$AA@ 1001c304     track.obj
+ 0002:00000328       ??_C@_0O@NPCECCAL@rside?5surface?$AA@ 1001c328     track3.obj
+ 0002:00000338       ??_C@_0O@HCANELOH@lside?5surface?$AA@ 1001c338     track3.obj
+ 0002:00000348       ??_C@_0M@JIMNBDGK@rside?5width?$AA@ 1001c348     track3.obj
+ 0002:00000354       ??_C@_0M@HNOECNII@lside?5width?$AA@ 1001c354     track3.obj
+ 0002:00000360       ??_C@_0BC@CGGLGKEK@rside?5start?5width?$AA@ 1001c360     track3.obj
+ 0002:00000374       ??_C@_0BC@BBOFCENL@lside?5start?5width?$AA@ 1001c374     track3.obj
+ 0002:00000388       ??_C@_0BA@HGOBKNIG@rside?5end?5width?$AA@ 1001c388     track3.obj
+ 0002:00000398       ??_C@_0BA@LAEEGFLD@lside?5end?5width?$AA@ 1001c398     track3.obj
+ 0002:000003a8       ??_C@_0L@DBFDKNL@rside?5type?$AA@ 1001c3a8     track3.obj
+ 0002:000003b4       ??_C@_0L@PPJFNFBG@lside?5type?$AA@ 1001c3b4     track3.obj
+ 0002:000003c0       ??_C@_0BA@MGNHKDJM@rborder?5surface?$AA@ 1001c3c0     track3.obj
+ 0002:000003d0       ??_C@_0BA@HCGLKJ@lborder?5surface?$AA@ 1001c3d0     track3.obj
+ 0002:000003e0       ??_C@_0O@JAMPCACM@rborder?5width?$AA@ 1001c3e0     track3.obj
+ 0002:000003f0       ??_C@_0O@DNOGEJMA@lborder?5width?$AA@ 1001c3f0     track3.obj
+ 0002:00000400       ??_C@_0O@JGMGDCMO@rborder?5style?$AA@ 1001c400     track3.obj
+ 0002:00000410       ??_C@_0O@DLOPFLCC@lborder?5style?$AA@ 1001c410     track3.obj
+ 0002:00000420       ??_C@_0P@CFHDAPKN@rborder?5height?$AA@ 1001c420     track3.obj
+ 0002:00000430       ??_C@_0P@IMGCIIJH@lborder?5height?$AA@ 1001c430     track3.obj
+ 0002:00000440       ??_C@_0BB@OLLGFOPO@rbarrier?5surface?$AA@ 1001c440     track3.obj
+ 0002:00000454       ??_C@_0BB@LNMDDPBF@lbarrier?5surface?$AA@ 1001c454     track3.obj
+ 0002:00000468       ??_C@_0P@IEEMAGDB@rbarrier?5width?$AA@ 1001c468     track3.obj
+ 0002:00000478       ??_C@_0P@CNFNIBAL@lbarrier?5width?$AA@ 1001c478     track3.obj
+ 0002:00000488       ??_C@_0P@ICEFBEND@rbarrier?5style?$AA@ 1001c488     track3.obj
+ 0002:00000498       ??_C@_0P@CLFEJDOJ@lbarrier?5style?$AA@ 1001c498     track3.obj
+ 0002:000004a8       ??_C@_0BA@EGGBOAFC@rbarrier?5height?$AA@ 1001c4a8     track3.obj
+ 0002:000004b8       ??_C@_0BA@IAMECIGH@lbarrier?5height?$AA@ 1001c4b8     track3.obj
+ 0002:000004c8       ??_C@_04DJEEHKI@plan?$AA@  1001c4c8     track3.obj
+ 0002:000004d0       ??_C@_04HJDALCLE@wall?$AA@ 1001c4d0     track3.obj
+ 0002:000004d8       ??_C@_04LLBAOAMK@curb?$AA@ 1001c4d8     track3.obj
+ 0002:000004e0       ??_C@_05EIKACAIN@fence?$AA@ 1001c4e0     track3.obj
+ 0002:000004e8       ??_C@_0CL@MAGDABIP@AddTrackSurface?3?5Memory?5allocati@ 1001c4e8     track3.obj
+ 0002:00000514       ??_C@_04PPBEGPNI@List?$AA@ 1001c514     track3.obj
+ 0002:0000051c       ??_C@_08NEAMABLN@Surfaces?$AA@ 1001c51c     track3.obj
+ 0002:00000528       ??_C@_08OBGMOMHH@?$CFs?1?$CFs?1?$CFs?$AA@ 1001c528     track3.obj
+ 0002:00000534       ??_C@_08LKDNMFOC@friction?$AA@ 1001c534     track3.obj
+ 0002:00000540       ??_C@_0BD@KPJFMCBF@rolling?5resistance?$AA@ 1001c540     track3.obj
+ 0002:00000554       ??_C@_09FLEKNONA@roughness?$AA@ 1001c554     track3.obj
+ 0002:00000560       ??_C@_0BF@INMIEJMD@roughness?5wavelength?$AA@ 1001c560     track3.obj
+ 0002:00000578       ??_C@_07OAPNLENP@dammage?$AA@ 1001c578     track3.obj
+ 0002:00000580       ??_C@_07OMEBIDND@rebound?$AA@ 1001c580     track3.obj
+ 0002:00000588       ??_C@_05JOBLOEL@grass?$AA@ 1001c588     track3.obj
+ 0002:00000590       ??_C@_05KJNJLLGA@level?$AA@ 1001c590     track3.obj
+ 0002:00000598       ??_C@_07PFBBHFFC@barrier?$AA@ 1001c598     track3.obj
+ 0002:000005a0       ??_C@_08GPGJEGMF@segments?$AA@ 1001c5a0     track3.obj
+ 0002:000005ac       ??_C@_0CC@NEOOFLKK@AddSides?3?5memory?5allocation?5erro@ 1001c5ac     track3.obj
+ 0002:000005ce       ??_C@_00CNPNBAHC@?$AA@     1001c5ce     track3.obj
+ 0002:000005d0       ??_C@_04GPMDFGEJ@type?$AA@ 1001c5d0     track3.obj
+ 0002:000005d8       ??_C@_03OJMAPEGJ@str?$AA@  1001c5d8     track3.obj
+ 0002:000005dc       ??_C@_03KIECGDDI@lft?$AA@  1001c5dc     track3.obj
+ 0002:000005e0       ??_C@_03BJEGCJKD@rgt?$AA@  1001c5e0     track3.obj
+ 0002:000005e4       ??_C@_07HAHIGFJI@asphalt?$AA@ 1001c5e4     track3.obj
+ 0002:000005ec       ??_C@_07IHELBNLD@surface?$AA@ 1001c5ec     track3.obj
+ 0002:000005f4       ??_C@_05NPKDHKMG@marks?$AA@ 1001c5f4     track3.obj
+ 0002:000005fc       ??_C@_01ICJEACDI@?$DL?$AA@ 1001c5fc     track3.obj
+ 0002:00000600       ??_C@_0O@IHGPKFKF@env?5map?5index?$AA@ 1001c600     track3.obj
+ 0002:00000610       ??_C@_02GLMPOJMJ@lg?$AA@   1001c610     track3.obj
+ 0002:00000614       ??_C@_06KGHINEPG@radius?$AA@ 1001c614     track3.obj
+ 0002:0000061c       ??_C@_0L@EGMHAGCD@end?5radius?$AA@ 1001c61c     track3.obj
+ 0002:00000628       ??_C@_03EEIEDENP@arc?$AA@  1001c628     track3.obj
+ 0002:0000062c       ??_C@_0N@BNKGANCO@z?5start?5left?$AA@ 1001c62c     track3.obj
+ 0002:0000063c       ??_C@_0O@MGDEKEKL@z?5start?5right?$AA@ 1001c63c     track3.obj
+ 0002:0000064c       ??_C@_0L@DLFLMKAL@z?5end?5left?$AA@ 1001c64c     track3.obj
+ 0002:00000658       ??_C@_0M@INBGINCL@z?5end?5right?$AA@ 1001c658     track3.obj
+ 0002:00000664       ??_C@_05GKGFBAEH@z?5end?$AA@ 1001c664     track3.obj
+ 0002:0000066c       ??_C@_07HGKIDNJI@z?5start?$AA@ 1001c66c     track3.obj
+ 0002:00000674       ??_C@_05MBALOGJ@grade?$AA@ 1001c674     track3.obj
+ 0002:0000067c       ??_C@_0O@JAJMCMHF@banking?5start?$AA@ 1001c67c     track3.obj
+ 0002:0000068c       ??_C@_0M@EPDMHKDD@banking?5end?$AA@ 1001c68c     track3.obj
+ 0002:00000698       ??_C@_06PEBOLMPL@spline?$AA@ 1001c698     track3.obj
+ 0002:000006a0       ??_C@_06EDHAMACH@profil?$AA@ 1001c6a0     track3.obj
+ 0002:000006a8       ??_C@_0N@PIBNALPI@profil?5steps?$AA@ 1001c6a8     track3.obj
+ 0002:000006b8       ??_C@_0BE@HFICBEJN@profil?5steps?5length?$AA@ 1001c6b8     track3.obj
+ 0002:000006cc       ??_C@_0BK@JGDFJLAM@profil?5start?5tangent?5left?$AA@ 1001c6cc     track3.obj
+ 0002:000006e8       ??_C@_0BI@OCNAPIMM@profil?5end?5tangent?5left?$AA@ 1001c6e8     track3.obj
+ 0002:00000700       ??_C@_0BL@BDNPHGNJ@profil?5start?5tangent?5right?$AA@ 1001c700     track3.obj
+ 0002:0000071c       ??_C@_0BJ@IIMPFBAK@profil?5end?5tangent?5right?$AA@ 1001c71c     track3.obj
+ 0002:00000738       ??_C@_0BF@MLBHAKBN@profil?5start?5tangent?$AA@ 1001c738     track3.obj
+ 0002:00000750       ??_C@_0BD@JOFDCPIC@profil?5end?5tangent?$AA@ 1001c750     track3.obj
+ 0002:00000764       ??_C@_02EGCJHIOB@id?$AA@   1001c764     track3.obj
+ 0002:00000768       ??_C@_06OGBDGJHD@no?5pit?$AA@ 1001c768     track3.obj
+ 0002:00000770       ??_C@_08GPGEDMLB@pit?5type?$AA@ 1001c770     track3.obj
+ 0002:0000077c       ??_C@_09MOLFJNJH@pit?5entry?$AA@ 1001c77c     track3.obj
+ 0002:00000788       ??_C@_08MKHGFOAJ@pit?5exit?$AA@ 1001c788     track3.obj
+ 0002:00000794       ??_C@_09ODADCKNC@pit?5start?$AA@ 1001c794     track3.obj
+ 0002:000007a0       ??_C@_07DGPBJHFL@pit?5end?$AA@ 1001c7a0     track3.obj
+ 0002:000007a8       ??_C@_05DHJDAOHK@right?$AA@ 1001c7a8     track3.obj
+ 0002:000007b0       ??_C@_08JGHCLMJC@pit?5side?$AA@ 1001c7b0     track3.obj
+ 0002:000007bc       ??_C@_0M@LNPHBNPL@speed?5limit?$AA@ 1001c7bc     track3.obj
+ 0002:000007c8       ??_C@_0L@HJJBFMBI@pit?5length?$AA@ 1001c7c8     track3.obj
+ 0002:000007d4       ??_C@_09DFMGOKCK@pit?5width?$AA@ 1001c7d4     track3.obj
+ 0002:000007e0       ??_C@_0L@BMFGMLNJ@track?5side?$AA@ 1001c7e0     track3.obj
+ 0002:000007ec       ??_C@_04DONFEANM@list?$AA@ 1001c7ec     track3.obj
+ 0002:000007f4       ??_C@_07HJIHKFEF@Cameras?$AA@ 1001c7f4     track3.obj
+ 0002:000007fc       ??_C@_0CE@BLONMGLJ@ReadTrack3?3?5Memory?5allocation?5er@ 1001c7fc     track3.obj
+ 0002:00000820       ??_C@_07BADNAEFA@segment?$AA@ 1001c820     track3.obj
+ 0002:00000828       ??_C@_0DC@KGEDEKE@Bad?5Track?5Definition?3?5in?5Camera?5@ 1001c828     track3.obj
+ 0002:0000085c       ??_C@_08LGBKCCF@to?5right?$AA@ 1001c85c     track3.obj
+ 0002:00000868       ??_C@_08GMJHFLMJ@to?5start?$AA@ 1001c868     track3.obj
+ 0002:00000874       ??_C@_09PIIMKFIK@fov?5start?$AA@ 1001c874     track3.obj
+ 0002:00000880       ??_C@_07KCDNDLMG@fov?5end?$AA@ 1001c880     track3.obj
+ 0002:00000888       __real@00000000            1001c888     track3.obj
+ 0002:0000088c       __real@3f000000            1001c88c     track3.obj
+ 0002:00000890       __real@3f800000            1001c890     track3.obj
+ 0002:00000898       __real@3fe0000000000000    1001c898     track3.obj
+ 0002:000008a0       __real@3ff0000000000000    1001c8a0     track3.obj
+ 0002:000008a8       __real@3ff921fb54442d18    1001c8a8     track3.obj
+ 0002:000008b0       __real@401921fb54442d18    1001c8b0     track3.obj
+ 0002:000008b8       __real@4042000000000000    1001c8b8     track3.obj
+ 0002:000008c0       __real@4049000000000000    1001c8c0     track3.obj
+ 0002:000008c8       __real@bf800000            1001c8c8     track3.obj
+ 0002:000008cc       __real@c7c35000            1001c8cc     track3.obj
+ 0002:000008d0       __xmm@80000000800000008000000080000000 1001c8d0     track3.obj
+ 0002:000008f0       ??_C@_0L@NDBGFCKN@Right?5Side?$AA@ 1001c8f0     track4.obj
+ 0002:000008fc       ??_C@_09OJMBBNPC@Left?5Side?$AA@ 1001c8fc     track4.obj
+ 0002:00000908       ??_C@_0N@INDFECPF@Right?5Border?$AA@ 1001c908     track4.obj
+ 0002:00000918       ??_C@_0M@FGHFGFLI@Left?5Border?$AA@ 1001c918     track4.obj
+ 0002:00000924       ??_C@_0O@DMHDDLJH@Right?5Barrier?$AA@ 1001c924     track4.obj
+ 0002:00000934       ??_C@_0N@DEMFEGJN@Left?5Barrier?$AA@ 1001c934     track4.obj
+ 0002:00000944       ??_C@_0N@CMHEBIDG@banking?5type?$AA@ 1001c944     track4.obj
+ 0002:00000954       ??_C@_05IAKJCFIM@style?$AA@ 1001c954     track4.obj
+ 0002:0000095c       ??_C@_0P@GDKHIKBJ@Track?5Segments?$AA@ 1001c95c     track4.obj
+ 0002:0000096c       ??_C@_0M@FGEPAADM@start?5width?$AA@ 1001c96c     track4.obj
+ 0002:00000978       ??_C@_09OMJLPMGE@end?5width?$AA@ 1001c978     track4.obj
+ 0002:00000984       ??_C@_0L@GFLICJDG@DoV?5factor?$AA@ 1001c984     track4.obj
+ 0002:00000990       ??_C@_0DO@KKJMNDKK@?$DO?$DO?$DO?$DO?$DO?$DO?$DO?$DO?$DO?5DUPLICATED?5SEGMENT?5NAM@ 1001c990     track4.obj
+ 0002:000009d0       ??_C@_04BAAKJFBJ@Pits?$AA@ 1001c9d0     track4.obj
+ 0002:000009d8       ??_C@_05HNNDEAND@entry?$AA@ 1001c9d8     track4.obj
+ 0002:000009e0       ??_C@_04MKNBDEPB@exit?$AA@ 1001c9e0     track4.obj
+ 0002:000009e8       ??_C@_05FAGFPHJG@start?$AA@ 1001c9e8     track4.obj
+ 0002:000009f0       ??_C@_03JBJLGPFL@end?$AA@  1001c9f0     track4.obj
+ 0002:000009f4       ??_C@_04JGNFNGGK@side?$AA@ 1001c9f4     track4.obj
+ 0002:000009fc       ??_C@_06IJDLPEM@length?$AA@ 1001c9fc     track4.obj
+ 0002:00000a04       ??_C@_07KOAMMMMO@trackv1?$AA@ 1001ca04     trackitf.obj
+ 0002:00000a0c       ??_C@_0L@CHJDGCDA@Track?5V1?40?$AA@ 1001ca0c     trackitf.obj
+ 0002:00000a1c       __real@40000000            1001ca1c     trackutil.obj
+ 0002:00000a20       __real@40400000            1001ca20     trackutil.obj
+ 0002:00000a28       ??_C@_05JLFELJNP@FATAL?$AA@ 1001ca28     ul_vs2008_32:ulError.obj
+ 0002:00000a30       ??_C@_07KCOHIFOP@WARNING?$AA@ 1001ca30     ul_vs2008_32:ulError.obj
+ 0002:00000a38       ??_C@_05KOLFGEDA@DEBUG?$AA@ 1001ca38     ul_vs2008_32:ulError.obj
+ 0002:00000a44       __FPinit                   1001ca44     LIBCMT:fpinit.obj
+ 0002:00003240       ??_C@_1BI@BGOHAHKC@?$AAm?$AAs?$AAc?$AAo?$AAr?$AAe?$AAe?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ 1001f240     LIBCMT:crt0dat.obj
+ 0002:00003258       ??_C@_0P@MIGLKIOC@CorExitProcess?$AA@ 1001f258     LIBCMT:crt0dat.obj
+ 0002:00003268       __pDefaultRawDllMain       1001f268     LIBCMT:dllcrt0.obj
+ 0002:00003268       __pRawDllMain              1001f268     LIBCMT:dllcrt0.obj
+ 0002:0000326c       ??_C@_06OJHGLDPL@?$CInull?$CJ?$AA@ 1001f26c     LIBCMT:output.obj
+ 0002:00003274       ??_C@_1O@CEDCILHN@?$AA?$CI?$AAn?$AAu?$AAl?$AAl?$AA?$CJ?$AA?$AA@ 1001f274     LIBCMT:output.obj
+ 0002:00003288       ___lookuptable             1001f288     LIBCMT:output.obj
+ 0002:000032e4       ??_C@_05KLBDPFGC@e?$CL000?$AA@ 1001f2e4     LIBCMT:cvt.obj
+ 0002:000032fc       ??_C@_1M@HPNHIDJI@?$AAj?$AAa?$AA?9?$AAJ?$AAP?$AA?$AA@ 1001f2fc     LIBCMT:mbctype.obj
+ 0002:00003308       ??_C@_1M@BIBDDEMK@?$AAz?$AAh?$AA?9?$AAC?$AAN?$AA?$AA@ 1001f308     LIBCMT:mbctype.obj
+ 0002:00003314       ??_C@_1M@JLOOOEGK@?$AAk?$AAo?$AA?9?$AAK?$AAR?$AA?$AA@ 1001f314     LIBCMT:mbctype.obj
+ 0002:00003320       ??_C@_1M@CLNBBOPM@?$AAz?$AAh?$AA?9?$AAT?$AAW?$AA?$AA@ 1001f320     LIBCMT:mbctype.obj
+ 0002:0000332c       ??_C@_03KOEHGMDN@Sun?$AA@  1001f32c     LIBCMT:nlsdata.obj
+ 0002:00003330       ??_C@_03PDAGKDH@Mon?$AA@   1001f330     LIBCMT:nlsdata.obj
+ 0002:00003334       ??_C@_03NAGEINEP@Tue?$AA@  1001f334     LIBCMT:nlsdata.obj
+ 0002:00003338       ??_C@_03MHOMLAJA@Wed?$AA@  1001f338     LIBCMT:nlsdata.obj
+ 0002:0000333c       ??_C@_03IOFIKPDN@Thu?$AA@  1001f33c     LIBCMT:nlsdata.obj
+ 0002:00003340       ??_C@_03IDIOELNC@Fri?$AA@  1001f340     LIBCMT:nlsdata.obj
+ 0002:00003344       ??_C@_03FEFJNEK@Sat?$AA@   1001f344     LIBCMT:nlsdata.obj
+ 0002:00003348       ??_C@_06OOPIFAJ@Sunday?$AA@ 1001f348     LIBCMT:nlsdata.obj
+ 0002:00003350       ??_C@_06JLEDEDGH@Monday?$AA@ 1001f350     LIBCMT:nlsdata.obj
+ 0002:00003358       ??_C@_07BAAGCFCM@Tuesday?$AA@ 1001f358     LIBCMT:nlsdata.obj
+ 0002:00003360       ??_C@_09DLIGFAKA@Wednesday?$AA@ 1001f360     LIBCMT:nlsdata.obj
+ 0002:0000336c       ??_C@_08HACCIKIA@Thursday?$AA@ 1001f36c     LIBCMT:nlsdata.obj
+ 0002:00003378       ??_C@_06JECMNKMI@Friday?$AA@ 1001f378     LIBCMT:nlsdata.obj
+ 0002:00003380       ??_C@_08INBOOONO@Saturday?$AA@ 1001f380     LIBCMT:nlsdata.obj
+ 0002:0000338c       ??_C@_03JIHJHPIE@Jan?$AA@  1001f38c     LIBCMT:nlsdata.obj
+ 0002:00003390       ??_C@_03HJBDCHOM@Feb?$AA@  1001f390     LIBCMT:nlsdata.obj
+ 0002:00003394       ??_C@_03ODNJBKGA@Mar?$AA@  1001f394     LIBCMT:nlsdata.obj
+ 0002:00003398       ??_C@_03LEOLGMJP@Apr?$AA@  1001f398     LIBCMT:nlsdata.obj
+ 0002:0000339c       ??_C@_03CNMDKL@May?$AA@    1001f39c     LIBCMT:nlsdata.obj
+ 0002:000033a0       ??_C@_03IDFGHECI@Jun?$AA@  1001f3a0     LIBCMT:nlsdata.obj
+ 0002:000033a4       ??_C@_03LBGABGKK@Jul?$AA@  1001f3a4     LIBCMT:nlsdata.obj
+ 0002:000033a8       ??_C@_03IFJFEIGA@Aug?$AA@  1001f3a8     LIBCMT:nlsdata.obj
+ 0002:000033ac       ??_C@_03GGCAPAJC@Sep?$AA@  1001f3ac     LIBCMT:nlsdata.obj
+ 0002:000033b0       ??_C@_03BMAOKBAD@Oct?$AA@  1001f3b0     LIBCMT:nlsdata.obj
+ 0002:000033b4       ??_C@_03JPJOFNIA@Nov?$AA@  1001f3b4     LIBCMT:nlsdata.obj
+ 0002:000033b8       ??_C@_03MKABNOCG@Dec?$AA@  1001f3b8     LIBCMT:nlsdata.obj
+ 0002:000033bc       ??_C@_07CGJPFGJA@January?$AA@ 1001f3bc     LIBCMT:nlsdata.obj
+ 0002:000033c4       ??_C@_08GNJGEPFN@February?$AA@ 1001f3c4     LIBCMT:nlsdata.obj
+ 0002:000033d0       ??_C@_05HPCKOFNC@March?$AA@ 1001f3d0     LIBCMT:nlsdata.obj
+ 0002:000033d8       ??_C@_05DMJDNLEJ@April?$AA@ 1001f3d8     LIBCMT:nlsdata.obj
+ 0002:000033e0       ??_C@_04CNLMGBGM@June?$AA@ 1001f3e0     LIBCMT:nlsdata.obj
+ 0002:000033e8       ??_C@_04MIEPOIFP@July?$AA@ 1001f3e8     LIBCMT:nlsdata.obj
+ 0002:000033f0       ??_C@_06LBBHFDDG@August?$AA@ 1001f3f0     LIBCMT:nlsdata.obj
+ 0002:000033f8       ??_C@_09BHHEALKD@September?$AA@ 1001f3f8     LIBCMT:nlsdata.obj
+ 0002:00003404       ??_C@_07JJNFCEND@October?$AA@ 1001f404     LIBCMT:nlsdata.obj
+ 0002:0000340c       ??_C@_08HCHEGEOA@November?$AA@ 1001f40c     LIBCMT:nlsdata.obj
+ 0002:00003418       ??_C@_08EDHMEBNP@December?$AA@ 1001f418     LIBCMT:nlsdata.obj
+ 0002:00003424       ??_C@_02DEDBPAFC@AM?$AA@   1001f424     LIBCMT:nlsdata.obj
+ 0002:00003428       ??_C@_02CJNFDJBF@PM?$AA@   1001f428     LIBCMT:nlsdata.obj
+ 0002:0000342c       ??_C@_08BPBNCDIB@MM?1dd?1yy?$AA@ 1001f42c     LIBCMT:nlsdata.obj
+ 0002:00003438       ??_C@_0BE@CKGJFCPC@dddd?0?5MMMM?5dd?0?5yyyy?$AA@ 1001f438     LIBCMT:nlsdata.obj
+ 0002:0000344c       ??_C@_08JCCMCCIL@HH?3mm?3ss?$AA@ 1001f44c     LIBCMT:nlsdata.obj
+ 0002:00003458       ??_C@_17MBGCMIPB@?$AAS?$AAu?$AAn?$AA?$AA@ 1001f458     LIBCMT:nlsdata.obj
+ 0002:00003460       ??_C@_17KBOMKBF@?$AAM?$AAo?$AAn?$AA?$AA@ 1001f460     LIBCMT:nlsdata.obj
+ 0002:00003468       ??_C@_17BMKGEGOJ@?$AAT?$AAu?$AAe?$AA?$AA@ 1001f468     LIBCMT:nlsdata.obj
+ 0002:00003470       ??_C@_17CJEDCEPE@?$AAW?$AAe?$AAd?$AA?$AA@ 1001f470     LIBCMT:nlsdata.obj
+ 0002:00003478       ??_C@_17PDPHAADD@?$AAT?$AAh?$AAu?$AA?$AA@ 1001f478     LIBCMT:nlsdata.obj
+ 0002:00003480       ??_C@_17HFOLPPLP@?$AAF?$AAr?$AAi?$AA?$AA@ 1001f480     LIBCMT:nlsdata.obj
+ 0002:00003488       ??_C@_17GGIBDPIH@?$AAS?$AAa?$AAt?$AA?$AA@ 1001f488     LIBCMT:nlsdata.obj
+ 0002:00003490       ??_C@_1O@IHNHDHPB@?$AAS?$AAu?$AAn?$AAd?$AAa?$AAy?$AA?$AA@ 1001f490     LIBCMT:nlsdata.obj
+ 0002:000034a0       ??_C@_1O@MMNBFLIA@?$AAM?$AAo?$AAn?$AAd?$AAa?$AAy?$AA?$AA@ 1001f4a0     LIBCMT:nlsdata.obj
+ 0002:000034b0       ??_C@_1BA@ENFBFFEK@?$AAT?$AAu?$AAe?$AAs?$AAd?$AAa?$AAy?$AA?$AA@ 1001f4b0     LIBCMT:nlsdata.obj
+ 0002:000034c0       ??_C@_1BE@EBOGMDOH@?$AAW?$AAe?$AAd?$AAn?$AAe?$AAs?$AAd?$AAa?$AAy?$AA?$AA@ 1001f4c0     LIBCMT:nlsdata.obj
+ 0002:000034d4       ??_C@_1BC@HHMNLIHE@?$AAT?$AAh?$AAu?$AAr?$AAs?$AAd?$AAa?$AAy?$AA?$AA@ 1001f4d4     LIBCMT:nlsdata.obj
+ 0002:000034e8       ??_C@_1O@PDICJHAG@?$AAF?$AAr?$AAi?$AAd?$AAa?$AAy?$AA?$AA@ 1001f4e8     LIBCMT:nlsdata.obj
+ 0002:000034f8       ??_C@_1BC@ENMNNPAJ@?$AAS?$AAa?$AAt?$AAu?$AAr?$AAd?$AAa?$AAy?$AA?$AA@ 1001f4f8     LIBCMT:nlsdata.obj
+ 0002:0000350c       ??_C@_17DKNBKCHM@?$AAJ?$AAa?$AAn?$AA?$AA@ 1001f50c     LIBCMT:nlsdata.obj
+ 0002:00003514       ??_C@_17LMDJEKJN@?$AAF?$AAe?$AAb?$AA?$AA@ 1001f514     LIBCMT:nlsdata.obj
+ 0002:0000351c       ??_C@_17CKNLEDEC@?$AAM?$AAa?$AAr?$AA?$AA@ 1001f51c     LIBCMT:nlsdata.obj
+ 0002:00003524       ??_C@_17LFPOIHDD@?$AAA?$AAp?$AAr?$AA?$AA@ 1001f524     LIBCMT:nlsdata.obj
+ 0002:0000352c       ??_C@_17PNNKMEED@?$AAM?$AAa?$AAy?$AA?$AA@ 1001f52c     LIBCMT:nlsdata.obj
+ 0002:00003534       ??_C@_17KCJGOCPB@?$AAJ?$AAu?$AAn?$AA?$AA@ 1001f534     LIBCMT:nlsdata.obj
+ 0002:0000353c       ??_C@_17IJPCKHK@?$AAJ?$AAu?$AAl?$AA?$AA@ 1001f53c     LIBCMT:nlsdata.obj
+ 0002:00003544       ??_C@_17ICPELBCN@?$AAA?$AAu?$AAg?$AA?$AA@ 1001f544     LIBCMT:nlsdata.obj
+ 0002:0000354c       ??_C@_17HCHCOKMG@?$AAS?$AAe?$AAp?$AA?$AA@ 1001f54c     LIBCMT:nlsdata.obj
+ 0002:00003554       ??_C@_17FNLKOI@?$AAO?$AAc?$AAt?$AA?$AA@ 1001f554     LIBCMT:nlsdata.obj
+ 0002:0000355c       ??_C@_17BBDMLCIG@?$AAN?$AAo?$AAv?$AA?$AA@ 1001f55c     LIBCMT:nlsdata.obj
+ 0002:00003564       ??_C@_17EGKACKIF@?$AAD?$AAe?$AAc?$AA?$AA@ 1001f564     LIBCMT:nlsdata.obj
+ 0002:0000356c       ??_C@_1BA@EFMEIEBA@?$AAJ?$AAa?$AAn?$AAu?$AAa?$AAr?$AAy?$AA?$AA@ 1001f56c     LIBCMT:nlsdata.obj
+ 0002:0000357c       ??_C@_1BC@JGDDFFAM@?$AAF?$AAe?$AAb?$AAr?$AAu?$AAa?$AAr?$AAy?$AA?$AA@ 1001f57c     LIBCMT:nlsdata.obj
+ 0002:00003590       ??_C@_1M@IKEENEDF@?$AAM?$AAa?$AAr?$AAc?$AAh?$AA?$AA@ 1001f590     LIBCMT:nlsdata.obj
+ 0002:0000359c       ??_C@_1M@GJNLMHFD@?$AAA?$AAp?$AAr?$AAi?$AAl?$AA?$AA@ 1001f59c     LIBCMT:nlsdata.obj
+ 0002:000035a8       ??_C@_19EPFLPGAP@?$AAJ?$AAu?$AAn?$AAe?$AA?$AA@ 1001f5a8     LIBCMT:nlsdata.obj
+ 0002:000035b4       ??_C@_19BIFMLPCD@?$AAJ?$AAu?$AAl?$AAy?$AA?$AA@ 1001f5b4     LIBCMT:nlsdata.obj
+ 0002:000035c0       ??_C@_1O@PAHLKOAC@?$AAA?$AAu?$AAg?$AAu?$AAs?$AAt?$AA?$AA@ 1001f5c0     LIBCMT:nlsdata.obj
+ 0002:000035d0       ??_C@_1BE@DKAAMBJL@?$AAS?$AAe?$AAp?$AAt?$AAe?$AAm?$AAb?$AAe?$AAr?$AA?$AA@ 1001f5d0     LIBCMT:nlsdata.obj
+ 0002:000035e4       ??_C@_1BA@EPANDLNG@?$AAO?$AAc?$AAt?$AAo?$AAb?$AAe?$AAr?$AA?$AA@ 1001f5e4     LIBCMT:nlsdata.obj
+ 0002:000035f4       ??_C@_1BC@BGLIFPF@?$AAN?$AAo?$AAv?$AAe?$AAm?$AAb?$AAe?$AAr?$AA?$AA@ 1001f5f4     LIBCMT:nlsdata.obj
+ 0002:00003608       ??_C@_1BC@FEMKIFH@?$AAD?$AAe?$AAc?$AAe?$AAm?$AAb?$AAe?$AAr?$AA?$AA@ 1001f608     LIBCMT:nlsdata.obj
+ 0002:0000361c       ??_C@_15ODEHAHHF@?$AAA?$AAM?$AA?$AA@ 1001f61c     LIBCMT:nlsdata.obj
+ 0002:00003624       ??_C@_15CLMNNGEL@?$AAP?$AAM?$AA?$AA@ 1001f624     LIBCMT:nlsdata.obj
+ 0002:0000362c       ??_C@_1BC@IEBCMHCM@?$AAM?$AAM?$AA?1?$AAd?$AAd?$AA?1?$AAy?$AAy?$AA?$AA@ 1001f62c     LIBCMT:nlsdata.obj
+ 0002:00003640       ??_C@_1CI@KNAKOEBC@?$AAd?$AAd?$AAd?$AAd?$AA?0?$AA?5?$AAM?$AAM?$AAM?$AAM?$AA?5?$AAd?$AAd?$AA?0?$AA?5?$AAy?$AAy?$AAy?$AAy?$AA?$AA@ 1001f640     LIBCMT:nlsdata.obj
+ 0002:00003668       ??_C@_1BC@GDGBMEMK@?$AAH?$AAH?$AA?3?$AAm?$AAm?$AA?3?$AAs?$AAs?$AA?$AA@ 1001f668     LIBCMT:nlsdata.obj
+ 0002:0000367c       ??_C@_1M@BMHNFIME@?$AAe?$AAn?$AA?9?$AAU?$AAS?$AA?$AA@ 1001f67c     LIBCMT:nlsdata.obj
+ 0002:00003710       __OP_ATAN2jmptab           1001f710     LIBCMT:87triga.obj
+ 0002:000037f8       ??_C@_03MGHMBJCF@log?$AA@  1001f7f8     LIBCMT:libm_error.obj
+ 0002:000037fc       ??_C@_05HGHHAHAP@log10?$AA@ 1001f7fc     LIBCMT:libm_error.obj
+ 0002:00003804       ??_C@_03KHJOGHMM@exp?$AA@  1001f804     LIBCMT:libm_error.obj
+ 0002:00003808       ??_C@_03JGHBODFD@pow?$AA@  1001f808     LIBCMT:libm_error.obj
+ 0002:0000380c       ??_C@_04FIHNOPOL@asin?$AA@ 1001f80c     LIBCMT:libm_error.obj
+ 0002:00003814       ??_C@_04PDIFKINK@acos?$AA@ 1001f814     LIBCMT:libm_error.obj
+ 0002:0000381c       ??_C@_05EOHGHCHD@exp10?$AA@ 1001f81c     LIBCMT:libm_error.obj
+ 0002:00003824       ??_C@_04MLLJIGOK@atan?$AA@ 1001f824     LIBCMT:libm_error.obj
+ 0002:0000382c       ??_C@_04GFPJNGEK@ceil?$AA@ 1001f82c     LIBCMT:libm_error.obj
+ 0002:00003834       ??_C@_05PBJFFIGL@floor?$AA@ 1001f834     LIBCMT:libm_error.obj
+ 0002:0000383c       ??_C@_04EHEDPDJG@modf?$AA@ 1001f83c     LIBCMT:libm_error.obj
+ 0002:00003844       ??_C@_03BLEJJJBH@sin?$AA@  1001f844     LIBCMT:libm_error.obj
+ 0002:00003848       ??_C@_03LALBNOCG@cos?$AA@  1001f848     LIBCMT:libm_error.obj
+ 0002:0000384c       ??_C@_03IIINPABG@tan?$AA@  1001f84c     LIBCMT:libm_error.obj
+ 0002:00003850       ??_C@_04EIAKFFMI@sqrt?$AA@ 1001f850     LIBCMT:libm_error.obj
+ 0002:00003858       ??_C@_1BK@MGMFAEKH@?$AAk?$AAe?$AAr?$AAn?$AAe?$AAl?$AA3?$AA2?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ 1001f858     LIBCMT:winapisupp.obj
+ 0002:00003874       ??_C@_08KNHFBNJ@FlsAlloc?$AA@ 1001f874     LIBCMT:winapisupp.obj
+ 0002:00003880       ??_C@_07PEJMOBNF@FlsFree?$AA@ 1001f880     LIBCMT:winapisupp.obj
+ 0002:00003888       ??_C@_0M@GDNOONDI@FlsGetValue?$AA@ 1001f888     LIBCMT:winapisupp.obj
+ 0002:00003894       ??_C@_0M@JCPCPOEF@FlsSetValue?$AA@ 1001f894     LIBCMT:winapisupp.obj
+ 0002:000038a0       ??_C@_0BM@HCFOFFN@InitializeCriticalSectionEx?$AA@ 1001f8a0     LIBCMT:winapisupp.obj
+ 0002:000038bc       ??_C@_0BD@KIEEOEEH@CreateSemaphoreExW?$AA@ 1001f8bc     LIBCMT:winapisupp.obj
+ 0002:000038d0       ??_C@_0BI@BKLFFAPO@SetThreadStackGuarantee?$AA@ 1001f8d0     LIBCMT:winapisupp.obj
+ 0002:000038e8       ??_C@_0BG@OGFAJCKC@CreateThreadpoolTimer?$AA@ 1001f8e8     LIBCMT:winapisupp.obj
+ 0002:00003900       ??_C@_0BD@LPLEMMDI@SetThreadpoolTimer?$AA@ 1001f900     LIBCMT:winapisupp.obj
+ 0002:00003914       ??_C@_0CA@FMNJENH@WaitForThreadpoolTimerCallbacks?$AA@ 1001f914     LIBCMT:winapisupp.obj
+ 0002:00003934       ??_C@_0BF@DCFCCNOC@CloseThreadpoolTimer?$AA@ 1001f934     LIBCMT:winapisupp.obj
+ 0002:0000394c       ??_C@_0BF@FLABGKKM@CreateThreadpoolWait?$AA@ 1001f94c     LIBCMT:winapisupp.obj
+ 0002:00003964       ??_C@_0BC@MGCOHNA@SetThreadpoolWait?$AA@ 1001f964     LIBCMT:winapisupp.obj
+ 0002:00003978       ??_C@_0BE@OCIOMIMP@CloseThreadpoolWait?$AA@ 1001f978     LIBCMT:winapisupp.obj
+ 0002:0000398c       ??_C@_0BJ@LKGHFHBO@FlushProcessWriteBuffers?$AA@ 1001f98c     LIBCMT:winapisupp.obj
+ 0002:000039a8       ??_C@_0BP@KALKKPMO@FreeLibraryWhenCallbackReturns?$AA@ 1001f9a8     LIBCMT:winapisupp.obj
+ 0002:000039c8       ??_C@_0BK@DFNBACLA@GetCurrentProcessorNumber?$AA@ 1001f9c8     LIBCMT:winapisupp.obj
+ 0002:000039e4       ??_C@_0BP@KHGALBC@GetLogicalProcessorInformation?$AA@ 1001f9e4     LIBCMT:winapisupp.obj
+ 0002:00003a04       ??_C@_0BE@FKKLLFLM@CreateSymbolicLinkW?$AA@ 1001fa04     LIBCMT:winapisupp.obj
+ 0002:00003a18       ??_C@_0BJ@OHNKDLIJ@SetDefaultDllDirectories?$AA@ 1001fa18     LIBCMT:winapisupp.obj
+ 0002:00003a34       ??_C@_0BE@LJANKFHF@EnumSystemLocalesEx?$AA@ 1001fa34     LIBCMT:winapisupp.obj
+ 0002:00003a48       ??_C@_0BA@IHGNDAEB@CompareStringEx?$AA@ 1001fa48     LIBCMT:winapisupp.obj
+ 0002:00003a58       ??_C@_0BA@EPCJIIPD@GetDateFormatEx?$AA@ 1001fa58     LIBCMT:winapisupp.obj
+ 0002:00003a68       ??_C@_0BA@ONOKGCMP@GetLocaleInfoEx?$AA@ 1001fa68     LIBCMT:winapisupp.obj
+ 0002:00003a78       ??_C@_0BA@CIJJKCJJ@GetTimeFormatEx?$AA@ 1001fa78     LIBCMT:winapisupp.obj
+ 0002:00003a88       ??_C@_0BJ@PBCCBIPI@GetUserDefaultLocaleName?$AA@ 1001fa88     LIBCMT:winapisupp.obj
+ 0002:00003aa4       ??_C@_0BC@CELBKLLA@IsValidLocaleName?$AA@ 1001faa4     LIBCMT:winapisupp.obj
+ 0002:00003ab8       ??_C@_0O@KKBNKAPF@LCMapStringEx?$AA@ 1001fab8     LIBCMT:winapisupp.obj
+ 0002:00003ac8       ??_C@_0BE@JOGNEJCI@GetCurrentPackageId?$AA@ 1001fac8     LIBCMT:winapisupp.obj
+ 0002:00003ae0       ??_C@_1FE@LLNEDJMD@?$AAR?$AA6?$AA0?$AA0?$AA8?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAe?$AAn?$AAo?$AAu?$AAg?$AAh?$AA?5?$AAs?$AAp?$AAa?$AAc?$AAe?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AAa?$AAr@ 1001fae0     LIBCMT:crt0msg.obj
+ 0002:00003b38       ??_C@_1FI@HONFMGBI@?$AAR?$AA6?$AA0?$AA0?$AA9?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAe?$AAn?$AAo?$AAu?$AAg?$AAh?$AA?5?$AAs?$AAp?$AAa?$AAc?$AAe?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AAe?$AAn@ 1001fb38     LIBCMT:crt0msg.obj
+ 0002:00003b90       ??_C@_1EG@BEHAGFJD@?$AAR?$AA6?$AA0?$AA1?$AA0?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAa?$AAb?$AAo?$AAr?$AAt?$AA?$CI?$AA?$CJ?$AA?5?$AAh?$AAa?$AAs?$AA?5?$AAb?$AAe?$AAe?$AAn?$AA?5?$AAc?$AAa?$AAl?$AAl?$AAe?$AAd@ 1001fb90     LIBCMT:crt0msg.obj
+ 0002:00003bd8       ??_C@_1FI@LOGNIKDM@?$AAR?$AA6?$AA0?$AA1?$AA6?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAe?$AAn?$AAo?$AAu?$AAg?$AAh?$AA?5?$AAs?$AAp?$AAa?$AAc?$AAe?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AAt?$AAh@ 1001fbd8     LIBCMT:crt0msg.obj
+ 0002:00003c30       ??_C@_1FK@BEOGODMC@?$AAR?$AA6?$AA0?$AA1?$AA7?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAu?$AAn?$AAe?$AAx?$AAp?$AAe?$AAc?$AAt?$AAe?$AAd?$AA?5?$AAm?$AAu?$AAl?$AAt?$AAi?$AAt?$AAh?$AAr?$AAe?$AAa?$AAd?$AA?5@ 1001fc30     LIBCMT:crt0msg.obj
+ 0002:00003c90       ??_C@_1EC@JIBHAOPH@?$AAR?$AA6?$AA0?$AA1?$AA8?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAu?$AAn?$AAe?$AAx?$AAp?$AAe?$AAc?$AAt?$AAe?$AAd?$AA?5?$AAh?$AAe?$AAa?$AAp?$AA?5?$AAe?$AAr?$AAr?$AAo?$AAr?$AA?$AN?$AA?6@ 1001fc90     LIBCMT:crt0msg.obj
+ 0002:00003cd8       ??_C@_1FC@ECHBIFBC@?$AAR?$AA6?$AA0?$AA1?$AA9?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAu?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo?$AA?5?$AAo?$AAp?$AAe?$AAn?$AA?5?$AAc?$AAo?$AAn?$AAs?$AAo?$AAl?$AAe?$AA?5@ 1001fcd8     LIBCMT:crt0msg.obj
+ 0002:00003d30       ??_C@_1GK@FHCKBEFA@?$AAR?$AA6?$AA0?$AA2?$AA4?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAe?$AAn?$AAo?$AAu?$AAg?$AAh?$AA?5?$AAs?$AAp?$AAa?$AAc?$AAe?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AA_?$AAo@ 1001fd30     LIBCMT:crt0msg.obj
+ 0002:00003da0       ??_C@_1EM@MAADIHMB@?$AAR?$AA6?$AA0?$AA2?$AA5?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAp?$AAu?$AAr?$AAe?$AA?5?$AAv?$AAi?$AAr?$AAt?$AAu?$AAa?$AAl?$AA?5?$AAf?$AAu?$AAn?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?5?$AAc@ 1001fda0     LIBCMT:crt0msg.obj
+ 0002:00003df0       ??_C@_1GK@MCAAGJMO@?$AAR?$AA6?$AA0?$AA2?$AA6?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAe?$AAn?$AAo?$AAu?$AAg?$AAh?$AA?5?$AAs?$AAp?$AAa?$AAc?$AAe?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AAs?$AAt@ 1001fdf0     LIBCMT:crt0msg.obj
+ 0002:00003e60       ??_C@_1GK@MFGOKLAG@?$AAR?$AA6?$AA0?$AA2?$AA7?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAe?$AAn?$AAo?$AAu?$AAg?$AAh?$AA?5?$AAs?$AAp?$AAa?$AAc?$AAe?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AAl?$AAo@ 1001fe60     LIBCMT:crt0msg.obj
+ 0002:00003ed0       ??_C@_1EK@HHFLMAOL@?$AAR?$AA6?$AA0?$AA2?$AA8?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAu?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo?$AA?5?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?5?$AAh?$AAe@ 1001fed0     LIBCMT:crt0msg.obj
+ 0002:00003f1c       ??_C@_1DO@BMFCDCD@?$AAR?$AA6?$AA0?$AA3?$AA0?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAC?$AAR?$AAT?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AAd?$AA?$AN?$AA?6?$AA?$AA@ 1001ff1c     LIBCMT:crt0msg.obj
+ 0002:00003f60       ??_C@_1MG@ENCOOIDF@?$AAR?$AA6?$AA0?$AA3?$AA1?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAA?$AAt?$AAt?$AAe?$AAm?$AAp?$AAt?$AA?5?$AAt?$AAo?$AA?5?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz?$AAe?$AA?5?$AAt@ 1001ff60     LIBCMT:crt0msg.obj
+ 0002:00004028       ??_C@_1GG@GOPILAJP@?$AAR?$AA6?$AA0?$AA3?$AA2?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAe?$AAn?$AAo?$AAu?$AAg?$AAh?$AA?5?$AAs?$AAp?$AAa?$AAc?$AAe?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AAl?$AAo@ 10020028     LIBCMT:crt0msg.obj
+ 0002:00004090       ??_C@_1BOO@KGEDBGAJ@?$AAR?$AA6?$AA0?$AA3?$AA3?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAA?$AAt?$AAt?$AAe?$AAm?$AAp?$AAt?$AA?5?$AAt?$AAo?$AA?5?$AAu?$AAs?$AAe?$AA?5?$AAM?$AAS?$AAI?$AAL?$AA?5?$AAc?$AAo?$AAd@ 10020090     LIBCMT:crt0msg.obj
+ 0002:00004280       ??_C@_1GG@MKFPEKFO@?$AAR?$AA6?$AA0?$AA3?$AA4?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAi?$AAn?$AAc?$AAo?$AAn?$AAs?$AAi?$AAs?$AAt?$AAe?$AAn?$AAt?$AA?5?$AAo?$AAn?$AAe?$AAx?$AAi?$AAt?$AA?5?$AAb?$AAe?$AAg@ 10020280     LIBCMT:crt0msg.obj
+ 0002:000042e8       ??_C@_1BO@BFCDCGC@?$AAD?$AAO?$AAM?$AAA?$AAI?$AAN?$AA?5?$AAe?$AAr?$AAr?$AAo?$AAr?$AA?$AN?$AA?6?$AA?$AA@ 100202e8     LIBCMT:crt0msg.obj
+ 0002:00004308       ??_C@_1BK@KMOMNAAI@?$AAS?$AAI?$AAN?$AAG?$AA?5?$AAe?$AAr?$AAr?$AAo?$AAr?$AA?$AN?$AA?6?$AA?$AA@ 10020308     LIBCMT:crt0msg.obj
+ 0002:00004324       ??_C@_1BM@JBBEPPHI@?$AAT?$AAL?$AAO?$AAS?$AAS?$AA?5?$AAe?$AAr?$AAr?$AAo?$AAr?$AA?$AN?$AA?6?$AA?$AA@ 10020324     LIBCMT:crt0msg.obj
+ 0002:00004340       ??_C@_15JNBOKNOG@?$AA?$AN?$AA?6?$AA?$AA@ 10020340     LIBCMT:crt0msg.obj
+ 0002:00004348       ??_C@_1BO@BKOMIGKJ@?$AAr?$AAu?$AAn?$AAt?$AAi?$AAm?$AAe?$AA?5?$AAe?$AAr?$AAr?$AAo?$AAr?$AA?5?$AA?$AA@ 10020348     LIBCMT:crt0msg.obj
+ 0002:00004420       ??_C@_1FK@PGACCAFB@?$AAR?$AA6?$AA0?$AA0?$AA2?$AA?$AN?$AA?6?$AA?9?$AA?5?$AAf?$AAl?$AAo?$AAa?$AAt?$AAi?$AAn?$AAg?$AA?5?$AAp?$AAo?$AAi?$AAn?$AAt?$AA?5?$AAs?$AAu?$AAp?$AAp?$AAo?$AAr?$AAt?$AA?5@ 10020420     LIBCMT:crt0msg.obj
+ 0002:0000447c       ??_C@_1DE@JNGNBFGO@?$AAR?$AAu?$AAn?$AAt?$AAi?$AAm?$AAe?$AA?5?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?$CB?$AA?6?$AA?6?$AAP?$AAr?$AAo?$AAg?$AAr?$AAa?$AAm?$AA?3?$AA?5?$AA?$AA@ 1002047c     LIBCMT:crt0msg.obj
+ 0002:000044b0       ??_C@_1CO@EAEJAADC@?$AA?$DM?$AAp?$AAr?$AAo?$AAg?$AAr?$AAa?$AAm?$AA?5?$AAn?$AAa?$AAm?$AAe?$AA?5?$AAu?$AAn?$AAk?$AAn?$AAo?$AAw?$AAn?$AA?$DO?$AA?$AA@ 100204b0     LIBCMT:crt0msg.obj
+ 0002:000044e0       ??_C@_17LGKOMLJ@?$AA?4?$AA?4?$AA?4?$AA?$AA@ 100204e0     LIBCMT:crt0msg.obj
+ 0002:000044e8       ??_C@_15IABLJNFO@?$AA?6?$AA?6?$AA?$AA@ 100204e8     LIBCMT:crt0msg.obj
+ 0002:000044f0       ??_C@_1EK@MBDPDCGA@?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt?$AA?5?$AAV?$AAi?$AAs?$AAu?$AAa?$AAl?$AA?5?$AAC?$AA?$CL?$AA?$CL?$AA?5?$AAR?$AAu?$AAn?$AAt?$AAi?$AAm?$AAe?$AA?5?$AAL?$AAi?$AAb@ 100204f0     LIBCMT:crt0msg.obj
+ 0002:00004540       __XcptActTab               10020540     LIBCMT:winxfltr.obj
+ 0002:000045d0       __XcptActTabCount          100205d0     LIBCMT:winxfltr.obj
+ 0002:000045d4       __XcptActTabSize           100205d4     LIBCMT:winxfltr.obj
+ 0002:000045d8       __First_FPE_Indx           100205d8     LIBCMT:winxfltr.obj
+ 0002:000045dc       __Num_FPE                  100205dc     LIBCMT:winxfltr.obj
+ 0002:000045e0       __indefinite               100205e0     LIBCMT:87disp.obj
+ 0002:000045ea       __piby2                    100205ea     LIBCMT:87disp.obj
+ 0002:00004618       __DEFAULT_CW_in_mem        10020618     LIBCMT:common.obj
+ 0002:0000461a       __pi_by_2_to_61            1002061a     LIBCMT:common.obj
+ 0002:00009e50       ___newctype                10025e50     LIBCMT:ctype.obj
+ 0002:0000a150       __wctype                   10026150     LIBCMT:ctype.obj
+ 0002:0000a358       ___newclmap                10026358     LIBCMT:ctype.obj
+ 0002:0000a4d8       ___newcumap                100264d8     LIBCMT:ctype.obj
+ 0002:0000a658       ??_C@_15PJPFLCCM@?$AAu?$AAk?$AA?$AA@ 10026658     LIBCMT:getqloc.obj
+ 0002:0000a660       ___rg_language_count       10026660     LIBCMT:getqloc.obj
+ 0002:0000a664       ___rg_country_count        10026664     LIBCMT:getqloc.obj
+ 0002:0000a668       _LcidToLocaleNameTable     10026668     LIBCMT:winapinls.obj
+ 0002:0000ad88       _LocaleNameToIndexTable    10026d88     LIBCMT:winapinls.obj
+ 0002:0000b4a8       ??_C@_15EMKDOKLE@?$AAa?$AAr?$AA?$AA@ 100274a8     LIBCMT:winapinls.obj
+ 0002:0000b4b0       ??_C@_15KNPADPLH@?$AAb?$AAg?$AA?$AA@ 100274b0     LIBCMT:winapinls.obj
+ 0002:0000b4b8       ??_C@_15EDMHLDMO@?$AAc?$AAa?$AA?$AA@ 100274b8     LIBCMT:winapinls.obj
+ 0002:0000b4c0       ??_C@_1O@BPEAJADD@?$AAz?$AAh?$AA?9?$AAC?$AAH?$AAS?$AA?$AA@ 100274c0     LIBCMT:winapinls.obj
+ 0002:0000b4d0       ??_C@_15LJNHCMNK@?$AAc?$AAs?$AA?$AA@ 100274d0     LIBCMT:winapinls.obj
+ 0002:0000b4d8       ??_C@_15FOMCIDHG@?$AAd?$AAa?$AA?$AA@ 100274d8     LIBCMT:winapinls.obj
+ 0002:0000b4e0       ??_C@_15NBKABECB@?$AAd?$AAe?$AA?$AA@ 100274e0     LIBCMT:winapinls.obj
+ 0002:0000b4e8       ??_C@_15GHPEIIAO@?$AAe?$AAl?$AA?$AA@ 100274e8     LIBCMT:winapinls.obj
+ 0002:0000b4f0       ??_C@_15MNPNEAIF@?$AAe?$AAn?$AA?$AA@ 100274f0     LIBCMT:winapinls.obj
+ 0002:0000b4f8       ??_C@_15GPIOMPMH@?$AAe?$AAs?$AA?$AA@ 100274f8     LIBCMT:winapinls.obj
+ 0002:0000b500       ??_C@_15NGLOAKJC@?$AAf?$AAi?$AA?$AA@ 10027500     LIBCMT:winapinls.obj
+ 0002:0000b508       ??_C@_15FBKGNKAM@?$AAf?$AAr?$AA?$AA@ 10027508     LIBCMT:winapinls.obj
+ 0002:0000b510       ??_C@_15KGGCNEFK@?$AAh?$AAe?$AA?$AA@ 10027510     LIBCMT:winapinls.obj
+ 0002:0000b518       ??_C@_15PGHLIDMF@?$AAh?$AAu?$AA?$AA@ 10027518     LIBCMT:winapinls.obj
+ 0002:0000b520       ??_C@_15BIEMAPLM@?$AAi?$AAs?$AA?$AA@ 10027520     LIBCMT:winapinls.obj
+ 0002:0000b528       ??_C@_15IFJLDHAF@?$AAi?$AAt?$AA?$AA@ 10027528     LIBCMT:winapinls.obj
+ 0002:0000b530       ??_C@_15GEMIOCAG@?$AAj?$AAa?$AA?$AA@ 10027530     LIBCMT:winapinls.obj
+ 0002:0000b538       ??_C@_15EPELEGJA@?$AAk?$AAo?$AA?$AA@ 10027538     LIBCMT:winapinls.obj
+ 0002:0000b540       ??_C@_15NDDHIMN@?$AAn?$AAl?$AA?$AA@ 10027540     LIBCMT:winapinls.obj
+ 0002:0000b548       ??_C@_15BPIGNHCD@?$AAn?$AAo?$AA?$AA@ 10027548     LIBCMT:winapinls.obj
+ 0002:0000b550       ??_C@_15DEOPBLCG@?$AAp?$AAl?$AA?$AA@ 10027550     LIBCMT:winapinls.obj
+ 0002:0000b558       ??_C@_15KBECGEFG@?$AAp?$AAt?$AA?$AA@ 10027558     LIBCMT:winapinls.obj
+ 0002:0000b560       ??_C@_15GLJCBFMD@?$AAr?$AAo?$AA?$AA@ 10027560     LIBCMT:winapinls.obj
+ 0002:0000b568       ??_C@_15FEDGKCDI@?$AAr?$AAu?$AA?$AA@ 10027568     LIBCMT:winapinls.obj
+ 0002:0000b570       ??_C@_15GLKMLLHM@?$AAh?$AAr?$AA?$AA@ 10027570     LIBCMT:winapinls.obj
+ 0002:0000b578       ??_C@_15CPKMFBDB@?$AAs?$AAk?$AA?$AA@ 10027578     LIBCMT:winapinls.obj
+ 0002:0000b580       ??_C@_15BAAIOGMK@?$AAs?$AAq?$AA?$AA@ 10027580     LIBCMT:winapinls.obj
+ 0002:0000b588       ??_C@_15INNPNOHD@?$AAs?$AAv?$AA?$AA@ 10027588     LIBCMT:winapinls.obj
+ 0002:0000b590       ??_C@_15CABMMOGH@?$AAt?$AAh?$AA?$AA@ 10027590     LIBCMT:winapinls.obj
+ 0002:0000b598       ??_C@_15BPLIHJJM@?$AAt?$AAr?$AA?$AA@ 10027598     LIBCMT:winapinls.obj
+ 0002:0000b5a0       ??_C@_15NEOEKKDJ@?$AAu?$AAr?$AA?$AA@ 100275a0     LIBCMT:winapinls.obj
+ 0002:0000b5a8       ??_C@_15NFICGAJK@?$AAi?$AAd?$AA?$AA@ 100275a8     LIBCMT:winapinls.obj
+ 0002:0000b5b0       ??_C@_15HPJPHDM@?$AAb?$AAe?$AA?$AA@ 100275b0     LIBCMT:winapinls.obj
+ 0002:0000b5b8       ??_C@_15LCHLGJII@?$AAs?$AAl?$AA?$AA@ 100275b8     LIBCMT:winapinls.obj
+ 0002:0000b5c0       ??_C@_15PCFJPHHO@?$AAe?$AAt?$AA?$AA@ 100275c0     LIBCMT:winapinls.obj
+ 0002:0000b5c8       ??_C@_15HPFPGODN@?$AAl?$AAv?$AA?$AA@ 100275c8     LIBCMT:winapinls.obj
+ 0002:0000b5d0       ??_C@_15NFFGKGLG@?$AAl?$AAt?$AA?$AA@ 100275d0     LIBCMT:winapinls.obj
+ 0002:0000b5d8       ??_C@_15BDAKCCHN@?$AAf?$AAa?$AA?$AA@ 100275d8     LIBCMT:winapinls.obj
+ 0002:0000b5e0       ??_C@_15NFGIAIAJ@?$AAv?$AAi?$AA?$AA@ 100275e0     LIBCMT:winapinls.obj
+ 0002:0000b5e8       ??_C@_15LMKNDMHN@?$AAh?$AAy?$AA?$AA@ 100275e8     LIBCMT:winapinls.obj
+ 0002:0000b5f0       ??_C@_15IJBHMCFL@?$AAa?$AAz?$AA?$AA@ 100275f0     LIBCMT:winapinls.obj
+ 0002:0000b5f8       ??_C@_15EKOFJABL@?$AAe?$AAu?$AA?$AA@ 100275f8     LIBCMT:winapinls.obj
+ 0002:0000b600       ??_C@_15BGHADCNK@?$AAm?$AAk?$AA?$AA@ 10027600     LIBCMT:winapinls.obj
+ 0002:0000b608       ??_C@_15JDNICKHM@?$AAa?$AAf?$AA?$AA@ 10027608     LIBCMT:winapinls.obj
+ 0002:0000b610       ??_C@_15KPJEDBKD@?$AAk?$AAa?$AA?$AA@ 10027610     LIBCMT:winapinls.obj
+ 0002:0000b618       ??_C@_15PDNFFFEO@?$AAf?$AAo?$AA?$AA@ 10027618     LIBCMT:winapinls.obj
+ 0002:0000b620       ??_C@_15OMLEGLOC@?$AAh?$AAi?$AA?$AA@ 10027620     LIBCMT:winapinls.obj
+ 0002:0000b628       ??_C@_15IDNNENKK@?$AAm?$AAs?$AA?$AA@ 10027628     LIBCMT:winapinls.obj
+ 0002:0000b630       ??_C@_15MACJNBMH@?$AAk?$AAk?$AA?$AA@ 10027630     LIBCMT:winapinls.obj
+ 0002:0000b638       ??_C@_15DKDJEOND@?$AAk?$AAy?$AA?$AA@ 10027638     LIBCMT:winapinls.obj
+ 0002:0000b640       ??_C@_15DFGDLJBG@?$AAs?$AAw?$AA?$AA@ 10027640     LIBCMT:winapinls.obj
+ 0002:0000b648       ??_C@_15BBFAICNG@?$AAu?$AAz?$AA?$AA@ 10027648     LIBCMT:winapinls.obj
+ 0002:0000b650       ??_C@_15DKNDCGEA@?$AAt?$AAt?$AA?$AA@ 10027650     LIBCMT:winapinls.obj
+ 0002:0000b658       ??_C@_15MGIFMDPL@?$AAp?$AAa?$AA?$AA@ 10027658     LIBCMT:winapinls.obj
+ 0002:0000b660       ??_C@_15HCNDBBA@?$AAg?$AAu?$AA?$AA@ 10027660     LIBCMT:winapinls.obj
+ 0002:0000b668       ??_C@_15FNBEIBON@?$AAt?$AAa?$AA?$AA@ 10027668     LIBCMT:winapinls.obj
+ 0002:0000b670       ??_C@_15NCHGBGLK@?$AAt?$AAe?$AA?$AA@ 10027670     LIBCMT:winapinls.obj
+ 0002:0000b678       ??_C@_15PHPHCBPF@?$AAk?$AAn?$AA?$AA@ 10027678     LIBCMT:winapinls.obj
+ 0002:0000b680       ??_C@_15DLGBCKMP@?$AAm?$AAr?$AA?$AA@ 10027680     LIBCMT:winapinls.obj
+ 0002:0000b688       ??_C@_15EABBLBFF@?$AAs?$AAa?$AA?$AA@ 10027688     LIBCMT:winapinls.obj
+ 0002:0000b690       ??_C@_15CBKOMCOI@?$AAm?$AAn?$AA?$AA@ 10027690     LIBCMT:winapinls.obj
+ 0002:0000b698       ??_C@_15CKDMCJAF@?$AAg?$AAl?$AA?$AA@ 10027698     LIBCMT:winapinls.obj
+ 0002:0000b6a0       ??_C@_17CNJFBPG@?$AAk?$AAo?$AAk?$AA?$AA@ 100276a0     LIBCMT:winapinls.obj
+ 0002:0000b6a8       ??_C@_17FFBJICPL@?$AAs?$AAy?$AAr?$AA?$AA@ 100276a8     LIBCMT:winapinls.obj
+ 0002:0000b6b0       ??_C@_17KPNDCPAF@?$AAd?$AAi?$AAv?$AA?$AA@ 100276b0     LIBCMT:winapinls.obj
+ 0002:0000b6b8       ??_C@_11LOCGONAA@?$AA?$AA@ 100276b8     LIBCMT:winapinls.obj
+ 0002:0000b6bc       ??_C@_1M@OKAHONE@?$AAa?$AAr?$AA?9?$AAS?$AAA?$AA?$AA@ 100276bc     LIBCMT:winapinls.obj
+ 0002:0000b6c8       ??_C@_1M@FFFIGIGK@?$AAb?$AAg?$AA?9?$AAB?$AAG?$AA?$AA@ 100276c8     LIBCMT:winapinls.obj
+ 0002:0000b6d4       ??_C@_1M@BJNKEDC@?$AAc?$AAa?$AA?9?$AAE?$AAS?$AA?$AA@ 100276d4     LIBCMT:winapinls.obj
+ 0002:0000b6e0       ??_C@_1M@IJJHFJHA@?$AAc?$AAs?$AA?9?$AAC?$AAZ?$AA?$AA@ 100276e0     LIBCMT:winapinls.obj
+ 0002:0000b6ec       ??_C@_1M@CLPEOBGI@?$AAd?$AAa?$AA?9?$AAD?$AAK?$AA?$AA@ 100276ec     LIBCMT:winapinls.obj
+ 0002:0000b6f8       ??_C@_1M@MCMADGCB@?$AAd?$AAe?$AA?9?$AAD?$AAE?$AA?$AA@ 100276f8     LIBCMT:winapinls.obj
+ 0002:0000b704       ??_C@_1M@OOCKEMAM@?$AAe?$AAl?$AA?9?$AAG?$AAR?$AA?$AA@ 10027704     LIBCMT:winapinls.obj
+ 0002:0000b710       ??_C@_1M@DDNJFGID@?$AAf?$AAi?$AA?9?$AAF?$AAI?$AA?$AA@ 10027710     LIBCMT:winapinls.obj
+ 0002:0000b71c       ??_C@_1M@GLIPPMAC@?$AAf?$AAr?$AA?9?$AAF?$AAR?$AA?$AA@ 1002771c     LIBCMT:winapinls.obj
+ 0002:0000b728       ??_C@_1M@GFMCHPE@?$AAh?$AAe?$AA?9?$AAI?$AAL?$AA?$AA@ 10027728     LIBCMT:winapinls.obj
+ 0002:0000b734       ??_C@_1M@MHLPGNKM@?$AAh?$AAu?$AA?9?$AAH?$AAU?$AA?$AA@ 10027734     LIBCMT:winapinls.obj
+ 0002:0000b740       ??_C@_1M@LPDDNNPN@?$AAi?$AAs?$AA?9?$AAI?$AAS?$AA?$AA@ 10027740     LIBCMT:winapinls.obj
+ 0002:0000b74c       ??_C@_1M@MADIPODN@?$AAi?$AAt?$AA?9?$AAI?$AAT?$AA?$AA@ 1002774c     LIBCMT:winapinls.obj
+ 0002:0000b758       ??_C@_1M@IHBJJGG@?$AAn?$AAl?$AA?9?$AAN?$AAL?$AA?$AA@ 10027758     LIBCMT:winapinls.obj
+ 0002:0000b764       ??_C@_1M@EANAGDL@?$AAn?$AAb?$AA?9?$AAN?$AAO?$AA?$AA@ 10027764     LIBCMT:winapinls.obj
+ 0002:0000b770       ??_C@_1M@NEIEMEGP@?$AAp?$AAl?$AA?9?$AAP?$AAL?$AA?$AA@ 10027770     LIBCMT:winapinls.obj
+ 0002:0000b77c       ??_C@_1M@BOCFIGEP@?$AAp?$AAt?$AA?9?$AAB?$AAR?$AA?$AA@ 1002777c     LIBCMT:winapinls.obj
+ 0002:0000b788       ??_C@_1M@IMPFOPBG@?$AAr?$AAo?$AA?9?$AAR?$AAO?$AA?$AA@ 10027788     LIBCMT:winapinls.obj
+ 0002:0000b794       ??_C@_1M@IDNNEJMM@?$AAr?$AAu?$AA?9?$AAR?$AAU?$AA?$AA@ 10027794     LIBCMT:winapinls.obj
+ 0002:0000b7a0       ??_C@_1M@LILEEOGM@?$AAh?$AAr?$AA?9?$AAH?$AAR?$AA?$AA@ 100277a0     LIBCMT:winapinls.obj
+ 0002:0000b7ac       ??_C@_1M@FKIFEHPB@?$AAs?$AAk?$AA?9?$AAS?$AAK?$AA?$AA@ 100277ac     LIBCMT:winapinls.obj
+ 0002:0000b7b8       ??_C@_1M@LJMAMNPJ@?$AAs?$AAq?$AA?9?$AAA?$AAL?$AA?$AA@ 100277b8     LIBCMT:winapinls.obj
+ 0002:0000b7c4       ??_C@_1M@GIAKDKJK@?$AAs?$AAv?$AA?9?$AAS?$AAE?$AA?$AA@ 100277c4     LIBCMT:winapinls.obj
+ 0002:0000b7d0       ??_C@_1M@MKJKIKCL@?$AAt?$AAh?$AA?9?$AAT?$AAH?$AA?$AA@ 100277d0     LIBCMT:winapinls.obj
+ 0002:0000b7dc       ??_C@_1M@MFLCCMPB@?$AAt?$AAr?$AA?9?$AAT?$AAR?$AA?$AA@ 100277dc     LIBCMT:winapinls.obj
+ 0002:0000b7e8       ??_C@_1M@OIJHDKJN@?$AAu?$AAr?$AA?9?$AAP?$AAK?$AA?$AA@ 100277e8     LIBCMT:winapinls.obj
+ 0002:0000b7f4       ??_C@_1M@LHIPCIEK@?$AAi?$AAd?$AA?9?$AAI?$AAD?$AA?$AA@ 100277f4     LIBCMT:winapinls.obj
+ 0002:0000b800       ??_C@_1M@MFMOBGI@?$AAu?$AAk?$AA?9?$AAU?$AAA?$AA?$AA@ 10027800     LIBCMT:winapinls.obj
+ 0002:0000b80c       ??_C@_1M@OBGLJIPL@?$AAb?$AAe?$AA?9?$AAB?$AAY?$AA?$AA@ 1002780c     LIBCMT:winapinls.obj
+ 0002:0000b818       ??_C@_1M@BCFAJEAD@?$AAs?$AAl?$AA?9?$AAS?$AAI?$AA?$AA@ 10027818     LIBCMT:winapinls.obj
+ 0002:0000b824       ??_C@_1M@FKFFEDDN@?$AAe?$AAt?$AA?9?$AAE?$AAE?$AA?$AA@ 10027824     LIBCMT:winapinls.obj
+ 0002:0000b830       ??_C@_1M@KGKKAACI@?$AAl?$AAv?$AA?9?$AAL?$AAV?$AA?$AA@ 10027830     LIBCMT:winapinls.obj
+ 0002:0000b83c       ??_C@_1M@IFGBIJO@?$AAl?$AAt?$AA?9?$AAL?$AAT?$AA?$AA@ 1002783c     LIBCMT:winapinls.obj
+ 0002:0000b848       ??_C@_1M@FGEAHEDM@?$AAf?$AAa?$AA?9?$AAI?$AAR?$AA?$AA@ 10027848     LIBCMT:winapinls.obj
+ 0002:0000b854       ??_C@_1M@KBMAIBFN@?$AAv?$AAi?$AA?9?$AAV?$AAN?$AA?$AA@ 10027854     LIBCMT:winapinls.obj
+ 0002:0000b860       ??_C@_1M@GPCBKDJK@?$AAh?$AAy?$AA?9?$AAA?$AAM?$AA?$AA@ 10027860     LIBCMT:winapinls.obj
+ 0002:0000b86c       ??_C@_1BG@BECMDDJB@?$AAa?$AAz?$AA?9?$AAA?$AAZ?$AA?9?$AAL?$AAa?$AAt?$AAn?$AA?$AA@ 1002786c     LIBCMT:winapinls.obj
+ 0002:0000b884       ??_C@_1M@MAOFCAEA@?$AAe?$AAu?$AA?9?$AAE?$AAS?$AA?$AA@ 10027884     LIBCMT:winapinls.obj
+ 0002:0000b890       ??_C@_1M@IGHABKPI@?$AAm?$AAk?$AA?9?$AAM?$AAK?$AA?$AA@ 10027890     LIBCMT:winapinls.obj
+ 0002:0000b89c       ??_C@_1M@IAIGNEJG@?$AAt?$AAn?$AA?9?$AAZ?$AAA?$AA?$AA@ 1002789c     LIBCMT:winapinls.obj
+ 0002:0000b8a8       ??_C@_1M@IIJCOJFA@?$AAx?$AAh?$AA?9?$AAZ?$AAA?$AA?$AA@ 100278a8     LIBCMT:winapinls.obj
+ 0002:0000b8b4       ??_C@_1M@LGPJHNJH@?$AAz?$AAu?$AA?9?$AAZ?$AAA?$AA?$AA@ 100278b4     LIBCMT:winapinls.obj
+ 0002:0000b8c0       ??_C@_1M@HOKAOIO@?$AAa?$AAf?$AA?9?$AAZ?$AAA?$AA?$AA@ 100278c0     LIBCMT:winapinls.obj
+ 0002:0000b8cc       ??_C@_1M@DPCLHLIE@?$AAk?$AAa?$AA?9?$AAG?$AAE?$AA?$AA@ 100278cc     LIBCMT:winapinls.obj
+ 0002:0000b8d8       ??_C@_1M@BLKMHJBI@?$AAf?$AAo?$AA?9?$AAF?$AAO?$AA?$AA@ 100278d8     LIBCMT:winapinls.obj
+ 0002:0000b8e4       ??_C@_1M@LGGJAPPB@?$AAh?$AAi?$AA?9?$AAI?$AAN?$AA?$AA@ 100278e4     LIBCMT:winapinls.obj
+ 0002:0000b8f0       ??_C@_1M@FIKPIHFE@?$AAm?$AAt?$AA?9?$AAM?$AAT?$AA?$AA@ 100278f0     LIBCMT:winapinls.obj
+ 0002:0000b8fc       ??_C@_1M@HEGGPBFA@?$AAs?$AAe?$AA?9?$AAN?$AAO?$AA?$AA@ 100278fc     LIBCMT:winapinls.obj
+ 0002:0000b908       ??_C@_1M@EIBJEEPA@?$AAm?$AAs?$AA?9?$AAM?$AAY?$AA?$AA@ 10027908     LIBCMT:winapinls.obj
+ 0002:0000b914       ??_C@_1M@FHLBGMPP@?$AAk?$AAk?$AA?9?$AAK?$AAZ?$AA?$AA@ 10027914     LIBCMT:winapinls.obj
+ 0002:0000b920       ??_C@_1M@NGJJLCGI@?$AAk?$AAy?$AA?9?$AAK?$AAG?$AA?$AA@ 10027920     LIBCMT:winapinls.obj
+ 0002:0000b92c       ??_C@_1M@GIENNBFC@?$AAs?$AAw?$AA?9?$AAK?$AAE?$AA?$AA@ 1002792c     LIBCMT:winapinls.obj
+ 0002:0000b938       ??_C@_1BG@NDGMJIMJ@?$AAu?$AAz?$AA?9?$AAU?$AAZ?$AA?9?$AAL?$AAa?$AAt?$AAn?$AA?$AA@ 10027938     LIBCMT:winapinls.obj
+ 0002:0000b950       ??_C@_1M@IDCCIHBC@?$AAt?$AAt?$AA?9?$AAR?$AAU?$AA?$AA@ 10027950     LIBCMT:winapinls.obj
+ 0002:0000b95c       ??_C@_1M@LOICPMOJ@?$AAb?$AAn?$AA?9?$AAI?$AAN?$AA?$AA@ 1002795c     LIBCMT:winapinls.obj
+ 0002:0000b968       ??_C@_1M@KPKKNEAH@?$AAp?$AAa?$AA?9?$AAI?$AAN?$AA?$AA@ 10027968     LIBCMT:winapinls.obj
+ 0002:0000b974       ??_C@_1M@PJGPPBOG@?$AAg?$AAu?$AA?9?$AAI?$AAN?$AA?$AA@ 10027974     LIBCMT:winapinls.obj
+ 0002:0000b980       ??_C@_1M@KMKMOPHI@?$AAt?$AAa?$AA?9?$AAI?$AAN?$AA?$AA@ 10027980     LIBCMT:winapinls.obj
+ 0002:0000b98c       ??_C@_1M@KFEHEPAC@?$AAt?$AAe?$AA?9?$AAI?$AAN?$AA?$AA@ 1002798c     LIBCMT:winapinls.obj
+ 0002:0000b998       ??_C@_1M@CDCLMGHI@?$AAk?$AAn?$AA?9?$AAI?$AAN?$AA?$AA@ 10027998     LIBCMT:winapinls.obj
+ 0002:0000b9a4       ??_C@_1M@MIODLDKF@?$AAm?$AAl?$AA?9?$AAI?$AAN?$AA?$AA@ 100279a4     LIBCMT:winapinls.obj
+ 0002:0000b9b0       ??_C@_1M@PBIEACPO@?$AAm?$AAr?$AA?9?$AAI?$AAN?$AA?$AA@ 100279b0     LIBCMT:winapinls.obj
+ 0002:0000b9bc       ??_C@_1M@NIDEAGPH@?$AAs?$AAa?$AA?9?$AAI?$AAN?$AA?$AA@ 100279bc     LIBCMT:winapinls.obj
+ 0002:0000b9c8       ??_C@_1M@FHIHCBIO@?$AAm?$AAn?$AA?9?$AAM?$AAN?$AA?$AA@ 100279c8     LIBCMT:winapinls.obj
+ 0002:0000b9d4       ??_C@_1M@JAIJPENP@?$AAc?$AAy?$AA?9?$AAG?$AAB?$AA?$AA@ 100279d4     LIBCMT:winapinls.obj
+ 0002:0000b9e0       ??_C@_1M@PHGFBEPN@?$AAg?$AAl?$AA?9?$AAE?$AAS?$AA?$AA@ 100279e0     LIBCMT:winapinls.obj
+ 0002:0000b9ec       ??_C@_1O@KPIPDNCP@?$AAk?$AAo?$AAk?$AA?9?$AAI?$AAN?$AA?$AA@ 100279ec     LIBCMT:winapinls.obj
+ 0002:0000b9fc       ??_C@_1O@KNHJLDJA@?$AAs?$AAy?$AAr?$AA?9?$AAS?$AAY?$AA?$AA@ 100279fc     LIBCMT:winapinls.obj
+ 0002:0000ba0c       ??_C@_1O@MKEKBLAH@?$AAd?$AAi?$AAv?$AA?9?$AAM?$AAV?$AA?$AA@ 10027a0c     LIBCMT:winapinls.obj
+ 0002:0000ba1c       ??_C@_1O@OHDCKDDF@?$AAq?$AAu?$AAz?$AA?9?$AAB?$AAO?$AA?$AA@ 10027a1c     LIBCMT:winapinls.obj
+ 0002:0000ba2c       ??_C@_1M@LEPJNLFD@?$AAn?$AAs?$AA?9?$AAZ?$AAA?$AA?$AA@ 10027a2c     LIBCMT:winapinls.obj
+ 0002:0000ba38       ??_C@_1M@OMLEIIJB@?$AAm?$AAi?$AA?9?$AAN?$AAZ?$AA?$AA@ 10027a38     LIBCMT:winapinls.obj
+ 0002:0000ba44       ??_C@_1M@PMPEAILG@?$AAa?$AAr?$AA?9?$AAI?$AAQ?$AA?$AA@ 10027a44     LIBCMT:winapinls.obj
+ 0002:0000ba50       ??_C@_1M@CNKPNOEE@?$AAd?$AAe?$AA?9?$AAC?$AAH?$AA?$AA@ 10027a50     LIBCMT:winapinls.obj
+ 0002:0000ba5c       ??_C@_1M@LKMGMLKO@?$AAe?$AAn?$AA?9?$AAG?$AAB?$AA?$AA@ 10027a5c     LIBCMT:winapinls.obj
+ 0002:0000ba68       ??_C@_1M@PGKJFFGL@?$AAe?$AAs?$AA?9?$AAM?$AAX?$AA?$AA@ 10027a68     LIBCMT:winapinls.obj
+ 0002:0000ba74       ??_C@_1M@DNNANBDC@?$AAf?$AAr?$AA?9?$AAB?$AAE?$AA?$AA@ 10027a74     LIBCMT:winapinls.obj
+ 0002:0000ba80       ??_C@_1M@HLGMDFHM@?$AAi?$AAt?$AA?9?$AAC?$AAH?$AA?$AA@ 10027a80     LIBCMT:winapinls.obj
+ 0002:0000ba8c       ??_C@_1M@CLLBGJH@?$AAn?$AAl?$AA?9?$AAB?$AAE?$AA?$AA@ 10027a8c     LIBCMT:winapinls.obj
+ 0002:0000ba98       ??_C@_1M@BODBOGLF@?$AAn?$AAn?$AA?9?$AAN?$AAO?$AA?$AA@ 10027a98     LIBCMT:winapinls.obj
+ 0002:0000baa4       ??_C@_1M@HFFAHKAD@?$AAp?$AAt?$AA?9?$AAP?$AAT?$AA?$AA@ 10027aa4     LIBCMT:winapinls.obj
+ 0002:0000bab0       ??_C@_1BG@LNOAKHIE@?$AAs?$AAr?$AA?9?$AAS?$AAP?$AA?9?$AAL?$AAa?$AAt?$AAn?$AA?$AA@ 10027ab0     LIBCMT:winapinls.obj
+ 0002:0000bac8       ??_C@_1M@HBMHBGAK@?$AAs?$AAv?$AA?9?$AAF?$AAI?$AA?$AA@ 10027ac8     LIBCMT:winapinls.obj
+ 0002:0000bad4       ??_C@_1BG@DGCJGJBE@?$AAa?$AAz?$AA?9?$AAA?$AAZ?$AA?9?$AAC?$AAy?$AAr?$AAl?$AA?$AA@ 10027ad4     LIBCMT:winapinls.obj
+ 0002:0000baec       ??_C@_1M@KEJDAAHB@?$AAs?$AAe?$AA?9?$AAS?$AAE?$AA?$AA@ 10027aec     LIBCMT:winapinls.obj
+ 0002:0000baf8       ??_C@_1M@HEIBJJAD@?$AAm?$AAs?$AA?9?$AAB?$AAN?$AA?$AA@ 10027af8     LIBCMT:winapinls.obj
+ 0002:0000bb04       ??_C@_1BG@PBGJMCEM@?$AAu?$AAz?$AA?9?$AAU?$AAZ?$AA?9?$AAC?$AAy?$AAr?$AAl?$AA?$AA@ 10027b04     LIBCMT:winapinls.obj
+ 0002:0000bb1c       ??_C@_1O@LAOBCMDF@?$AAq?$AAu?$AAz?$AA?9?$AAE?$AAC?$AA?$AA@ 10027b1c     LIBCMT:winapinls.obj
+ 0002:0000bb2c       ??_C@_1M@POEEMAIO@?$AAa?$AAr?$AA?9?$AAE?$AAG?$AA?$AA@ 10027b2c     LIBCMT:winapinls.obj
+ 0002:0000bb38       ??_C@_1M@EFAKDEDL@?$AAz?$AAh?$AA?9?$AAH?$AAK?$AA?$AA@ 10027b38     LIBCMT:winapinls.obj
+ 0002:0000bb44       ??_C@_1M@HKKIJHGI@?$AAd?$AAe?$AA?9?$AAA?$AAT?$AA?$AA@ 10027b44     LIBCMT:winapinls.obj
+ 0002:0000bb50       ??_C@_1M@KBFBEHJF@?$AAe?$AAn?$AA?9?$AAA?$AAU?$AA?$AA@ 10027b50     LIBCMT:winapinls.obj
+ 0002:0000bb5c       ??_C@_1M@MNPLFAAH@?$AAe?$AAs?$AA?9?$AAE?$AAS?$AA?$AA@ 10027b5c     LIBCMT:winapinls.obj
+ 0002:0000bb68       ??_C@_1M@HJOOJFMA@?$AAf?$AAr?$AA?9?$AAC?$AAA?$AA?$AA@ 10027b68     LIBCMT:winapinls.obj
+ 0002:0000bb74       ??_C@_1BG@JPOFPNAB@?$AAs?$AAr?$AA?9?$AAS?$AAP?$AA?9?$AAC?$AAy?$AAr?$AAl?$AA?$AA@ 10027b74     LIBCMT:winapinls.obj
+ 0002:0000bb8c       ??_C@_1M@LNFOCMOB@?$AAs?$AAe?$AA?9?$AAF?$AAI?$AA?$AA@ 10027b8c     LIBCMT:winapinls.obj
+ 0002:0000bb98       ??_C@_1O@MGJBOAMB@?$AAq?$AAu?$AAz?$AA?9?$AAP?$AAE?$AA?$AA@ 10027b98     LIBCMT:winapinls.obj
+ 0002:0000bba8       ??_C@_1M@GJINLBOK@?$AAa?$AAr?$AA?9?$AAL?$AAY?$AA?$AA@ 10027ba8     LIBCMT:winapinls.obj
+ 0002:0000bbb4       ??_C@_1M@GGMNHJNL@?$AAz?$AAh?$AA?9?$AAS?$AAG?$AA?$AA@ 10027bb4     LIBCMT:winapinls.obj
+ 0002:0000bbc0       ??_C@_1M@HOIKODND@?$AAd?$AAe?$AA?9?$AAL?$AAU?$AA?$AA@ 10027bc0     LIBCMT:winapinls.obj
+ 0002:0000bbcc       ??_C@_1M@DDOCCGFG@?$AAe?$AAn?$AA?9?$AAC?$AAA?$AA?$AA@ 10027bcc     LIBCMT:winapinls.obj
+ 0002:0000bbd8       ??_C@_1M@BNOEMJLF@?$AAe?$AAs?$AA?9?$AAG?$AAT?$AA?$AA@ 10027bd8     LIBCMT:winapinls.obj
+ 0002:0000bbe4       ??_C@_1M@EOGNKEK@?$AAf?$AAr?$AA?9?$AAC?$AAH?$AA?$AA@ 10027be4     LIBCMT:winapinls.obj
+ 0002:0000bbf0       ??_C@_1M@FLIDJFHL@?$AAh?$AAr?$AA?9?$AAB?$AAA?$AA?$AA@ 10027bf0     LIBCMT:winapinls.obj
+ 0002:0000bbfc       ??_C@_1O@FMCELNAJ@?$AAs?$AAm?$AAj?$AA?9?$AAN?$AAO?$AA?$AA@ 10027bfc     LIBCMT:winapinls.obj
+ 0002:0000bc0c       ??_C@_1M@JHGLJMGJ@?$AAa?$AAr?$AA?9?$AAD?$AAZ?$AA?$AA@ 10027c0c     LIBCMT:winapinls.obj
+ 0002:0000bc18       ??_C@_1M@JKKFDCNP@?$AAz?$AAh?$AA?9?$AAM?$AAO?$AA?$AA@ 10027c18     LIBCMT:winapinls.obj
+ 0002:0000bc24       ??_C@_1M@GEEFALPE@?$AAd?$AAe?$AA?9?$AAL?$AAI?$AA?$AA@ 10027c24     LIBCMT:winapinls.obj
+ 0002:0000bc30       ??_C@_1M@IGEOFBG@?$AAe?$AAn?$AA?9?$AAN?$AAZ?$AA?$AA@ 10027c30     LIBCMT:winapinls.obj
+ 0002:0000bc3c       ??_C@_1M@KDBONEHP@?$AAe?$AAs?$AA?9?$AAC?$AAR?$AA?$AA@ 10027c3c     LIBCMT:winapinls.obj
+ 0002:0000bc48       ??_C@_1M@FHMDOHNN@?$AAf?$AAr?$AA?9?$AAL?$AAU?$AA?$AA@ 10027c48     LIBCMT:winapinls.obj
+ 0002:0000bc54       ??_C@_1BG@NFKKMAFG@?$AAb?$AAs?$AA?9?$AAB?$AAA?$AA?9?$AAL?$AAa?$AAt?$AAn?$AA?$AA@ 10027c54     LIBCMT:winapinls.obj
+ 0002:0000bc6c       ??_C@_1O@IMNBEMCI@?$AAs?$AAm?$AAj?$AA?9?$AAS?$AAE?$AA?$AA@ 10027c6c     LIBCMT:winapinls.obj
+ 0002:0000bc7c       ??_C@_1M@DHHMBNDP@?$AAa?$AAr?$AA?9?$AAM?$AAA?$AA?$AA@ 10027c7c     LIBCMT:winapinls.obj
+ 0002:0000bc88       ??_C@_1M@BNBLJCGH@?$AAe?$AAn?$AA?9?$AAI?$AAE?$AA?$AA@ 10027c88     LIBCMT:winapinls.obj
+ 0002:0000bc94       ??_C@_1M@GEPAFMDL@?$AAe?$AAs?$AA?9?$AAP?$AAA?$AA?$AA@ 10027c94     LIBCMT:winapinls.obj
+ 0002:0000bca0       ??_C@_1M@OJONDMDL@?$AAf?$AAr?$AA?9?$AAM?$AAC?$AA?$AA@ 10027ca0     LIBCMT:winapinls.obj
+ 0002:0000bcac       ??_C@_1BG@OBCNFJB@?$AAs?$AAr?$AA?9?$AAB?$AAA?$AA?9?$AAL?$AAa?$AAt?$AAn?$AA?$AA@ 10027cac     LIBCMT:winapinls.obj
+ 0002:0000bcc4       ??_C@_1O@KEMEEGPO@?$AAs?$AAm?$AAa?$AA?9?$AAN?$AAO?$AA?$AA@ 10027cc4     LIBCMT:winapinls.obj
+ 0002:0000bcd4       ??_C@_1M@ELMGFODK@?$AAa?$AAr?$AA?9?$AAT?$AAN?$AA?$AA@ 10027cd4     LIBCMT:winapinls.obj
+ 0002:0000bce0       ??_C@_1M@BHDLHFAF@?$AAe?$AAn?$AA?9?$AAZ?$AAA?$AA?$AA@ 10027ce0     LIBCMT:winapinls.obj
+ 0002:0000bcec       ??_C@_1M@BMGIGLIF@?$AAe?$AAs?$AA?9?$AAD?$AAO?$AA?$AA@ 10027cec     LIBCMT:winapinls.obj
+ 0002:0000bcf8       ??_C@_1BG@CMBHIPBE@?$AAs?$AAr?$AA?9?$AAB?$AAA?$AA?9?$AAC?$AAy?$AAr?$AAl?$AA?$AA@ 10027cf8     LIBCMT:winapinls.obj
+ 0002:0000bd10       ??_C@_1O@HEDBLHNP@?$AAs?$AAm?$AAa?$AA?9?$AAS?$AAE?$AA?$AA@ 10027d10     LIBCMT:winapinls.obj
+ 0002:0000bd20       ??_C@_1M@DAGCADIM@?$AAa?$AAr?$AA?9?$AAO?$AAM?$AA?$AA@ 10027d20     LIBCMT:winapinls.obj
+ 0002:0000bd2c       ??_C@_1M@FODLMICG@?$AAe?$AAn?$AA?9?$AAJ?$AAM?$AA?$AA@ 10027d2c     LIBCMT:winapinls.obj
+ 0002:0000bd38       ??_C@_1M@DNMLCIHB@?$AAe?$AAs?$AA?9?$AAV?$AAE?$AA?$AA@ 10027d38     LIBCMT:winapinls.obj
+ 0002:0000bd44       ??_C@_1O@EOKHMKJK@?$AAs?$AAm?$AAs?$AA?9?$AAF?$AAI?$AA?$AA@ 10027d44     LIBCMT:winapinls.obj
+ 0002:0000bd54       ??_C@_1M@CAFJMKOF@?$AAa?$AAr?$AA?9?$AAY?$AAE?$AA?$AA@ 10027d54     LIBCMT:winapinls.obj
+ 0002:0000bd60       ??_C@_1M@CBFHIJLI@?$AAe?$AAn?$AA?9?$AAC?$AAB?$AA?$AA@ 10027d60     LIBCMT:winapinls.obj
+ 0002:0000bd6c       ??_C@_1M@BGNFLDN@?$AAe?$AAs?$AA?9?$AAC?$AAO?$AA?$AA@ 10027d6c     LIBCMT:winapinls.obj
+ 0002:0000bd78       ??_C@_1O@JMPHMAMC@?$AAs?$AAm?$AAn?$AA?9?$AAF?$AAI?$AA?$AA@ 10027d78     LIBCMT:winapinls.obj
+ 0002:0000bd88       ??_C@_1M@JLANABKE@?$AAa?$AAr?$AA?9?$AAS?$AAY?$AA?$AA@ 10027d88     LIBCMT:winapinls.obj
+ 0002:0000bd94       ??_C@_1M@HPKGCFGN@?$AAe?$AAn?$AA?9?$AAB?$AAZ?$AA?$AA@ 10027d94     LIBCMT:winapinls.obj
+ 0002:0000bda0       ??_C@_1M@OLJCMLGM@?$AAe?$AAs?$AA?9?$AAP?$AAE?$AA?$AA@ 10027da0     LIBCMT:winapinls.obj
+ 0002:0000bdac       ??_C@_1M@MKKGFKLE@?$AAa?$AAr?$AA?9?$AAJ?$AAO?$AA?$AA@ 10027dac     LIBCMT:winapinls.obj
+ 0002:0000bdb8       ??_C@_1M@EKPGLDNI@?$AAe?$AAn?$AA?9?$AAT?$AAT?$AA?$AA@ 10027db8     LIBCMT:winapinls.obj
+ 0002:0000bdc4       ??_C@_1M@OONGHFHE@?$AAe?$AAs?$AA?9?$AAA?$AAR?$AA?$AA@ 10027dc4     LIBCMT:winapinls.obj
+ 0002:0000bdd0       ??_C@_1M@OOJFGBHE@?$AAa?$AAr?$AA?9?$AAL?$AAB?$AA?$AA@ 10027dd0     LIBCMT:winapinls.obj
+ 0002:0000bddc       ??_C@_1M@GCEJHNEG@?$AAe?$AAn?$AA?9?$AAZ?$AAW?$AA?$AA@ 10027ddc     LIBCMT:winapinls.obj
+ 0002:0000bde8       ??_C@_1M@JNOCAHJI@?$AAe?$AAs?$AA?9?$AAE?$AAC?$AA?$AA@ 10027de8     LIBCMT:winapinls.obj
+ 0002:0000bdf4       ??_C@_1M@JEFHPGGB@?$AAa?$AAr?$AA?9?$AAK?$AAW?$AA?$AA@ 10027df4     LIBCMT:winapinls.obj
+ 0002:0000be00       ??_C@_1M@MLKIBJOJ@?$AAe?$AAn?$AA?9?$AAP?$AAH?$AA?$AA@ 10027e00     LIBCMT:winapinls.obj
+ 0002:0000be0c       ??_C@_1M@BDNIPEND@?$AAe?$AAs?$AA?9?$AAC?$AAL?$AA?$AA@ 10027e0c     LIBCMT:winapinls.obj
+ 0002:0000be18       ??_C@_1M@MPNMEKBD@?$AAa?$AAr?$AA?9?$AAA?$AAE?$AA?$AA@ 10027e18     LIBCMT:winapinls.obj
+ 0002:0000be24       ??_C@_1M@KBJALCPI@?$AAe?$AAs?$AA?9?$AAU?$AAY?$AA?$AA@ 10027e24     LIBCMT:winapinls.obj
+ 0002:0000be30       ??_C@_1M@LLCCOAGA@?$AAa?$AAr?$AA?9?$AAB?$AAH?$AA?$AA@ 10027e30     LIBCMT:winapinls.obj
+ 0002:0000be3c       ??_C@_1M@PBFNCDEL@?$AAe?$AAs?$AA?9?$AAP?$AAY?$AA?$AA@ 10027e3c     LIBCMT:winapinls.obj
+ 0002:0000be48       ??_C@_1M@EDGINPNP@?$AAa?$AAr?$AA?9?$AAQ?$AAA?$AA?$AA@ 10027e48     LIBCMT:winapinls.obj
+ 0002:0000be54       ??_C@_1M@MKDBIIJI@?$AAe?$AAs?$AA?9?$AAB?$AAO?$AA?$AA@ 10027e54     LIBCMT:winapinls.obj
+ 0002:0000be60       ??_C@_1M@CPKKEBLD@?$AAe?$AAs?$AA?9?$AAS?$AAV?$AA?$AA@ 10027e60     LIBCMT:winapinls.obj
+ 0002:0000be6c       ??_C@_1M@NDBGMMJL@?$AAe?$AAs?$AA?9?$AAH?$AAN?$AA?$AA@ 10027e6c     LIBCMT:winapinls.obj
+ 0002:0000be78       ??_C@_1M@JIJIBHDP@?$AAe?$AAs?$AA?9?$AAN?$AAI?$AA?$AA@ 10027e78     LIBCMT:winapinls.obj
+ 0002:0000be84       ??_C@_1M@CGFMKEEK@?$AAe?$AAs?$AA?9?$AAP?$AAR?$AA?$AA@ 10027e84     LIBCMT:winapinls.obj
+ 0002:0000be90       ??_C@_1O@ICJHKIIK@?$AAz?$AAh?$AA?9?$AAC?$AAH?$AAT?$AA?$AA@ 10027e90     LIBCMT:winapinls.obj
+ 0002:0000bea0       ??_C@_15CLNEJCE@?$AAs?$AAr?$AA?$AA@ 10027ea0     LIBCMT:winapinls.obj
+ 0002:0000bea8       ??_C@_1M@KAHEKEIG@?$AAa?$AAf?$AA?9?$AAz?$AAa?$AA?$AA@ 10027ea8     LIBCMT:winapinls.obj
+ 0002:0000beb4       ??_C@_1M@GIECOABL@?$AAa?$AAr?$AA?9?$AAa?$AAe?$AA?$AA@ 10027eb4     LIBCMT:winapinls.obj
+ 0002:0000bec0       ??_C@_1M@BMLMEKGI@?$AAa?$AAr?$AA?9?$AAb?$AAh?$AA?$AA@ 10027ec0     LIBCMT:winapinls.obj
+ 0002:0000becc       ??_C@_1M@DAPFDGGB@?$AAa?$AAr?$AA?9?$AAd?$AAz?$AA?$AA@ 10027ecc     LIBCMT:winapinls.obj
+ 0002:0000bed8       ??_C@_1M@FJNKGKIG@?$AAa?$AAr?$AA?9?$AAe?$AAg?$AA?$AA@ 10027ed8     LIBCMT:winapinls.obj
+ 0002:0000bee4       ??_C@_1M@FLGKKCLO@?$AAa?$AAr?$AA?9?$AAi?$AAq?$AA?$AA@ 10027ee4     LIBCMT:winapinls.obj
+ 0002:0000bef0       ??_C@_1M@GNDIPALM@?$AAa?$AAr?$AA?9?$AAj?$AAo?$AA?$AA@ 10027ef0     LIBCMT:winapinls.obj
+ 0002:0000befc       ??_C@_1M@DDMJFMGJ@?$AAa?$AAr?$AA?9?$AAk?$AAw?$AA?$AA@ 10027efc     LIBCMT:winapinls.obj
+ 0002:0000bf08       ??_C@_1M@EJALMLHM@?$AAa?$AAr?$AA?9?$AAl?$AAb?$AA?$AA@ 10027f08     LIBCMT:winapinls.obj
+ 0002:0000bf14       ??_C@_1M@MOBDBLOC@?$AAa?$AAr?$AA?9?$AAl?$AAy?$AA?$AA@ 10027f14     LIBCMT:winapinls.obj
+ 0002:0000bf20       ??_C@_1M@JAOCLHDH@?$AAa?$AAr?$AA?9?$AAm?$AAa?$AA?$AA@ 10027f20     LIBCMT:winapinls.obj
+ 0002:0000bf2c       ??_C@_1M@JHPMKJIE@?$AAa?$AAr?$AA?9?$AAo?$AAm?$AA?$AA@ 10027f2c     LIBCMT:winapinls.obj
+ 0002:0000bf38       ??_C@_1M@OEPGHFNH@?$AAa?$AAr?$AA?9?$AAq?$AAa?$AA?$AA@ 10027f38     LIBCMT:winapinls.obj
+ 0002:0000bf44       ??_C@_1M@KJDONENM@?$AAa?$AAr?$AA?9?$AAs?$AAa?$AA?$AA@ 10027f44     LIBCMT:winapinls.obj
+ 0002:0000bf50       ??_C@_1M@DMJDKLKM@?$AAa?$AAr?$AA?9?$AAs?$AAy?$AA?$AA@ 10027f50     LIBCMT:winapinls.obj
+ 0002:0000bf5c       ??_C@_1M@OMFIPEDC@?$AAa?$AAr?$AA?9?$AAt?$AAn?$AA?$AA@ 10027f5c     LIBCMT:winapinls.obj
+ 0002:0000bf68       ??_C@_1M@IHMHGAON@?$AAa?$AAr?$AA?9?$AAy?$AAe?$AA?$AA@ 10027f68     LIBCMT:winapinls.obj
+ 0002:0000bf74       ??_C@_1BG@KDCPGJGB@?$AAa?$AAz?$AA?9?$AAa?$AAz?$AA?9?$AAc?$AAy?$AAr?$AAl?$AA?$AA@ 10027f74     LIBCMT:winapinls.obj
+ 0002:0000bf8c       ??_C@_1BG@IBCKDDOE@?$AAa?$AAz?$AA?9?$AAa?$AAz?$AA?9?$AAl?$AAa?$AAt?$AAn?$AA?$AA@ 10027f8c     LIBCMT:winapinls.obj
+ 0002:0000bfa4       ??_C@_1M@EGPFDCPD@?$AAb?$AAe?$AA?9?$AAb?$AAy?$AA?$AA@ 10027fa4     LIBCMT:winapinls.obj
+ 0002:0000bfb0       ??_C@_1M@PCMGMCGC@?$AAb?$AAg?$AA?9?$AAb?$AAg?$AA?$AA@ 10027fb0     LIBCMT:winapinls.obj
+ 0002:0000bfbc       ??_C@_1M@BJBMFGOB@?$AAb?$AAn?$AA?9?$AAi?$AAn?$AA?$AA@ 10027fbc     LIBCMT:winapinls.obj
+ 0002:0000bfc8       ??_C@_1BG@EAKMMACD@?$AAb?$AAs?$AA?9?$AAb?$AAa?$AA?9?$AAl?$AAa?$AAt?$AAn?$AA?$AA@ 10027fc8     LIBCMT:winapinls.obj
+ 0002:0000bfe0       ??_C@_1M@KGADAODK@?$AAc?$AAa?$AA?9?$AAe?$AAs?$AA?$AA@ 10027fe0     LIBCMT:winapinls.obj
+ 0002:0000bfec       ??_C@_1M@COAJPDHI@?$AAc?$AAs?$AA?9?$AAc?$AAz?$AA?$AA@ 10027fec     LIBCMT:winapinls.obj
+ 0002:0000bff8       ??_C@_1M@DHBHFONH@?$AAc?$AAy?$AA?9?$AAg?$AAb?$AA?$AA@ 10027ff8     LIBCMT:winapinls.obj
+ 0002:0000c004       ??_C@_1M@IMGKELGA@?$AAd?$AAa?$AA?9?$AAd?$AAk?$AA?$AA@ 10028004     LIBCMT:winapinls.obj
+ 0002:0000c010       ??_C@_1M@NNDGDNGA@?$AAd?$AAe?$AA?9?$AAa?$AAt?$AA?$AA@ 10028010     LIBCMT:winapinls.obj
+ 0002:0000c01c       ??_C@_1M@IKDBHEEM@?$AAd?$AAe?$AA?9?$AAc?$AAh?$AA?$AA@ 1002801c     LIBCMT:winapinls.obj
+ 0002:0000c028       ??_C@_1M@GFFOJMCJ@?$AAd?$AAe?$AA?9?$AAd?$AAe?$AA?$AA@ 10028028     LIBCMT:winapinls.obj
+ 0002:0000c034       ??_C@_1M@MDNLKBPM@?$AAd?$AAe?$AA?9?$AAl?$AAi?$AA?$AA@ 10028034     LIBCMT:winapinls.obj
+ 0002:0000c040       ??_C@_1M@NJBEEJNL@?$AAd?$AAe?$AA?9?$AAl?$AAu?$AA?$AA@ 10028040     LIBCMT:winapinls.obj
+ 0002:0000c04c       ??_C@_1O@GNNELBAP@?$AAd?$AAi?$AAv?$AA?9?$AAm?$AAv?$AA?$AA@ 1002804c     LIBCMT:winapinls.obj
+ 0002:0000c05c       ??_C@_1M@EJLEOGAE@?$AAe?$AAl?$AA?9?$AAg?$AAr?$AA?$AA@ 1002805c     LIBCMT:winapinls.obj
+ 0002:0000c068       ??_C@_1M@GMPONJN@?$AAe?$AAn?$AA?9?$AAa?$AAu?$AA?$AA@ 10028068     LIBCMT:winapinls.obj
+ 0002:0000c074       ??_C@_1M@NIDIIPGF@?$AAe?$AAn?$AA?9?$AAb?$AAz?$AA?$AA@ 10028074     LIBCMT:winapinls.obj
+ 0002:0000c080       ??_C@_1M@JEHMIMFO@?$AAe?$AAn?$AA?9?$AAc?$AAa?$AA?$AA@ 10028080     LIBCMT:winapinls.obj
+ 0002:0000c08c       ??_C@_1M@IGMJCDLA@?$AAe?$AAn?$AA?9?$AAc?$AAb?$AA?$AA@ 1002808c     LIBCMT:winapinls.obj
+ 0002:0000c098       ??_C@_1M@BNFIGBKG@?$AAe?$AAn?$AA?9?$AAg?$AAb?$AA?$AA@ 10028098     LIBCMT:winapinls.obj
+ 0002:0000c0a4       ??_C@_1M@LKIFDIGP@?$AAe?$AAn?$AA?9?$AAi?$AAe?$AA?$AA@ 100280a4     LIBCMT:winapinls.obj
+ 0002:0000c0b0       ??_C@_1M@PJKFGCCO@?$AAe?$AAn?$AA?9?$AAj?$AAm?$AA?$AA@ 100280b0     LIBCMT:winapinls.obj
+ 0002:0000c0bc       ??_C@_1M@KPPKEPBO@?$AAe?$AAn?$AA?9?$AAn?$AAz?$AA?$AA@ 100280bc     LIBCMT:winapinls.obj
+ 0002:0000c0c8       ??_C@_1M@GMDGLDOB@?$AAe?$AAn?$AA?9?$AAp?$AAh?$AA?$AA@ 100280c8     LIBCMT:winapinls.obj
+ 0002:0000c0d4       ??_C@_1M@ONGIBJNA@?$AAe?$AAn?$AA?9?$AAt?$AAt?$AA?$AA@ 100280d4     LIBCMT:winapinls.obj
+ 0002:0000c0e0       ??_C@_1M@LLODPCMM@?$AAe?$AAn?$AA?9?$AAu?$AAs?$AA?$AA@ 100280e0     LIBCMT:winapinls.obj
+ 0002:0000c0ec       ??_C@_1M@LAKFNPAN@?$AAe?$AAn?$AA?9?$AAz?$AAa?$AA?$AA@ 100280ec     LIBCMT:winapinls.obj
+ 0002:0000c0f8       ??_C@_1M@MFNHNHEO@?$AAe?$AAn?$AA?9?$AAz?$AAw?$AA?$AA@ 100280f8     LIBCMT:winapinls.obj
+ 0002:0000c104       ??_C@_1M@EJEINPHM@?$AAe?$AAs?$AA?9?$AAa?$AAr?$AA?$AA@ 10028104     LIBCMT:winapinls.obj
+ 0002:0000c110       ??_C@_1M@GNKPCCJA@?$AAe?$AAs?$AA?9?$AAb?$AAo?$AA?$AA@ 10028110     LIBCMT:winapinls.obj
+ 0002:0000c11c       ??_C@_1M@LEEGFONL@?$AAe?$AAs?$AA?9?$AAc?$AAl?$AA?$AA@ 1002811c     LIBCMT:winapinls.obj
+ 0002:0000c128       ??_C@_1M@KGPDPBDF@?$AAe?$AAs?$AA?9?$AAc?$AAo?$AA?$AA@ 10028128     LIBCMT:winapinls.obj
+ 0002:0000c134       ??_C@_1M@EIAHOHH@?$AAe?$AAs?$AA?9?$AAc?$AAr?$AA?$AA@ 10028134     LIBCMT:winapinls.obj
+ 0002:0000c140       ??_C@_1M@LLPGMBIN@?$AAe?$AAs?$AA?9?$AAd?$AAo?$AA?$AA@ 10028140     LIBCMT:winapinls.obj
+ 0002:0000c14c       ??_C@_1M@DKHMKNJA@?$AAe?$AAs?$AA?9?$AAe?$AAc?$AA?$AA@ 1002814c     LIBCMT:winapinls.obj
+ 0002:0000c158       ??_C@_1M@GKGFPKAP@?$AAe?$AAs?$AA?9?$AAe?$AAs?$AA?$AA@ 10028158     LIBCMT:winapinls.obj
+ 0002:0000c164       ??_C@_1M@LKHKGDLN@?$AAe?$AAs?$AA?9?$AAg?$AAt?$AA?$AA@ 10028164     LIBCMT:winapinls.obj
+ 0002:0000c170       ??_C@_1M@HEIIGGJD@?$AAe?$AAs?$AA?9?$AAh?$AAn?$AA?$AA@ 10028170     LIBCMT:winapinls.obj
+ 0002:0000c17c       ??_C@_1M@FBDHPPGD@?$AAe?$AAs?$AA?9?$AAm?$AAx?$AA?$AA@ 1002817c     LIBCMT:winapinls.obj
+ 0002:0000c188       ??_C@_1M@DPAGLNDH@?$AAe?$AAs?$AA?9?$AAn?$AAi?$AA?$AA@ 10028188     LIBCMT:winapinls.obj
+ 0002:0000c194       ??_C@_1M@MDGOPGDD@?$AAe?$AAs?$AA?9?$AAp?$AAa?$AA?$AA@ 10028194     LIBCMT:winapinls.obj
+ 0002:0000c1a0       ??_C@_1M@EMAMGBGE@?$AAe?$AAs?$AA?9?$AAp?$AAe?$AA?$AA@ 100281a0     LIBCMT:winapinls.obj
+ 0002:0000c1ac       ??_C@_1M@IBMCAOEC@?$AAe?$AAs?$AA?9?$AAp?$AAr?$AA?$AA@ 100281ac     LIBCMT:winapinls.obj
+ 0002:0000c1b8       ??_C@_1M@FGMDIJED@?$AAe?$AAs?$AA?9?$AAp?$AAy?$AA?$AA@ 100281b8     LIBCMT:winapinls.obj
+ 0002:0000c1c4       ??_C@_1M@IIDEOLLL@?$AAe?$AAs?$AA?9?$AAs?$AAv?$AA?$AA@ 100281c4     LIBCMT:winapinls.obj
+ 0002:0000c1d0       ??_C@_1M@GAOBIPA@?$AAe?$AAs?$AA?9?$AAu?$AAy?$AA?$AA@ 100281d0     LIBCMT:winapinls.obj
+ 0002:0000c1dc       ??_C@_1M@JKFFICHJ@?$AAe?$AAs?$AA?9?$AAv?$AAe?$AA?$AA@ 100281dc     LIBCMT:winapinls.obj
+ 0002:0000c1e8       ??_C@_1M@PNMLOJDF@?$AAe?$AAt?$AA?9?$AAe?$AAe?$AA?$AA@ 100281e8     LIBCMT:winapinls.obj
+ 0002:0000c1f4       ??_C@_1M@GHHLIKEI@?$AAe?$AAu?$AA?9?$AAe?$AAs?$AA?$AA@ 100281f4     LIBCMT:winapinls.obj
+ 0002:0000c200       ??_C@_1M@PBNONODE@?$AAf?$AAa?$AA?9?$AAi?$AAr?$AA?$AA@ 10028200     LIBCMT:winapinls.obj
+ 0002:0000c20c       ??_C@_1M@JEEHPMIL@?$AAf?$AAi?$AA?9?$AAf?$AAi?$AA?$AA@ 1002820c     LIBCMT:winapinls.obj
+ 0002:0000c218       ??_C@_1M@LMDCNDBA@?$AAf?$AAo?$AA?9?$AAf?$AAo?$AA?$AA@ 10028218     LIBCMT:winapinls.obj
+ 0002:0000c224       ??_C@_1M@JKEOHLDK@?$AAf?$AAr?$AA?9?$AAb?$AAe?$AA?$AA@ 10028224     LIBCMT:winapinls.obj
+ 0002:0000c230       ??_C@_1M@NOHADPMI@?$AAf?$AAr?$AA?9?$AAc?$AAa?$AA?$AA@ 10028230     LIBCMT:winapinls.obj
+ 0002:0000c23c       ??_C@_1M@KDHIHAEC@?$AAf?$AAr?$AA?9?$AAc?$AAh?$AA?$AA@ 1002823c     LIBCMT:winapinls.obj
+ 0002:0000c248       ??_C@_1M@MMBBFGAK@?$AAf?$AAr?$AA?9?$AAf?$AAr?$AA?$AA@ 10028248     LIBCMT:winapinls.obj
+ 0002:0000c254       ??_C@_1M@PAFNENNF@?$AAf?$AAr?$AA?9?$AAl?$AAu?$AA?$AA@ 10028254     LIBCMT:winapinls.obj
+ 0002:0000c260       ??_C@_1M@EOHDJGDD@?$AAf?$AAr?$AA?9?$AAm?$AAc?$AA?$AA@ 10028260     LIBCMT:winapinls.obj
+ 0002:0000c26c       ??_C@_1M@FAPLLOPF@?$AAg?$AAl?$AA?9?$AAe?$AAs?$AA?$AA@ 1002826c     LIBCMT:winapinls.obj
+ 0002:0000c278       ??_C@_1M@FOPBFLOO@?$AAg?$AAu?$AA?9?$AAi?$AAn?$AA?$AA@ 10028278     LIBCMT:winapinls.obj
+ 0002:0000c284       ??_C@_1M@KBMCINPM@?$AAh?$AAe?$AA?9?$AAi?$AAl?$AA?$AA@ 10028284     LIBCMT:winapinls.obj
+ 0002:0000c290       ??_C@_1M@BBPHKFPJ@?$AAh?$AAi?$AA?9?$AAi?$AAn?$AA?$AA@ 10028290     LIBCMT:winapinls.obj
+ 0002:0000c29c       ??_C@_1M@PMBNDPHD@?$AAh?$AAr?$AA?9?$AAb?$AAa?$AA?$AA@ 1002829c     LIBCMT:winapinls.obj
+ 0002:0000c2a8       ??_C@_1M@BPCKOEGE@?$AAh?$AAr?$AA?9?$AAh?$AAr?$AA?$AA@ 100282a8     LIBCMT:winapinls.obj
+ 0002:0000c2b4       ??_C@_1M@GACBMHKE@?$AAh?$AAu?$AA?9?$AAh?$AAu?$AA?$AA@ 100282b4     LIBCMT:winapinls.obj
+ 0002:0000c2c0       ??_C@_1M@MILPAJJC@?$AAh?$AAy?$AA?9?$AAa?$AAm?$AA?$AA@ 100282c0     LIBCMT:winapinls.obj
+ 0002:0000c2cc       ??_C@_1M@BABBICEC@?$AAi?$AAd?$AA?9?$AAi?$AAd?$AA?$AA@ 100282cc     LIBCMT:winapinls.obj
+ 0002:0000c2d8       ??_C@_1M@BIKNHHPF@?$AAi?$AAs?$AA?9?$AAi?$AAs?$AA?$AA@ 100282d8     LIBCMT:winapinls.obj
+ 0002:0000c2e4       ??_C@_1M@NMPCJPHE@?$AAi?$AAt?$AA?9?$AAc?$AAh?$AA?$AA@ 100282e4     LIBCMT:winapinls.obj
+ 0002:0000c2f0       ??_C@_1M@GHKGFEDF@?$AAi?$AAt?$AA?9?$AAi?$AAt?$AA?$AA@ 100282f0     LIBCMT:winapinls.obj
+ 0002:0000c2fc       ??_C@_1M@NIEJCJJA@?$AAj?$AAa?$AA?9?$AAj?$AAp?$AA?$AA@ 100282fc     LIBCMT:winapinls.obj
+ 0002:0000c308       ??_C@_1M@JILFNBIM@?$AAk?$AAa?$AA?9?$AAg?$AAe?$AA?$AA@ 10028308     LIBCMT:winapinls.obj
+ 0002:0000c314       ??_C@_1M@PACPMGPH@?$AAk?$AAk?$AA?9?$AAk?$AAz?$AA?$AA@ 10028314     LIBCMT:winapinls.obj
+ 0002:0000c320       ??_C@_1M@IELFGMHA@?$AAk?$AAn?$AA?9?$AAi?$AAn?$AA?$AA@ 10028320     LIBCMT:winapinls.obj
+ 0002:0000c32c       ??_C@_1O@IBBJHCH@?$AAk?$AAo?$AAk?$AA?9?$AAi?$AAn?$AA?$AA@ 1002832c     LIBCMT:winapinls.obj
+ 0002:0000c33c       ??_C@_1M@DMHAEOGC@?$AAk?$AAo?$AA?9?$AAk?$AAr?$AA?$AA@ 1002833c     LIBCMT:winapinls.obj
+ 0002:0000c348       ??_C@_1M@HBAHBIGA@?$AAk?$AAy?$AA?9?$AAk?$AAg?$AA?$AA@ 10028348     LIBCMT:winapinls.obj
+ 0002:0000c354       ??_C@_1M@KPMILCJG@?$AAl?$AAt?$AA?9?$AAl?$AAt?$AA?$AA@ 10028354     LIBCMT:winapinls.obj
+ 0002:0000c360       ??_C@_1M@BDEKKCA@?$AAl?$AAv?$AA?9?$AAl?$AAv?$AA?$AA@ 10028360     LIBCMT:winapinls.obj
+ 0002:0000c36c       ??_C@_1M@ELCKCCJJ@?$AAm?$AAi?$AA?9?$AAn?$AAz?$AA?$AA@ 1002836c     LIBCMT:winapinls.obj
+ 0002:0000c378       ??_C@_1M@CBOOLAPA@?$AAm?$AAk?$AA?9?$AAm?$AAk?$AA?$AA@ 10028378     LIBCMT:winapinls.obj
+ 0002:0000c384       ??_C@_1M@GPHNBJKN@?$AAm?$AAl?$AA?9?$AAi?$AAn?$AA?$AA@ 10028384     LIBCMT:winapinls.obj
+ 0002:0000c390       ??_C@_1M@PABJILIG@?$AAm?$AAn?$AA?9?$AAm?$AAn?$AA?$AA@ 10028390     LIBCMT:winapinls.obj
+ 0002:0000c39c       ??_C@_1M@FGBKKIPG@?$AAm?$AAr?$AA?9?$AAi?$AAn?$AA?$AA@ 1002839c     LIBCMT:winapinls.obj
+ 0002:0000c3a8       ??_C@_1M@NDBPDDAL@?$AAm?$AAs?$AA?9?$AAb?$AAn?$AA?$AA@ 100283a8     LIBCMT:winapinls.obj
+ 0002:0000c3b4       ??_C@_1M@OPIHOOPI@?$AAm?$AAs?$AA?9?$AAm?$AAy?$AA?$AA@ 100283b4     LIBCMT:winapinls.obj
+ 0002:0000c3c0       ??_C@_1M@PPDBCNFM@?$AAm?$AAt?$AA?9?$AAm?$AAt?$AA?$AA@ 100283c0     LIBCMT:winapinls.obj
+ 0002:0000c3cc       ??_C@_1M@KDJDKMDD@?$AAn?$AAb?$AA?9?$AAn?$AAo?$AA?$AA@ 100283cc     LIBCMT:winapinls.obj
+ 0002:0000c3d8       ??_C@_1M@KFCFLMJP@?$AAn?$AAl?$AA?9?$AAb?$AAe?$AA?$AA@ 100283d8     LIBCMT:winapinls.obj
+ 0002:0000c3e4       ??_C@_1M@KPOPDDGO@?$AAn?$AAl?$AA?9?$AAn?$AAl?$AA?$AA@ 100283e4     LIBCMT:winapinls.obj
+ 0002:0000c3f0       ??_C@_1M@LJKPEMLN@?$AAn?$AAn?$AA?9?$AAn?$AAo?$AA?$AA@ 100283f0     LIBCMT:winapinls.obj
+ 0002:0000c3fc       ??_C@_1M@BDGHHBFL@?$AAn?$AAs?$AA?9?$AAz?$AAa?$AA?$AA@ 100283fc     LIBCMT:winapinls.obj
+ 0002:0000c408       ??_C@_1M@IDEHOAP@?$AAp?$AAa?$AA?9?$AAi?$AAn?$AA?$AA@ 10028408     LIBCMT:winapinls.obj
+ 0002:0000c414       ??_C@_1M@HDBKGOGH@?$AAp?$AAl?$AA?9?$AAp?$AAl?$AA?$AA@ 10028414     LIBCMT:winapinls.obj
+ 0002:0000c420       ??_C@_1M@LJLLCMEH@?$AAp?$AAt?$AA?9?$AAb?$AAr?$AA?$AA@ 10028420     LIBCMT:winapinls.obj
+ 0002:0000c42c       ??_C@_1M@NCMONAAL@?$AAp?$AAt?$AA?9?$AAp?$AAt?$AA?$AA@ 1002842c     LIBCMT:winapinls.obj
+ 0002:0000c438       ??_C@_1O@EAKMAJDN@?$AAq?$AAu?$AAz?$AA?9?$AAb?$AAo?$AA?$AA@ 10028438     LIBCMT:winapinls.obj
+ 0002:0000c448       ??_C@_1O@BHHPIGDN@?$AAq?$AAu?$AAz?$AA?9?$AAe?$AAc?$AA?$AA@ 10028448     LIBCMT:winapinls.obj
+ 0002:0000c458       ??_C@_1O@GBAPEKMJ@?$AAq?$AAu?$AAz?$AA?9?$AAp?$AAe?$AA?$AA@ 10028458     LIBCMT:winapinls.obj
+ 0002:0000c468       ??_C@_1M@CLGLEFBO@?$AAr?$AAo?$AA?9?$AAr?$AAo?$AA?$AA@ 10028468     LIBCMT:winapinls.obj
+ 0002:0000c474       ??_C@_1M@CEEDODME@?$AAr?$AAu?$AA?9?$AAr?$AAu?$AA?$AA@ 10028474     LIBCMT:winapinls.obj
+ 0002:0000c480       ??_C@_1M@HPKKKMPP@?$AAs?$AAa?$AA?9?$AAi?$AAn?$AA?$AA@ 10028480     LIBCMT:winapinls.obj
+ 0002:0000c48c       ??_C@_1M@BKMAIGOJ@?$AAs?$AAe?$AA?9?$AAf?$AAi?$AA?$AA@ 1002848c     LIBCMT:winapinls.obj
+ 0002:0000c498       ??_C@_1M@NDPIFLFI@?$AAs?$AAe?$AA?9?$AAn?$AAo?$AA?$AA@ 10028498     LIBCMT:winapinls.obj
+ 0002:0000c4a4       ??_C@_1M@DANKKHJ@?$AAs?$AAe?$AA?9?$AAs?$AAe?$AA?$AA@ 100284a4     LIBCMT:winapinls.obj
+ 0002:0000c4b0       ??_C@_1M@PNBLONPJ@?$AAs?$AAk?$AA?9?$AAs?$AAk?$AA?$AA@ 100284b0     LIBCMT:winapinls.obj
+ 0002:0000c4bc       ??_C@_1M@LFMODOAL@?$AAs?$AAl?$AA?9?$AAs?$AAi?$AA?$AA@ 100284bc     LIBCMT:winapinls.obj
+ 0002:0000c4c8       ??_C@_1O@DFKOMPG@?$AAs?$AAm?$AAa?$AA?9?$AAn?$AAo?$AA?$AA@ 100284c8     LIBCMT:winapinls.obj
+ 0002:0000c4d8       ??_C@_1O@NDKPBNNH@?$AAs?$AAm?$AAa?$AA?9?$AAs?$AAe?$AA?$AA@ 100284d8     LIBCMT:winapinls.obj
+ 0002:0000c4e8       ??_C@_1O@PLLKBHAB@?$AAs?$AAm?$AAj?$AA?9?$AAn?$AAo?$AA?$AA@ 100284e8     LIBCMT:winapinls.obj
+ 0002:0000c4f8       ??_C@_1O@CLEPOGCA@?$AAs?$AAm?$AAj?$AA?9?$AAs?$AAe?$AA?$AA@ 100284f8     LIBCMT:winapinls.obj
+ 0002:0000c508       ??_C@_1O@DLGJGKMK@?$AAs?$AAm?$AAn?$AA?9?$AAf?$AAi?$AA?$AA@ 10028508     LIBCMT:winapinls.obj
+ 0002:0000c518       ??_C@_1O@OJDJGAJC@?$AAs?$AAm?$AAs?$AA?9?$AAf?$AAi?$AA?$AA@ 10028518     LIBCMT:winapinls.obj
+ 0002:0000c528       ??_C@_1M@BOFOGHPB@?$AAs?$AAq?$AA?9?$AAa?$AAl?$AA?$AA@ 10028528     LIBCMT:winapinls.obj
+ 0002:0000c534       ??_C@_1BG@LJBBIPGB@?$AAs?$AAr?$AA?9?$AAb?$AAa?$AA?9?$AAc?$AAy?$AAr?$AAl?$AA?$AA@ 10028534     LIBCMT:winapinls.obj
+ 0002:0000c54c       ??_C@_1BG@JLBENFOE@?$AAs?$AAr?$AA?9?$AAb?$AAa?$AA?9?$AAl?$AAa?$AAt?$AAn?$AA?$AA@ 1002854c     LIBCMT:winapinls.obj
+ 0002:0000c564       ??_C@_1BG@KODPNHE@?$AAs?$AAr?$AA?9?$AAs?$AAp?$AA?9?$AAc?$AAy?$AAr?$AAl?$AA?$AA@ 10028564     LIBCMT:winapinls.obj
+ 0002:0000c57c       ??_C@_1BG@CIOGKHPB@?$AAs?$AAr?$AA?9?$AAs?$AAp?$AA?9?$AAl?$AAa?$AAt?$AAn?$AA?$AA@ 1002857c     LIBCMT:winapinls.obj
+ 0002:0000c594       ??_C@_1M@NGFJLMAC@?$AAs?$AAv?$AA?9?$AAf?$AAi?$AA?$AA@ 10028594     LIBCMT:winapinls.obj
+ 0002:0000c5a0       ??_C@_1M@MPJEJAJC@?$AAs?$AAv?$AA?9?$AAs?$AAe?$AA?$AA@ 100285a0     LIBCMT:winapinls.obj
+ 0002:0000c5ac       ??_C@_1M@MPNDHLFK@?$AAs?$AAw?$AA?9?$AAk?$AAe?$AA?$AA@ 100285ac     LIBCMT:winapinls.obj
+ 0002:0000c5b8       ??_C@_1O@KOHBJJI@?$AAs?$AAy?$AAr?$AA?9?$AAs?$AAy?$AA?$AA@ 100285b8     LIBCMT:winapinls.obj
+ 0002:0000c5c8       ??_C@_1M@LDCEFHA@?$AAt?$AAa?$AA?9?$AAi?$AAn?$AA?$AA@ 100285c8     LIBCMT:winapinls.obj
+ 0002:0000c5d4       ??_C@_1M@CNJOFAK@?$AAt?$AAe?$AA?9?$AAi?$AAn?$AA?$AA@ 100285d4     LIBCMT:winapinls.obj
+ 0002:0000c5e0       ??_C@_1M@GNAECACD@?$AAt?$AAh?$AA?9?$AAt?$AAh?$AA?$AA@ 100285e0     LIBCMT:winapinls.obj
+ 0002:0000c5ec       ??_C@_1M@CHBIHOJO@?$AAt?$AAn?$AA?9?$AAz?$AAa?$AA?$AA@ 100285ec     LIBCMT:winapinls.obj
+ 0002:0000c5f8       ??_C@_1M@GCCMIGPJ@?$AAt?$AAr?$AA?9?$AAt?$AAr?$AA?$AA@ 100285f8     LIBCMT:winapinls.obj
+ 0002:0000c604       ??_C@_1M@CELMCNBK@?$AAt?$AAt?$AA?9?$AAr?$AAu?$AA?$AA@ 10028604     LIBCMT:winapinls.obj
+ 0002:0000c610       ??_C@_1M@KLMCELGA@?$AAu?$AAk?$AA?9?$AAu?$AAa?$AA?$AA@ 10028610     LIBCMT:winapinls.obj
+ 0002:0000c61c       ??_C@_1M@EPAJJAJF@?$AAu?$AAr?$AA?9?$AAp?$AAk?$AA?$AA@ 1002861c     LIBCMT:winapinls.obj
+ 0002:0000c628       ??_C@_1BG@GEGPMCDJ@?$AAu?$AAz?$AA?9?$AAu?$AAz?$AA?9?$AAc?$AAy?$AAr?$AAl?$AA?$AA@ 10028628     LIBCMT:winapinls.obj
+ 0002:0000c640       ??_C@_1BG@EGGKJILM@?$AAu?$AAz?$AA?9?$AAu?$AAz?$AA?9?$AAl?$AAa?$AAt?$AAn?$AA?$AA@ 10028640     LIBCMT:winapinls.obj
+ 0002:0000c658       ??_C@_1M@GFOCLFF@?$AAv?$AAi?$AA?9?$AAv?$AAn?$AA?$AA@ 10028658     LIBCMT:winapinls.obj
+ 0002:0000c664       ??_C@_1M@CPAMEDFI@?$AAx?$AAh?$AA?9?$AAz?$AAa?$AA?$AA@ 10028664     LIBCMT:winapinls.obj
+ 0002:0000c670       ??_C@_1O@EBKIFIGN@?$AAz?$AAh?$AA?9?$AAc?$AAh?$AAs?$AA?$AA@ 10028670     LIBCMT:winapinls.obj
+ 0002:0000c680       ??_C@_1O@NMHPGANE@?$AAz?$AAh?$AA?9?$AAc?$AAh?$AAt?$AA?$AA@ 10028680     LIBCMT:winapinls.obj
+ 0002:0000c690       ??_C@_1M@LPINJOMC@?$AAz?$AAh?$AA?9?$AAc?$AAn?$AA?$AA@ 10028690     LIBCMT:winapinls.obj
+ 0002:0000c69c       ??_C@_1M@OCJEJODD@?$AAz?$AAh?$AA?9?$AAh?$AAk?$AA?$AA@ 1002869c     LIBCMT:winapinls.obj
+ 0002:0000c6a8       ??_C@_1M@DNDLJINH@?$AAz?$AAh?$AA?9?$AAm?$AAo?$AA?$AA@ 100286a8     LIBCMT:winapinls.obj
+ 0002:0000c6b4       ??_C@_1M@MBFDNDND@?$AAz?$AAh?$AA?9?$AAs?$AAg?$AA?$AA@ 100286b4     LIBCMT:winapinls.obj
+ 0002:0000c6c0       ??_C@_1M@IMEPLEPE@?$AAz?$AAh?$AA?9?$AAt?$AAw?$AA?$AA@ 100286c0     LIBCMT:winapinls.obj
+ 0002:0000c6cc       ??_C@_1M@BBGHNHJP@?$AAz?$AAu?$AA?9?$AAz?$AAa?$AA?$AA@ 100286cc     LIBCMT:winapinls.obj
+ 0002:0000c6d8       ___lookuptable_s           100286d8     LIBCMT:outputs.obj
+ 0002:0000c734       ??_C@_1BG@GOEBHBDC@?$AAU?$AAS?$AAE?$AAR?$AA3?$AA2?$AA?4?$AAD?$AAL?$AAL?$AA?$AA@ 10028734     LIBCMT:crtmboxw.obj
+ 0002:0000c74c       ??_C@_0M@DLDCCGNP@MessageBoxW?$AA@ 1002874c     LIBCMT:crtmboxw.obj
+ 0002:0000c758       ??_C@_0BA@HNOPNCHB@GetActiveWindow?$AA@ 10028758     LIBCMT:crtmboxw.obj
+ 0002:0000c768       ??_C@_0BD@HHGDFDBJ@GetLastActivePopup?$AA@ 10028768     LIBCMT:crtmboxw.obj
+ 0002:0000c77c       ??_C@_0BK@DEKFELLI@GetUserObjectInformationW?$AA@ 1002877c     LIBCMT:crtmboxw.obj
+ 0002:0000c798       ??_C@_0BI@DFKBFLJE@GetProcessWindowStation?$AA@ 10028798     LIBCMT:crtmboxw.obj
+ 0002:0000c7b0       ??_C@_06PGGFOGJG@1?$CDSNAN?$AA@ 100287b0     LIBCMT:x10fout.obj
+ 0002:0000c7b8       ??_C@_05PHHOCPM@1?$CDIND?$AA@ 100287b8     LIBCMT:x10fout.obj
+ 0002:0000c7c0       ??_C@_05DNEBIAHO@1?$CDINF?$AA@ 100287c0     LIBCMT:x10fout.obj
+ 0002:0000c7c8       ??_C@_06IMKFLFPG@1?$CDQNAN?$AA@ 100287c8     LIBCMT:x10fout.obj
+ 0002:0000c7d0       ??_C@_04COOMCNPB@sinh?$AA@ 100287d0     LIBCMT:fpexcept.obj
+ 0002:0000c7d8       ??_C@_04HPJJNFIM@cosh?$AA@ 100287d8     LIBCMT:fpexcept.obj
+ 0002:0000c7e0       ??_C@_04FJHINJAO@tanh?$AA@ 100287e0     LIBCMT:fpexcept.obj
+ 0002:0000c7e8       ??_C@_05KNGEOGJB@atan2?$AA@ 100287e8     LIBCMT:fpexcept.obj
+ 0002:0000c7f0       ??_C@_04ODHECPBC@fabs?$AA@ 100287f0     LIBCMT:fpexcept.obj
+ 0002:0000c7f8       ??_C@_05CEJMAHNP@ldexp?$AA@ 100287f8     LIBCMT:fpexcept.obj
+ 0002:0000c800       ??_C@_05KBKMEMPO@_cabs?$AA@ 10028800     LIBCMT:fpexcept.obj
+ 0002:0000c808       ??_C@_06MEIMCGCF@_hypot?$AA@ 10028808     LIBCMT:fpexcept.obj
+ 0002:0000c810       ??_C@_04KEPJIHGP@fmod?$AA@ 10028810     LIBCMT:fpexcept.obj
+ 0002:0000c818       ??_C@_05GKKHEGJL@frexp?$AA@ 10028818     LIBCMT:fpexcept.obj
+ 0002:0000c820       ??_C@_03MJLDFKDL@_y0?$AA@  10028820     LIBCMT:fpexcept.obj
+ 0002:0000c824       ??_C@_03NAKIGLHK@_y1?$AA@  10028824     LIBCMT:fpexcept.obj
+ 0002:0000c828       ??_C@_03ONILCKOB@_yn?$AA@  10028828     LIBCMT:fpexcept.obj
+ 0002:0000c82c       ??_C@_05JGDBENOH@_logb?$AA@ 1002882c     LIBCMT:fpexcept.obj
+ 0002:0000c834       ??_C@_0L@KDOEJCKC@_nextafter?$AA@ 10028834     LIBCMT:fpexcept.obj
+ 0002:0000c840       ??_C@_1BA@BALFACEM@?$AAC?$AAO?$AAN?$AAO?$AAU?$AAT?$AA$?$AA?$AA@ 10028840     LIBCMT:initcon.obj
+ 0002:0000c850       __load_config_used         10028850     LIBCMT:loadcfg.obj
+ 0002:0000c8a0       ___safe_se_handler_table   100288a0     <linker-defined>
+ 0002:0000c8ac       ___rtc_iaa                 100288ac     LIBCMT:initsect.obj
+ 0002:0000c8b0       ___rtc_izz                 100288b0     LIBCMT:initsect.obj
+ 0002:0000c8b4       ___rtc_taa                 100288b4     LIBCMT:initsect.obj
+ 0002:0000c8b8       ___rtc_tzz                 100288b8     LIBCMT:initsect.obj
+ 0002:0000cbf4       __IMPORT_DESCRIPTOR_tgf    10028bf4     tgf:tgf.dll
+ 0002:0000cc08       __IMPORT_DESCRIPTOR_robottools 10028c08     robottools:robottools.dll
+ 0002:0000cc1c       __IMPORT_DESCRIPTOR_KERNEL32 10028c1c     kernel32:KERNEL32.dll
+ 0002:0000cc30       __NULL_IMPORT_DESCRIPTOR   10028c30     tgf:tgf.dll
+ 0003:000000b0       ?_sgdGravity@@3PANA        1002a0b0     sg_vs2008_32:sgd.obj
+ 0003:000000e0       __fltused                  1002a0e0     LIBCMT:fpinit.obj
+ 0003:000000e4       __ldused                   1002a0e4     LIBCMT:fpinit.obj
+ 0003:00000148       __iob                      1002a148     LIBCMT:_file.obj
+ 0003:000003c8       ___nullstring              1002a3c8     LIBCMT:output.obj
+ 0003:000003cc       ___wnullstring             1002a3cc     LIBCMT:output.obj
+ 0003:00000540       ___isa_enabled             1002a540     LIBCMT:cpu_disp.obj
+ 0003:00000544       __cfltcvt_tab              1002a544     LIBCMT:cmiscdat.obj
+ 0003:00000570       ___ptmbcinfo               1002a570     LIBCMT:mbctype.obj
+ 0003:00000668       __mbctype                  1002a668     LIBCMT:mbctype.obj
+ 0003:00000770       __mbcasemap                1002a770     LIBCMT:mbctype.obj
+ 0003:00000870       ___initialmbcinfo          1002a870     LIBCMT:mbctype.obj
+ 0003:00000a90       ___flsindex                1002aa90     LIBCMT:tidtable.obj
+ 0003:00000a94       ___wclocalestr             1002aa94     LIBCMT:nlsdata.obj
+ 0003:00000a98       ___lc_time_c               1002aa98     LIBCMT:nlsdata.obj
+ 0003:00000bfc       ___ptlocinfo               1002abfc     LIBCMT:nlsdata.obj
+ 0003:00000c00       ___initiallocinfo          1002ac00     LIBCMT:nlsdata.obj
+ 0003:00000cb8       ___initiallocalestructinfo 1002acb8     LIBCMT:nlsdata.obj
+ 0003:00000cc0       ___mb_cur_max              1002acc0     LIBCMT:nlsdata.obj
+ 0003:00000cc4       ___globallocalestatus      1002acc4     LIBCMT:glstatus.obj
+ 0003:00000cd0       ___security_cookie         1002acd0     LIBCMT:gs_cookie.obj
+ 0003:00000cd4       ___security_cookie_complement 1002acd4     LIBCMT:gs_cookie.obj
+ 0003:00000e08       ___badioinfo               1002ae08     LIBCMT:ioinit.obj
+ 0003:00000e50       ___lconv                   1002ae50     LIBCMT:lconv.obj
+ 0003:00000e54       ___lconv_static_decimal    1002ae54     LIBCMT:lconv.obj
+ 0003:00000e58       ___lconv_c                 1002ae58     LIBCMT:lconv.obj
+ 0003:00000ea8       ___lconv_static_W_decimal  1002aea8     LIBCMT:lconv.obj
+ 0003:00000eac       __pctype                   1002aeac     LIBCMT:ctype.obj
+ 0003:00000eb0       __pwctype                  1002aeb0     LIBCMT:ctype.obj
+ 0003:00000ec0       __matherr_flag             1002aec0     LIBCMT:matherr.obj
+ 0003:00000ec4       ___abort_behavior          1002aec4     LIBCMT:abort.obj
+ 0003:00000f00       __NLG_Destination          1002af00     LIBCMT:exsup.obj
+ 0003:00001014       __confh                    1002b014     LIBCMT:initcon.obj
+ 0003:00001018       __pow10pos                 1002b018     LIBCMT:constpow.obj
+ 0003:00001178       __pow10neg                 1002b178     LIBCMT:constpow.obj
+ 0003:000012d8       __d_inf                    1002b2d8     LIBCMT:util.obj
+ 0003:000012e0       __d_ind                    1002b2e0     LIBCMT:util.obj
+ 0003:000012e8       __d_max                    1002b2e8     LIBCMT:util.obj
+ 0003:000012f0       __d_min                    1002b2f0     LIBCMT:util.obj
+ 0003:000012f8       __d_mzero                  1002b2f8     LIBCMT:util.obj
+ 0003:00001844       ___fastflag                1002b844     LIBCMT:fpinit.obj
+ 0003:0000184c       __umaskval                 1002b84c     LIBCMT:crt0dat.obj
+ 0003:00001850       __exitflag                 1002b850     LIBCMT:crt0dat.obj
+ 0003:00001854       __C_Termination_Done       1002b854     LIBCMT:crt0dat.obj
+ 0003:00001858       ___winitenv                1002b858     LIBCMT:crt0dat.obj
+ 0003:0000185c       ___initenv                 1002b85c     LIBCMT:crt0dat.obj
+ 0003:00001860       __C_Exit_Done              1002b860     LIBCMT:crt0dat.obj
+ 0003:00001864       ___argc                    1002b864     LIBCMT:crt0dat.obj
+ 0003:00001868       ___argv                    1002b868     LIBCMT:crt0dat.obj
+ 0003:0000186c       ___wargv                   1002b86c     LIBCMT:crt0dat.obj
+ 0003:00001870       __environ                  1002b870     LIBCMT:crt0dat.obj
+ 0003:00001874       __wenviron                 1002b874     LIBCMT:crt0dat.obj
+ 0003:00001878       __pgmptr                   1002b878     LIBCMT:crt0dat.obj
+ 0003:0000187c       __wpgmptr                  1002b87c     LIBCMT:crt0dat.obj
+ 0003:00001884       __aenvptr                  1002b884     LIBCMT:dllcrt0.obj
+ 0003:00001888       __wenvptr                  1002b888     LIBCMT:dllcrt0.obj
+ 0003:0000188c       __cflush                   1002b88c     LIBCMT:_file.obj
+ 0003:00001890       ___pInvalidArgHandler      1002b890     LIBCMT:invarg.obj
+ 0003:00001894       ___isa_available           1002b894     LIBCMT:cpu_disp.obj
+ 0003:00001898       ___favor                   1002b898     LIBCMT:cpu_disp.obj
+ 0003:0000189c       ___mblocalename            1002b89c     LIBCMT:mbctype.obj
+ 0003:000018a0       ___mbcodepage              1002b8a0     LIBCMT:mbctype.obj
+ 0003:000018a4       ___ismbcodepage            1002b8a4     LIBCMT:mbctype.obj
+ 0003:000018a8       ___mbulinfo                1002b8a8     LIBCMT:mbctype.obj
+ 0003:000018b8       ___locale_changed          1002b8b8     LIBCMT:wsetloca.obj
+ 0003:000018bc       __stdbuf                   1002b8bc     LIBCMT:_sftbuf.obj
+ 0003:00001d40       ___app_type                1002bd40     LIBCMT:crt0msg.obj
+ 0003:00002370       __maxwait                  1002c370     LIBCMT:crtheap.obj
+ 0003:00002374       ?__pInconsistency@@3P6AXXZA 1002c374     LIBCMT:hooks.obj
+ 0003:00002378       ?_pnhHeap@@3P6AHI@ZA       1002c378     LIBCMT:handler.obj
+ 0003:0000237c       ___pPurecall               1002c37c     LIBCMT:inithelp.obj
+ 0003:00002398       __crtheap                  1002c398     LIBCMT:heapinit.obj
+ 0003:000023a0       ___pioinfo                 1002c3a0     LIBCMT:ioinit.obj
+ 0003:000025a8       __outputformat             1002c5a8     LIBCMT:outputformat.obj
+ 0003:000025ac       ___lconv_static_null       1002c5ac     LIBCMT:lconv.obj
+ 0003:000025b0       ___lconv_static_W_null     1002c5b0     LIBCMT:lconv.obj
+ 0003:000025b8       ___error_mode              1002c5b8     LIBCMT:errmode.obj
+ 0003:000025d0       __newmode                  1002c5d0     LIBCMT:_newmode.obj
+ 0003:000025d4       __debugger_hook_dummy      1002c5d4     <common>
+ 0003:000025d8       ___use_sse2_mathfcns       1002c5d8     <common>
+ 0003:000025dc       __nhandle                  1002c5dc     <common>
+ 0003:000025e0       _encodedKERNEL32Functions  1002c5e0     <common>
+ 0003:00002654       __pmatherr                 1002c654     <common>
+ 0003:00002658       __pDestructExceptionObject 1002c658     <common>
+ 0003:0000265c       ___piob                    1002c65c     <common>
+ 0003:00002660       __nstream                  1002c660     <common>
+ 0003:00002680       __bufin                    1002c680     <common>
+ 0003:00003680       __acmdln                   1002d680     <common>
+ 0003:00003684       ___dyn_tls_init_callback   1002d684     <common>
+ 0003:00003688       ___onexitend               1002d688     <common>
+ 0003:0000368c       ___onexitbegin             1002d68c     <common>
+ 0003:00003690       ___mbctype_initialized     1002d690     <common>
+ 0003:00003694       ___env_initialized         1002d694     <common>
+
+ entry point at        0001:0000d559
+
+ Static symbols
+
+ 0001:00000240       ?GetTrackHeader@@YAXPAX@Z  10001240 f   track.obj
+ 0001:00000540       ?freeSeg@@YAXPAUtrackSeg@@@Z 10001540 f   track.obj
+ 0001:00001290       ?AddTrackSurface@@YAPAUtrackSurface@@PAXPAUtTrack@@PBD@Z 10002290 f   track3.obj
+ 0001:00001440       ?InitSides@@YAXPAXPAUtTrack@@@Z 10002440 f   track3.obj
+ 0001:000016e0       ?AddSides@@YAXPAUtrackSeg@@PAXPAUtTrack@@HH@Z 100026e0 f   track3.obj
+ 0001:00004040       ?normSeg@@YAXPAUtrackSeg@@@Z 10005040 f   track3.obj
+ 0001:00004130       ?CreateSegRing3@@YAXPAXPAUtTrack@@PAUtrackSeg@@2H@Z 10005130 f   track3.obj
+ 0001:00006aa0       ?AddTrackSurface@@YAPAUtrackSurface@@PAXPAUtTrack@@PBD@Z 10007aa0 f   track4.obj
+ 0001:00006c50       ?InitSides@@YAXPAXPAUtTrack@@@Z 10007c50 f   track4.obj
+ 0001:00006f60       ?AddSides@@YAXPAUtrackSeg@@PAXPAUtTrack@@HH@Z 10007f60 f   track4.obj
+ 0001:00009980       ?normSeg@@YAXPAUtrackSeg@@@Z 1000a980 f   track4.obj
+ 0001:00009a70       ?CreateSegRing@@YAXPAXPAUtTrack@@PAUtrackSeg@@2H@Z 1000aa70 f   track4.obj
+ 0001:0000b8a0       ?trackInit@@YAHHPAX@Z      1000c8a0 f   trackitf.obj
+ 0001:0000bbd0       $$000000                   1000cbd0     LIBCMT:strrchr.obj
+ 0001:0000bd10       $$000000                   1000cd10     LIBCMT:ftol2.obj
+ 0001:0000beba       ?strtoxl@@YAKPAUlocaleinfo_struct@@PBDPAPBDHH@Z 1000ceba f   LIBCMT:strtol.obj
+ 0001:0000c290       $$000000                   1000d290     LIBCMT:87ctriga.obj
+ 0001:0000c2b0       $$000000                   1000d2b0     LIBCMT:cos_sse2_precise.obj
+ 0001:0000c470       $$000000                   1000d470     LIBCMT:sin_sse2_precise.obj
+ 0001:0000c640       $$000000                   1000d640     LIBCMT:sqrt_sse2_precise.obj
+ 0001:0000c740       $$000000                   1000d740     LIBCMT:tan_sse2_precise.obj
+ 0001:0000c9b0       $$000000                   1000d9b0     LIBCMT:memcpy.obj
+ 0001:0000cc00       LeadUpVec                  1000dc00     LIBCMT:memcpy.obj
+ 0001:0000cc7c       UnwindUpVec                1000dc7c     LIBCMT:memcpy.obj
+ 0001:0000cce8       TrailUpVec                 1000dce8     LIBCMT:memcpy.obj
+ 0001:0000cd8c       LeadDownVec                1000dd8c     LIBCMT:memcpy.obj
+ 0001:0000ce18       UnwindDownVec              1000de18     LIBCMT:memcpy.obj
+ 0001:0000ce84       TrailDownVec               1000de84     LIBCMT:memcpy.obj
+ 0001:0000d254       __initterm                 1000e254 f   LIBCMT:crt0dat.obj
+ 0001:0000d2a4       _doexit                    1000e2a4 f   LIBCMT:crt0dat.obj
+ 0001:0000d57c       ___DllMainCRTStartup       1000e57c f   LIBCMT:dllcrt0.obj
+ 0001:0000d6b0       $$000000                   1000e6b0     LIBCMT:sqrt.obj
+ 0001:0000d770       $$000000                   1000e770     LIBCMT:asin.obj
+ 0001:0000d8c0       $$000000                   1000e8c0     LIBCMT:acos.obj
+ 0001:0000da10       $$000000                   1000ea10     LIBCMT:sin.obj
+ 0001:0000db40       $$000000                   1000eb40     LIBCMT:cos.obj
+ 0001:0000dc70       $$000000                   1000ec70     LIBCMT:tan.obj
+ 0001:0000ed5e       $LN272                     1000fd5e     LIBCMT:output.obj
+ 0001:0000ed7e       _write_char                1000fd7e f   LIBCMT:output.obj
+ 0001:0000edc4       _write_multi_char          1000fdc4 f   LIBCMT:output.obj
+ 0001:0000edf0       _write_string              1000fdf0 f   LIBCMT:output.obj
+ 0001:0000f448       __cftoe2_l                 10010448 f   LIBCMT:cvt.obj
+ 0001:0000f663       __cftof2_l                 10010663 f   LIBCMT:cvt.obj
+ 0001:0000fa8d       __shift                    10010a8d f   LIBCMT:cvt.obj
+ 0001:0000fe65       ?CPtoLocaleName@@YAPB_WH@Z 10010e65 f   LIBCMT:mbctype.obj
+ 0001:0000fe9f       ?getSystemCP@@YAHH@Z       10010e9f f   LIBCMT:mbctype.obj
+ 0001:0000ff0b       ?setSBCS@@YAXPAUthreadmbcinfostruct@@@Z 10010f0b f   LIBCMT:mbctype.obj
+ 0001:0000ff74       ?setSBUpLow@@YAXPAUthreadmbcinfostruct@@@Z 10010f74 f   LIBCMT:mbctype.obj
+ 0001:00010a60       $$000000                   10011a60     LIBCMT:sehprolg4.obj
+ 0001:00010e80       $$000000                   10011e80     LIBCMT:87triga.obj
+ 0001:00010f30       $$000000                   10011f30     LIBCMT:87cdisp.obj
+ 0001:00011459       $LN79                      10012459     LIBCMT:libm_error.obj
+ 0001:00011d40       __onexit_nolock            10012d40 f   LIBCMT:onexit.obj
+ 0001:00012192       _siglookup                 10013192 f   LIBCMT:winsig.obj
+ 0001:00012715       _parse_cmdline             10013715 f   LIBCMT:stdargv.obj
+ 0001:00012aa0       $$000000                   10013aa0     LIBCMT:87disp.obj
+ 0001:00012c70       $$000000                   10013c70     LIBCMT:genexcep.obj
+ 0001:00012cd0       $$000000                   10013cd0     LIBCMT:common.obj
+ 0001:00012e70       $$000000                   10013e70     LIBCMT:asin_pentium4.obj
+ 0001:000133f0       $$000000                   100143f0     LIBCMT:acos_pentium4.obj
+ 0001:00013950       $$000000                   10014950     LIBCMT:sin_pentium4.obj
+ 0001:00013b20       $$000000                   10014b20     LIBCMT:cos_pentium4.obj
+ 0001:00013cd0       $$000000                   10014cd0     LIBCMT:tan_pentium4.obj
+ 0001:000140a4       _flsall                    100150a4 f   LIBCMT:fflush.obj
+ 0001:00014190       $$000000                   10015190     LIBCMT:memset.obj
+ 0001:00014d80       $$000000                   10015d80     LIBCMT:strlen.obj
+ 0001:00014f50       $$000000                   10015f50     LIBCMT:ulldvrm.obj
+ 0001:00015230       $$000000                   10016230     LIBCMT:memmove.obj
+ 0001:00015480       LeadUpVec                  10016480     LIBCMT:memmove.obj
+ 0001:000154fc       UnwindUpVec                100164fc     LIBCMT:memmove.obj
+ 0001:00015568       TrailUpVec                 10016568     LIBCMT:memmove.obj
+ 0001:0001560c       LeadDownVec                1001660c     LIBCMT:memmove.obj
+ 0001:00015698       UnwindDownVec              10016698     LIBCMT:memmove.obj
+ 0001:00015704       TrailDownVec               10016704     LIBCMT:memmove.obj
+ 0001:00015b90       $$000000                   10016b90     LIBCMT:lldvrm.obj
+ 0001:00015c70       $$000000                   10016c70     LIBCMT:ullshr.obj
+ 0001:000161d8       ?__crtLCMapStringA_stat@@YAHPAUlocaleinfo_struct@@PB_WKPBDHPADHHH@Z 100171d8 f   LIBCMT:a_map.obj
+ 0001:00016423       ?__crtGetStringTypeA_stat@@YAHPAUlocaleinfo_struct@@KPBDHPAGHH@Z 10017423 f   LIBCMT:a_str.obj
+ 0001:00016820       $$000000                   10017820     LIBCMT:exsup4.obj
+ 0001:000168b0       __unwind_handler4          100178b0 f   LIBCMT:exsup4.obj
+ 0001:00016ecb       ?x_ismbbtype_l@@YAHPAUlocaleinfo_struct@@IHH@Z 10017ecb f   LIBCMT:ismbbyte.obj
+ 0001:000174c0       $$000000                   100184c0     LIBCMT:chkstk.obj
+ 0001:00018717       $LN304                     10019717     LIBCMT:strgtold.obj
+ 0001:0001910b       ___hw_cw_sse2              1001a10b f   LIBCMT:ieee87.obj
+ 0001:000194b4       __hw_cw                    1001a4b4 f   LIBCMT:ieee87.obj
+ 0001:00019550       $$000000                   1001a550     LIBCMT:alloca16.obj
+ 0001:00019580       $$000000                   1001a580     LIBCMT:exsup.obj
+ 0001:000195a0       __unwind_handler           1001a5a0 f   LIBCMT:exsup.obj
+ 0001:0001a190       $$000000                   1001b190     LIBCMT:llmul.obj
+ 0002:00000180       _pinit                     1001c180     LIBCMT:_file.obj
+ 0002:00000184       _pinit                     1001c184     LIBCMT:cpu_disp.obj
+ 0002:00000188       _pinit                     1001c188     LIBCMT:mbctype.obj
+ 0002:0000018c       _pinit                     1001c18c     LIBCMT:onexit.obj
+ 0002:00000190       _pinit                     1001c190     LIBCMT:mathfcns.obj
+ 0002:0000019c       _pterm                     1001c19c     LIBCMT:wsetloca.obj
+ 0002:000001a0       _pterm                     1001c1a0     LIBCMT:initcon.obj
+ 0002:000001a4       _pterm                     1001c1a4     LIBCMT:_file.obj
+ 0002:000001c0       _PI                        1001c1c0     track.obj
+ 0002:00000318       __ulEndianTest             1001c318     track3.obj
+ 0002:00000320       _PI                        1001c320     track3.obj
+ 0002:000008e0       __ulEndianTest             1001c8e0     track4.obj
+ 0002:000008e8       _PI                        1001c8e8     track4.obj
+ 0002:00000a18       __ulEndianTest             1001ca18     trackutil.obj
+ 0002:00000a24       __ulEndianTest             1001ca24     sg_vs2008_32:sgd.obj
+ 0002:00000a40       __ulEndianTest             1001ca40     ul_vs2008_32:ulError.obj
+ 0002:00000a50       Ctable                     1001ca50     LIBCMT:cos_sse2_precise.obj
+ 0002:00001250       SC_1                       1001d250     LIBCMT:cos_sse2_precise.obj
+ 0002:00001260       SC_2                       1001d260     LIBCMT:cos_sse2_precise.obj
+ 0002:00001270       SC_3                       1001d270     LIBCMT:cos_sse2_precise.obj
+ 0002:00001280       SC_4                       1001d280     LIBCMT:cos_sse2_precise.obj
+ 0002:00001290       PI32INV                    1001d290     LIBCMT:cos_sse2_precise.obj
+ 0002:00001298       SHIFTER                    1001d298     LIBCMT:cos_sse2_precise.obj
+ 0002:000012a0       P_2                        1001d2a0     LIBCMT:cos_sse2_precise.obj
+ 0002:000012b0       P_1                        1001d2b0     LIBCMT:cos_sse2_precise.obj
+ 0002:000012b8       P_3                        1001d2b8     LIBCMT:cos_sse2_precise.obj
+ 0002:000012c0       TWO_POW_55                 1001d2c0     LIBCMT:cos_sse2_precise.obj
+ 0002:000012c8       TWO_POW_M55                1001d2c8     LIBCMT:cos_sse2_precise.obj
+ 0002:000012d0       ALL_ONES                   1001d2d0     LIBCMT:cos_sse2_precise.obj
+ 0002:000012d8       NEG_ZERO                   1001d2d8     LIBCMT:cos_sse2_precise.obj
+ 0002:000012e0       ONE                        1001d2e0     LIBCMT:cos_sse2_precise.obj
+ 0002:000012f0       SIGN_MASK                  1001d2f0     LIBCMT:cos_sse2_precise.obj
+ 0002:00001300       Ctable                     1001d300     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b00       SC_1                       1001db00     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b10       SC_2                       1001db10     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b20       SC_3                       1001db20     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b30       SC_4                       1001db30     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b40       PI32INV                    1001db40     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b48       SHIFTER                    1001db48     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b50       P_2                        1001db50     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b60       P_1                        1001db60     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b68       P_3                        1001db68     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b70       TWO_POW_55                 1001db70     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b78       TWO_POW_M55                1001db78     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b80       ALL_ONES                   1001db80     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b88       NEG_ZERO                   1001db88     LIBCMT:sin_sse2_precise.obj
+ 0002:00001b90       ONE                        1001db90     LIBCMT:sin_sse2_precise.obj
+ 0002:00001ba0       Ctable                     1001dba0     LIBCMT:tan_sse2_precise.obj
+ 0002:000031a0       PI32INV                    1001f1a0     LIBCMT:tan_sse2_precise.obj
+ 0002:000031b0       SHIFTER                    1001f1b0     LIBCMT:tan_sse2_precise.obj
+ 0002:000031c0       P_1                        1001f1c0     LIBCMT:tan_sse2_precise.obj
+ 0002:000031d0       P_2                        1001f1d0     LIBCMT:tan_sse2_precise.obj
+ 0002:000031e0       P_3                        1001f1e0     LIBCMT:tan_sse2_precise.obj
+ 0002:000031f0       QQ_2                       1001f1f0     LIBCMT:tan_sse2_precise.obj
+ 0002:000031f8       ONE                        1001f1f8     LIBCMT:tan_sse2_precise.obj
+ 0002:00003200       MASK_35                    1001f200     LIBCMT:tan_sse2_precise.obj
+ 0002:00003210       sign_mask                  1001f210     LIBCMT:tan_sse2_precise.obj
+ 0002:00003218       TWO_POW_55                 1001f218     LIBCMT:tan_sse2_precise.obj
+ 0002:00003220       TWO_POW_M55                1001f220     LIBCMT:tan_sse2_precise.obj
+ 0002:00003228       TWO_POW_M53                1001f228     LIBCMT:tan_sse2_precise.obj
+ 0002:00003230       INF                        1001f230     LIBCMT:tan_sse2_precise.obj
+ 0002:000032ec       __mb_locale_names          1001f2ec     LIBCMT:mbctype.obj
+ 0002:00003688       __first_127char            1001f688     LIBCMT:wsetloca.obj
+ 0002:00003708       _GS_ExceptionPointers      1001f708     LIBCMT:gs_report.obj
+ 0002:00003760       DblMax                     1001f760     LIBCMT:87cdisp.obj
+ 0002:00003768       DblMin                     1001f768     LIBCMT:87cdisp.obj
+ 0002:00003770       IeeeAdjO                   1001f770     LIBCMT:87cdisp.obj
+ 0002:00003778       IeeeAdjU                   1001f778     LIBCMT:87cdisp.obj
+ 0002:00003780       _infinity                  1001f780     LIBCMT:87cdisp.obj
+ 0002:00003788       _zero                      1001f788     LIBCMT:87cdisp.obj
+ 0002:00003790       _INF                       1001f790     LIBCMT:libm_error.obj
+ 0002:000037a0       _BIG                       1001f7a0     LIBCMT:libm_error.obj
+ 0002:000037b0       _ZERO                      1001f7b0     LIBCMT:libm_error.obj
+ 0002:000037c0       _INF_32                    1001f7c0     LIBCMT:libm_error.obj
+ 0002:000037c8       _NAN_32                    1001f7c8     LIBCMT:libm_error.obj
+ 0002:000037d0       _ZERO_32                   1001f7d0     LIBCMT:libm_error.obj
+ 0002:000037d8       _libm_largef               1001f7d8     LIBCMT:libm_error.obj
+ 0002:000037e0       _libm_smallf               1001f7e0     LIBCMT:libm_error.obj
+ 0002:000037e8       _libm_small                1001f7e8     LIBCMT:libm_error.obj
+ 0002:00004368       _rterrs                    10020368     LIBCMT:crt0msg.obj
+ 0002:000045f4       One                        100205f4     LIBCMT:87disp.obj
+ 0002:000045fc       XAMtoTagTab                100205fc     LIBCMT:87disp.obj
+ 0002:00004610       One                        10020610     LIBCMT:common.obj
+ 0002:00004624       DblMax                     10020624     LIBCMT:common.obj
+ 0002:0000462c       DblMin                     1002062c     LIBCMT:common.obj
+ 0002:00004634       IeeeAdjO                   10020634     LIBCMT:common.obj
+ 0002:0000463c       IeeeAdjU                   1002063c     LIBCMT:common.obj
+ 0002:00004644       _infinity                  10020644     LIBCMT:common.obj
+ 0002:0000464c       _zero                      1002064c     LIBCMT:common.obj
+ 0002:00004660       Shifter                    10020660     LIBCMT:asin_pentium4.obj
+ 0002:00004670       Tbl_addr                   10020670     LIBCMT:asin_pentium4.obj
+ 0002:00005570       T_table                    10021570     LIBCMT:asin_pentium4.obj
+ 0002:00005d70       PI_BY_2                    10021d70     LIBCMT:asin_pentium4.obj
+ 0002:00005d80       SIGNMASK                   10021d80     LIBCMT:asin_pentium4.obj
+ 0002:00005d90       HALFMASK                   10021d90     LIBCMT:asin_pentium4.obj
+ 0002:00005da0       HALFMASK2                  10021da0     LIBCMT:asin_pentium4.obj
+ 0002:00005da8       cv                         10021da8     LIBCMT:asin_pentium4.obj
+ 0002:00005dc0       cv2                        10021dc0     LIBCMT:asin_pentium4.obj
+ 0002:00005e00       ABSVALMASK                 10021e00     LIBCMT:asin_pentium4.obj
+ 0002:00005e08       TMASK                      10021e08     LIBCMT:asin_pentium4.obj
+ 0002:00005e10       ONEMASK                    10021e10     LIBCMT:asin_pentium4.obj
+ 0002:00005e18       EMIN                       10021e18     LIBCMT:asin_pentium4.obj
+ 0002:00005e20       MAX_ARG                    10021e20     LIBCMT:asin_pentium4.obj
+ 0002:00005e28       MIN_ARG                    10021e28     LIBCMT:asin_pentium4.obj
+ 0002:00005e30       INF                        10021e30     LIBCMT:asin_pentium4.obj
+ 0002:00005e38       ZERO                       10021e38     LIBCMT:asin_pentium4.obj
+ 0002:00005e40       Shifter                    10021e40     LIBCMT:acos_pentium4.obj
+ 0002:00005e50       Tbl_addr                   10021e50     LIBCMT:acos_pentium4.obj
+ 0002:00006d50       T_table                    10022d50     LIBCMT:acos_pentium4.obj
+ 0002:00007550       PI_BY_2                    10023550     LIBCMT:acos_pentium4.obj
+ 0002:00007560       NEG_PI                     10023560     LIBCMT:acos_pentium4.obj
+ 0002:00007570       PI                         10023570     LIBCMT:acos_pentium4.obj
+ 0002:00007580       SIGNMASK                   10023580     LIBCMT:acos_pentium4.obj
+ 0002:00007590       HALFMASK                   10023590     LIBCMT:acos_pentium4.obj
+ 0002:000075a0       HALFMASK2                  100235a0     LIBCMT:acos_pentium4.obj
+ 0002:000075b0       cv                         100235b0     LIBCMT:acos_pentium4.obj
+ 0002:000075d0       cv2                        100235d0     LIBCMT:acos_pentium4.obj
+ 0002:00007610       ABSVALMASK                 10023610     LIBCMT:acos_pentium4.obj
+ 0002:00007618       TMASK                      10023618     LIBCMT:acos_pentium4.obj
+ 0002:00007620       ONEMASK                    10023620     LIBCMT:acos_pentium4.obj
+ 0002:00007628       ONE_BY_2                   10023628     LIBCMT:acos_pentium4.obj
+ 0002:00007630       EMIN                       10023630     LIBCMT:acos_pentium4.obj
+ 0002:00007638       MAX_ARG                    10023638     LIBCMT:acos_pentium4.obj
+ 0002:00007640       MIN_ARG                    10023640     LIBCMT:acos_pentium4.obj
+ 0002:00007648       INF                        10023648     LIBCMT:acos_pentium4.obj
+ 0002:00007650       ZERO                       10023650     LIBCMT:acos_pentium4.obj
+ 0002:00007658       ALPHA                      10023658     LIBCMT:acos_pentium4.obj
+ 0002:00007660       Ctable                     10023660     LIBCMT:sin_pentium4.obj
+ 0002:00007e60       SC_1                       10023e60     LIBCMT:sin_pentium4.obj
+ 0002:00007e70       SC_2                       10023e70     LIBCMT:sin_pentium4.obj
+ 0002:00007e80       SC_3                       10023e80     LIBCMT:sin_pentium4.obj
+ 0002:00007e90       SC_4                       10023e90     LIBCMT:sin_pentium4.obj
+ 0002:00007ea0       PI32INV                    10023ea0     LIBCMT:sin_pentium4.obj
+ 0002:00007ea8       SHIFTER                    10023ea8     LIBCMT:sin_pentium4.obj
+ 0002:00007eb0       P_2                        10023eb0     LIBCMT:sin_pentium4.obj
+ 0002:00007ec0       P_1                        10023ec0     LIBCMT:sin_pentium4.obj
+ 0002:00007ec8       P_3                        10023ec8     LIBCMT:sin_pentium4.obj
+ 0002:00007ed0       TWO_POW_55                 10023ed0     LIBCMT:sin_pentium4.obj
+ 0002:00007ed8       TWO_POW_M55                10023ed8     LIBCMT:sin_pentium4.obj
+ 0002:00007ee0       ALL_ONES                   10023ee0     LIBCMT:sin_pentium4.obj
+ 0002:00007ee8       NEG_ZERO                   10023ee8     LIBCMT:sin_pentium4.obj
+ 0002:00007ef0       ONE                        10023ef0     LIBCMT:sin_pentium4.obj
+ 0002:00007f00       Ctable                     10023f00     LIBCMT:cos_pentium4.obj
+ 0002:00008700       SC_1                       10024700     LIBCMT:cos_pentium4.obj
+ 0002:00008710       SC_2                       10024710     LIBCMT:cos_pentium4.obj
+ 0002:00008720       SC_3                       10024720     LIBCMT:cos_pentium4.obj
+ 0002:00008730       SC_4                       10024730     LIBCMT:cos_pentium4.obj
+ 0002:00008740       PI32INV                    10024740     LIBCMT:cos_pentium4.obj
+ 0002:00008748       SHIFTER                    10024748     LIBCMT:cos_pentium4.obj
+ 0002:00008750       P_2                        10024750     LIBCMT:cos_pentium4.obj
+ 0002:00008760       P_1                        10024760     LIBCMT:cos_pentium4.obj
+ 0002:00008768       P_3                        10024768     LIBCMT:cos_pentium4.obj
+ 0002:00008770       TWO_POW_55                 10024770     LIBCMT:cos_pentium4.obj
+ 0002:00008778       TWO_POW_M55                10024778     LIBCMT:cos_pentium4.obj
+ 0002:00008780       ALL_ONES                   10024780     LIBCMT:cos_pentium4.obj
+ 0002:00008788       NEG_ZERO                   10024788     LIBCMT:cos_pentium4.obj
+ 0002:00008790       ONE                        10024790     LIBCMT:cos_pentium4.obj
+ 0002:000087a0       SIGN_MASK                  100247a0     LIBCMT:cos_pentium4.obj
+ 0002:000087b0       Ctable                     100247b0     LIBCMT:tan_pentium4.obj
+ 0002:00009db0       PI32INV                    10025db0     LIBCMT:tan_pentium4.obj
+ 0002:00009dc0       SHIFTER                    10025dc0     LIBCMT:tan_pentium4.obj
+ 0002:00009dd0       P_1                        10025dd0     LIBCMT:tan_pentium4.obj
+ 0002:00009de0       P_2                        10025de0     LIBCMT:tan_pentium4.obj
+ 0002:00009df0       P_3                        10025df0     LIBCMT:tan_pentium4.obj
+ 0002:00009e00       QQ_2                       10025e00     LIBCMT:tan_pentium4.obj
+ 0002:00009e08       ONE                        10025e08     LIBCMT:tan_pentium4.obj
+ 0002:00009e10       MASK_35                    10025e10     LIBCMT:tan_pentium4.obj
+ 0002:00009e20       sign_mask                  10025e20     LIBCMT:tan_pentium4.obj
+ 0002:00009e28       TWO_POW_55                 10025e28     LIBCMT:tan_pentium4.obj
+ 0002:00009e30       TWO_POW_M55                10025e30     LIBCMT:tan_pentium4.obj
+ 0002:00009e38       TWO_POW_M53                10025e38     LIBCMT:tan_pentium4.obj
+ 0002:00009e40       INF                        10025e40     LIBCMT:tan_pentium4.obj
+ 0002:0000c8c0       __sehtable$_printf         100288c0     LIBCMT:printf.obj
+ 0002:0000c8e0       __sehtable$_doexit         100288e0     LIBCMT:crt0dat.obj
+ 0002:0000c900       __sehtable$__CRT_INIT@12   10028900     LIBCMT:dllcrt0.obj
+ 0002:0000c920       __sehtable$___DllMainCRTStartup 10028920     LIBCMT:dllcrt0.obj
+ 0002:0000c940       __sehtable$___updatetlocinfo 10028940     LIBCMT:localref.obj
+ 0002:0000c960       __sehtable$___updatetmbcinfo 10028960     LIBCMT:mbctype.obj
+ 0002:0000c980       __sehtable$__setmbcp       10028980     LIBCMT:mbctype.obj
+ 0002:0000c9a0       __sehtable$__freefls@4     100289a0     LIBCMT:tidtable.obj
+ 0002:0000c9c8       __sehtable$__initptd       100289c8     LIBCMT:tidtable.obj
+ 0002:0000c9f0       __sehtable$__locterm       100289f0     LIBCMT:wsetloca.obj
+ 0002:0000ca10       __sehtable$__mtinitlocknum 10028a10     LIBCMT:mlock.obj
+ 0002:0000ca30       __sehtable$__IsNonwritableInCurrentImage 10028a30     LIBCMT:pesect.obj
+ 0002:0000ca50       __sehtable$__onexit        10028a50     LIBCMT:onexit.obj
+ 0002:0000ca70       __sehtable$?terminate@@YAXXZ 10028a70     LIBCMT:hooks.obj
+ 0002:0000ca90       __sehtable$_raise          10028a90     LIBCMT:winsig.obj
+ 0002:0000cab0       __sehtable$__ioinit        10028ab0     LIBCMT:ioinit.obj
+ 0002:0000cad0       __sehtable$__fcloseall     10028ad0     LIBCMT:closeall.obj
+ 0002:0000caf0       __sehtable$_flsall         10028af0     LIBCMT:fflush.obj
+ 0002:0000cb18       __sehtable$__write         10028b18     LIBCMT:write.obj
+ 0002:0000cb38       __sehtable$__lseeki64      10028b38     LIBCMT:lseeki64.obj
+ 0002:0000cb58       __sehtable$_fclose         10028b58     LIBCMT:fclose.obj
+ 0002:0000cb78       __sehtable$__commit        10028b78     LIBCMT:commit.obj
+ 0002:0000cb98       __sehtable$___lock_fhandle 10028b98     LIBCMT:osfinfo.obj
+ 0002:0000cbb8       __sehtable$___set_fpsr_sse2 10028bb8     LIBCMT:fpctrl.obj
+ 0002:0000cbd8       __sehtable$__close         10028bd8     LIBCMT:close.obj
+ 0002:0000cf14       .idata$6                   10028f14     tgf:tgf.dll
+ 0002:0000cfac       .idata$6                   10028fac     robottools:robottools.dll
+ 0002:0000d462       .idata$6                   10029462     kernel32:KERNEL32.dll
+ 0002:0000d470       .edata                     10029470     track.exp
+ 0002:0000d498       rgpv                       10029498     track.exp
+ 0002:0000d49c       rgszName                   1002949c     track.exp
+ 0002:0000d4a0       rgwOrd                     100294a0     track.exp
+ 0002:0000d4a2       szName                     100294a2     track.exp
+ 0002:0000d4ac       $N00001                    100294ac     track.exp
+ 0003:00000000       _DEGPRAD                   1002a000     track.obj
+ 0003:00000004       _KeySideSurface            1002a004     track3.obj
+ 0003:0000000c       _KeySideWidth              1002a00c     track3.obj
+ 0003:00000014       _KeySideStartWidth         1002a014     track3.obj
+ 0003:0000001c       _KeySideEndWidth           1002a01c     track3.obj
+ 0003:00000024       _KeySideBankType           1002a024     track3.obj
+ 0003:0000002c       _KeyBorderSurface          1002a02c     track3.obj
+ 0003:00000034       _KeyBorderWidth            1002a034     track3.obj
+ 0003:0000003c       _KeyBorderStyle            1002a03c     track3.obj
+ 0003:00000044       _KeyBorderHeight           1002a044     track3.obj
+ 0003:0000004c       _KeyBarrierSurface         1002a04c     track3.obj
+ 0003:00000054       _KeyBarrierWidth           1002a054     track3.obj
+ 0003:0000005c       _KeyBarrierStyle           1002a05c     track3.obj
+ 0003:00000064       _KeyBarrierHeight          1002a064     track3.obj
+ 0003:0000006c       _ValStyle                  1002a06c     track3.obj
+ 0003:0000007c       _SectSide                  1002a07c     track4.obj
+ 0003:00000084       _SectBorder                1002a084     track4.obj
+ 0003:0000008c       _SectBarrier               1002a08c     track4.obj
+ 0003:00000094       _ValStyle                  1002a094     track4.obj
+ 0003:000000a8       _DoVfactor                 1002a0a8     track4.obj
+ 0003:000000c8       __ulSeverityText           1002a0c8     ul_vs2008_32:ulError.obj
+ 0003:000000f0       _NAME_                     1002a0f0     LIBCMT:sqrt.obj
+ 0003:00000100       _NAME_                     1002a100     LIBCMT:asin.obj
+ 0003:00000110       _NAME_                     1002a110     LIBCMT:acos.obj
+ 0003:00000120       _NAME_                     1002a120     LIBCMT:sin.obj
+ 0003:00000130       _NAME_                     1002a130     LIBCMT:cos.obj
+ 0003:00000140       _NAME_                     1002a140     LIBCMT:tan.obj
+ 0003:000003d0       _errtable                  1002a3d0     LIBCMT:dosmap.obj
+ 0003:00000538       _ErrnoNoMem                1002a538     LIBCMT:dosmap.obj
+ 0003:0000053c       _DoserrorNoMem             1002a53c     LIBCMT:dosmap.obj
+ 0003:00000574       ___rgctypeflag             1002a574     LIBCMT:mbctype.obj
+ 0003:00000578       ___rgcode_page_info        1002a578     LIBCMT:mbctype.obj
+ 0003:00000cc8       __ctype_loc_style          1002acc8     LIBCMT:wsetloca.obj
+ 0003:00000ce0       __locktable                1002ace0     LIBCMT:mlock.obj
+ 0003:00000e00       ?isPackaged@?1??__crtIsPackagedApp@@9@9 1002ae00     LIBCMT:winapisupp.obj
+ 0003:00000ed0       _DoubleFormat              1002aed0     LIBCMT:intrncvt.obj
+ 0003:00000ee8       _FloatFormat               1002aee8     LIBCMT:intrncvt.obj
+ 0003:00000f10       ?_names@?1??_get_fname@@9@9 1002af10     LIBCMT:fpexcept.obj
+ 0003:00000ff8       _over                      1002aff8     LIBCMT:fpctrl.obj
+ 0003:00001004       _under                     1002b004     LIBCMT:fpctrl.obj
+ 0003:00001010       ?__DAZ_ENABLED@?1??__set_fpsr_sse2@@9@9 1002b010     LIBCMT:fpctrl.obj
+ 0003:00001300       _theTrack                  1002b300     track.obj
+ 0003:00001304       _theCamList                1002b304     track.obj
+ 0003:00001308       _TrackHandle               1002b308     track.obj
+ 0003:0000130c       _GlobalStepLen             1002b30c     track3.obj
+ 0003:00001310       _xmin                      1002b310     track3.obj
+ 0003:00001314       _xmax                      1002b314     track3.obj
+ 0003:00001318       _ymin                      1002b318     track3.obj
+ 0003:0000131c       _ymax                      1002b31c     track3.obj
+ 0003:00001320       _zmin                      1002b320     track3.obj
+ 0003:00001324       _zmax                      1002b324     track3.obj
+ 0003:00001328       _sideEndWidth              1002b328     track3.obj
+ 0003:00001330       _sideStartWidth            1002b330     track3.obj
+ 0003:00001338       _sideBankType              1002b338     track3.obj
+ 0003:00001340       _sideMaterial              1002b340     track3.obj
+ 0003:00001348       _sideSurface               1002b348     track3.obj
+ 0003:00001350       _envIndex                  1002b350     track3.obj
+ 0003:00001354       _borderWidth               1002b354     track3.obj
+ 0003:0000135c       _borderHeight              1002b35c     track3.obj
+ 0003:00001364       _borderStyle               1002b364     track3.obj
+ 0003:0000136c       _borderMaterial            1002b36c     track3.obj
+ 0003:00001374       _borderSurface             1002b374     track3.obj
+ 0003:0000137c       _barrierWidth              1002b37c     track3.obj
+ 0003:00001384       _barrierHeight             1002b384     track3.obj
+ 0003:0000138c       _barrierStyle              1002b38c     track3.obj
+ 0003:00001394       _barrierMaterial           1002b394     track3.obj
+ 0003:0000139c       _barrierSurface            1002b39c     track3.obj
+ 0003:000013a4       _GlobalStepLen             1002b3a4     track4.obj
+ 0003:000013a8       _xmin                      1002b3a8     track4.obj
+ 0003:000013ac       _xmax                      1002b3ac     track4.obj
+ 0003:000013b0       _ymin                      1002b3b0     track4.obj
+ 0003:000013b4       _ymax                      1002b3b4     track4.obj
+ 0003:000013b8       _zmin                      1002b3b8     track4.obj
+ 0003:000013bc       _zmax                      1002b3bc     track4.obj
+ 0003:000013c0       _sideEndWidth              1002b3c0     track4.obj
+ 0003:000013c8       _sideStartWidth            1002b3c8     track4.obj
+ 0003:000013d0       _sideBankType              1002b3d0     track4.obj
+ 0003:000013d8       _sideMaterial              1002b3d8     track4.obj
+ 0003:000013e0       _sideSurface               1002b3e0     track4.obj
+ 0003:000013e8       _envIndex                  1002b3e8     track4.obj
+ 0003:000013ec       _borderWidth               1002b3ec     track4.obj
+ 0003:000013f4       _borderHeight              1002b3f4     track4.obj
+ 0003:000013fc       _borderStyle               1002b3fc     track4.obj
+ 0003:00001404       _borderMaterial            1002b404     track4.obj
+ 0003:0000140c       _borderSurface             1002b40c     track4.obj
+ 0003:00001414       _barrierWidth              1002b414     track4.obj
+ 0003:0000141c       _barrierHeight             1002b41c     track4.obj
+ 0003:00001424       _barrierStyle              1002b424     track4.obj
+ 0003:0000142c       _barrierMaterial           1002b42c     track4.obj
+ 0003:00001434       _barrierSurface            1002b434     track4.obj
+ 0003:00001440       __ulErrorBuffer            1002b440     ul_vs2008_32:ulError.obj
+ 0003:00001840       __ulErrorCB                1002b840     ul_vs2008_32:ulError.obj
+ 0003:00001848       ___enable_percent_n        1002b848     LIBCMT:printf.obj
+ 0003:00001880       ___proc_attached           1002b880     LIBCMT:dllcrt0.obj
+ 0003:000018b4       _fSystemSet                1002b8b4     LIBCMT:mbctype.obj
+ 0003:000018c8       _GS_ExceptionRecord        1002b8c8     LIBCMT:gs_report.obj
+ 0003:00001918       _GS_ContextRecord          1002b918     LIBCMT:gs_report.obj
+ 0003:00001be4       _DebuggerWasPresent        1002bbe4     LIBCMT:gs_report.obj
+ 0003:00001be8       __pmatherr_set             1002bbe8     LIBCMT:libm_error.obj
+ 0003:00001bf0       _lclcritsects              1002bbf0     LIBCMT:mlock.obj
+ 0003:00001d48       ?outmsg@?8??_NMSG_WRITE@@9@9 1002bd48     LIBCMT:crt0msg.obj
+ 0003:00002380       _g_pfnRtlGenRandom         1002c380     LIBCMT:rand_s.obj
+ 0003:00002384       _ctrlc_action              1002c384     LIBCMT:winsig.obj
+ 0003:00002388       _ctrlbreak_action          1002c388     LIBCMT:winsig.obj
+ 0003:0000238c       _abort_action              1002c38c     LIBCMT:winsig.obj
+ 0003:00002390       _term_action               1002c390     LIBCMT:winsig.obj
+ 0003:00002394       _ConsoleCtrlHandler_Installed 1002c394     LIBCMT:winsig.obj
+ 0003:000024a0       ?_pgmname@?1??_setargv@@9@9 1002c4a0     LIBCMT:stdargv.obj
+ 0003:000025b4       ___crtCallProc             1002c5b4     LIBCMT:winapinls.obj
+ 0003:000025bc       ?pfnMessageBox@?1??__crtMessageBoxW@@9@9 1002c5bc     LIBCMT:crtmboxw.obj
+ 0003:000025c0       ?pfnGetActiveWindow@?1??__crtMessageBoxW@@9@9 1002c5c0     LIBCMT:crtmboxw.obj
+ 0003:000025c4       ?pfnGetLastActivePopup@?1??__crtMessageBoxW@@9@9 1002c5c4     LIBCMT:crtmboxw.obj
+ 0003:000025c8       ?pfnGetProcessWindowStation@?1??__crtMessageBoxW@@9@9 1002c5c8     LIBCMT:crtmboxw.obj
+ 0003:000025cc       ?pfnGetUserObjectInformation@?1??__crtMessageBoxW@@9@9 1002c5cc     LIBCMT:crtmboxw.obj

@@ -1,0 +1,28 @@
+﻿Build started 4/23/2013 12:19:46 PM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\inferno\inferno.vcxproj" on node 5 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D BERNIW_2004_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt inferno.cpp mycar.cpp pathfinder.cpp spline.cpp trackdesc.cpp
+         inferno.cpp
+         mycar.cpp
+         pathfinder.cpp
+         spline.cpp
+         trackdesc.cpp
+         Generating Code...
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release/inferno.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../export/lib /LIBPATH:../../windows/lib tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\inferno.def" /MANIFEST:NO /PDB:".\Release/inferno.pdb" /MAP:".\Release/inferno.map" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Release/inferno.lib" /MACHINE:X86 /SAFESEH /DLL .\Release/inferno.obj
+         .\Release/mycar.obj
+         .\Release/pathfinder.obj
+         .\Release/spline.obj
+         .\Release/trackdesc.obj
+            Creating library .\Release/inferno.lib and object .\Release/inferno.exp
+         inferno.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\inferno\.\Release\inferno.dll
+       PostBuildEvent:
+         copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\inferno\Release\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtime\drivers\inferno
+         :VCEnd
+         D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\inferno\Release\inferno.dll
+                 1 fil(er) kopierad(e).
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\inferno\inferno.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.10

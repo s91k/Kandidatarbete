@@ -1,0 +1,28 @@
+﻿Build started 4/23/2013 12:19:41 PM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw2\berniw2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D BERNIW2_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt berniw2.cpp mycar.cpp pathfinder.cpp spline.cpp trackdesc.cpp
+         berniw2.cpp
+         mycar.cpp
+         pathfinder.cpp
+         spline.cpp
+         trackdesc.cpp
+         Generating Code...
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release/berniw2.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../export/lib /LIBPATH:../../windows/lib tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\berniw2.def" /MANIFEST:NO /PDB:".\Release/berniw2.pdb" /MAP:".\Release/berniw2.map" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Release/berniw2.lib" /MACHINE:X86 /SAFESEH /DLL .\Release/berniw2.obj
+         .\Release/mycar.obj
+         .\Release/pathfinder.obj
+         .\Release/spline.obj
+         .\Release/trackdesc.obj
+            Creating library .\Release/berniw2.lib and object .\Release/berniw2.exp
+         berniw2.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw2\.\Release\berniw2.dll
+       PostBuildEvent:
+         copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw2\Release\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtime\drivers\berniw2
+         :VCEnd
+         D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw2\Release\berniw2.dll
+                 1 fil(er) kopierad(e).
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw2\berniw2.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.83

@@ -1,0 +1,28 @@
+﻿Build started 4/11/2013 11:46:33 PM.
+     1>Project "D:\Simon\Documents\Kandidatarbete\torcs-1.3.4\src\drivers\bt\bt.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D BT_EXPORTS /D DEBUG /D DEBUG_OUT /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc110.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt bt.cpp cardata.cpp driver.cpp learn.cpp opponent.cpp pit.cpp spline.cpp strategy.cpp
+         bt.cpp
+         cardata.cpp
+         driver.cpp
+         learn.cpp
+         opponent.cpp
+         pit.cpp
+         spline.cpp
+         strategy.cpp
+         Generating Code...
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/bt.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../export/libd /LIBPATH:../../windows/lib tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMT /DEF:".\bt.def" /MANIFEST:NO /DEBUG /PDB:".\Debug/bt.pdb" /MAP:".\Debug/bt.map" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Debug/bt.lib" /MACHINE:X86 /SAFESEH /DLL .\Debug/bt.obj
+         .\Debug/cardata.obj
+         .\Debug/driver.obj
+         .\Debug/learn.obj
+         .\Debug/opponent.obj
+         .\Debug/pit.obj
+         .\Debug/spline.obj
+         .\Debug/strategy.obj
+     1>LINK : fatal error LNK1181: cannot open input file 'tgf.lib'
+     1>Done Building Project "D:\Simon\Documents\Kandidatarbete\torcs-1.3.4\src\drivers\bt\bt.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.16

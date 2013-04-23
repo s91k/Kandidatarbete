@@ -1,0 +1,65 @@
+﻿Build started 4/23/2013 12:19:30 PM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\graphic\ssggraph\ssggraphlib.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../../export/include /I../../../windows/include /I../../../.. /Zi /nologo /W2 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _LIB /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt CarSoundData.cpp grboard.cpp grcam.cpp grcar.cpp grcarlight.cpp grloadac.cpp grmain.cpp grmultitexstate.cpp grscene.cpp grscreen.cpp grshadow.cpp grskidmarks.cpp grsmoke.cpp grsound.cpp grtexture.cpp grtrackmap.cpp grutil.cpp grvtxtable.cpp OpenalSoundInterface.cpp PlibSoundInterface.cpp SoundInterface.cpp ssggraph.cpp TorcsSound.cpp
+         CarSoundData.cpp
+         grboard.cpp
+         grcam.cpp
+         grcar.cpp
+         grcarlight.cpp
+         grloadac.cpp
+         grmain.cpp
+         grmultitexstate.cpp
+         grscene.cpp
+         grscreen.cpp
+         grshadow.cpp
+         grskidmarks.cpp
+         grsmoke.cpp
+         grsound.cpp
+         grtexture.cpp
+         grtrackmap.cpp
+         grutil.cpp
+         grvtxtable.cpp
+         OpenalSoundInterface.cpp
+         PlibSoundInterface.cpp
+         Generating Code...
+         Compiling...
+         SoundInterface.cpp
+         ssggraph.cpp
+         TorcsSound.cpp
+         Generating Code...
+       Lib:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:".\Release\ssggraphlib.lib" /NOLOGO .\Release/CarSoundData.obj
+         .\Release/grboard.obj
+         .\Release/grcam.obj
+         .\Release/grcar.obj
+         .\Release/grcarlight.obj
+         .\Release/grloadac.obj
+         .\Release/grmain.obj
+         .\Release/grmultitexstate.obj
+         .\Release/grscene.obj
+         .\Release/grscreen.obj
+         .\Release/grshadow.obj
+         .\Release/grskidmarks.obj
+         .\Release/grsmoke.obj
+         .\Release/grsound.obj
+         .\Release/grtexture.obj
+         .\Release/grtrackmap.obj
+         .\Release/grutil.obj
+         .\Release/grvtxtable.obj
+         .\Release/OpenalSoundInterface.obj
+         .\Release/PlibSoundInterface.obj
+         .\Release/SoundInterface.obj
+         .\Release/ssggraph.obj
+         .\Release/TorcsSound.obj
+         ssggraphlib.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\graphic\ssggraph\.\Release\ssggraphlib.lib
+       PostBuildEvent:
+         copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\graphic\ssggraph\Release\*.lib ..\..\..\..\export\lib
+         :VCEnd
+         D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\graphic\ssggraph\Release\ssggraphlib.lib
+                 1 fil(er) kopierad(e).
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\graphic\ssggraph\ssggraphlib.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:16.18

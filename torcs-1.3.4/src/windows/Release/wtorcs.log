@@ -1,0 +1,34 @@
+﻿Build started 4/23/2013 12:20:07 PM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\windows\wtorcs.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\..\export\include /I..\windows\include /I..\.. /Zi /nologo /W2 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp windowsspec.cpp
+         main.cpp
+         windowsspec.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D NDEBUG /D _VC80_UPGRADE=0x0600 /l"0x0409" /I\Users\berni\Development\torcs\torcs /nologo /fo"Release/tocs.res" ..\..\torcs.rc 
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release/wtorcs.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../export/lib /LIBPATH:../windows/lib client.lib txml.lib libpng15_vs2008_32.lib tgf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST:NO /PDB:".\Release\wtorcs.pdb" /MAP:".\Release/wtorcs.map" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Release\wtorcs.lib" /MACHINE:X86 /SAFESEH Release/tocs.res
+         .\Release/main.obj
+         .\Release/windowsspec.obj
+         wtorcs.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\windows\.\Release\wtorcs.exe
+       PostBuildEvent:
+         copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\windows\Release\wtorcs.exe D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtime
+         copy dll\glut32.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtime
+         copy dll\OpenAL32.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtime
+         copy dll\libogg.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtime
+         copy dll\libvorbis.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtime
+         copy dll\libvorbisfile.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtime
+         
+         :VCEnd
+                 1 fil(er) kopierad(e).
+                 1 fil(er) kopierad(e).
+                 1 fil(er) kopierad(e).
+                 1 fil(er) kopierad(e).
+                 1 fil(er) kopierad(e).
+                 1 fil(er) kopierad(e).
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\windows\wtorcs.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.67
