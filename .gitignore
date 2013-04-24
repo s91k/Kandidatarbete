@@ -86,3 +86,6 @@
 
 /torcs-1.3.4/src/drivers/damned/Release/damned.log
 /torcs-1.3.4/src/drivers/human/Release/human.log
+/torcs-1.3.4/runtime/drivers/ANN_Bot/ANN_Bot.dll
+
+/torcs-1.3.4/src/drivers/ANN_Bot/Release
