@@ -1,0 +1,10 @@
+;
+; berniw_Recorder.def
+;
+
+LIBRARY
+
+SECTIONS .data READ WRITE
+
+EXPORTS
+	berniw_Recorder
