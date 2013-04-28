@@ -21,6 +21,8 @@
 #include "berniw_Recorder.h"
 #include <portability.h>
 #include <iostream>
+#include <fstream>
+#include <string>
 
 #ifdef DMALLOC
 #include "dmalloc.h"
@@ -57,6 +59,7 @@ extern "C" int berniw_Recorder(tModInfo *modInfo)
 		modInfo[i].gfId    = ROB_IDENT;			/* supported framework version */
 		modInfo[i].index   = i+1;
 	}
+
 	return 0;
 }
 
@@ -82,7 +85,8 @@ static TrackDesc* myTrackDesc = NULL;
 static double currenttime;
 static const tdble waitToTurn = 1.0; /* how long should i wait till i try to turn backwards */
 
-static std::fstream outputFiles[BOTS];
+static std::ofstream outputFiles[BOTS];
+static double timeSinceLastUpdate[BOTS];
 
 
 /* release resources when the module gets unloaded */
@@ -102,6 +106,8 @@ static void shutdown(int index) {
 		delete [] ocar;
 		ocar = NULL;
 	}
+
+	outputFiles[index - 1].close();
 }
 
 
@@ -148,6 +154,10 @@ static void newRace(int index, tCarElt* car, tSituation *situation)
 	mycar[index-1] = new MyCar(myTrackDesc, car, situation);
 
 	currenttime = situation->currentTime;
+
+	//Open the file that the training data will be written to
+	outputFiles[index - 1].open(std::string("drivers/berniw_Recorder/") + botname[index - 1] + std::string(" recording.txt"));
+	timeSinceLastUpdate[index - 1] = 0.0;
 }
 
 
@@ -418,6 +428,36 @@ static void drive(int index, tCarElt* car, tSituation *situation)
 	}
 
 	if (myc->tr_mode == 0) car->_steerCmd = steer;
+
+
+	timeSinceLastUpdate[index - 1] += situation->deltaTime;
+	
+	//Only update once per second
+	if(timeSinceLastUpdate[index - 1] > 1.0)
+	{
+		timeSinceLastUpdate[index - 1] = 0.0;
+
+		//Write training data
+		outputFiles[index - 1]<<"DATA"<<std::endl;
+
+		outputFiles[index - 1]<<"speed "<<myc->getSpeed()<<std::endl;
+		//Distance sensors output
+
+		outputFiles[index - 1]<<"steer "<<car->ctrl.steer<<std::endl;
+		outputFiles[index - 1]<<"accel "<<car->ctrl.accelCmd<<std::endl;
+		outputFiles[index - 1]<<"brake "<<car->ctrl.brakeCmd<<std::endl;
+		outputFiles[index - 1]<<"gear "<<car->ctrl.gear<<std::endl;
+		outputFiles[index - 1]<<"clutch "<<car->ctrl.clutchCmd<<std::endl;
+
+		//Write training data to console
+		printf_s("-----------------------------\n");
+		printf_s("Speed: %f\n", myc->getSpeed());
+		printf_s("Steering: %f\n", car->ctrl.steer);
+		printf_s("Acceleration: %f\n", car->ctrl.accelCmd);
+		printf_s("Brake: %f\n", car->ctrl.brakeCmd);
+		printf_s("Gear: %f\n", car->ctrl.gear);
+		printf_s("Clutch: %f\n", car->ctrl.clutchCmd);
+	}
 }
 
 /* pitstop callback */
