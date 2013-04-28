@@ -11,9 +11,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="bt.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="cardata.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -35,9 +32,18 @@
     <ClCompile Include="strategy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ANN_Bot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AnnAIController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNetwork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bt.def">
+    <None Include="ANN_Bot.def">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
@@ -51,9 +57,6 @@
     <ClInclude Include="learn.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="linalg.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="opponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -64,6 +67,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="strategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnnAIController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuralNetwork.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
