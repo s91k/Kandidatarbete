@@ -38,6 +38,7 @@
 #include "learn.h"
 #include "strategy.h"
 #include "cardata.h"
+#include "AnnAIController.h"
 
 #define BT_SECT_PRIV "bt private"
 #define BT_ATT_FUELPERLAP "fuelperlap"
