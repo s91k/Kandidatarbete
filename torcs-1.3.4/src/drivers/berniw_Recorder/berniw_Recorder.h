@@ -35,6 +35,7 @@
 #include "trackdesc.h"
 #include "mycar.h"
 #include "pathfinder.h"
+#include "sensors.h"
 
 #define TRACKFILENAME		"/home/berni/track.dat"
 #define TRACKDESCFILENAME   "/home/berni/track.txt"

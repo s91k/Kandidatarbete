@@ -171,8 +171,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="berniw_Recorder.cpp" />
+    <ClCompile Include="DistanceSensor.cpp" />
     <ClCompile Include="mycar.cpp" />
     <ClCompile Include="pathfinder.cpp" />
+    <ClCompile Include="sensors.cpp" />
     <ClCompile Include="spline.cpp" />
     <ClCompile Include="trackdesc.cpp" />
   </ItemGroup>
@@ -181,9 +183,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="berniw_Recorder.h" />
+    <ClInclude Include="DistanceSensor.h" />
     <ClInclude Include="linalg.h" />
     <ClInclude Include="mycar.h" />
     <ClInclude Include="pathfinder.h" />
+    <ClInclude Include="sensors.h" />
     <ClInclude Include="spline.h" />
     <ClInclude Include="trackdesc.h" />
   </ItemGroup>

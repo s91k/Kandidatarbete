@@ -1,0 +1,51 @@
+﻿Build started 5/3/2013 2:27:21 AM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\simu\simuv2\simuv2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../../export/include /I../../../windows/include /I../../../.. /Zi /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D SIMUV2_EXPORTS /D DEBUG /D DEBUG_OUT /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc110.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt aero.cpp axle.cpp brake.cpp car.cpp categories.cpp collide.cpp differential.cpp engine.cpp simu.cpp simuitf.cpp steer.cpp susp.cpp transmission.cpp wheel.cpp
+         aero.cpp
+         axle.cpp
+         brake.cpp
+         car.cpp
+         categories.cpp
+         collide.cpp
+         differential.cpp
+         engine.cpp
+         simu.cpp
+         simuitf.cpp
+         steer.cpp
+         susp.cpp
+         transmission.cpp
+         wheel.cpp
+         Generating Code...
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/simuv2.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../../export/libd /LIBPATH:../../../windows/lib solid.lib tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMT /DEF:".\simuv2.def" /MANIFEST:NO /DEBUG /PDB:".\Debug/simuv2.pdb" /MAP:".\Debug/simuv2.map" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Debug/simuv2.lib" /MACHINE:X86 /SAFESEH /DLL .\Debug/aero.obj
+         .\Debug/axle.obj
+         .\Debug/brake.obj
+         .\Debug/car.obj
+         .\Debug/categories.obj
+         .\Debug/collide.obj
+         .\Debug/differential.obj
+         .\Debug/engine.obj
+         .\Debug/simu.obj
+         .\Debug/simuitf.obj
+         .\Debug/steer.obj
+         .\Debug/susp.obj
+         .\Debug/transmission.obj
+         .\Debug/wheel.obj
+            Creating library .\Debug/simuv2.lib and object .\Debug/simuv2.exp
+         simuv2.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\simu\simuv2\.\Debug\simuv2.dll
+       BscMake:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\bscmake.exe /nologo /o".\Debug/simuv2.bsc" .\Debug\aero.sbr .\Debug\axle.sbr .\Debug\brake.sbr .\Debug\car.sbr .\Debug\categories.sbr .\Debug\collide.sbr .\Debug\differential.sbr .\Debug\engine.sbr .\Debug\simu.sbr .\Debug\simuitf.sbr .\Debug\steer.sbr .\Debug\susp.sbr .\Debug\transmission.sbr .\Debug\wheel.sbr
+       PostBuildEvent:
+         copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\simu\simuv2\Debug\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtimed\modules\simu
+         :VCEnd
+         D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\simu\simuv2\Debug\simuv2.dll
+         Det går inte att hitta sökvägen.
+                 0 fil(er) kopierad(e).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targets(134,5): error MSB3073: The command "copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\simu\simuv2\Debug\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtimed\modules\simu
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targets(134,5): error MSB3073: :VCEnd" exited with code 1.
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\simu\simuv2\simuv2.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:14.69
