@@ -1,0 +1,118 @@
+﻿Build started 5/3/2013 2:27:10 AM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\libs\client\client.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../interfaces /I../../.. /Zi /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D CLIENT_EXPORTS /D DEBUG /D DEBUG_OUT /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc110.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt ..\tgfclient\control.cpp ..\confscreens\controlconfig.cpp ..\confscreens\driverconfig.cpp ..\racescreens\driverselect.cpp entry.cpp exitmenu.cpp ..\racescreens\fileselect.cpp ..\tgfclient\glfeatures.cpp ..\confscreens\graphconfig.cpp ..\tgfclient\gui.cpp ..\tgfclient\guibutton.cpp ..\tgfclient\guiedit.cpp ..\tgfclient\guifont.cpp ..\tgfclient\guihelp.cpp ..\tgfclient\guiimage.cpp ..\tgfclient\guilabel.cpp ..\tgfclient\guimenu.cpp ..\tgfclient\guiobject.cpp ..\tgfclient\guiscrollbar.cpp ..\tgfclient\guiscrollist.cpp ..\tgfclient\img.cpp ..\confscreens\joystickconfig.cpp ..\racescreens\loadingscreen.cpp mainmenu.cpp ..\racescreens\miscscreens.cpp ..\confscreens\mouseconfig.cpp ..\musicplayer\musicplayer.cpp ..\musicplayer\OggSoundStream.cpp ..\musicplayer\OpenALMusicPlayer.cpp ..\confscreens\openglconfig.cpp optionmenu.cpp ..\racescreens\pitmenu.cpp ..\raceengineclient\raceengine.cpp ..\raceengineclient\racegl.cpp ..\raceengineclient\raceinit.cpp ..\raceengineclient\racemain.cpp ..\raceengineclient\racemanmenu.cpp ..\racescreens\racemenu.cpp ..\raceengineclient\raceresults.cpp ..\raceengineclient\racestate.cpp ..\racescreens\results.cpp ..\tgfclient\screen.cpp ..\confscreens\simuconfig.cpp ..\raceengineclient\singleplayer.cpp ..\confscreens\soundconfig.cpp ..\musicplayer\SoundStream.cpp splash.cpp ..\tgfclient\tgfclient.cpp ..\racescreens\trackselect.cpp
+         control.cpp
+         controlconfig.cpp
+         driverconfig.cpp
+         driverselect.cpp
+         entry.cpp
+         exitmenu.cpp
+         fileselect.cpp
+         glfeatures.cpp
+         graphconfig.cpp
+         gui.cpp
+         guibutton.cpp
+         guiedit.cpp
+         guifont.cpp
+         guihelp.cpp
+         guiimage.cpp
+         guilabel.cpp
+         guimenu.cpp
+         guiobject.cpp
+         guiscrollbar.cpp
+         guiscrollist.cpp
+         Generating Code...
+         Compiling...
+         img.cpp
+         joystickconfig.cpp
+         loadingscreen.cpp
+         mainmenu.cpp
+         miscscreens.cpp
+         mouseconfig.cpp
+         musicplayer.cpp
+         OggSoundStream.cpp
+         OpenALMusicPlayer.cpp
+         openglconfig.cpp
+         optionmenu.cpp
+         pitmenu.cpp
+         raceengine.cpp
+         racegl.cpp
+         raceinit.cpp
+         racemain.cpp
+         racemanmenu.cpp
+         racemenu.cpp
+         raceresults.cpp
+         racestate.cpp
+         Generating Code...
+         Compiling...
+         results.cpp
+         screen.cpp
+         simuconfig.cpp
+         singleplayer.cpp
+         soundconfig.cpp
+         SoundStream.cpp
+         splash.cpp
+         tgfclient.cpp
+         trackselect.cpp
+         Generating Code...
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/client.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../export/libd /LIBPATH:../../windows/lib txml.lib libpng15_vs2008_32.lib sg_vs2008_32.lib ul_vs2008_32.lib tgf.lib robottools.lib ssggraphlib.lib ssg_vs2008_32.lib ssgAux_vs2008_32.lib sl_vs2008_32.lib OpenAL32.lib Alut.lib libogg.lib libvorbis.lib libvorbisfile.lib zlib1_vs2008_32.lib js_vs2008_32.lib Advapi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMT /DEF:".\client.def" /MANIFEST:NO /DEBUG /PDB:".\Debug/client.pdb" /MAP:".\Debug/client.map" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Debug/client.lib" /MACHINE:X86 /SAFESEH /DLL .\Debug/control.obj
+         .\Debug/controlconfig.obj
+         .\Debug/driverconfig.obj
+         .\Debug/driverselect.obj
+         .\Debug/entry.obj
+         .\Debug/exitmenu.obj
+         .\Debug/fileselect.obj
+         .\Debug/glfeatures.obj
+         .\Debug/graphconfig.obj
+         .\Debug/gui.obj
+         .\Debug/guibutton.obj
+         .\Debug/guiedit.obj
+         .\Debug/guifont.obj
+         .\Debug/guihelp.obj
+         .\Debug/guiimage.obj
+         .\Debug/guilabel.obj
+         .\Debug/guimenu.obj
+         .\Debug/guiobject.obj
+         .\Debug/guiscrollbar.obj
+         .\Debug/guiscrollist.obj
+         .\Debug/img.obj
+         .\Debug/joystickconfig.obj
+         .\Debug/loadingscreen.obj
+         .\Debug/mainmenu.obj
+         .\Debug/miscscreens.obj
+         .\Debug/mouseconfig.obj
+         .\Debug/musicplayer.obj
+         .\Debug/OggSoundStream.obj
+         .\Debug/OpenALMusicPlayer.obj
+         .\Debug/openglconfig.obj
+         .\Debug/optionmenu.obj
+         .\Debug/pitmenu.obj
+         .\Debug/raceengine.obj
+         .\Debug/racegl.obj
+         .\Debug/raceinit.obj
+         .\Debug/racemain.obj
+         .\Debug/racemanmenu.obj
+         .\Debug/racemenu.obj
+         .\Debug/raceresults.obj
+         .\Debug/racestate.obj
+         .\Debug/results.obj
+         .\Debug/screen.obj
+         .\Debug/simuconfig.obj
+         .\Debug/singleplayer.obj
+         .\Debug/soundconfig.obj
+         .\Debug/SoundStream.obj
+         .\Debug/splash.obj
+         .\Debug/tgfclient.obj
+         .\Debug/trackselect.obj
+            Creating library .\Debug/client.lib and object .\Debug/client.exp
+         client.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\libs\client\.\Debug\client.dll
+       BscMake:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\bscmake.exe /nologo /o".\Debug/client.bsc" .\Debug\control.sbr .\Debug\controlconfig.sbr .\Debug\driverconfig.sbr .\Debug\driverselect.sbr .\Debug\entry.sbr .\Debug\exitmenu.sbr .\Debug\fileselect.sbr .\Debug\glfeatures.sbr .\Debug\graphconfig.sbr .\Debug\gui.sbr .\Debug\guibutton.sbr .\Debug\guiedit.sbr .\Debug\guifont.sbr .\Debug\guihelp.sbr .\Debug\guiimage.sbr .\Debug\guilabel.sbr .\Debug\guimenu.sbr .\Debug\guiobject.sbr .\Debug\guiscrollbar.sbr .\Debug\guiscrollist.sbr .\Debug\img.sbr .\Debug\joystickconfig.sbr .\Debug\loadingscreen.sbr .\Debug\mainmenu.sbr .\Debug\miscscreens.sbr .\Debug\mouseconfig.sbr .\Debug\musicplayer.sbr .\Debug\OggSoundStream.sbr .\Debug\OpenALMusicPlayer.sbr .\Debug\openglconfig.sbr .\Debug\optionmenu.sbr .\Debug\pitmenu.sbr .\Debug\raceengine.sbr .\Debug\racegl.sbr .\Debug\raceinit.sbr .\Debug\racemain.sbr .\Debug\racemanmenu.sbr .\Debug\racemenu.sbr .\Debug\raceresults.sbr .\Debug\racestate.sbr .\Debug\results.sbr .\Debug\screen.sbr .\Debug\simuconfig.sbr .\Debug\singleplayer.sbr .\Debug\soundconfig.sbr .\Debug\SoundStream.sbr .\Debug\splash.sbr .\Debug\tgfclient.sbr .\Debug\trackselect.sbr
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targets(1681,5): error MSB6006: "bscmake.exe" exited with code -1073741510.
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\libs\client\client.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:36.93

@@ -1,0 +1,45 @@
+﻿Build started 5/3/2013 2:27:33 AM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot\ANN_Bot.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D ANN_Bot_EXPORTS /D DEBUG /D DEBUG_OUT /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc110.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt AnnAIController.cpp ANN_Bot.cpp cardata.cpp driver.cpp learn.cpp NeuralNetwork.cpp opponent.cpp pit.cpp spline.cpp strategy.cpp
+         AnnAIController.cpp
+         ANN_Bot.cpp
+         cardata.cpp
+         driver.cpp
+         learn.cpp
+         NeuralNetwork.cpp
+     1>NeuralNetwork.cpp(12): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>NeuralNetwork.cpp(13): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+         opponent.cpp
+         pit.cpp
+         spline.cpp
+         strategy.cpp
+         Generating Code...
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/ANN_Bot.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../export/libd /LIBPATH:../../windows/lib tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMT /DEF:".\ANN_Bot.def" /MANIFEST:NO /DEBUG /PDB:".\Debug/ANN_Bot.pdb" /MAP:".\Debug/ANN_Bot.map" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Debug/ANN_Bot.lib" /MACHINE:X86 /SAFESEH /DLL .\Debug/AnnAIController.obj
+         .\Debug/ANN_Bot.obj
+         .\Debug/cardata.obj
+         .\Debug/driver.obj
+         .\Debug/learn.obj
+         .\Debug/NeuralNetwork.obj
+         .\Debug/opponent.obj
+         .\Debug/pit.obj
+         .\Debug/spline.obj
+         .\Debug/strategy.obj
+            Creating library .\Debug/ANN_Bot.lib and object .\Debug/ANN_Bot.exp
+         ANN_Bot.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot\.\Debug\ANN_Bot.dll
+       BscMake:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\bscmake.exe /nologo /o".\Debug/ANN_Bot.bsc" .\Debug\AnnAIController.sbr .\Debug\ANN_Bot.sbr .\Debug\cardata.sbr .\Debug\driver.sbr .\Debug\learn.sbr .\Debug\NeuralNetwork.sbr .\Debug\opponent.sbr .\Debug\pit.sbr .\Debug\spline.sbr .\Debug\strategy.sbr
+       PostBuildEvent:
+         copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot\Debug\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtimed\drivers\ANN_Bot
+         :VCEnd
+         D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot\Debug\ANN_Bot.dll
+         Det går inte att hitta sökvägen.
+                 0 fil(er) kopierad(e).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targets(134,5): error MSB3073: The command "copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot\Debug\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtimed\drivers\ANN_Bot
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targets(134,5): error MSB3073: :VCEnd" exited with code 1.
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot\ANN_Bot.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:09.38

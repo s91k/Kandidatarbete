@@ -1,17 +1,14 @@
-﻿Build started 4/26/2013 2:51:00 PM.
-     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw_Recorder\berniw_Recorder.vcxproj" on node 5 (Rebuild target(s)).
+﻿Build started 5/3/2013 2:46:25 AM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw_Recorder\berniw_Recorder.vcxproj" on node 4 (Build target(s)).
      1>ClCompile:
-         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D BERNIW_RECORDER_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt berniw_Recorder.cpp mycar.cpp pathfinder.cpp spline.cpp trackdesc.cpp
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D BERNIW_RECORDER_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt berniw_Recorder.cpp
          berniw_Recorder.cpp
-         mycar.cpp
-         pathfinder.cpp
-         spline.cpp
-         trackdesc.cpp
-         Generating Code...
        Link:
          D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release/berniw_Recorder.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../export/lib /LIBPATH:../../windows/lib tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\berniw_Recorder.def" /MANIFEST:NO /PDB:".\Release/berniw_Recorder.pdb" /MAP:".\Release/berniw_Recorder.map" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Release/berniw_Recorder.lib" /MACHINE:X86 /SAFESEH /DLL .\Release/berniw_Recorder.obj
+         .\Release/DistanceSensor.obj
          .\Release/mycar.obj
          .\Release/pathfinder.obj
+         .\Release/sensors.obj
          .\Release/spline.obj
          .\Release/trackdesc.obj
             Creating library .\Release/berniw_Recorder.lib and object .\Release/berniw_Recorder.exp
@@ -22,8 +19,8 @@
          D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw_Recorder\Release\berniw.dll
          D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw_Recorder\Release\berniw_Recorder.dll
                  2 fil(er) kopierad(e).
-     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw_Recorder\berniw_Recorder.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw_Recorder\berniw_Recorder.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.80
+Time Elapsed 00:00:01.26
