@@ -22,8 +22,8 @@ class NeuralLayer
 {
 public:
 	NeuralLayer(int nNeurons, int nInputs, int type);
-	void Propogate(NeuralLayer& nexLayer);
-	void BackPropogate(NeuralLayer& nexLayer);
+	void Propagate(NeuralLayer& nexLayer);
+	void BackPropagate(NeuralLayer& nexLayer);
 	void AdjustWeights(NeuralLayer& nInputs, float lRate = 0.1f, float momentum = 0.5f);
 
 	//Data
@@ -53,10 +53,17 @@ private:
 public:
 	NeuralNetwork(int nInputs, int nOutputs, int nHiddenLayers, int nNodesInHiddenLayers);
 	void Init();
-	void Train(std::vector<float>& nInputs, std::vector<float>& nOutputs);
-	
+	void Train(std::vector<float>& nInputs, std::vector<float>& nExpectedOutput);
+	void Use(std::vector<float>& nInputs, std::vector<float>& nOutputs);
+
+	void Propagate();
+	void BackPropagate();
+
 	void WriteWeights();
 	void ReadWeights();
 	
+	void SetInputs(std::vector<float>& inputs);
+	void FindError(std::vector<float>& ouputs);
+
 	float GetError() {return zError;}
 };
