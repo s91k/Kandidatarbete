@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vector>
+#include "NeuralLayer.h"
 
 enum NN_TYPE
 {
@@ -8,29 +8,6 @@ enum NN_TYPE
 	NN_HIDDEN,
 	NN_OUTPUT
 };
-
-struct Neuron
-{
-	std::vector<float> zWeights;	//Connection Strength
-	std::vector<float> zLastDelta;	//Used for inertia in updating the weights while learning
-	float zOutput;					//The fired potential of the neuron
-	float zError;					//The error gradient of the potential from the expected 
-									//potential; used when learning
-};
-
-class NeuralLayer
-{
-public:
-	NeuralLayer(int nNeurons, int nInputs, int type);
-	void Propagate(NeuralLayer& nexLayer);
-	void BackPropagate(NeuralLayer& nexLayer);
-	void AdjustWeights(NeuralLayer& nInputs, float lRate = 0.1f, float momentum = 0.5f);
-
-	//Data
-	std::vector<Neuron*> zNeurons;
-	int zLayerType;
-};
-
 
 class NeuralNetwork
 {
@@ -65,5 +42,5 @@ public:
 	void SetInputs(std::vector<float>& inputs);
 	void FindError(std::vector<float>& ouputs);
 
-	float GetError() {return zError;}
+	float GetError() {return this->zError;}
 };

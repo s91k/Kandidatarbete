@@ -112,3 +112,15 @@ torcs-1.3.4/runtime/results/practice/results-2013-05-02-02-10-02.xml
 torcs-1.3.4/runtime/results/practice/results-2013-05-02-02-10-59.xml
 torcs-1.3.4/runtime/results/practice/results-2013-05-03-02-42-32.xml
 torcs-1.3.4/runtime/results/practice/results-2013-05-03-02-46-52.xml
+
+/torcs-1.3.4/src/drivers/berniw_Recorder/Debug
+
+/torcs-1.3.4/src/drivers/berniw_Recorder/Debug
+
+/torcs-1.3.4/src/drivers/berniw_Recorder/Release
+
+/NeuralNetworkTraining/Debug
+/NeuralNetworkTraining/*.sdf
+
+/NeuralNetworkTraining/NeuralNetworkTraining.v11.suo
+/NeuralNetworkTraining/NeuralNetworkTraining.opensdf
