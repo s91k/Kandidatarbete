@@ -1,10 +1,9 @@
 #pragma once
 
 #include <vector>
+#include "NeuralNetwork.h"
 
-class NeuralNetwork;
-
-#define NUM_ITERATIONS_TO_TRAIN 100
+#define NUM_ITERATIONS_TO_TRAIN 10
 
 struct Car
 {
@@ -76,7 +75,7 @@ public:
 	void Reset();
 	//Returns true if training is Done
 	bool Update();
-
+	bool RunTraining();
 	void TrainNetAndSave();
 
 };
