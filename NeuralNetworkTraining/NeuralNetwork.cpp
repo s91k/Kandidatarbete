@@ -10,13 +10,20 @@ NeuralNetwork::NeuralNetwork( int nInputs, int nOutputs, int nHiddenLayers, int 
 	this->Init();
 }
 
+NeuralNetwork::~NeuralNetwork()
+{
+	this->zLayers.clear();
+}
+
+
 void NeuralNetwork::Init()
 {
 	this->zInputLayer = NULL;
 	this->zOutputLayer = NULL;
 
-	this->zLearningRate = 0.01f;
-	this->zMomentum = 0.9f;
+	//this->zLearningRate = 0.000000000001f;
+	this->zLearningRate = 0.000000001f;
+	this->zMomentum = 0.5f;
 
 	//error check
 	if(this->zNLayers < 2)
@@ -96,15 +103,20 @@ void NeuralNetwork::Propagate()
 void NeuralNetwork::BackPropagate()
 {
 	//BackPropagate the error
+	//for (int i = this->zNLayers - 1; i > 0; i--)
+	//{
+	//	this->zLayers[i].BackPropagate(this->zLayers[i - 1]);
+	//}
+
 	for (int i = this->zNLayers - 1; i > 0; i--)
 	{
-		this->zLayers[i].BackPropagate(this->zLayers[i - 1]);
+		this->zLayers[i - 1].BackPropagate(this->zLayers[i]);
 	}
 
 	//Adjust the weights
-	for (int i =  1; i < this->zNLayers - 1; i++)
+	for (int i =  0; i < this->zNLayers - 1; i++)
 	{
-		this->zLayers[i].AdjustWeights(this->zLayers[i - 1], zLearningRate, zMomentum);
+		this->zLayers[i + 1].AdjustWeights(this->zLayers[i], zLearningRate, zMomentum);
 	}
 }
 
@@ -121,9 +133,9 @@ void NeuralNetwork::WriteWeights()
 
 		for (int j = 0; j < numNeurons; j++)
 		{
-			int numWeights = this->zLayers[i].zNeurons[j]->zWeights.size();
+			int numWeights = this->zLayers[i].zNeurons[j].zWeights.size();
 			for (int k = 0; k < numWeights; k++)
-				fprintf(pFile, "%f ", this->zLayers[i].zNeurons[j]->zWeights[k]);
+				fprintf(pFile, "%f \n", this->zLayers[i].zNeurons[j].zWeights[k]);
 		}
 	}
 	fclose(pFile);
@@ -141,9 +153,9 @@ void NeuralNetwork::ReadWeights()
 		int numNeurons = this->zLayers[i].zNeurons.size();
 		for(int j = 0; j < numNeurons; j++)
 		{
-			int numWeights = this->zLayers[i].zNeurons[j]->zWeights.size();
+			int numWeights = this->zLayers[i].zNeurons[j].zWeights.size();
 			for(int k = 0; k < numWeights; k++)
-				fscanf(pFile,"%f ",&this->zLayers[i].zNeurons[j]->zWeights[k]);
+				fscanf(pFile,"%f ",&this->zLayers[i].zNeurons[j].zWeights[k]);
 		}
 	}
 	fclose(pFile);

@@ -175,6 +175,7 @@
     <ClCompile Include="cardata.cpp" />
     <ClCompile Include="driver.cpp" />
     <ClCompile Include="learn.cpp" />
+    <ClCompile Include="NeuralLayer.cpp" />
     <ClCompile Include="NeuralNetwork.cpp" />
     <ClCompile Include="opponent.cpp" />
     <ClCompile Include="pit.cpp" />
@@ -189,6 +190,7 @@
     <ClInclude Include="cardata.h" />
     <ClInclude Include="driver.h" />
     <ClInclude Include="learn.h" />
+    <ClInclude Include="NeuralLayer.h" />
     <ClInclude Include="NeuralNetwork.h" />
     <ClInclude Include="opponent.h" />
     <ClInclude Include="pit.h" />

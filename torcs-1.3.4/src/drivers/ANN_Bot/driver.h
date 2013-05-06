@@ -184,6 +184,8 @@ class Driver {
 
 		// Track variables.
 		tTrack* track;
+
+		AnnAIController* AiController;
 };
 
 #endif // _DRIVER_H_

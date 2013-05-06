@@ -58,10 +58,10 @@ const int Driver::TEAM_DAMAGE_CHANGE_LEAD = 700;			// When to change position in
 Cardata *Driver::cardata = NULL;
 double Driver::currentsimtime;
 
-
 Driver::Driver(int index)
 {
 	INDEX = index;
+	AiController = NULL;
 }
 
 
@@ -76,6 +76,8 @@ Driver::~Driver()
 		delete cardata;
 		cardata = NULL;
 	}
+	if (AiController)
+		delete AiController;
 }
 
 
@@ -164,6 +166,8 @@ void Driver::newRace(tCarElt* car, tSituation *s)
 
 	// create the pit object.
 	pit = new Pit(s, this);
+
+	AiController = new AnnAIController(&car->ctrl);
 }
 
 
@@ -640,19 +644,21 @@ void Driver::update(tSituation *s)
 		cardata->update();
 	}
 
+	AiController->Update();
+
 	// Update the local data rest.
-	speedangle = mycardata->getTrackangle() - atan2(car->_speed_Y, car->_speed_X);
-	NORM_PI_PI(speedangle);
-	mass = CARMASS + car->_fuel;
-	currentspeedsqr = car->_speed_x*car->_speed_x;
-	opponents->update(s, this);
-	strategy->update(car, s);
-	if (!pit->getPitstop()) {
-		pit->setPitstop(strategy->needPitstop(car, s));
-	}
-	pit->update();
-	alone = isAlone();
-	learn->update(s, track, car, alone, myoffset, car->_trkPos.seg->width/WIDTHDIV-BORDER_OVERTAKE_MARGIN, radius);
+	//speedangle = mycardata->getTrackangle() - atan2(car->_speed_Y, car->_speed_X);
+	//NORM_PI_PI(speedangle);
+	//mass = CARMASS + car->_fuel;
+	//currentspeedsqr = car->_speed_x*car->_speed_x;
+	//opponents->update(s, this);
+	//strategy->update(car, s);
+	//if (!pit->getPitstop()) {
+	//	pit->setPitstop(strategy->needPitstop(car, s));
+	//}
+	//pit->update();
+	//alone = isAlone();
+	//learn->update(s, track, car, alone, myoffset, car->_trkPos.seg->width/WIDTHDIV-BORDER_OVERTAKE_MARGIN, radius);
 }
 
 

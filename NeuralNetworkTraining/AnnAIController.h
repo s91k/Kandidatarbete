@@ -3,7 +3,7 @@
 #include <vector>
 #include "NeuralNetwork.h"
 
-#define NUM_ITERATIONS_TO_TRAIN 10
+#define NUM_ITERATIONS_TO_TRAIN 1000
 
 struct Car
 {
@@ -62,7 +62,7 @@ private:
 	std::vector<float> zOutputs;
 
 	//Training data
-	std::vector<Car*> zTrainingData;
+	std::vector<Car> zTrainingData;
 
 	int zNumSavedTrainingSets;
 
@@ -77,5 +77,5 @@ public:
 	bool Update();
 	bool RunTraining();
 	void TrainNetAndSave();
-
+	void GetNetOutput();
 };
