@@ -10,6 +10,12 @@ NeuralNetwork::NeuralNetwork( int nInputs, int nOutputs, int nHiddenLayers, int 
 	this->Init();
 }
 
+NeuralNetwork::~NeuralNetwork()
+{
+	this->zLayers.clear();
+}
+
+
 void NeuralNetwork::Init()
 {
 	this->zInputLayer = NULL;
@@ -127,9 +133,9 @@ void NeuralNetwork::WriteWeights()
 
 		for (int j = 0; j < numNeurons; j++)
 		{
-			int numWeights = this->zLayers[i].zNeurons[j]->zWeights.size();
+			int numWeights = this->zLayers[i].zNeurons[j].zWeights.size();
 			for (int k = 0; k < numWeights; k++)
-				fprintf(pFile, "%f \n", this->zLayers[i].zNeurons[j]->zWeights[k]);
+				fprintf(pFile, "%f \n", this->zLayers[i].zNeurons[j].zWeights[k]);
 		}
 	}
 	fclose(pFile);
@@ -147,9 +153,9 @@ void NeuralNetwork::ReadWeights()
 		int numNeurons = this->zLayers[i].zNeurons.size();
 		for(int j = 0; j < numNeurons; j++)
 		{
-			int numWeights = this->zLayers[i].zNeurons[j]->zWeights.size();
+			int numWeights = this->zLayers[i].zNeurons[j].zWeights.size();
 			for(int k = 0; k < numWeights; k++)
-				fscanf(pFile,"%f ",&this->zLayers[i].zNeurons[j]->zWeights[k]);
+				fscanf(pFile,"%f ",&this->zLayers[i].zNeurons[j].zWeights[k]);
 		}
 	}
 	fclose(pFile);

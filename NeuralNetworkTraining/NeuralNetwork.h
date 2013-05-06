@@ -29,6 +29,7 @@ private:
 	void AddLayer(int nNeurons, int nInputs, int type);
 public:
 	NeuralNetwork(int nInputs, int nOutputs, int nHiddenLayers, int nNodesInHiddenLayers);
+	virtual ~NeuralNetwork();
 	void Init();
 	void Train(std::vector<float>& nInputs, std::vector<float>& nExpectedOutput);
 	void Use(std::vector<float>& nInputs, std::vector<float>& nOutputs);

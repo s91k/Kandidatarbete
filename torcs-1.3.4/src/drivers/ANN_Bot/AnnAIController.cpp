@@ -78,20 +78,20 @@ void AnnAIController::GetNetOutput()
 	this->zInputs.clear();
 	this->zOutputs.clear();
 
-	Car* car = this->zTrainingData[25];
+	Car car = this->zTrainingData[25];
 	//Set Inputs
-	
-	this->zInputs.push_back(car->speed);
-	this->zInputs.push_back(car->angle);
-	this->zInputs.push_back(car->distR);
-	this->zInputs.push_back(car->distFR);
-	this->zInputs.push_back(car->distFFR);
-	this->zInputs.push_back(car->distF);
-	this->zInputs.push_back(car->distL);
-	this->zInputs.push_back(car->distFL);
-	this->zInputs.push_back(car->distFFL);
-	this->zInputs.push_back(car->clutch);
-	
+
+	this->zInputs.push_back(car.speed);
+	this->zInputs.push_back(car.angle);
+	this->zInputs.push_back(car.distR);
+	this->zInputs.push_back(car.distFR);
+	this->zInputs.push_back(car.distFFR);
+	this->zInputs.push_back(car.distF);
+	this->zInputs.push_back(car.distL);
+	this->zInputs.push_back(car.distFL);
+	this->zInputs.push_back(car.distFFL);
+	this->zInputs.push_back(car.clutch);
+
 	this->zNNetwork->Use(this->zInputs, this->zOutputs);
 
 	// Accel/Brake
@@ -184,7 +184,7 @@ bool AnnAIController::LoadTrainingData( std::string filename )
 	if (!read.is_open())
 		return false;
 
-	Car* tempCarData = NULL;
+	Car tempCarData;
 	bool first = true;
 	int index = 0;
 	while (!read.eof())
@@ -206,64 +206,64 @@ bool AnnAIController::LoadTrainingData( std::string filename )
 			if (!first)
 				this->zTrainingData.push_back(tempCarData);
 
-			tempCarData = new Car();
+			tempCarData = Car();
 			first = false;
 		}
 		else if (dataType == "speed")
 		{
-			tempCarData->speed = floatVal;
+			tempCarData.speed = floatVal;
 		}
 		else if (dataType == "angle")
 		{
-			tempCarData->angle = floatVal;
+			tempCarData.angle = floatVal;
 		}
 		else if (dataType == "distR")
 		{
-			tempCarData->distR = floatVal;
+			tempCarData.distR = floatVal;
 		}
 		else if (dataType == "distFR")
 		{
-			tempCarData->distFR = floatVal;
+			tempCarData.distFR = floatVal;
 		}
 		else if (dataType == "distFFR")
 		{
-			tempCarData->distFFR = floatVal;
+			tempCarData.distFFR = floatVal;
 		}
 		else if (dataType == "distF")
 		{
-			tempCarData->distF = floatVal;
+			tempCarData.distF = floatVal;
 		}
 		else if (dataType == "distFFL")
 		{
-			tempCarData->distFFL = floatVal;
+			tempCarData.distFFL = floatVal;
 		}
 		else if (dataType == "distFL")
 		{
-			tempCarData->distFL = floatVal;
+			tempCarData.distFL = floatVal;
 		}
 		else if (dataType == "distL")
 		{
-			tempCarData->distL = floatVal;
+			tempCarData.distL = floatVal;
 		}
 		else if (dataType == "steer")
 		{
-			tempCarData->steer = floatVal;
+			tempCarData.steer = floatVal;
 		}
 		else if (dataType == "accel")
 		{
-			tempCarData->accel = floatVal;
+			tempCarData.accel = floatVal;
 		}
 		else if (dataType == "brake")
 		{
-			tempCarData->brake = floatVal;
+			tempCarData.brake = floatVal;
 		}
 		else if (dataType == "gear")
 		{
-			tempCarData->gear = floatVal;
+			tempCarData.gear = floatVal;
 		}
 		else if (dataType == "clutch")
 		{
-			tempCarData->clutch = floatVal;
+			tempCarData.clutch = floatVal;
 		}
 	}
 
@@ -274,23 +274,23 @@ bool AnnAIController::LoadTrainingData( std::string filename )
 bool AnnAIController::RunTraining()
 {
 	static int index = 0;
-	Car* car = NULL;
+	Car car;
 
 	this->zNumSavedTrainingSets++;
 	car = this->zTrainingData[index++];
 
 	float temp = 0.5f;
 
-	this->zInputs.push_back(car->speed);
-	this->zInputs.push_back(car->angle);
-	this->zInputs.push_back(car->distR);
-	this->zInputs.push_back(car->distFR);
-	this->zInputs.push_back(car->distFFR);
-	this->zInputs.push_back(car->distF);
-	this->zInputs.push_back(car->distL);
-	this->zInputs.push_back(car->distFL);
-	this->zInputs.push_back(car->distFFL);
-	this->zInputs.push_back(car->clutch);
+	this->zInputs.push_back(car.speed);
+	this->zInputs.push_back(car.angle);
+	this->zInputs.push_back(car.distR);
+	this->zInputs.push_back(car.distFR);
+	this->zInputs.push_back(car.distFFR);
+	this->zInputs.push_back(car.distF);
+	this->zInputs.push_back(car.distL);
+	this->zInputs.push_back(car.distFL);
+	this->zInputs.push_back(car.distFFL);
+	this->zInputs.push_back(car.clutch);
 
 	//Final Value for accel/brake, clamped between -1.0 & 1.0
 	//temp < 0.5 = brake else accel or 0.5 = 0.0 for both
@@ -314,10 +314,10 @@ bool AnnAIController::RunTraining()
 	//{
 	//	this->zOutputs.push_back(0.0f);
 	//}
-	this->zOutputs.push_back(car->accel);
-	this->zOutputs.push_back(car->brake);
-	this->zOutputs.push_back(car->steer);
-	this->zOutputs.push_back(car->gear);
+	this->zOutputs.push_back(car.accel);
+	this->zOutputs.push_back(car.brake);
+	this->zOutputs.push_back(car.steer);
+	this->zOutputs.push_back(car.gear);
 
 
 	FILE* pfile;
@@ -327,14 +327,14 @@ bool AnnAIController::RunTraining()
 
 	//Print inputs
 	fprintf(pfile, "%f %f %f %f %f %f %f %f %f %f\n", 
-		car->speed, car->angle, car->distR,
-		car->distFR, car->distFFR, car->distF, 
-		car->distL, car->distFL, car->distFFL,
-		car->clutch
+		car.speed, car.angle, car.distR,
+		car.distFR, car.distFFR, car.distF, 
+		car.distL, car.distFL, car.distFFL,
+		car.clutch
 		);
 
 	//Print outputs
-	fprintf(pfile, "%f %f %f %f\n", car->accel, car->brake, car->steer, car->gear);
+	fprintf(pfile, "%f %f %f %f\n", car.accel, car.brake, car.steer, car.gear);
 
 	fclose(pfile);
 

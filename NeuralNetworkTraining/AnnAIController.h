@@ -62,7 +62,7 @@ private:
 	std::vector<float> zOutputs;
 
 	//Training data
-	std::vector<Car*> zTrainingData;
+	std::vector<Car> zTrainingData;
 
 	int zNumSavedTrainingSets;
 

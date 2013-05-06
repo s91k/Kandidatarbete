@@ -3,6 +3,9 @@
 
 int main()
 {
+
+	_CrtSetDbgFlag( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+
 	AnnAIController* controller = new AnnAIController();
 	
 	std::cout << "Choose a file number between 0 - 7" << std::endl;
@@ -34,6 +37,9 @@ int main()
 	{
 
 	}
+
+	delete controller;
+
 	std::cout << "Press Enter to quit" << std::endl;
 	std::cin.ignore(1);
 

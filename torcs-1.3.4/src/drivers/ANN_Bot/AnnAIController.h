@@ -66,7 +66,7 @@ private:
 	tCarCtrl* zCar;
 
 	//Training data
-	std::vector<Car*> zTrainingData;
+	std::vector<Car> zTrainingData;
 
 	int zNumSavedTrainingSets;
 
