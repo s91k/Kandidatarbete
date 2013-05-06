@@ -48,7 +48,7 @@ void NeuralLayer::Propagate( NeuralLayer& nextLayer )
 
 void NeuralLayer::BackPropagate( NeuralLayer& nextLayer )
 {
-	//*
+	/*
 	float outputValue;
 	float error;
 
@@ -64,8 +64,8 @@ void NeuralLayer::BackPropagate( NeuralLayer& nextLayer )
 		}
 		nextLayer.zNeurons[i]->zError = outputValue * error;
 	}
-	//*/
-	/*for(unsigned int i = 0; i < this->zNeurons.size(); i++)
+	*/
+	for(unsigned int i = 0; i < this->zNeurons.size(); i++)
 	{
 		float error = 0.0f;
 
@@ -75,7 +75,7 @@ void NeuralLayer::BackPropagate( NeuralLayer& nextLayer )
 		}		
 
 		this->zNeurons[i]->zError = this->zNeurons[i]->zOutput * error;
-	}*/	
+	}	
 }
 
 void NeuralLayer::AdjustWeights( NeuralLayer& nInputs, float lRate /*= 0.1f*/, float momentum /*= 0.5f*/ )
