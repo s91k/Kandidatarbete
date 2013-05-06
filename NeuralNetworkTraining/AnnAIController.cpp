@@ -159,16 +159,20 @@ void AnnAIController::TrainNetAndSave()
 		{
 			lowestAbsError = abs(totalError);
 			lowestError = totalError;
-			std::cout << totalError << std::endl;
+			std::cout <<"Lowest Error so far = " << totalError << std::endl;
 		}
 
-		if (abs(totalError) < this->zMaximumErrorAllowed)
+		if (i >= NUM_ITERATIONS_TO_TRAIN * 0.5f)
 		{
-			std::cout << "Total Error = " <<totalError << std::endl;
-			std::cout << "Writing weights to file " << std::endl;
-			this->zNNetwork->WriteWeights();
-			return;
+			if (abs(totalError) < this->zMaximumErrorAllowed)
+			{
+				std::cout << "Total Error = " <<totalError << std::endl;
+				std::cout << "Writing weights to file " << std::endl;
+				this->zNNetwork->WriteWeights();
+				return;
+			}
 		}
+		
 	}
 		
 	std::cout << "Total Error = " <<this->zNNetwork->GetError() << std::endl <<
