@@ -82,4 +82,6 @@ public:
 	bool RunTraining();
 	void TrainNetAndSave();
 	void GetNetOutput();
+
+	void run(Car *car);
 };

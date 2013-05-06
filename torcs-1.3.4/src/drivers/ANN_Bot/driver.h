@@ -39,6 +39,8 @@
 #include "strategy.h"
 #include "cardata.h"
 #include "AnnAIController.h"
+#include "sensors.h"
+#include "trackdesc.h"
 
 #define BT_SECT_PRIV "bt private"
 #define BT_ATT_FUELPERLAP "fuelperlap"
@@ -184,6 +186,8 @@ class Driver {
 
 		// Track variables.
 		tTrack* track;
+		TrackDesc* trackDesc;
+		Sensors* sensors;
 
 		AnnAIController* AiController;
 };
