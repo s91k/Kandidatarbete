@@ -105,6 +105,7 @@ void NeuralLayer::AdjustWeights( NeuralLayer& nInputs, float lRate /*= 0.1f*/, f
 void NeuralLayer::SetInput( std::vector<float>& inputs )
 {
 	int numNeurons = this->zNeurons.size();
+
 	for (int i = 0; i < numNeurons; i++)
 	{
 		this->zNeurons[i].zOutput = inputs[i];

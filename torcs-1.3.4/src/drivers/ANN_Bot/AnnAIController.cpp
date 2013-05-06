@@ -34,7 +34,7 @@ void AnnAIController::Init()
 	this->zNumOutputs = 4;
 	this->zNumHiddenLayers = 1;
 
-	this->zNetMode = NN_TRAIN;
+	this->zNetMode = NN_USE;
 
 	if (this->zNetMode == NN_USE)
 	{
@@ -351,4 +351,50 @@ bool AnnAIController::RunTraining()
 	}
 
 	return false;
+}
+
+void AnnAIController::run(Car *car)
+{
+	std::vector<float> inputs;
+	std::vector<float> outputs;
+
+	inputs.push_back(car->speed);
+	inputs.push_back(car->angle);
+	inputs.push_back(car->distR);
+	inputs.push_back(car->distFR);
+	inputs.push_back(car->distFFR);
+	inputs.push_back(car->distF);
+	inputs.push_back(car->distL);
+	inputs.push_back(car->distFL);
+	inputs.push_back(car->distFFL);
+	inputs.push_back(car->clutch);	
+
+	this->zNNetwork->Use(inputs, outputs);
+
+	// Accel/Brake
+	float value = outputs[0];
+	if (value < 0.5f) //Brake
+	{
+		value = 2.0f * value - 1.0f;
+		//Set Brake Value
+		car->brake = value;
+
+	}
+	else if (value > 0.5f) //Accel
+	{
+		value = 2.0f * value - 1.0f;
+		//Set Accel to Value
+		car->accel = value;
+	}
+	else // Both = 0.0
+	{
+		//Set Both Values to 0.0
+		car->accel = 0.0f;
+		car->brake = 0.0f;
+
+	}
+	// Steer
+	car->steer = outputs[1];
+	// Gear
+	car->gear = outputs[2];
 }

@@ -120,6 +120,8 @@ void Driver::initTrack(tTrack* t, void *carHandle, void **carParmHandle, tSituat
 
 	// Load and set parameters.
 	MU_FACTOR = GfParmGetNum(*carParmHandle, BT_SECT_PRIV, BT_ATT_MUFACTOR, (char*)NULL, 0.69f);
+
+	this->trackDesc = new TrackDesc(track);
 }
 
 
@@ -168,6 +170,16 @@ void Driver::newRace(tCarElt* car, tSituation *s)
 	pit = new Pit(s, this);
 
 	AiController = new AnnAIController(&car->ctrl);
+
+	//Create seven sensors
+	sensors = new Sensors(car, 7);
+	sensors->setSensor(0, -90.0f, 100.0f);
+	sensors->setSensor(1, -60.0f, 100.0f);
+	sensors->setSensor(2, -30.0f, 100.0f);
+	sensors->setSensor(3, 0.0f, 100.0f);
+	sensors->setSensor(4, 30.0f, 100.0f);
+	sensors->setSensor(5, 60.0f, 100.0f);
+	sensors->setSensor(6, 90.0f, 100.0f);
 }
 
 
@@ -176,28 +188,53 @@ void Driver::drive(tSituation *s)
 {
 	memset(&car->ctrl, 0, sizeof(tCarCtrl));
 
-	update(s);
+	//update(s);
 
-	//pit->setPitstop(true);
+	////pit->setPitstop(true);
 
-	if (isStuck()) {
-		car->_steerCmd = -mycardata->getCarAngle() / car->_steerLock;
-		car->_gearCmd = -1;		// Reverse gear.
-		car->_accelCmd = 1.0f;	// 100% accelerator pedal.
-		car->_brakeCmd = 0.0f;	// No brakes.
-		car->_clutchCmd = 0.0f;	// Full clutch (gearbox connected with engine).
-	} else {
-		car->_steerCmd = filterSColl(getSteer());
-		car->_gearCmd = getGear();
-		car->_brakeCmd = filterABS(filterBrakeSpeed(filterBColl(filterBPit(getBrake()))));
-		if (car->_brakeCmd == 0.0f) {
-			car->_accelCmd = filterTCL(filterTrk(filterOverlap(getAccel())));
-		} else {
-			car->_accelCmd = 0.0f;
-  		}
-		car->_clutchCmd = getClutch();
+	//if (isStuck()) {
+	//	car->_steerCmd = -mycardata->getCarAngle() / car->_steerLock;
+	//	car->_gearCmd = -1;		// Reverse gear.
+	//	car->_accelCmd = 1.0f;	// 100% accelerator pedal.
+	//	car->_brakeCmd = 0.0f;	// No brakes.
+	//	car->_clutchCmd = 0.0f;	// Full clutch (gearbox connected with engine).
+	//} else {
+	//	car->_steerCmd = filterSColl(getSteer());
+	//	car->_gearCmd = getGear();
+	//	car->_brakeCmd = filterABS(filterBrakeSpeed(filterBColl(filterBPit(getBrake()))));
+	//	if (car->_brakeCmd == 0.0f) {
+	//		car->_accelCmd = filterTCL(filterTrk(filterOverlap(getAccel())));
+	//	} else {
+	//		car->_accelCmd = 0.0f;
+ // 		}
+	//	car->_clutchCmd = getClutch();
 
-	}
+	//}
+
+
+	Car *annCar = new Car();
+
+	annCar->speed = sqrt((car->_speed_x)*(car->_speed_x) + (car->_speed_y)*(car->_speed_y) + (car->_speed_z)*(car->_speed_z));
+	annCar->angle = MAX(-this->trackDesc->getSegmentPtr(this->trackDesc->getCurrentSegment(car))->getKgamma() - car->_pitch, 0.0);
+	annCar->clutch = car->ctrl.clutchCmd;
+
+	//Distance sensors
+	annCar->distR = this->sensors->getSensorOut(0);
+	annCar->distFR = this->sensors->getSensorOut(1);
+	annCar->distFFR = this->sensors->getSensorOut(2);
+	annCar->distF = this->sensors->getSensorOut(3);
+	annCar->distFFL = this->sensors->getSensorOut(4);
+	annCar->distFL = this->sensors->getSensorOut(5);
+	annCar->distL = this->sensors->getSensorOut(6);
+
+	this->AiController->run(annCar);
+
+	car->ctrl.accelCmd = annCar->accel;
+	car->ctrl.brakeCmd = annCar->brake;
+	car->ctrl.steer = annCar->steer;
+	car->ctrl.gear = annCar->gear;
+
+	delete annCar;
 }
 
 

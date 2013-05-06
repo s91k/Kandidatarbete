@@ -179,8 +179,10 @@
     <ClCompile Include="NeuralNetwork.cpp" />
     <ClCompile Include="opponent.cpp" />
     <ClCompile Include="pit.cpp" />
+    <ClCompile Include="sensors.cpp" />
     <ClCompile Include="spline.cpp" />
     <ClCompile Include="strategy.cpp" />
+    <ClCompile Include="trackdesc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ANN_Bot.def" />
@@ -190,12 +192,15 @@
     <ClInclude Include="cardata.h" />
     <ClInclude Include="driver.h" />
     <ClInclude Include="learn.h" />
+    <ClInclude Include="linalg.h" />
     <ClInclude Include="NeuralLayer.h" />
     <ClInclude Include="NeuralNetwork.h" />
     <ClInclude Include="opponent.h" />
     <ClInclude Include="pit.h" />
+    <ClInclude Include="sensors.h" />
     <ClInclude Include="spline.h" />
     <ClInclude Include="strategy.h" />
+    <ClInclude Include="trackdesc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
