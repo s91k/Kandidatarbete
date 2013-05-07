@@ -169,7 +169,7 @@ void Driver::newRace(tCarElt* car, tSituation *s)
 	// create the pit object.
 	pit = new Pit(s, this);
 
-	AiController = new AnnAIController(&car->ctrl);
+	AiController = new AnnAIController();
 
 	//Create seven sensors
 	sensors = new Sensors(car, 7);
@@ -210,7 +210,6 @@ void Driver::drive(tSituation *s)
 	//	car->_clutchCmd = getClutch();
 
 	//}
-
 
 	Car *annCar = new Car();
 
@@ -680,8 +679,6 @@ void Driver::update(tSituation *s)
 		currentsimtime = s->currentTime;
 		cardata->update();
 	}
-
-	AiController->Update();
 
 	// Update the local data rest.
 	//speedangle = mycardata->getTrackangle() - atan2(car->_speed_Y, car->_speed_X);

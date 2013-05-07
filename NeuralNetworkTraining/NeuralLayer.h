@@ -2,6 +2,7 @@
 
 #include <vector>
 
+
 struct Neuron
 {
 	virtual ~Neuron() {}

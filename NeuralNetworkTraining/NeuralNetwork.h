@@ -39,7 +39,7 @@ public:
 
 	void WriteWeights();
 	void ReadWeights();
-	
+
 	void SetInputs(std::vector<float>& inputs);
 	void FindError(std::vector<float>& ouputs);
 
