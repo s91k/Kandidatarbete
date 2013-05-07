@@ -33,7 +33,7 @@ int main()
 
 	controller->LoadTrainingData(texfiles[input]);
 	
-	while(!controller->Update())
+	while(!controller->RunTraining())
 	{
 
 	}

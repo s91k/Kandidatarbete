@@ -74,8 +74,8 @@ public:
 	void Init();
 	void Reset();
 	//Returns true if training is Done
-	bool Update();
 	bool RunTraining();
 	void TrainNetAndSave();
-	void GetNetOutput();
+
+	void run(Car *car);
 };

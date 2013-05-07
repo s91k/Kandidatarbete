@@ -67,6 +67,16 @@
     <section name="0">
       <attnum name="fovy-0-0" val="40"/>
       <attnum name="fovy-9-0" val="9"/>
+      <attnum name="driver board" val="1"/>
+      <attnum name="driver counter" val="1"/>
+      <attnum name="leader board" val="1"/>
+      <attnum name="G graph" val="1"/>
+      <attnum name="debug info" val="1"/>
+      <attnum name="enable mirror" val="0"/>
+      <attnum name="arcade" val="0"/>
+      <attstr name="current driver" val="ANN_Bot 1"/>
+      <attnum name="camera" val="0"/>
+      <attnum name="camera head list" val="0"/>
     </section>
 
   </section>

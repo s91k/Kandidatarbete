@@ -2,7 +2,6 @@
 
 #include <vector>
 #include "NeuralNetwork.h"
-#include "car.h"
 
 #define NUM_ITERATIONS_TO_TRAIN 1000
 
@@ -62,26 +61,21 @@ private:
 	std::vector<float> zInputs;
 	std::vector<float> zOutputs;
 
-	//Torcs stuff
-	tCarCtrl* zCar;
-
 	//Training data
 	std::vector<Car> zTrainingData;
 
 	int zNumSavedTrainingSets;
 
 public:
-	AnnAIController(tCarCtrl* car);
+	AnnAIController();
 	virtual ~AnnAIController();
 	bool LoadTrainingData(std::string filename);
 
 	void Init();
 	void Reset();
 	//Returns true if training is Done
-	bool Update();
 	bool RunTraining();
 	void TrainNetAndSave();
-	void GetNetOutput();
 
 	void run(Car *car);
 };

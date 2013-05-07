@@ -4,13 +4,11 @@
 #include <string>
 #include <sstream>
 #include <iostream>
-//#include <time.h>
+#include <time.h>
 
-AnnAIController::AnnAIController(tCarCtrl* car)
+AnnAIController::AnnAIController()
 {
-	this->zCar = car;
-
-	//std::srand(time(0));
+	std::srand(time(0));
 
 	this->Init();
 }
@@ -41,83 +39,11 @@ void AnnAIController::Init()
 		this->zNNetwork = new NeuralNetwork(this->zNumInputs, this->zNumOutputs, this->zNumHiddenLayers, this->zNumHiddenNodes);
 		this->zNNetwork->ReadWeights();
 	}
-	//else if (this->zNetMode == NN_TRAIN)
-	//{
-	//	this->zNNetwork = new NeuralNetwork(this->zNumInputs, this->zNumOutputs, this->zNumHiddenLayers, this->zNumHiddenNodes);
-	//	this->zNNetwork->ReadWeights();
-	//}
 }
 
 void AnnAIController::Reset()
 {
 	this->Init();
-}
-
-bool AnnAIController::Update()
-{
-	switch (this->zNetMode)
-	{
-	case NN_TRAIN:
-		return this->RunTraining();
-
-		break;
-	case NN_RETRAIN:
-		return true;
-		break;
-	case NN_USE:
-	default:
-		GetNetOutput();
-		return true;
-		break;
-	}
-	return true;
-}
-
-void AnnAIController::GetNetOutput()
-{
-	this->zInputs.clear();
-	this->zOutputs.clear();
-
-	Car car = this->zTrainingData[25];
-	//Set Inputs
-
-	this->zInputs.push_back(car.speed);
-	this->zInputs.push_back(car.angle);
-	this->zInputs.push_back(car.distR);
-	this->zInputs.push_back(car.distFR);
-	this->zInputs.push_back(car.distFFR);
-	this->zInputs.push_back(car.distF);
-	this->zInputs.push_back(car.distL);
-	this->zInputs.push_back(car.distFL);
-	this->zInputs.push_back(car.distFFL);
-	this->zInputs.push_back(car.clutch);
-
-	this->zNNetwork->Use(this->zInputs, this->zOutputs);
-
-	// Accel/Brake
-	//float value = this->zOutputs[0];
-	//if (value < 0.5f) //Brake
-	//{
-	//	value = 2.0f * value - 1.0f;
-	//	//Set Brake Value
-
-	//}
-	//else if (value > 0.5f) //Accel
-	//{
-	//	value = 2.0f * value - 1.0f;
-	//	//Set Accel to Value
-	//}
-	//else // Both = 0.0
-	//{
-	//	//Set Both Values to 0.0
-
-	//}
-	this->zCar->accelCmd = this->zOutputs[0];
-	this->zCar->brakeCmd = this->zOutputs[1];
-	// Steer
-	this->zCar->steer = this->zOutputs[2];
-	// Gear
-	this->zCar->gear = this->zOutputs[3];
 }
 
 void AnnAIController::TrainNetAndSave()
@@ -372,29 +298,30 @@ void AnnAIController::run(Car *car)
 	this->zNNetwork->Use(inputs, outputs);
 
 	// Accel/Brake
-	float value = outputs[0];
-	if (value < 0.5f) //Brake
-	{
-		value = 2.0f * value - 1.0f;
-		//Set Brake Value
-		car->brake = value;
+	//float value = outputs[0];
+	//if (value < 0.5f) //Brake
+	//{
+	//	value = 2.0f * value - 1.0f;
+	//	//Set Brake Value
+	//	car->brake = value;
 
-	}
-	else if (value > 0.5f) //Accel
-	{
-		value = 2.0f * value - 1.0f;
-		//Set Accel to Value
-		car->accel = value;
-	}
-	else // Both = 0.0
-	{
-		//Set Both Values to 0.0
-		car->accel = 0.0f;
-		car->brake = 0.0f;
-
-	}
+	//}
+	//else if (value > 0.5f) //Accel
+	//{
+	//	value = 2.0f * value - 1.0f;
+	//	//Set Accel to Value
+	//	car->accel = value;
+	//}
+	//else // Both = 0.0
+	//{
+	//	//Set Both Values to 0.0
+	//	car->accel = 0.0f;
+	//	car->brake = 0.0f;
+	car->accel = outputs[0];
+	car->brake = outputs[1];
+	//}
 	// Steer
-	car->steer = outputs[1];
+	car->steer = outputs[2];
 	// Gear
-	car->gear = outputs[2];
+	car->gear = outputs[3];
 }
