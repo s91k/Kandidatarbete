@@ -448,7 +448,7 @@ static void drive(int index, tCarElt* car, tSituation *situation)
 	timeSinceLastUpdate[index - 1] += situation->deltaTime;
 	
 	//Only update once per second
-	if(timeSinceLastUpdate[index - 1] > 0.5)
+	if(timeSinceLastUpdate[index - 1] > 0.1)
 	{
 		timeSinceLastUpdate[index - 1] = 0.0;
 		sensors[index - 1]->sensors_update();
@@ -477,22 +477,22 @@ static void drive(int index, tCarElt* car, tSituation *situation)
 		outputFiles[index - 1]<<"clutch "<<car->ctrl.clutchCmd<<std::endl;
 
 		//Write training data to console
-		printf_s("-----------------------------\n");
-		printf_s("Speed: %f\n", myc->getSpeed());
-		printf_s("Steering: %f\n", car->ctrl.steer);
-		printf_s("Acceleration: %f\n", car->ctrl.accelCmd);
-		printf_s("Brake: %f\n", car->ctrl.brakeCmd);
-		printf_s("Gear: %f\n", car->ctrl.gear);
-		printf_s("Clutch: %f\n", car->ctrl.clutchCmd);
-		printf_s("Angle (x, y, z): %f, %f, %f\n\n", car->pub.DynGCg.pos.ax, car->pub.DynGCg.pos.ay, car->pub.DynGCg.pos.az);
+		//printf_s("-----------------------------\n");
+		//printf_s("Speed: %f\n", myc->getSpeed());
+		//printf_s("Steering: %f\n", car->ctrl.steer);
+		//printf_s("Acceleration: %f\n", car->ctrl.accelCmd);
+		//printf_s("Brake: %f\n", car->ctrl.brakeCmd);
+		//printf_s("Gear: %f\n", car->ctrl.gear);
+		//printf_s("Clutch: %f\n", car->ctrl.clutchCmd);
+		//printf_s("Angle (x, y, z): %f, %f, %f\n\n", car->pub.DynGCg.pos.ax, car->pub.DynGCg.pos.ay, car->pub.DynGCg.pos.az);
 
-		printf_s("distR %f\n", sensors[index - 1]->getSensorOut(0));
-		printf_s("distFR %f\n", sensors[index - 1]->getSensorOut(1));
-		printf_s("distFFR %f\n", sensors[index - 1]->getSensorOut(2));
-		printf_s("distF %f\n", sensors[index - 1]->getSensorOut(3));
-		printf_s("distFFL %f\n", sensors[index - 1]->getSensorOut(4));
-		printf_s("distFL %f\n", sensors[index - 1]->getSensorOut(5));
-		printf_s("distL %f\n", sensors[index - 1]->getSensorOut(6));
+		//printf_s("distR %f\n", sensors[index - 1]->getSensorOut(0));
+		//printf_s("distFR %f\n", sensors[index - 1]->getSensorOut(1));
+		//printf_s("distFFR %f\n", sensors[index - 1]->getSensorOut(2));
+		//printf_s("distF %f\n", sensors[index - 1]->getSensorOut(3));
+		//printf_s("distFFL %f\n", sensors[index - 1]->getSensorOut(4));
+		//printf_s("distFL %f\n", sensors[index - 1]->getSensorOut(5));
+		//printf_s("distL %f\n", sensors[index - 1]->getSensorOut(6));
 	}
 }
 

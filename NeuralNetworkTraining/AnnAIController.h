@@ -3,7 +3,7 @@
 #include <vector>
 #include "NeuralNetwork.h"
 
-#define NUM_ITERATIONS_TO_TRAIN 1000
+#define NUM_ITERATIONS_TO_TRAIN 10000
 
 struct Car
 {

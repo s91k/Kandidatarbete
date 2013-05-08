@@ -23,7 +23,7 @@ void AnnAIController::Init()
 	//Undecided amount
 	this->zNumInputs = 10;
 	this->zNumHiddenNodes = 25;
-	this->zMaximumErrorAllowed = 0.02f;
+	this->zMaximumErrorAllowed = 1.0f;
 	this->zNumSavedTrainingSets = 0;
 
 	this->zInputs.clear();
@@ -60,7 +60,7 @@ void AnnAIController::TrainNetAndSave()
 	//int counter = 0;
 	//int totalIterations = NUM_ITERATIONS_TO_TRAIN * this->zNumSavedTrainingSets;
 	//Loop through num iterations
-	for (int i = 0; i < NUM_ITERATIONS_TO_TRAIN; i++)
+	for (int i = 0; /*i < NUM_ITERATIONS_TO_TRAIN*/ true; i++)
 	{
 		for (int j = 0; j < this->zNumSavedTrainingSets; j++)
 		{
@@ -78,7 +78,32 @@ void AnnAIController::TrainNetAndSave()
 			this->zNNetwork->Train(tempIns, tempOuts);
 		}
 
-		totalError = this->zNNetwork->GetError();
+
+		//Do a test to see how good the network is
+		totalError = 0.0f;
+
+		for(int j = 0; j < 10; j++)
+		{
+			//Loop through num saved trainings
+			tempIns.clear();
+			tempOuts.clear();
+			//Get Training sets inputs
+			for (int k = 0; k < this->zNumInputs; k++)
+				tempIns.push_back(this->zInputs[k + j * this->zNumInputs]);
+
+			//Get Training sets outputs
+			for (int k = 0; k < this->zNumOutputs; k++)
+				tempOuts.push_back(this->zOutputs[k + j * this->zNumOutputs]);
+
+			std::vector<float> networkOutput;
+
+			this->zNNetwork->Use(tempIns, networkOutput);
+
+			for(int k = 0; k < tempOuts.size(); k++)
+			{
+				totalError += abs(networkOutput[k] - tempOuts[k]);
+			}
+		}
 
 		if (abs(totalError) < lowestAbsError)
 		{
@@ -87,7 +112,7 @@ void AnnAIController::TrainNetAndSave()
 			std::cout << totalError << std::endl;
 		}
 
-		if (abs(totalError) < this->zMaximumErrorAllowed)
+		if (abs(totalError) < this->zMaximumErrorAllowed * 10)
 		{
 			std::cout << "Total Error = " <<totalError << std::endl;
 			std::cout << "Writing weights to file " << std::endl;
@@ -96,7 +121,7 @@ void AnnAIController::TrainNetAndSave()
 		}
 	}
 		
-	std::cout << "Total Error = " <<this->zNNetwork->GetError() << std::endl <<
+	std::cout << "Total Error = " << totalError << std::endl <<
 		"Lowest Abs error = "<< lowestAbsError<< std::endl <<
 		"Lowest error = " << lowestError << std::endl;
 }
