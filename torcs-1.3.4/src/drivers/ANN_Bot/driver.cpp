@@ -76,8 +76,15 @@ Driver::~Driver()
 		delete cardata;
 		cardata = NULL;
 	}
-	if (AiController)
-		delete AiController;
+	if (this->AiController)
+		delete this->AiController;
+	if (this->Ai_Speed_Controller)
+		delete this->Ai_Speed_Controller;
+	if (this->Ai_Steering_Controller)
+		delete this->Ai_Steering_Controller;
+	if (this->Ai_Gear_Controller)
+		delete this->Ai_Gear_Controller;
+
 }
 
 
@@ -169,7 +176,11 @@ void Driver::newRace(tCarElt* car, tSituation *s)
 	// create the pit object.
 	pit = new Pit(s, this);
 
-	AiController = new AnnAIController();
+	//Create Ai Controllers
+	this->AiController = new AnnAIController();
+	this->Ai_Speed_Controller = new AnnAIController(TRAINING_TYPE_SPEED);
+	this->Ai_Steering_Controller = new AnnAIController(TRAINING_TYPE_STEER);
+	this->Ai_Gear_Controller = new AnnAIController(TRAINING_TYPE_GEAR);
 
 	//Create seven sensors
 	sensors = new Sensors(car, 7);
@@ -226,7 +237,17 @@ void Driver::drive(tSituation *s)
 	annCar->distFL = this->sensors->getSensorOut(5);
 	annCar->distL = this->sensors->getSensorOut(6);
 
-	this->AiController->run(annCar);
+	bool fullAi = false;
+	if (fullAi)
+	{
+		this->AiController->Run(annCar);
+	}
+	else
+	{
+		this->Ai_Speed_Controller->Run(annCar);
+		this->Ai_Steering_Controller->Run(annCar);
+		this->Ai_Gear_Controller->Run(annCar);
+	}
 
 	car->ctrl.accelCmd = annCar->accel;
 	car->ctrl.brakeCmd = annCar->brake;

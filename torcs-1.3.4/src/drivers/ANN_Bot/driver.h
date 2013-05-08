@@ -190,6 +190,9 @@ class Driver {
 		Sensors* sensors;
 
 		AnnAIController* AiController;
+		AnnAIController* Ai_Speed_Controller;
+		AnnAIController* Ai_Steering_Controller;
+		AnnAIController* Ai_Gear_Controller;
 };
 
 #endif // _DRIVER_H_

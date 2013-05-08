@@ -1,11 +1,13 @@
 #include "NeuralNetwork.h"
 
-NeuralNetwork::NeuralNetwork( int nInputs, int nOutputs, int nHiddenLayers, int nNodesInHiddenLayers )
+NeuralNetwork::NeuralNetwork(int nInputs, int nOutputs, int nHiddenLayers, int nNodesInHiddenLayers, const std::string& weightFile)
 {
 	this->zNInputs = nInputs;
 	this->zNOutputs = nOutputs;
 	this->zNLayers = nHiddenLayers + 2;
 	this->zNHiddenNodesPerLayer = nNodesInHiddenLayers;
+
+	this->zWeightFile = weightFile;
 
 	this->Init();
 }
@@ -21,9 +23,9 @@ void NeuralNetwork::Init()
 	this->zInputLayer = NULL;
 	this->zOutputLayer = NULL;
 
-	//this->zLearningRate = 0.000000000001f;
-	this->zLearningRate = 0.000000001f;
-	this->zMomentum = 0.5f;
+	//this->zLearningRate = 0.000000001f; // Split
+	this->zLearningRate = 0.0000000001f; //Full
+	this->zMomentum = 0.8f;
 
 	//error check
 	if(this->zNLayers < 2)
@@ -123,7 +125,7 @@ void NeuralNetwork::BackPropagate()
 void NeuralNetwork::WriteWeights()
 {
 	FILE* pFile;
-	fopen_s(&pFile, "NNWeightData.txt", "w");
+	fopen_s(&pFile, this->zWeightFile.c_str(), "w");
 	if (pFile == NULL)
 		return;
 
@@ -144,7 +146,7 @@ void NeuralNetwork::WriteWeights()
 void NeuralNetwork::ReadWeights()
 {
 	FILE* pFile;
-	fopen_s(&pFile, "NNWeightData.txt", "r");
+	fopen_s(&pFile, this->zWeightFile.c_str(), "r");
 	if (pFile == NULL)
 		return;
 

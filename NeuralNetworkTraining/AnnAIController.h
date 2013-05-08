@@ -47,6 +47,14 @@ enum NEURAL_NET_TYPE
 	NN_RETRAIN
 };
 
+enum TRAINING_TYPE
+{
+	TRAINING_TYPE_FULL, //Use 4 outputs
+	TRAINING_TYPE_SPEED, // Use 2 outputs Accel & Brake
+	TRAINING_TYPE_STEER, // Use 1 output Steering
+	TRAINING_TYPE_GEAR // Use 1 output Gear
+};
+
 class AnnAIController
 {
 private:
@@ -65,17 +73,20 @@ private:
 	std::vector<Car> zTrainingData;
 
 	int zNumSavedTrainingSets;
+	TRAINING_TYPE zTraining_type;
 
+	float zFinalError;
 public:
-	AnnAIController();
+	AnnAIController(TRAINING_TYPE type = TRAINING_TYPE_FULL);
 	virtual ~AnnAIController();
-	bool LoadTrainingData(std::string filename);
+	bool LoadTrainingData(const std::string& filename);
 
 	void Init();
 	void Reset();
-	//Returns true if training is Done
-	bool RunTraining();
+	void RunTraining();
 	void TrainNetAndSave();
 
-	void run(Car *car);
+	float GetFinalError() {return this->zFinalError;}
+
+	void Run(Car *car);
 };
