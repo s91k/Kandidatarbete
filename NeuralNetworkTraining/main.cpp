@@ -3,11 +3,13 @@
 
 int main()
 {
-
 	_CrtSetDbgFlag( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
-	AnnAIController* controller = new AnnAIController();
-	
+	AnnAIController* controllerFull = new AnnAIController();
+	AnnAIController* controllerSpeed = new AnnAIController(TRAINING_TYPE_SPEED);
+	AnnAIController* controllerSteering = new AnnAIController(TRAINING_TYPE_STEER);
+	AnnAIController* controllerGear = new AnnAIController(TRAINING_TYPE_GEAR);
+
 	std::cout << "Choose a file number between 0 - 7" << std::endl;
 
 	int input = 0;
@@ -31,14 +33,47 @@ int main()
 	else if (input > 7)
 		input = 7;
 
-	controller->LoadTrainingData(texfiles[input]);
-	
-	while(!controller->RunTraining())
+	float error = 0.0f;
+	bool Full_Training = true;
+	//Run Training
+	if (Full_Training)
 	{
+		controllerFull->LoadTrainingData(texfiles[input]);
+		controllerFull->RunTraining();
 
+		error = controllerFull->GetFinalError();
+		std::cout << "Final Error for Full Training = " << error << std::endl;
+	}
+	else
+	{
+		std::cout << "Running speed training (Accel & Brake)" << std::endl;
+		controllerSpeed->LoadTrainingData(texfiles[input]);
+		controllerSpeed->RunTraining();
+
+		std::cout << "Running Steering training" << std::endl;
+		controllerSteering->LoadTrainingData(texfiles[input]);
+		controllerSteering->RunTraining();
+
+		std::cout << "Running Gear training" << std::endl;
+		controllerGear->LoadTrainingData(texfiles[input]);
+		controllerGear->RunTraining();
+
+		error = controllerSpeed->GetFinalError();
+		std::cout << "Final Error for Speed Training = " << error << std::endl;
+
+		error = controllerSteering->GetFinalError();
+		std::cout << "Final Error for Steering Training = " << error << std::endl;
+
+		error = controllerGear->GetFinalError();
+		std::cout << "Final Error for Gear Training = " << error << std::endl;
 	}
 
-	delete controller;
+	
+
+	//delete controllerFull;
+	delete controllerSpeed;
+	delete controllerSteering;
+	delete controllerGear;
 
 	std::cout << "Press Enter to quit" << std::endl;
 	std::cin.ignore(1);

@@ -6,9 +6,11 @@
 #include <iostream>
 #include <time.h>
 
-AnnAIController::AnnAIController()
+AnnAIController::AnnAIController(TRAINING_TYPE type)
 {
 	std::srand(time(0));
+
+	this->zTraining_type = type;
 
 	this->Init();
 }
@@ -22,21 +24,56 @@ void AnnAIController::Init()
 {
 	//Undecided amount
 	this->zNumInputs = 10;
-	this->zNumHiddenNodes = 25;
-	this->zMaximumErrorAllowed = 1.0f;
+	this->zNumHiddenNodes = 28;
+	this->zMaximumErrorAllowed = 0.5f;
 	this->zNumSavedTrainingSets = 0;
 
 	this->zInputs.clear();
 	this->zOutputs.clear();
 
-	this->zNumOutputs = 4;
+	switch (this->zTraining_type)
+	{
+	case TRAINING_TYPE_SPEED:
+		this->zNumOutputs = 2;
+		break;
+	case TRAINING_TYPE_STEER:
+		this->zNumOutputs = 1;
+		break;
+	case TRAINING_TYPE_GEAR:
+		this->zNumOutputs = 1;
+		break;
+	case TRAINING_TYPE_FULL:
+	default:
+		this->zNumOutputs = 4;
+		break;
+	}
+
 	this->zNumHiddenLayers = 1;
 
-	this->zNetMode = NN_USE;
+	this->zNetMode = NN_TRAIN;
 
 	if (this->zNetMode == NN_USE)
 	{
-		this->zNNetwork = new NeuralNetwork(this->zNumInputs, this->zNumOutputs, this->zNumHiddenLayers, this->zNumHiddenNodes);
+		std::string filename;
+
+		switch (this->zTraining_type)
+		{
+		case TRAINING_TYPE_SPEED:
+			filename = "NNSpeedWeightData.txt";
+			break;
+		case TRAINING_TYPE_STEER:
+			filename = "NNSteerWeightData.txt";
+			break;
+		case TRAINING_TYPE_GEAR:
+			filename = "NNGearWeightData.txt";
+			break;
+		case TRAINING_TYPE_FULL:
+		default:
+			filename = "NNWeightData.txt";
+			break;
+		}
+
+		this->zNNetwork = new NeuralNetwork(this->zNumInputs, this->zNumOutputs, this->zNumHiddenLayers, this->zNumHiddenNodes, filename);
 		this->zNNetwork->ReadWeights();
 	}
 }
@@ -51,16 +88,37 @@ void AnnAIController::TrainNetAndSave()
 	//Stats
 	float lowestAbsError = 9999999.9f;
 	float lowestError = lowestAbsError;
+	std::string filename;
 
-	this->zNNetwork = new NeuralNetwork(this->zNumInputs, this->zNumOutputs, this->zNumHiddenLayers, this->zNumHiddenNodes);
+	switch (this->zTraining_type)
+	{
+	case TRAINING_TYPE_SPEED:
+		filename = "NNSpeedWeightData.txt";
+		break;
+	case TRAINING_TYPE_STEER:
+		filename = "NNSteerWeightData.txt";
+		break;
+	case TRAINING_TYPE_GEAR:
+		filename = "NNGearWeightData.txt";
+		break;
+	case TRAINING_TYPE_FULL:
+	default:
+		filename = "NNWeightData.txt";
+		break;
+	}
 
+	this->zNNetwork = new NeuralNetwork(this->zNumInputs, this->zNumOutputs, this->zNumHiddenLayers, this->zNumHiddenNodes, filename);
+
+	std::cout << "Running Training " << std::endl << std::endl;
+	
+	int nrOfIterations = 0;
+	int printLimit = 1000;
 	std::vector<float> tempIns;
 	std::vector<float> tempOuts;
 	float totalError = 0.0f;
-	//int counter = 0;
-	//int totalIterations = NUM_ITERATIONS_TO_TRAIN * this->zNumSavedTrainingSets;
+
 	//Loop through num iterations
-	for (int i = 0; /*i < NUM_ITERATIONS_TO_TRAIN*/ true; i++)
+	while (true)
 	{
 		for (int j = 0; j < this->zNumSavedTrainingSets; j++)
 		{
@@ -78,6 +136,7 @@ void AnnAIController::TrainNetAndSave()
 			this->zNNetwork->Train(tempIns, tempOuts);
 		}
 
+		nrOfIterations++;
 
 		//Do a test to see how good the network is
 		totalError = 0.0f;
@@ -105,17 +164,26 @@ void AnnAIController::TrainNetAndSave()
 			}
 		}
 
-		if (abs(totalError) < lowestAbsError)
+		if (nrOfIterations >= printLimit)
 		{
-			lowestAbsError = abs(totalError);
-			lowestError = totalError;
-			std::cout << totalError << std::endl;
+			
+			std::cout << printLimit << " iterations run " << std::endl;
+			std::cout << "Total Error so Far " << totalError << std::endl;
+			printLimit += 1000;
 		}
+
+		//if (abs(totalError) < lowestAbsError)
+		//{
+		//	lowestAbsError = abs(totalError);
+		//	lowestError = totalError;
+		//	std::cout << totalError << std::endl;
+		//}
 
 		if (abs(totalError) < this->zMaximumErrorAllowed * 10)
 		{
+			this->zFinalError = totalError;
 			std::cout << "Total Error = " <<totalError << std::endl;
-			std::cout << "Writing weights to file " << std::endl;
+			std::cout << "Writing weights to file " << filename << std::endl;
 			this->zNNetwork->WriteWeights();
 			return;
 		}
@@ -126,7 +194,7 @@ void AnnAIController::TrainNetAndSave()
 		"Lowest error = " << lowestError << std::endl;
 }
 
-bool AnnAIController::LoadTrainingData( std::string filename )
+bool AnnAIController::LoadTrainingData( const std::string& filename )
 {
 	std::fstream read;
 
@@ -222,89 +290,103 @@ bool AnnAIController::LoadTrainingData( std::string filename )
 	return true;
 }
 
-bool AnnAIController::RunTraining()
+void AnnAIController::RunTraining()
 {
-	static int index = 0;
 	Car car;
 
-	this->zNumSavedTrainingSets++;
-	car = this->zTrainingData[index++];
-
-	float temp = 0.5f;
-
-	this->zInputs.push_back(car.speed);
-	this->zInputs.push_back(car.angle);
-	this->zInputs.push_back(car.distR);
-	this->zInputs.push_back(car.distFR);
-	this->zInputs.push_back(car.distFFR);
-	this->zInputs.push_back(car.distF);
-	this->zInputs.push_back(car.distL);
-	this->zInputs.push_back(car.distFL);
-	this->zInputs.push_back(car.distFFL);
-	this->zInputs.push_back(car.clutch);
-
-	//Final Value for accel/brake, clamped between -1.0 & 1.0
-	//temp < 0.5 = brake else accel or 0.5 = 0.0 for both
-	//if (car->accel > 0.0f)
-	//{
-	//	temp = car->accel;
-	//	//Clamp value between 0.5 & 1.0
-	//	//temp = 0.5f * (temp + 1.0f);
-	//	this->zOutputs.push_back(temp);
-	//}
-	//else if (car->brake > 0.0f)
-	//{
-	//	temp = car->brake;
-	//	//Make value negative so it ends up between 0 & 0.5
-	//	temp = -temp;
-	//	//Clamp value between 0.0 & 0.5
-	//	//temp = 0.5f * (temp + 1.0f);
-	//	this->zOutputs.push_back(temp);
-	//}
-	//else
-	//{
-	//	this->zOutputs.push_back(0.0f);
-	//}
-	this->zOutputs.push_back(car.accel);
-	this->zOutputs.push_back(car.brake);
-	this->zOutputs.push_back(car.steer);
-	this->zOutputs.push_back(car.gear);
-
-
-	FILE* pfile;
-	pfile = fopen("NeuralNetworkTrainingData.txt", "a");
-	if (pfile == NULL)
-		return true;
-
-	//Print inputs
-	fprintf(pfile, "%f %f %f %f %f %f %f %f %f %f\n", 
-		car.speed, car.angle, car.distR,
-		car.distFR, car.distFFR, car.distF, 
-		car.distL, car.distFL, car.distFFL,
-		car.clutch
-		);
-
-	//Print outputs
-	fprintf(pfile, "%f %f %f %f\n", car.accel, car.brake, car.steer, car.gear);
-
-	fclose(pfile);
-
-	if (this->zNumSavedTrainingSets == this->zTrainingData.size())
+	for (auto it_data = this->zTrainingData.cbegin(); it_data != this->zTrainingData.cend(); it_data++)
 	{
-		std::cout << "Training data input done" <<std::endl;
+		this->zNumSavedTrainingSets++;
+		car = (*it_data);
 
-		std::cout << "Press Enter to begin training" <<std::endl;
-		std::cin.ignore(1);
+		float temp = 0.5f;
 
-		std::cout << "Beginning training network " <<std::endl;
-		TrainNetAndSave();
-		return true;
+		this->zInputs.push_back(car.speed);
+		this->zInputs.push_back(car.angle);
+		this->zInputs.push_back(car.distR);
+		this->zInputs.push_back(car.distFR);
+		this->zInputs.push_back(car.distFFR);
+		this->zInputs.push_back(car.distF);
+		this->zInputs.push_back(car.distL);
+		this->zInputs.push_back(car.distFL);
+		this->zInputs.push_back(car.distFFL);
+		this->zInputs.push_back(car.clutch);
+
+		//Final Value for accel/brake, clamped between -1.0 & 1.0
+		//temp < 0.5 = brake else accel or 0.5 = 0.0 for both
+		//if (car->accel > 0.0f)
+		//{
+		//	temp = car->accel;
+		//	//Clamp value between 0.5 & 1.0
+		//	//temp = 0.5f * (temp + 1.0f);
+		//	this->zOutputs.push_back(temp);
+		//}
+		//else if (car->brake > 0.0f)
+		//{
+		//	temp = car->brake;
+		//	//Make value negative so it ends up between 0 & 0.5
+		//	temp = -temp;
+		//	//Clamp value between 0.0 & 0.5
+		//	//temp = 0.5f * (temp + 1.0f);
+		//	this->zOutputs.push_back(temp);
+		//}
+		//else
+		//{
+		//	this->zOutputs.push_back(0.0f);
+		//}
+		switch (this->zTraining_type)
+		{
+		case TRAINING_TYPE_SPEED:
+			this->zOutputs.push_back(car.accel);
+			this->zOutputs.push_back(car.brake);
+			break;
+		case TRAINING_TYPE_STEER:
+			this->zOutputs.push_back(car.steer);
+			break;
+		case TRAINING_TYPE_GEAR:
+			this->zOutputs.push_back(car.gear);
+			break;
+		case TRAINING_TYPE_FULL:
+		default:
+			this->zOutputs.push_back(car.accel);
+			this->zOutputs.push_back(car.brake);
+			this->zOutputs.push_back(car.steer);
+			this->zOutputs.push_back(car.gear);
+			break;
+		}
+		/*
+		FILE* pfile;
+		fopen_s(&pfile, "NeuralNetworkTrainingData.txt", "a");
+		if (pfile == NULL)
+		{
+			std::cout << "Failed to open training data file" << std::endl;
+			return;
+		}
+		//Print inputs
+		fprintf(pfile, "%f %f %f %f %f %f %f %f %f %f\n", 
+			car.speed, car.angle, car.distR,
+			car.distFR, car.distFFR, car.distF, 
+			car.distL, car.distFL, car.distFFL,
+			car.clutch);
+
+		//Print outputs
+		fprintf(pfile, "%f %f %f %f\n", car.accel, car.brake, car.steer, car.gear);
+
+		fclose(pfile);
+		*/
 	}
+	
+	std::cout << "Training data input done" <<std::endl;
 
-	return false;
+	//std::cout << "Press Enter to begin training" <<std::endl;
+	//std::cin.ignore(1);
+
+	std::cout << "Beginning training network " <<std::endl;
+	TrainNetAndSave();
+	return;
 }
 
-void AnnAIController::run(Car *car)
+void AnnAIController::Run(Car *car)
 {
 	std::vector<float> inputs;
 	std::vector<float> outputs;
@@ -329,7 +411,6 @@ void AnnAIController::run(Car *car)
 	//	value = 2.0f * value - 1.0f;
 	//	//Set Brake Value
 	//	car->brake = value;
-
 	//}
 	//else if (value > 0.5f) //Accel
 	//{
@@ -342,11 +423,24 @@ void AnnAIController::run(Car *car)
 	//	//Set Both Values to 0.0
 	//	car->accel = 0.0f;
 	//	car->brake = 0.0f;
-	car->accel = outputs[0];
-	car->brake = outputs[1];
-	//}
-	// Steer
-	car->steer = outputs[2];
-	// Gear
-	car->gear = outputs[3];
+	switch (this->zTraining_type)
+	{
+	case TRAINING_TYPE_SPEED:
+		car->accel = outputs[0];
+		car->brake = outputs[1];
+		break;
+	case TRAINING_TYPE_STEER:
+		car->steer = outputs[0];
+		break;
+	case TRAINING_TYPE_GEAR:
+		car->gear = outputs[0];
+		break;
+	case TRAINING_TYPE_FULL:
+	default:
+		car->accel = outputs[0];
+		car->brake = outputs[1];
+		car->steer = outputs[2];
+		car->gear = outputs[3];
+		break;
+	}
 }

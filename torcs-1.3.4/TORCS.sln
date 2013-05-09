@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TORCS", "TORCS.vcxproj", "{8D944D60-3543-4444-84E4-260BA6FAA2C7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{91C20C6F-2270-4E73-8AA4-6F5DB1EF83DA} = {91C20C6F-2270-4E73-8AA4-6F5DB1EF83DA}
+		{166D9898-C5C8-4B83-AFDC-C8D66C1F9633} = {166D9898-C5C8-4B83-AFDC-C8D66C1F9633}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "accc", "src\tools\accc\accc.vcxproj", "{B207EB9E-56BC-4A80-9343-F08EA9C30951}"
 EndProject

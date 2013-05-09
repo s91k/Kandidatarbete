@@ -25,10 +25,12 @@ private:
 	float zMomentum;
 	float zError;
 
+	std::string zWeightFile;
+
 private:
 	void AddLayer(int nNeurons, int nInputs, int type);
 public:
-	NeuralNetwork(int nInputs, int nOutputs, int nHiddenLayers, int nNodesInHiddenLayers);
+	NeuralNetwork(int nInputs, int nOutputs, int nHiddenLayers, int nNodesInHiddenLayers, const std::string& weightFile);
 	virtual ~NeuralNetwork();
 	void Init();
 	void Train(std::vector<float>& nInputs, std::vector<float>& nExpectedOutput);
