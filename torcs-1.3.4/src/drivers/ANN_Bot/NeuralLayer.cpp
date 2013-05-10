@@ -2,6 +2,7 @@
 
 NeuralLayer::NeuralLayer( int nNeurons, int nInputs, int type )
 {
+	this->zThreshold = 1.0f;
 	this->zLayerType = type;
 	for (int i = 0; i < nNeurons; i++)
 	{
@@ -30,7 +31,7 @@ NeuralLayer::~NeuralLayer()
 
 }
 
-void NeuralLayer::Propagate( NeuralLayer& nextLayer )
+void NeuralLayer::Propagate(int type, NeuralLayer& nextLayer)
 {
 	int numNeurons = nextLayer.zNeurons.size();
 
@@ -47,29 +48,48 @@ void NeuralLayer::Propagate( NeuralLayer& nextLayer )
 		//add in the bias (always has an input of -1)
 		value += nextLayer.zNeurons[i].zWeights[numWeights] * -1.0f;
 
-		nextLayer.zNeurons[i].zOutput = value;
+		switch (type)
+		{
+		case ACT_STEP:
+			nextLayer.zNeurons[i].zOutput = this->ActStep(value);
+			break;
+		case ACT_TANH:
+			nextLayer.zNeurons[i].zOutput = this->ActTanh(value);
+			break;
+		case ACT_LOGISTIC:
+			nextLayer.zNeurons[i].zOutput = this->ActLogistic(value);
+			break;
+		case ACT_BIPOLAR:
+			nextLayer.zNeurons[i].zOutput = this->ActBipolarSigmoid(value);
+			break;
+		case ACT_LINEAR:
+		default:
+			nextLayer.zNeurons[i].zOutput = value;
+			break;
+		}
+		
 	}
 }
 
-void NeuralLayer::BackPropagate( NeuralLayer& nextLayer )
+void NeuralLayer::BackPropagate(int type, NeuralLayer& nextLayer)
 {
-	/*
-	float outputValue;
+
+	/*float outputValue;
 	float error;
 
 	int numNeurons = nextLayer.zNeurons.size();
 
 	for (int i = 0; i < numNeurons; i++)
 	{
-		outputValue = nextLayer.zNeurons[i]->zOutput;
-		error = 0;
-		for (int j = 0; j < this->zNeurons.size(); j++)
-		{
-			error += this->zNeurons[j]->zWeights[i] * this->zNeurons[j]->zError;
-		}
-		nextLayer.zNeurons[i]->zError = outputValue * error;
+	outputValue = nextLayer.zNeurons[i].zOutput;
+	error = 0;
+	for (int j = 0; j < this->zNeurons.size(); j++)
+	{
+	error += this->zNeurons[j]->zWeights[i] * this->zNeurons[j].zError;
 	}
-	*/
+	nextLayer.zNeurons[i].zError = outputValue * error;
+	}*/
+
 	for(unsigned int i = 0; i < this->zNeurons.size(); i++)
 	{
 		float error = 0.0f;
@@ -79,11 +99,26 @@ void NeuralLayer::BackPropagate( NeuralLayer& nextLayer )
 			error += nextLayer.zNeurons[j].zWeights[i] * nextLayer.zNeurons[j].zError;
 		}		
 
-		this->zNeurons[i].zError = this->zNeurons[i].zOutput * error;
+		switch (type)
+		{
+		case ACT_TANH:
+			this->zNeurons[i].zError = this->DerTanh(this->zNeurons[i].zOutput) * error;
+			break;
+		case ACT_LOGISTIC:
+			this->zNeurons[i].zError = this->DerLogistic(this->zNeurons[i].zOutput) * error;
+			break;
+		case ACT_BIPOLAR:
+			this->zNeurons[i].zError = this->DerBipolarSigmoid(this->zNeurons[i].zOutput) * error;
+			break;
+		case ACT_LINEAR:
+		default:
+			this->zNeurons[i].zError = this->zNeurons[i].zOutput * error;
+			break;
+		}
 	}	
 }
 
-void NeuralLayer::AdjustWeights( NeuralLayer& nInputs, float lRate /*= 0.1f*/, float momentum /*= 0.5f*/ )
+void NeuralLayer::AdjustWeights(NeuralLayer& nInputs, float lRate /*= 0.1f*/, float momentum /*= 0.5f*/)
 {
 	for (unsigned int i = 0; i < this->zNeurons.size(); i++)
 	{
@@ -137,4 +172,39 @@ float NeuralLayer::CalculateError( std::vector<float> &expectedOutputs )
 	}
 
 	return totalError;
+}
+
+float NeuralLayer::ActLogistic( float value )
+{
+	return (1 / (1 + exp( -value * zThreshold)));
+}
+
+float NeuralLayer::ActStep( float value )
+{
+	return (value * zThreshold * (1.0f - value));
+}
+
+float NeuralLayer::ActTanh( float value )
+{
+	return (tanh(value * zThreshold));
+}
+
+float NeuralLayer::ActBipolarSigmoid( float value )
+{
+	 return ((2.0f / (1.0f + exp( -value * zThreshold))) - 1.0f);
+}
+
+float NeuralLayer::DerLogistic( float value )
+{
+	return (value * zThreshold * (1.0f - value));
+}
+
+float NeuralLayer::DerTanh( float value )
+{
+	return (1 - value * value);
+}
+
+float NeuralLayer::DerBipolarSigmoid( float value )
+{
+	return (0.5f * zThreshold * (1 + value) * (1 - value));
 }

@@ -5,6 +5,7 @@
 #include <sstream>
 #include <iostream>
 #include <time.h>
+#include <windows.h>
 
 AnnAIController::AnnAIController(TRAINING_TYPE type)
 {
@@ -24,8 +25,8 @@ void AnnAIController::Init()
 {
 	//Undecided amount
 	this->zNumInputs = 10;
-	this->zNumHiddenNodes = 28;
-	this->zMaximumErrorAllowed = 0.5f;
+	this->zNumHiddenNodes = 20;
+	this->zMaximumErrorAllowed = 0.05f;
 	this->zNumSavedTrainingSets = 0;
 
 	this->zInputs.clear();
@@ -113,9 +114,19 @@ void AnnAIController::TrainNetAndSave()
 	
 	int nrOfIterations = 0;
 	int printLimit = 1000;
+	int verificationTests = 20;
+
 	std::vector<float> tempIns;
 	std::vector<float> tempOuts;
 	float totalError = 0.0f;
+
+	//Performance variables
+	/*INT64 frequency, startTime, currentTime;
+	float secsPerCnt, timeDifference, deltaTime;
+
+	QueryPerformanceFrequency((LARGE_INTEGER*) &frequency);
+	secsPerCnt = 1.0f / (float)frequency;
+	QueryPerformanceCounter((LARGE_INTEGER*) &startTime);*/
 
 	//Loop through num iterations
 	while (true)
@@ -136,12 +147,19 @@ void AnnAIController::TrainNetAndSave()
 			this->zNNetwork->Train(tempIns, tempOuts);
 		}
 
+		/*QueryPerformanceCounter((LARGE_INTEGER*) &currentTime);
+		timeDifference = (float) (currentTime - startTime);
+		deltaTime = timeDifference * secsPerCnt;
+		startTime = currentTime;
+
+		std::cout << "Delta time for 1 iteration: " << deltaTime << std::endl;*/
+
 		nrOfIterations++;
 
 		//Do a test to see how good the network is
 		totalError = 0.0f;
 
-		for(int j = 0; j < 10; j++)
+		for(int j = 0; j < verificationTests; j++)
 		{
 			//Loop through num saved trainings
 			tempIns.clear();
@@ -158,7 +176,8 @@ void AnnAIController::TrainNetAndSave()
 
 			this->zNNetwork->Use(tempIns, networkOutput);
 
-			for(int k = 0; k < tempOuts.size(); k++)
+			int size = tempOuts.size();
+			for(int k = 0; k < size; k++)
 			{
 				totalError += abs(networkOutput[k] - tempOuts[k]);
 			}
@@ -166,7 +185,6 @@ void AnnAIController::TrainNetAndSave()
 
 		if (nrOfIterations >= printLimit)
 		{
-			
 			std::cout << printLimit << " iterations run " << std::endl;
 			std::cout << "Total Error so Far " << totalError << std::endl;
 			printLimit += 1000;
@@ -179,7 +197,7 @@ void AnnAIController::TrainNetAndSave()
 		//	std::cout << totalError << std::endl;
 		//}
 
-		if (abs(totalError) < this->zMaximumErrorAllowed * 10)
+		if (abs(totalError) < this->zMaximumErrorAllowed * verificationTests)
 		{
 			this->zFinalError = totalError;
 			std::cout << "Total Error = " <<totalError << std::endl;
@@ -426,8 +444,15 @@ void AnnAIController::Run(Car *car)
 	switch (this->zTraining_type)
 	{
 	case TRAINING_TYPE_SPEED:
-		car->accel = outputs[0];
-		car->brake = outputs[1];
+		if (outputs[0] >= 0.0f)
+			car->accel = outputs[0];
+		else
+			car->accel = 0.0f;
+
+		if (outputs[0] >= 0.0f)
+			car->brake = outputs[1];
+		else
+			car->brake = 0.0f;
 		break;
 	case TRAINING_TYPE_STEER:
 		car->steer = outputs[0];
@@ -437,8 +462,15 @@ void AnnAIController::Run(Car *car)
 		break;
 	case TRAINING_TYPE_FULL:
 	default:
-		car->accel = outputs[0];
-		car->brake = outputs[1];
+		if (outputs[0] >= 0.0f)
+			car->accel = outputs[0];
+		else
+			car->accel = 0.0f;
+
+		if (outputs[0] >= 0.0f)
+			car->brake = outputs[1];
+		else
+			car->brake = 0.0f;
 		car->steer = outputs[2];
 		car->gear = outputs[3];
 		break;

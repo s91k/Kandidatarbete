@@ -24,8 +24,8 @@ void AnnAIController::Init()
 {
 	//Undecided amount
 	this->zNumInputs = 10;
-	this->zNumHiddenNodes = 25;
-	this->zMaximumErrorAllowed = 1.0f;
+	this->zNumHiddenNodes = 20;
+	this->zMaximumErrorAllowed = 0.5f;
 	this->zNumSavedTrainingSets = 0;
 
 	this->zInputs.clear();
@@ -113,6 +113,8 @@ void AnnAIController::TrainNetAndSave()
 	
 	int nrOfIterations = 0;
 	int printLimit = 1000;
+	int verificationTests = 20;
+
 	std::vector<float> tempIns;
 	std::vector<float> tempOuts;
 	float totalError = 0.0f;
@@ -141,7 +143,7 @@ void AnnAIController::TrainNetAndSave()
 		//Do a test to see how good the network is
 		totalError = 0.0f;
 
-		for(int j = 0; j < 10; j++)
+		for(int j = 0; j < verificationTests; j++)
 		{
 			//Loop through num saved trainings
 			tempIns.clear();
@@ -179,7 +181,7 @@ void AnnAIController::TrainNetAndSave()
 		//	std::cout << totalError << std::endl;
 		//}
 
-		if (abs(totalError) < this->zMaximumErrorAllowed * 10)
+		if (abs(totalError) < this->zMaximumErrorAllowed * verificationTests)
 		{
 			this->zFinalError = totalError;
 			std::cout << "Total Error = " <<totalError << std::endl;

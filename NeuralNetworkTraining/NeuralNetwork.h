@@ -27,6 +27,9 @@ private:
 
 	std::string zWeightFile;
 
+	int zActType;
+	int zOutputActType;
+
 private:
 	void AddLayer(int nNeurons, int nInputs, int type);
 public:

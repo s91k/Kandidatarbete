@@ -23,9 +23,12 @@ void NeuralNetwork::Init()
 	this->zInputLayer = NULL;
 	this->zOutputLayer = NULL;
 
-	//this->zLearningRate = 0.000000000001f;
-	this->zLearningRate = 0.00000001f;
-	this->zMomentum = 0.5f;
+	this->zActType = ACT_BIPOLAR;
+	this->zOutputActType= ACT_LOGISTIC;
+
+	//this->zLearningRate = 0.000000001f; // Split
+	this->zLearningRate = 0.00001f; //Full
+	this->zMomentum = 0.8f;
 
 	//error check
 	if(this->zNLayers < 2)
@@ -98,7 +101,8 @@ void NeuralNetwork::Propagate()
 {
 	for (int i = 0; i < this->zNLayers - 1; i++)
 	{
-		this->zLayers[i].Propagate(this->zLayers[i + 1]);
+		int type = (this->zLayers[i + 1].zLayerType == NN_OUTPUT) ? this->zOutputActType : this->zActType;
+		this->zLayers[i].Propagate(type, this->zLayers[i + 1]);
 	}
 }
 
@@ -112,7 +116,7 @@ void NeuralNetwork::BackPropagate()
 
 	for (int i = this->zNLayers - 1; i > 0; i--)
 	{
-		this->zLayers[i - 1].BackPropagate(this->zLayers[i]);
+		this->zLayers[i - 1].BackPropagate(this->zActType, this->zLayers[i]);
 	}
 
 	//Adjust the weights

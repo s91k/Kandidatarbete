@@ -38,6 +38,7 @@ int main()
 	//Run Training
 	if (Full_Training)
 	{
+		std::cout << "Running Full Training" << std::endl;
 		controllerFull->LoadTrainingData(texfiles[input]);
 		controllerFull->RunTraining();
 
@@ -46,15 +47,15 @@ int main()
 	}
 	else
 	{
-		std::cout << "Running speed training (Accel & Brake)" << std::endl;
+		std::cout << "Running Speed Training (Accel & Brake)" << std::endl;
 		controllerSpeed->LoadTrainingData(texfiles[input]);
 		controllerSpeed->RunTraining();
 
-		std::cout << "Running Steering training" << std::endl;
+		std::cout << "Running Steering Training" << std::endl;
 		controllerSteering->LoadTrainingData(texfiles[input]);
 		controllerSteering->RunTraining();
 
-		std::cout << "Running Gear training" << std::endl;
+		std::cout << "Running Gear Training" << std::endl;
 		controllerGear->LoadTrainingData(texfiles[input]);
 		controllerGear->RunTraining();
 
@@ -67,8 +68,6 @@ int main()
 		error = controllerGear->GetFinalError();
 		std::cout << "Final Error for Gear Training = " << error << std::endl;
 	}
-
-	
 
 	//delete controllerFull;
 	delete controllerSpeed;
