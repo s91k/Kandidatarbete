@@ -14,6 +14,10 @@ NeuralNetwork::NeuralNetwork(int nInputs, int nOutputs, int nHiddenLayers, int n
 
 NeuralNetwork::~NeuralNetwork()
 {
+	for (int i = 0; i < this->zLayers.size(); i++)
+	{
+		this->zLayers[i].Clear();
+	}
 	this->zLayers.clear();
 }
 
@@ -22,6 +26,9 @@ void NeuralNetwork::Init()
 {
 	this->zInputLayer = NULL;
 	this->zOutputLayer = NULL;
+
+	this->zActType = ACT_TANH;
+	this->zOutputActType= ACT_LOGISTIC;
 
 	//this->zLearningRate = 0.000000001f; // Split
 	this->zLearningRate = 0.0000000001f; //Full
@@ -64,7 +71,8 @@ void NeuralNetwork::Init()
 
 void NeuralNetwork::AddLayer( int nNeurons, int nInputs, int type )
 {
-	this->zLayers.push_back(NeuralLayer(nNeurons, nInputs, type));
+	NeuralLayer layer = NeuralLayer(nNeurons, nInputs, type);
+	this->zLayers.push_back(layer);
 }
 
 void NeuralNetwork::Train( std::vector<float>& nInputs, std::vector<float>& nExpectedOutput )
@@ -98,7 +106,8 @@ void NeuralNetwork::Propagate()
 {
 	for (int i = 0; i < this->zNLayers - 1; i++)
 	{
-		this->zLayers[i].Propagate(this->zLayers[i + 1]);
+		int type = (this->zLayers[i + 1].zLayerType == NN_OUTPUT) ? this->zOutputActType : this->zActType;
+		this->zLayers[i].Propagate(type, this->zLayers[i + 1]);
 	}
 }
 
@@ -112,7 +121,7 @@ void NeuralNetwork::BackPropagate()
 
 	for (int i = this->zNLayers - 1; i > 0; i--)
 	{
-		this->zLayers[i - 1].BackPropagate(this->zLayers[i]);
+		this->zLayers[i - 1].BackPropagate(this->zActType, this->zLayers[i]);
 	}
 
 	//Adjust the weights
@@ -135,9 +144,9 @@ void NeuralNetwork::WriteWeights()
 
 		for (int j = 0; j < numNeurons; j++)
 		{
-			int numWeights = this->zLayers[i].zNeurons[j].zWeights.size();
+			int numWeights = this->zLayers[i].zNeurons[j]->zWeights.size();
 			for (int k = 0; k < numWeights; k++)
-				fprintf(pFile, "%f \n", this->zLayers[i].zNeurons[j].zWeights[k]);
+				fprintf(pFile, "%f \n", this->zLayers[i].zNeurons[j]->zWeights[k]);
 		}
 	}
 	fclose(pFile);
@@ -155,9 +164,9 @@ void NeuralNetwork::ReadWeights()
 		int numNeurons = this->zLayers[i].zNeurons.size();
 		for(int j = 0; j < numNeurons; j++)
 		{
-			int numWeights = this->zLayers[i].zNeurons[j].zWeights.size();
+			int numWeights = this->zLayers[i].zNeurons[j]->zWeights.size();
 			for(int k = 0; k < numWeights; k++)
-				fscanf(pFile,"%f ",&this->zLayers[i].zNeurons[j].zWeights[k]);
+				fscanf(pFile,"%f ",&this->zLayers[i].zNeurons[j]->zWeights[k]);
 		}
 	}
 	fclose(pFile);
