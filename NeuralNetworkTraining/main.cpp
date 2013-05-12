@@ -34,7 +34,7 @@ int main()
 		input = 7;
 
 	float error = 0.0f;
-	bool Full_Training = true;
+	bool Full_Training = false;
 	//Run Training
 	if (Full_Training)
 	{

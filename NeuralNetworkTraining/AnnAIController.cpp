@@ -141,7 +141,7 @@ void AnnAIController::TrainNetAndSave()
 		//Do a test to see how good the network is
 		totalError = 0.0f;
 
-		for(int j = 0; j < 10; j++)
+		for (int j = 0; j < this->zNumSavedTrainingSets; j++)
 		{
 			//Loop through num saved trainings
 			tempIns.clear();
