@@ -35,12 +35,15 @@ void AnnAIController::Init()
 	{
 	case TRAINING_TYPE_SPEED:
 		this->zNumOutputs = 2;
+		this->zNumHiddenNodes = 20;
 		break;
 	case TRAINING_TYPE_STEER:
 		this->zNumOutputs = 1;
+		this->zNumHiddenNodes = 20;
 		break;
 	case TRAINING_TYPE_GEAR:
 		this->zNumOutputs = 1;
+		this->zNumHiddenNodes = 2;
 		break;
 	case TRAINING_TYPE_FULL:
 	default:
@@ -160,7 +163,7 @@ void AnnAIController::TrainNetAndSave()
 
 			for(int k = 0; k < tempOuts.size(); k++)
 			{
-				totalError += abs(networkOutput[k] - tempOuts[k]);
+				totalError += abs(abs(networkOutput[k]) - abs(tempOuts[k]));
 			}
 		}
 
@@ -179,7 +182,7 @@ void AnnAIController::TrainNetAndSave()
 		//	std::cout << totalError << std::endl;
 		//}
 
-		if (abs(totalError) < this->zMaximumErrorAllowed * 10)
+		if (abs(totalError) < this->zMaximumErrorAllowed * this->zNumSavedTrainingSets)
 		{
 			this->zFinalError = totalError;
 			std::cout << "Total Error = " <<totalError << std::endl;

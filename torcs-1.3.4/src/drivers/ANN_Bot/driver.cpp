@@ -222,6 +222,8 @@ void Driver::drive(tSituation *s)
 
 	//}
 
+	this->sensors->sensors_update();
+
 	Car *annCar = new Car();
 
 	annCar->speed = sqrt((car->_speed_x)*(car->_speed_x) + (car->_speed_y)*(car->_speed_y) + (car->_speed_z)*(car->_speed_z));
@@ -252,7 +254,26 @@ void Driver::drive(tSituation *s)
 	car->ctrl.accelCmd = annCar->accel;
 	car->ctrl.brakeCmd = annCar->brake;
 	car->ctrl.steer = annCar->steer;
-	car->ctrl.gear = annCar->gear;
+	car->ctrl.gear = max(min(annCar->gear + 1.0f, 6), -1);
+
+	printf_s("ANN DATA\n");
+
+	printf_s("Speed:\t\t %f\n", annCar->speed);
+	printf_s("Angle:\t\t %f\n", annCar->angle);
+
+	printf_s("DistR:\t\t %f\n", annCar->distR);
+	printf_s("DistFR:\t\t %f\n", annCar->distFR);
+	printf_s("DistFFR:\t %f\n", annCar->distFFR);
+	printf_s("DistF:\t\t %f\n", annCar->distF);
+	printf_s("DistFFL:\t %f\n", annCar->distFFL);
+	printf_s("DistFL:\t\t %f\n", annCar->distFL);
+	printf_s("DistL:\t\t %f\n", annCar->distL);
+
+	printf_s("Accel:\t\t %f\n", annCar->accel);
+	printf_s("Brake:\t\t %f\n", annCar->brake);
+	printf_s("Steer:\t\t %f\n", annCar->steer);
+	printf_s("Gear:\t\t %f\n", annCar->gear);
+
 
 	delete annCar;
 }
