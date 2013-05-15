@@ -274,7 +274,6 @@ void Driver::drive(tSituation *s)
 	printf_s("Steer:\t\t %f\n", annCar->steer);
 	printf_s("Gear:\t\t %f\n", annCar->gear);
 
-
 	delete annCar;
 }
 

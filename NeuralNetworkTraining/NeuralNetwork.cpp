@@ -21,25 +21,23 @@ NeuralNetwork::~NeuralNetwork()
 	this->zLayers.clear();
 }
 
-
 void NeuralNetwork::Init()
 {
 	this->zInputLayer = NULL;
 	this->zOutputLayer = NULL;
 
-	this->zActType = ACT_TANH;
+	this->zActType = ACT_BIPOLAR;
 	this->zOutputActType= ACT_LOGISTIC;
 
-	//this->zLearningRate = 0.000000001f; // Split
-	this->zLearningRate = 0.0000000001f; //Full
-	this->zMomentum = 0.8f;
+	this->zLearningRate = 0.0000001f;
+	this->zMomentum = 0.35f;
 
 	//error check
 	if(this->zNLayers < 2)
 		return;
 
 	//clear out the layers, in Case you're restarting the net
-	zLayers.clear();
+	this->zLayers.clear();
 
 	//input layer
 	AddLayer(this->zNInputs, 1, NN_INPUT);
@@ -116,7 +114,7 @@ void NeuralNetwork::BackPropagate()
 	//BackPropagate the error
 	//for (int i = this->zNLayers - 1; i > 0; i--)
 	//{
-	//	this->zLayers[i].BackPropagate(this->zLayers[i - 1]);
+	//	this->zLayers[i].BackPropagate(this->zActType, this->zLayers[i - 1]);
 	//}
 
 	for (int i = this->zNLayers - 1; i > 0; i--)
