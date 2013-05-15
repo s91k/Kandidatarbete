@@ -48,9 +48,12 @@ public:
 	float DerLogistic(float value);
 	float DerTanh(float value);
 	float DerBipolarSigmoid(float value);
+	//Used to fix memory leaks since it tries to 
+	//delete the neurons every time a new layer is created
+	void Clear();
 
 	//Data
-	std::vector<Neuron> zNeurons;
+	std::vector<Neuron*> zNeurons;
 	int zLayerType;
 	float zThreshold;
 };

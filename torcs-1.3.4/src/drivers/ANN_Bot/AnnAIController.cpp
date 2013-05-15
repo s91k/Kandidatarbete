@@ -5,6 +5,7 @@
 #include <sstream>
 #include <iostream>
 #include <time.h>
+#include <windows.h>
 
 AnnAIController::AnnAIController(TRAINING_TYPE type)
 {
@@ -23,9 +24,8 @@ AnnAIController::~AnnAIController()
 void AnnAIController::Init()
 {
 	//Undecided amount
-	this->zNumInputs = 10;
-	this->zNumHiddenNodes = 20;
-	this->zMaximumErrorAllowed = 0.5f;
+	
+	this->zMaximumErrorAllowed = 0.08f;
 	this->zNumSavedTrainingSets = 0;
 
 	this->zInputs.clear();
@@ -34,17 +34,25 @@ void AnnAIController::Init()
 	switch (this->zTraining_type)
 	{
 	case TRAINING_TYPE_SPEED:
-		this->zNumOutputs = 2;
+		this->zNumInputs = 3;
+		this->zNumOutputs = 1;
+		this->zNumHiddenNodes = 20;
 		break;
 	case TRAINING_TYPE_STEER:
+		this->zNumInputs = 10;
 		this->zNumOutputs = 1;
+		this->zNumHiddenNodes = 15;
 		break;
 	case TRAINING_TYPE_GEAR:
+		this->zNumInputs = 1;
 		this->zNumOutputs = 1;
+		this->zNumHiddenNodes = 20;
 		break;
 	case TRAINING_TYPE_FULL:
 	default:
-		this->zNumOutputs = 4;
+		this->zNumInputs = 10;
+		this->zNumOutputs = 3;
+		this->zNumHiddenNodes = 18;
 		break;
 	}
 
@@ -113,7 +121,6 @@ void AnnAIController::TrainNetAndSave()
 	
 	int nrOfIterations = 0;
 	int printLimit = 1000;
-	int verificationTests = 20;
 
 	std::vector<float> tempIns;
 	std::vector<float> tempOuts;
@@ -143,34 +150,37 @@ void AnnAIController::TrainNetAndSave()
 		//Do a test to see how good the network is
 		totalError = 0.0f;
 
-		for(int j = 0; j < verificationTests; j++)
+		for (int u = 0; u < 2; u++)
 		{
-			//Loop through num saved trainings
-			tempIns.clear();
-			tempOuts.clear();
-			//Get Training sets inputs
-			for (int k = 0; k < this->zNumInputs; k++)
-				tempIns.push_back(this->zInputs[k + j * this->zNumInputs]);
-
-			//Get Training sets outputs
-			for (int k = 0; k < this->zNumOutputs; k++)
-				tempOuts.push_back(this->zOutputs[k + j * this->zNumOutputs]);
-
-			std::vector<float> networkOutput;
-
-			this->zNNetwork->Use(tempIns, networkOutput);
-
-			for(int k = 0; k < tempOuts.size(); k++)
+			for (int j = 0; j < this->zNumSavedTrainingSets; j++)
 			{
-				totalError += abs(networkOutput[k] - tempOuts[k]);
+				//Loop through num saved trainings
+				tempIns.clear();
+				tempOuts.clear();
+				//Get Training sets inputs
+				for (int k = 0; k < this->zNumInputs; k++)
+					tempIns.push_back(this->zInputs[k + j * this->zNumInputs]);
+
+				//Get Training sets outputs
+				for (int k = 0; k < this->zNumOutputs; k++)
+					tempOuts.push_back(this->zOutputs[k + j * this->zNumOutputs]);
+
+				std::vector<float> networkOutput;
+
+				this->zNNetwork->Use(tempIns, networkOutput);
+
+				for(int k = 0; k < tempOuts.size(); k++)
+				{
+					totalError += abs(abs(networkOutput[k]) - abs(tempOuts[k]));
+				}
 			}
 		}
-
+		
 		if (nrOfIterations >= printLimit)
 		{
-			
 			std::cout << printLimit << " iterations run " << std::endl;
-			std::cout << "Total Error so Far " << totalError << std::endl;
+			std::cout << "Total Error " << totalError << std::endl;
+			std::cout << "Average Error " << totalError / (this->zNumSavedTrainingSets * 2) << std::endl;
 			printLimit += 1000;
 		}
 
@@ -181,10 +191,11 @@ void AnnAIController::TrainNetAndSave()
 		//	std::cout << totalError << std::endl;
 		//}
 
-		if (abs(totalError) < this->zMaximumErrorAllowed * verificationTests)
+		if (abs(totalError) < this->zMaximumErrorAllowed * this->zNumSavedTrainingSets * 2)
 		{
 			this->zFinalError = totalError;
 			std::cout << "Total Error = " <<totalError << std::endl;
+			std::cout << "Average Error = " << totalError / (this->zNumSavedTrainingSets * 2)<< std::endl;
 			std::cout << "Writing weights to file " << filename << std::endl;
 			this->zNNetwork->WriteWeights();
 			return;
@@ -303,17 +314,6 @@ void AnnAIController::RunTraining()
 
 		float temp = 0.5f;
 
-		this->zInputs.push_back(car.speed);
-		this->zInputs.push_back(car.angle);
-		this->zInputs.push_back(car.distR);
-		this->zInputs.push_back(car.distFR);
-		this->zInputs.push_back(car.distFFR);
-		this->zInputs.push_back(car.distF);
-		this->zInputs.push_back(car.distL);
-		this->zInputs.push_back(car.distFL);
-		this->zInputs.push_back(car.distFFL);
-		this->zInputs.push_back(car.clutch);
-
 		//Final Value for accel/brake, clamped between -1.0 & 1.0
 		//temp < 0.5 = brake else accel or 0.5 = 0.0 for both
 		//if (car->accel > 0.0f)
@@ -339,19 +339,57 @@ void AnnAIController::RunTraining()
 		switch (this->zTraining_type)
 		{
 		case TRAINING_TYPE_SPEED:
-			this->zOutputs.push_back(car.accel);
-			this->zOutputs.push_back(car.brake);
+			this->zInputs.push_back(car.speed);
+			this->zInputs.push_back(car.angle);
+			this->zInputs.push_back(car.clutch);
+
+			if (car.accel > 0.0f)
+				this->zOutputs.push_back(car.accel);
+			else if(car.brake > 0.0f)
+				this->zOutputs.push_back(-car.brake);
+			else
+				this->zOutputs.push_back(0.0f);
+
 			break;
 		case TRAINING_TYPE_STEER:
+			this->zInputs.push_back(car.speed);
+			this->zInputs.push_back(car.angle);
+			this->zInputs.push_back(car.distR);
+			this->zInputs.push_back(car.distFR);
+			this->zInputs.push_back(car.distFFR);
+			this->zInputs.push_back(car.distF);
+			this->zInputs.push_back(car.distL);
+			this->zInputs.push_back(car.distFL);
+			this->zInputs.push_back(car.distFFL);
+			this->zInputs.push_back(car.clutch);
+
 			this->zOutputs.push_back(car.steer);
 			break;
 		case TRAINING_TYPE_GEAR:
+			this->zInputs.push_back(car.speed);
+
 			this->zOutputs.push_back(car.gear);
 			break;
 		case TRAINING_TYPE_FULL:
 		default:
-			this->zOutputs.push_back(car.accel);
-			this->zOutputs.push_back(car.brake);
+			this->zInputs.push_back(car.speed);
+			this->zInputs.push_back(car.angle);
+			this->zInputs.push_back(car.distR);
+			this->zInputs.push_back(car.distFR);
+			this->zInputs.push_back(car.distFFR);
+			this->zInputs.push_back(car.distF);
+			this->zInputs.push_back(car.distL);
+			this->zInputs.push_back(car.distFL);
+			this->zInputs.push_back(car.distFFL);
+			this->zInputs.push_back(car.clutch);
+
+			if (car.accel > 0.0f)
+				this->zOutputs.push_back(car.accel);
+			else if(car.brake > 0.0f)
+				this->zOutputs.push_back(-car.brake);
+			else
+				this->zOutputs.push_back(0.0f);
+
 			this->zOutputs.push_back(car.steer);
 			this->zOutputs.push_back(car.gear);
 			break;
@@ -393,16 +431,42 @@ void AnnAIController::Run(Car *car)
 	std::vector<float> inputs;
 	std::vector<float> outputs;
 
-	inputs.push_back(car->speed);
-	inputs.push_back(car->angle);
-	inputs.push_back(car->distR);
-	inputs.push_back(car->distFR);
-	inputs.push_back(car->distFFR);
-	inputs.push_back(car->distF);
-	inputs.push_back(car->distL);
-	inputs.push_back(car->distFL);
-	inputs.push_back(car->distFFL);
-	inputs.push_back(car->clutch);	
+	switch (this->zTraining_type)
+	{
+	case TRAINING_TYPE_SPEED:
+		inputs.push_back(car->speed);
+		inputs.push_back(car->angle);
+		inputs.push_back(car->clutch);
+		break;
+	case TRAINING_TYPE_STEER:
+		inputs.push_back(car->speed);
+		inputs.push_back(car->angle);
+		inputs.push_back(car->distR);
+		inputs.push_back(car->distFR);
+		inputs.push_back(car->distFFR);
+		inputs.push_back(car->distF);
+		inputs.push_back(car->distL);
+		inputs.push_back(car->distFL);
+		inputs.push_back(car->distFFL);
+		inputs.push_back(car->clutch);
+		break;
+	case TRAINING_TYPE_GEAR:
+		inputs.push_back(car->speed);
+		break;
+	case TRAINING_TYPE_FULL:
+	default:
+		inputs.push_back(car->speed);
+		inputs.push_back(car->angle);
+		inputs.push_back(car->distR);
+		inputs.push_back(car->distFR);
+		inputs.push_back(car->distFFR);
+		inputs.push_back(car->distF);
+		inputs.push_back(car->distL);
+		inputs.push_back(car->distFL);
+		inputs.push_back(car->distFFL);
+		inputs.push_back(car->clutch);
+		break;
+	}
 
 	this->zNNetwork->Use(inputs, outputs);
 
@@ -428,8 +492,19 @@ void AnnAIController::Run(Car *car)
 	switch (this->zTraining_type)
 	{
 	case TRAINING_TYPE_SPEED:
-		car->accel = outputs[0];
-		car->brake = outputs[1];
+		if (outputs[0] > 0.0f)
+		{
+			car->accel = outputs[0];
+		}
+		else if (outputs[1] > 0.0f)
+		{
+			car->brake = outputs[1];
+		}
+		else
+		{
+			car->brake = 0.0f;
+			car->accel = 0.0f;
+		}
 		break;
 	case TRAINING_TYPE_STEER:
 		car->steer = outputs[0];
@@ -439,8 +514,19 @@ void AnnAIController::Run(Car *car)
 		break;
 	case TRAINING_TYPE_FULL:
 	default:
-		car->accel = outputs[0];
-		car->brake = outputs[1];
+		if (outputs[0] > 0.0f)
+		{
+			car->accel = outputs[0];
+		}
+		else if (outputs[1] > 0.0f)
+		{
+			car->brake = outputs[1];
+		}
+		else
+		{
+			car->brake = 0.0f;
+			car->accel = 0.0f;
+		}
 		car->steer = outputs[2];
 		car->gear = outputs[3];
 		break;

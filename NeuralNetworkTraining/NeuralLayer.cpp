@@ -87,21 +87,37 @@ void NeuralLayer::Propagate(int type, NeuralLayer& nextLayer)
 void NeuralLayer::BackPropagate(int type, NeuralLayer& nextLayer)
 {
 
-	/*float outputValue;
-	float error;
-
-	int numNeurons = nextLayer.zNeurons.size();
-
-	for (int i = 0; i < numNeurons; i++)
-	{
-	outputValue = nextLayer.zNeurons[i].zOutput;
-	error = 0;
-	for (int j = 0; j < this->zNeurons.size(); j++)
-	{
-	error += this->zNeurons[j]->zWeights[i] * this->zNeurons[j].zError;
-	}
-	nextLayer.zNeurons[i].zError = outputValue * error;
-	}*/
+	//float outputValue;
+	//float error;
+	//
+	//int numNeurons = nextLayer.zNeurons.size();
+	//
+	//for (int i = 0; i < numNeurons; i++)
+	//{
+	//	outputValue = nextLayer.zNeurons[i]->zOutput;
+	//	error = 0;
+	//	for (int j = 0; j < this->zNeurons.size(); j++)
+	//	{
+	//		error += this->zNeurons[j]->zWeights[i] * this->zNeurons[j]->zError;
+	//	}
+	//
+	//	switch (type)
+	//	{
+	//	case ACT_TANH:
+	//		nextLayer.zNeurons[i]->zError = this->DerTanh(outputValue) * error;
+	//		break;
+	//	case ACT_LOGISTIC:
+	//		nextLayer.zNeurons[i]->zError = this->DerLogistic(outputValue) * error;
+	//		break;
+	//	case ACT_BIPOLAR:
+	//		nextLayer.zNeurons[i]->zError = this->DerBipolarSigmoid(outputValue) * error;
+	//		break;
+	//	case ACT_LINEAR:
+	//	default:
+	//		nextLayer.zNeurons[i]->zError = outputValue * error;
+	//		break;
+	//	}
+	//}
 
 	unsigned int numNeurons = this->zNeurons.size();
 	for(unsigned int i = 0; i < numNeurons; i++)
