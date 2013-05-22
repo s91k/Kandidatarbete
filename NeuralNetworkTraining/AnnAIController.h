@@ -24,6 +24,7 @@ struct Car
 		gear = 0.0f;
 		clutch = 0.0f;
 	}
+	//Inputs
 	float speed;
 	float angle;
 	float distR;
@@ -33,11 +34,13 @@ struct Car
 	float distFFL;
 	float distFL;
 	float distL;
+	float clutch;
+	//Outputs
 	float steer;
 	float accel;
 	float brake;
 	float gear;
-	float clutch;
+	
 };
 
 enum NEURAL_NET_TYPE
@@ -64,13 +67,11 @@ private:
 	int zNumHiddenNodes;
 	int zNetMode;
 
+	float zRequiredCorrectPercentage;
 	float zMaximumErrorAllowed;
 	NeuralNetwork* zNNetwork;
 	std::vector<float> zInputs;
 	std::vector<float> zOutputs;
-
-	//Training data
-	std::vector<Car> zTrainingData;
 
 	int zNumSavedTrainingSets;
 	TRAINING_TYPE zTraining_type;
@@ -79,14 +80,14 @@ private:
 public:
 	AnnAIController(TRAINING_TYPE type = TRAINING_TYPE_FULL);
 	virtual ~AnnAIController();
-	bool LoadTrainingData(const std::string& filename);
 
 	void Init();
 	void Reset();
-	void RunTraining();
+	void RunTraining(std::vector<Car*> trainingData);
 	void TrainNetAndSave();
 
 	float GetFinalError() {return this->zFinalError;}
 
 	void Run(Car *car);
+	void ResetTraining();
 };

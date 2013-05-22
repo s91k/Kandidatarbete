@@ -84,7 +84,6 @@ Driver::~Driver()
 		delete this->Ai_Steering_Controller;
 	if (this->Ai_Gear_Controller)
 		delete this->Ai_Gear_Controller;
-
 }
 
 
@@ -239,7 +238,7 @@ void Driver::drive(tSituation *s)
 	annCar->distFL = this->sensors->getSensorOut(5);
 	annCar->distL = this->sensors->getSensorOut(6);
 
-	bool fullAi = false;
+	bool fullAi = true;
 	if (fullAi)
 	{
 		this->AiController->Run(annCar);
@@ -254,7 +253,7 @@ void Driver::drive(tSituation *s)
 	car->ctrl.accelCmd = annCar->accel;
 	car->ctrl.brakeCmd = annCar->brake;
 	car->ctrl.steer = annCar->steer;
-	car->ctrl.gear = max(min(annCar->gear + 1.0f, 6), -1);
+	car->ctrl.gear = getGear();//max(min(annCar->gear + 1.0f, 6), -1);
 
 	printf_s("ANN DATA\n");
 

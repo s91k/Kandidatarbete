@@ -448,7 +448,7 @@ static void drive(int index, tCarElt* car, tSituation *situation)
 	timeSinceLastUpdate[index - 1] += situation->deltaTime;
 	
 	//Only update once per second
-	if(timeSinceLastUpdate[index - 1] > 0.1)
+	if(timeSinceLastUpdate[index - 1] >= 0.1)
 	{
 		/* steer to next target point */
 		float targetAngleOut = atan2(myc->destpathseg->getLoc()->y - car->_pos_Y, myc->destpathseg->getLoc()->x - car->_pos_X);

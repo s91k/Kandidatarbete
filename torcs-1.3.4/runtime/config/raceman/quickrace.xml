@@ -13,7 +13,7 @@
   <section name="Tracks">
     <attnum name="maximum number" val="1"/>
     <section name="1">
-      <attstr name="name" val="alpine-1"/>
+      <attstr name="name" val="ole-road-1"/>
       <attstr name="category" val="road"/>
     </section>
 
@@ -48,13 +48,8 @@
     <attstr name="focused module" val="human"/>
     <attnum name="focused idx" val="1"/>
     <section name="1">
-      <attnum name="idx" val="0"/>
-      <attstr name="module" val="ANN_Bot"/>
-    </section>
-
-    <section name="2">
       <attnum name="idx" val="1"/>
-      <attstr name="module" val="ANN_Bot"/>
+      <attstr name="module" val="berniw_Recorder"/>
     </section>
 
   </section>
@@ -85,12 +80,7 @@
 
   <section name="Drivers Start List">
     <section name="1">
-      <attstr name="module" val="ANN_Bot"/>
-      <attnum name="idx" val="0"/>
-    </section>
-
-    <section name="2">
-      <attstr name="module" val="ANN_Bot"/>
+      <attstr name="module" val="berniw_Recorder"/>
       <attnum name="idx" val="1"/>
     </section>
 

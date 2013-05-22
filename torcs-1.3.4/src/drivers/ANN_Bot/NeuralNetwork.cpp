@@ -14,7 +14,7 @@ NeuralNetwork::NeuralNetwork(int nInputs, int nOutputs, int nHiddenLayers, int n
 
 NeuralNetwork::~NeuralNetwork()
 {
-	for (int i = 0; i < this->zLayers.size(); i++)
+	for (unsigned int i = 0; i < this->zLayers.size(); i++)
 	{
 		this->zLayers[i].Clear();
 	}
@@ -27,10 +27,10 @@ void NeuralNetwork::Init()
 	this->zOutputLayer = NULL;
 
 	this->zActType = ACT_BIPOLAR;
-	this->zOutputActType= ACT_LOGISTIC;
+	this->zOutputActType = ACT_LOGISTIC;
 
-	this->zLearningRate = 0.0000001f;
-	this->zMomentum = 0.35f;
+	this->zLearningRate = 0.00000117f; // Speed
+	this->zMomentum = 0.8f; //Speed
 
 	//error check
 	if(this->zNLayers < 2)
@@ -97,7 +97,7 @@ void NeuralNetwork::SetInputs( std::vector<float>& inputs )
 
 void NeuralNetwork::FindError( std::vector<float>& expectedOutput )
 {
-	this->zError = this->zOutputLayer->CalculateError(expectedOutput);
+	this->zError = this->zOutputLayer->CalculateError(this->zActType, expectedOutput);
 }
 
 void NeuralNetwork::Propagate()
@@ -112,18 +112,17 @@ void NeuralNetwork::Propagate()
 void NeuralNetwork::BackPropagate()
 {
 	//BackPropagate the error
-	//for (int i = this->zNLayers - 1; i > 0; i--)
-	//{
-	//	this->zLayers[i].BackPropagate(this->zActType, this->zLayers[i - 1]);
-	//}
-
 	for (int i = this->zNLayers - 1; i > 0; i--)
 	{
-		this->zLayers[i - 1].BackPropagate(this->zActType, this->zLayers[i]);
+		this->zLayers[i].BackPropagate(this->zActType, this->zLayers[i - 1]);
 	}
+	/*for (int i = this->zNLayers - 1; i > 0; i--)
+	{
+		this->zLayers[i - 1].BackPropagate(this->zActType, this->zLayers[i]);
+	}*/
 
 	//Adjust the weights
-	for (int i =  0; i < this->zNLayers - 1; i++)
+	for (int i = 0; i < this->zNLayers - 1; i++)
 	{
 		this->zLayers[i + 1].AdjustWeights(this->zLayers[i], zLearningRate, zMomentum);
 	}
