@@ -77,12 +77,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnnAIController.cpp" />
+    <ClCompile Include="BackProp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NeuralLayer.cpp" />
     <ClCompile Include="NeuralNetwork.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnnAIController.h" />
+    <ClInclude Include="BackProp.H" />
     <ClInclude Include="NeuralLayer.h" />
     <ClInclude Include="NeuralNetwork.h" />
   </ItemGroup>

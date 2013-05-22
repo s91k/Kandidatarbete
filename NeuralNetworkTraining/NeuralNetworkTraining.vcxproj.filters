@@ -27,6 +27,9 @@
     <ClCompile Include="NeuralLayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BackProp.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NeuralNetwork.h">
@@ -37,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="NeuralLayer.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BackProp.H">
+      <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

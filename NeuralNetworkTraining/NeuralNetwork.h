@@ -49,4 +49,10 @@ public:
 	void FindError(std::vector<float>& ouputs);
 
 	float GetError() {return this->zError;}
+
+	float GetLearningRate() {return this->zLearningRate;}
+	float GetMomentum() {return this->zMomentum;}
+
+	void SetLearningRate(float lRate) {this->zLearningRate = lRate;}
+	void SetMomentum(float momentum) {this->zMomentum = momentum;}
 };

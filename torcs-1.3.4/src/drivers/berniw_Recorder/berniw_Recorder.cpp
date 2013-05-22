@@ -448,7 +448,7 @@ static void drive(int index, tCarElt* car, tSituation *situation)
 	timeSinceLastUpdate[index - 1] += situation->deltaTime;
 	
 	//Only update once per second
-	if(timeSinceLastUpdate[index - 1] > 0.5)
+	if(timeSinceLastUpdate[index - 1] >= 0.1)
 	{
 		timeSinceLastUpdate[index - 1] = 0.0;
 		sensors[index - 1]->sensors_update();
