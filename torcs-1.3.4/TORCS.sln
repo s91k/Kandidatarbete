@@ -68,6 +68,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ANN_Bot", "src\drivers\ANN_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "berniw_Recorder", "src\drivers\berniw_Recorder\berniw_Recorder.vcxproj", "{91C20C6F-2270-4E73-8AA4-6F5DB1EF83DA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "human_Recorder", "src\drivers\human_Recorder\human_Recorder.vcxproj", "{FDC0C39F-5A22-4A8D-BEAA-E8DEED53EC08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -190,6 +192,10 @@ Global
 		{91C20C6F-2270-4E73-8AA4-6F5DB1EF83DA}.Debug|Win32.Build.0 = Debug|Win32
 		{91C20C6F-2270-4E73-8AA4-6F5DB1EF83DA}.Release|Win32.ActiveCfg = Release|Win32
 		{91C20C6F-2270-4E73-8AA4-6F5DB1EF83DA}.Release|Win32.Build.0 = Release|Win32
+		{FDC0C39F-5A22-4A8D-BEAA-E8DEED53EC08}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FDC0C39F-5A22-4A8D-BEAA-E8DEED53EC08}.Debug|Win32.Build.0 = Debug|Win32
+		{FDC0C39F-5A22-4A8D-BEAA-E8DEED53EC08}.Release|Win32.ActiveCfg = Release|Win32
+		{FDC0C39F-5A22-4A8D-BEAA-E8DEED53EC08}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

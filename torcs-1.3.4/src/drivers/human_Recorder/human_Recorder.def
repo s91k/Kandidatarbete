@@ -1,0 +1,11 @@
+;
+; human_Recorder.def
+;
+
+LIBRARY	human_Recorder
+
+SECTIONS .data READ WRITE
+
+EXPORTS
+	human_Recorder
+
