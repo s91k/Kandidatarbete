@@ -1,0 +1,32 @@
+﻿Build started 5/24/2013 12:43:13 PM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human_Recorder\human_Recorder.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D HUMAN_RECORDER_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt human_Recorder.cpp mycar.cpp pathfinder.cpp
+         human_Recorder.cpp
+         mycar.cpp
+         pathfinder.cpp
+         Generating Code...
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release/human_Recorder.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../export/lib /LIBPATH:../../windows/lib client.lib tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\human_Recorder.def" /MANIFEST:NO /PDB:".\Release/human_Recorder.pdb" /MAP:".\Release/human_Recorder.map" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Release/human_Recorder.lib" /MACHINE:X86 /SAFESEH /DLL .\Release/human_Recorder.obj
+         .\Release/mycar.obj
+         .\Release/pathfinder.obj
+         .\Release/pref.obj
+         .\Release/sensors.obj
+         .\Release/spline.obj
+         .\Release/trackdesc.obj
+         "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\libs\client\Release\client.lib"
+         "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\libs\robottools\Release\robottools.lib"
+         "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\libs\tgf\Release\tgf.lib"
+            Creating library .\Release/human_Recorder.lib and object .\Release/human_Recorder.exp
+         human_Recorder.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human_Recorder\.\Release\human_Recorder.dll
+       PostBuildEvent:
+         copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human_Recorder\Release\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtime\drivers\human_Recorder
+         :VCEnd
+         D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human_Recorder\Release\human.dll
+         D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human_Recorder\Release\human_Recorder.dll
+                 2 fil(er) kopierad(e).
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human_Recorder\human_Recorder.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.10
