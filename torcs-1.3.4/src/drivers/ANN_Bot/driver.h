@@ -40,6 +40,7 @@
 #include "cardata.h"
 #include "AnnAIController.h"
 #include "sensors.h"
+#include "mycar.h"
 #include "trackdesc.h"
 
 #define BT_SECT_PRIV "bt private"
@@ -188,6 +189,7 @@ class Driver {
 		tTrack* track;
 		TrackDesc* trackDesc;
 		Sensors* sensors;
+		MyCar* myc;
 
 		AnnAIController* AiController;
 		AnnAIController* Ai_Speed_Controller;

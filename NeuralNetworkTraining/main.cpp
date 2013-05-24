@@ -51,6 +51,10 @@ bool loadCarData(const std::string& filename, std::vector<Car*>& data)
 		{
 			tempCarData->angle = floatVal;
 		}
+		else if (dataType == "targetAngle")
+		{
+			tempCarData->targetAngle = floatVal;
+		}
 		else if (dataType == "distR")
 		{
 			tempCarData->distR = floatVal;
@@ -315,26 +319,23 @@ int main()
 	//TrainBackProp(TRAINING_TYPE_GEAR, "E-Track_3.txt");
 	
 	std::vector<Car*> trainingData;
-	loadCarData("TrainingData/Road_E-Track 1.txt", trainingData);
+	//loadCarData("TrainingData/Road_E-Track 1.txt", trainingData);
 	//loadCarData("TrainingData/Road_E-Track 2.txt", trainingData);
 	//loadCarData("TrainingData/Road_Corkscrew.txt", trainingData);
-	loadCarData("TrainingData/Road_Olethros-Road-1.txt", trainingData);
-	loadCarData("TrainingData/Oval_Michigan-Speedway.txt", trainingData);
-	loadCarData("TrainingData/Dirt_Mixed-1.txt", trainingData);
-	loadCarData("TrainingData/Dirt_Dirt-2.txt", trainingData);
+	//loadCarData("TrainingData/Road_Olethros-Road-1.txt", trainingData);
+	//loadCarData("TrainingData/Oval_Michigan-Speedway.txt", trainingData);
+	//loadCarData("TrainingData/Dirt_Mixed-1.txt", trainingData);
+	//loadCarData("TrainingData/Dirt_Dirt-2.txt", trainingData);
+	//loadCarData("TrainingData/Road_Wheel 2.txt", trainingData);
+
+	loadCarData("TrainingData/Road_Alpine 1.txt", trainingData);
 	loadCarData("TrainingData/Road_Wheel 2.txt", trainingData);
 
 	TrainAnnController(TRAINING_TYPE_FULL, trainingData);
 
-	float Speed_Error = TrainAnnController(TRAINING_TYPE_STEER, trainingData);
-	float Steer_Error = TrainAnnController(TRAINING_TYPE_SPEED, trainingData);
-	float Gear_Error = TrainAnnController(TRAINING_TYPE_GEAR, trainingData);
-
-	//std::cout << "Final Error for Speed Training = " << Speed_Error << std::endl;
-
-	//std::cout << "Final Error for Steering Training = " << Steer_Error << std::endl;
-
-	//std::cout << "Final Error for Gear Training = " << Gear_Error << std::endl;
+	//TrainAnnController(TRAINING_TYPE_STEER, trainingData);
+	//TrainAnnController(TRAINING_TYPE_SPEED, trainingData);
+	//TrainAnnController(TRAINING_TYPE_GEAR, trainingData);
 
 	std::cout << "Press Enter to quit" << std::endl;
 	std::cin.ignore(1);

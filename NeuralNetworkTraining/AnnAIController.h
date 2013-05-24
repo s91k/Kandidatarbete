@@ -11,6 +11,7 @@ struct Car
 	{
 		speed = 0.0f;
 		angle = 0.0f;
+		targetAngle = 0.0f;
 		distR = 0.0f;
 		distFR = 0.0f;
 		distFFR = 0.0f;
@@ -27,6 +28,7 @@ struct Car
 	//Inputs
 	float speed;
 	float angle;
+	float targetAngle;
 	float distR;
 	float distFR;
 	float distFFR;
@@ -77,6 +79,8 @@ private:
 	TRAINING_TYPE zTraining_type;
 
 	float zFinalError;
+
+	float Round(float num, int precision);
 public:
 	AnnAIController(TRAINING_TYPE type = TRAINING_TYPE_FULL);
 	virtual ~AnnAIController();
@@ -90,4 +94,5 @@ public:
 
 	void Run(Car *car);
 	void ResetTraining();
+	void PrintData(const std::string& info, const float& expectedOutput, const float& generatedOutput);
 };

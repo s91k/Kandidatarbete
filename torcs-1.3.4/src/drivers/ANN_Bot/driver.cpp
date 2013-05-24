@@ -62,6 +62,7 @@ Driver::Driver(int index)
 {
 	INDEX = index;
 	AiController = NULL;
+	myc = NULL;
 }
 
 
@@ -84,6 +85,9 @@ Driver::~Driver()
 		delete this->Ai_Steering_Controller;
 	if (this->Ai_Gear_Controller)
 		delete this->Ai_Gear_Controller;
+
+	if (myc)
+	 delete myc;
 }
 
 
@@ -190,6 +194,8 @@ void Driver::newRace(tCarElt* car, tSituation *s)
 	sensors->setSensor(4, 30.0f, 100.0f);
 	sensors->setSensor(5, 60.0f, 100.0f);
 	sensors->setSensor(6, 90.0f, 100.0f);
+
+	myc = new MyCar(trackDesc, car, s);
 }
 
 
@@ -198,30 +204,14 @@ void Driver::drive(tSituation *s)
 {
 	memset(&car->ctrl, 0, sizeof(tCarCtrl));
 
-	//update(s);
-
-	////pit->setPitstop(true);
-
-	//if (isStuck()) {
-	//	car->_steerCmd = -mycardata->getCarAngle() / car->_steerLock;
-	//	car->_gearCmd = -1;		// Reverse gear.
-	//	car->_accelCmd = 1.0f;	// 100% accelerator pedal.
-	//	car->_brakeCmd = 0.0f;	// No brakes.
-	//	car->_clutchCmd = 0.0f;	// Full clutch (gearbox connected with engine).
-	//} else {
-	//	car->_steerCmd = filterSColl(getSteer());
-	//	car->_gearCmd = getGear();
-	//	car->_brakeCmd = filterABS(filterBrakeSpeed(filterBColl(filterBPit(getBrake()))));
-	//	if (car->_brakeCmd == 0.0f) {
-	//		car->_accelCmd = filterTCL(filterTrk(filterOverlap(getAccel())));
-	//	} else {
-	//		car->_accelCmd = 0.0f;
- // 		}
-	//	car->_clutchCmd = getClutch();
-
-	//}
-
 	this->sensors->sensors_update();
+
+	this->myc->update(trackDesc, car, s);
+
+	/* steer to next target point */
+	float targetAngleOut = atan2(myc->destpathseg->getLoc()->y - car->_pos_Y, myc->destpathseg->getLoc()->x - car->_pos_X);
+	targetAngleOut -= car->_yaw;
+	NORM_PI_PI(targetAngleOut);
 
 	Car *annCar = new Car();
 

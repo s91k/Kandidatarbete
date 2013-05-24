@@ -26,7 +26,7 @@ void NeuralNetwork::Init()
 	this->zInputLayer = NULL;
 	this->zOutputLayer = NULL;
 
-	this->zActType = ACT_BIPOLAR;
+	this->zActType = ACT_TANH;
 	this->zOutputActType = ACT_LOGISTIC;
 
 	this->zLearningRate = 0.00000117f; // Speed
