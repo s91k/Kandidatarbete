@@ -48,11 +48,11 @@
 
   <section name="Drivers">
     <attnum name="maximum number" val="1"/>
-    <attnum name="focused idx" val="1"/>
-    <attstr name="focused module" val="human_Recorder"/>
+    <attnum name="focused idx" val="0"/>
+    <attstr name="focused module" val="ANN_Bot"/>
     <section name="1">
-      <attnum name="idx" val="1"/>
-      <attstr name="module" val="human_Recorder"/>
+      <attnum name="idx" val="0"/>
+      <attstr name="module" val="ANN_Bot"/>
     </section>
 
   </section>
