@@ -1196,6 +1196,10 @@ static void drive_at(int index, tCarElt* car, tSituation *s)
 		targetAngleOut -= car->_yaw;
 		NORM_PI_PI(targetAngleOut);
 
+		float segmentAngle;
+		segmentAngle = RtTrackSideTgAngleL(&(car->_trkPos)) - car->_yaw;
+		NORM_PI_PI(segmentAngle);
+
 		timeSinceLastUpdate = 0.0;
 		sensor->sensors_update();
 
@@ -1215,6 +1219,12 @@ static void drive_at(int index, tCarElt* car, tSituation *s)
 		outputFile<<"distFFL "<<sensor->getSensorOut(4)<<std::endl;
 		outputFile<<"distFL "<<sensor->getSensorOut(5)<<std::endl;
 		outputFile<<"distL "<<sensor->getSensorOut(6)<<std::endl;
+
+		//Distance from center of track
+		outputFile<<"distC "<<car->_trkPos.toMiddle<<std::endl;
+
+		//Angle toward the segment
+		outputFile<<"segmentAngle "<<segmentAngle<<std::endl;
 
 		//OUTPUT
 		outputFile<<"steer "<<car->ctrl.steer<<std::endl;
@@ -1241,6 +1251,9 @@ static void drive_at(int index, tCarElt* car, tSituation *s)
 		printf_s("distFFL %f\n", sensor->getSensorOut(4));
 		printf_s("distFL %f\n", sensor->getSensorOut(5));
 		printf_s("distL %f\n", sensor->getSensorOut(6));
+
+		printf_s("distC %f\n", car->_trkPos.toMiddle);
+		printf_s("Angle to segment: %f\n\n", segmentAngle);
 	}
 }
 

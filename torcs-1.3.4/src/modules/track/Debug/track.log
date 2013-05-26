@@ -1,23 +1,7 @@
-﻿Build started 5/3/2013 2:27:26 AM.
-     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\track\track.vcxproj" on node 4 (Build target(s)).
-     1>ClCompile:
-         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D TRACK_EXPORTS /D DEBUG /D DEBUG_OUT /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc110.pdb" /FR".\Debug/" /Gd /TP /analyze- /errorReport:prompt track.cpp track3.cpp track4.cpp trackitf.cpp trackutil.cpp
-         track.cpp
-         track3.cpp
-         track4.cpp
-         trackitf.cpp
-         trackutil.cpp
-         Generating Code...
-       Link:
-         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/track.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../export/libd /LIBPATH:../../windows/lib tgf.lib robottools.lib txml.lib ssg_vs2008_32.lib ul_vs2008_32.lib sg_vs2008_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMT /DEF:".\track.def" /MANIFEST:NO /DEBUG /PDB:".\Debug/track.pdb" /MAP:".\Debug/track.map" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Debug/track.lib" /MACHINE:X86 /SAFESEH /DLL .\Debug/track.obj
-         .\Debug/track3.obj
-         .\Debug/track4.obj
-         .\Debug/trackitf.obj
-         .\Debug/trackutil.obj
-            Creating library .\Debug/track.lib and object .\Debug/track.exp
+﻿Build started 5/26/2013 2:42:17 AM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\track\track.vcxproj" on node 5 (Build target(s)).
+     1>Link:
          track.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\track\.\Debug\track.dll
-       BscMake:
-         D:\Program\Microsoft Visual Studio 11.0\VC\bin\bscmake.exe /nologo /o".\Debug/track.bsc" .\Debug/track.sbr .\Debug/track3.sbr .\Debug/track4.sbr .\Debug/trackitf.sbr .\Debug/trackutil.sbr
        PostBuildEvent:
          copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\modules\track\Debug\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtimed\modules\track
          :VCEnd
@@ -30,4 +14,4 @@ C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targe
 
 Build FAILED.
 
-Time Elapsed 00:00:07.27
+Time Elapsed 00:00:00.11

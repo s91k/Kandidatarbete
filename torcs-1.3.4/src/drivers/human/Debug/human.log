@@ -1,0 +1,27 @@
+﻿Build started 5/26/2013 2:42:18 AM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human\human.vcxproj" on node 5 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D HUMAN_EXPORTS /D DEBUG /D DEBUG_OUT /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc110.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt human.cpp pref.cpp
+         human.cpp
+         pref.cpp
+         Generating Code...
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/human.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../export/libd /LIBPATH:../../windows/lib client.lib tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMT /DEF:".\human.def" /MANIFEST:NO /DEBUG /PDB:".\Debug/human.pdb" /MAP:".\Debug/human.map" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Debug/human.lib" /MACHINE:X86 /SAFESEH /DLL .\Debug/human.obj
+         .\Debug/pref.obj
+            Creating library .\Debug/human.lib and object .\Debug/human.exp
+         human.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human\.\Debug\human.dll
+       BscMake:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\bscmake.exe /nologo /o".\Debug/human.bsc" .\Debug\human.sbr .\Debug\pref.sbr
+       PostBuildEvent:
+         copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human\Debug\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtimed\drivers\human
+         :VCEnd
+         D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human\Debug\human.dll
+         Det går inte att hitta sökvägen.
+                 0 fil(er) kopierad(e).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targets(134,5): error MSB3073: The command "copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human\Debug\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtimed\drivers\human
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targets(134,5): error MSB3073: :VCEnd" exited with code 1.
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human\human.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.93

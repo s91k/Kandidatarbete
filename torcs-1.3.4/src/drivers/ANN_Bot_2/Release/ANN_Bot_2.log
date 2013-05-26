@@ -1,0 +1,29 @@
+﻿Build started 5/26/2013 2:55:20 AM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot_2\ANN_Bot_2.vcxproj" on node 4 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D ANN_BOT_2_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt NeuralNetwork.cpp
+         NeuralNetwork.cpp
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release/ANN_Bot_2.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../export/lib /LIBPATH:../../windows/lib client.lib tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\ANN_Bot_2.def" /MANIFEST:NO /PDB:".\Release/ANN_Bot_2.pdb" /MAP:".\Release/ANN_Bot_2.map" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Release/ANN_Bot_2.lib" /MACHINE:X86 /SAFESEH /DLL .\Release/mycar.obj
+         .\Release/NeuralNetwork.obj
+         .\Release/NeuronLayer.obj
+         .\Release/pathfinder.obj
+         .\Release/sensors.obj
+         .\Release/spline.obj
+         .\Release/ANN_Bot_2.obj
+         .\Release/pref.obj
+         .\Release/trackdesc.obj
+            Creating library .\Release/ANN_Bot_2.lib and object .\Release/ANN_Bot_2.exp
+         ANN_Bot_2.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot_2\.\Release\ANN_Bot_2.dll
+       PostBuildEvent:
+         copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot_2\Release\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtime\drivers\ANN_Bot_2
+         :VCEnd
+         D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot_2\Release\ANN_Bot_2.dll
+         D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot_2\Release\human.dll
+         D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot_2\Release\stig.dll
+                 3 fil(er) kopierad(e).
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\ANN_Bot_2\ANN_Bot_2.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.78

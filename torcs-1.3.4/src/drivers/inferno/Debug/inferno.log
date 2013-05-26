@@ -1,20 +1,6 @@
-﻿Build started 5/3/2013 2:27:12 AM.
-     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\inferno\inferno.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D BERNIW_2004_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt inferno.cpp mycar.cpp pathfinder.cpp spline.cpp trackdesc.cpp
-         inferno.cpp
-         mycar.cpp
-         pathfinder.cpp
-         spline.cpp
-         trackdesc.cpp
-         Generating Code...
-       Link:
-         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/inferno.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../export/libd /LIBPATH:../../windows/lib tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMT /DEF:".\inferno.def" /MANIFEST:NO /DEBUG /PDB:".\Debug/inferno.pdb" /MAP:".\Debug/inferno.map" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Debug/inferno.lib" /MACHINE:X86 /SAFESEH /DLL .\Debug/inferno.obj
-         .\Debug/mycar.obj
-         .\Debug/pathfinder.obj
-         .\Debug/spline.obj
-         .\Debug/trackdesc.obj
-            Creating library .\Debug/inferno.lib and object .\Debug/inferno.exp
+﻿Build started 5/26/2013 2:42:18 AM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\inferno\inferno.vcxproj" on node 4 (Build target(s)).
+     1>Link:
          inferno.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\inferno\.\Debug\inferno.dll
        PostBuildEvent:
          copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\inferno\Debug\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtimed\drivers\inferno
@@ -28,4 +14,4 @@ C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targe
 
 Build FAILED.
 
-Time Elapsed 00:00:03.12
+Time Elapsed 00:00:00.16

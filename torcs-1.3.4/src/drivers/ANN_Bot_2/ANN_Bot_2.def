@@ -1,0 +1,11 @@
+;
+; ANN_Bot_2.def
+;
+
+LIBRARY	ANN_Bot_2
+
+SECTIONS .data READ WRITE
+
+EXPORTS
+	ANN_Bot_2
+
