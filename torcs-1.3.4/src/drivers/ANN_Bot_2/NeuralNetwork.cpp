@@ -28,7 +28,6 @@ NeuralNetwork::NeuralNetwork(std::string path)
 
 NeuralNetwork::~NeuralNetwork()
 {
-	this->m_layers.clear();
 }
 
 void NeuralNetwork::use(std::vector<float> &input, std::vector<float> &output)

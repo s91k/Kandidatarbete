@@ -96,7 +96,8 @@ static tdble lastKeyUpdate = -10.0;
 
 static int	firstTime = 0;
 
-static NeuralNetwork *neuralNetwork = NULL;
+static NeuralNetwork *steeringNetwork = NULL;
+static NeuralNetwork *speedNetwork = NULL;
 static Sensors *sensors = NULL;
 static MyCar *myCar = NULL;
 static TrackDesc *trackDesc = NULL;
@@ -129,10 +130,16 @@ shutdown(int index)
 		firstTime = 0;
 	}
 
-	printf("Deleting neural network.\n");
-	if(neuralNetwork != NULL)
+	printf("Deleting steering neural network.\n");
+	if(steeringNetwork != NULL)
 	{
-		delete neuralNetwork;
+		delete steeringNetwork;
+	}
+
+	printf("Deleting speed neural network.\n");
+	if(speedNetwork != NULL)
+	{
+		delete speedNetwork;
 	}
 
 	printf("Deleting sensors.\n");
@@ -154,24 +161,6 @@ shutdown(int index)
 	}
 }
 
-
-
-/*
- * Function
- *	InitFuncPt
- *
- * Description
- *	Robot functions initialisation
- *
- * Parameters
- *	pt	pointer on functions structure
- *
- * Return
- *	0
- *
- * Remarks
- *
- */
 static int
 InitFuncPt(int index, void *pt)
 {
@@ -220,24 +209,6 @@ InitFuncPt(int index, void *pt)
 	return 0;
 }
 
-/*
- * Function
- *	ANN_Bot_2
- *
- * Description
- *	DLL entry point (general to all types of modules)
- *
- * Parameters
- *	modInfo	administrative info on module
- *
- * Return
- *	0
- *
- * Remarks
- *
- */
-
-
 extern "C" int
 ANN_Bot_2(tModInfo *modInfo)
 {
@@ -274,26 +245,6 @@ ANN_Bot_2(tModInfo *modInfo)
 	return 0;
 }
 
-
-/*
- * Function
- *
- *
- * Description
- *	search under drivers/ANN_Bot_2/tracks/<trackname>/car-<model>-<index>.xml
- *		     drivers/ANN_Bot_2/car-<model>-<index>.xml
- *		     drivers/ANN_Bot_2/tracks/<trackname>/car-<model>.xml
- *		     drivers/ANN_Bot_2/car-<model>.xml
- *
- * Parameters
- *
- *
- * Return
- *
- *
- * Remarks
- *
- */
 static void initTrack(int index, tTrack* track, void *carHandle, void **carParmHandle, tSituation *s)
 {
 	const char *carname;
@@ -390,10 +341,11 @@ static void initTrack(int index, tTrack* track, void *carHandle, void **carParmH
 
 void newrace(int index, tCarElt* car, tSituation *s)
 {
-	printf("Creating the neural network\n");
-	neuralNetwork = new NeuralNetwork("drivers/ANN_Bot_2/steerWeights.txt");
+	printf("Creating the neural networks\n");
+	steeringNetwork = new NeuralNetwork("drivers/ANN_Bot_2/steerWeights.txt");
+	speedNetwork = new NeuralNetwork("drivers/ANN_Bot_2/speedWeights.txt");
 
-	printf("Neural network created.\n");
+	printf("Neural networks created.\n");
 
 	sensors = new Sensors(car, 7);
 
@@ -1163,28 +1115,24 @@ static void drive(int index, tCarElt* car, tSituation *s)
 	input.push_back(targetAngle);
 	input.push_back(segmentAngle);
 
-	neuralNetwork->use(input, output);
+	steeringNetwork->use(input, output);
 
 	car->ctrl.steer = output[0];
 
-	car->ctrl.accelCmd = 0.3f;
-	car->ctrl.gear = min(car->ctrl.gear, 2);
+	input.clear();
+	output.clear();
 
-	printf_s("Steer: %f\t\n", output[0]);
+	input.push_back(myCar->getSpeed());
+	input.push_back(targetAngle);
+	input.push_back(segmentAngle);
 
-	printf_s("ANN DATA\n");
+	speedNetwork->use(input, output);
 
-	printf_s("Speed:\t\t %f\n", sqrt((car->_speed_x)*(car->_speed_x) + (car->_speed_y)*(car->_speed_y) + (car->_speed_z)*(car->_speed_z)));
-	printf_s("Target angle:\t %f\n", targetAngle);
-	printf_s("Segment angle:\t %f\n", segmentAngle);
-	printf_s("DistR:\t\t %f\n", sensors->getSensorOut(6));
-	printf_s("DistFR:\t\t %f\n", sensors->getSensorOut(5));
-	printf_s("DistFFR:\t %f\n", sensors->getSensorOut(4));
-	printf_s("DistF:\t\t %f\n", sensors->getSensorOut(3));
-	printf_s("DistFFL:\t %f\n", sensors->getSensorOut(2));
-	printf_s("DistFL:\t\t %f\n", sensors->getSensorOut(1));
-	printf_s("DistL:\t\t %f\n", sensors->getSensorOut(0));
-	printf_s("DistC:\t\t %f\n\n", car->_trkPos.toMiddle);
+	car->ctrl.accelCmd = max(output[0], 0.0f);
+	car->ctrl.brakeCmd = max(output[0] * -1.0f, 0.0f);
+
+	//car->ctrl.gear = min(car->ctrl.gear, 2);
+	//car->ctrl.accelCmd = 0.3f;
 
 	if (HCtx[idx]->autoClutch && car->_clutchCmd == 0.0f)
 	    car->_clutchCmd = getAutoClutch(idx, car->_gear, car->_gearCmd, car);
