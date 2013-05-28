@@ -343,23 +343,23 @@ static void initTrack(int index, tTrack* track, void *carHandle, void **carParmH
 void newrace(int index, tCarElt* car, tSituation *s)
 {
 	printf("Creating the neural networks\n");
-	steeringNetwork = new NeuralNetwork(4, 1, 0, 0, "drivers/ANN_Bot_2/steeringWeights.txt");
-	steeringNetwork->ReadWeights();
-
-	accelNetwork = new NeuralNetwork(3, 1, 0, 0, "drivers/ANN_Bot_2/accelWeights.txt");
+	accelNetwork = new NeuralNetwork(12, 1, 1, 5, "drivers/ANN_Bot_2/accelWeights.txt");
 	accelNetwork->ReadWeights();
+
+	steeringNetwork = new NeuralNetwork(11, 1, 1, 4, "drivers/ANN_Bot_2/steeringWeights.txt");
+	steeringNetwork->ReadWeights();
 
 	printf("Neural networks created.\n");
 
 	sensors = new Sensors(car, 7);
 
-	sensors->setSensor(0, -90.0f, 100.0f);
-	sensors->setSensor(1, -60.0f, 100.0f);
-	sensors->setSensor(2, -30.0f, 100.0f);
-	sensors->setSensor(3, 0.0f, 100.0f);
-	sensors->setSensor(4, 30.0f, 100.0f);
-	sensors->setSensor(5, 60.0f, 100.0f);
-	sensors->setSensor(6, 90.0f, 100.0f);
+	sensors->setSensor(0, -90.0f, 100.0f);	//DistR
+	sensors->setSensor(1, -60.0f, 100.0f);	//DistFR
+	sensors->setSensor(2, -30.0f, 100.0f);	//DistFFR
+	sensors->setSensor(3, 0.0f, 100.0f);	//DistF
+	sensors->setSensor(4, 30.0f, 100.0f);	//DistFFL
+	sensors->setSensor(5, 60.0f, 100.0f);	//DistFL
+	sensors->setSensor(6, 90.0f, 100.0f);	//DistL
 
 	printf("Sensors created.\n");
 
@@ -1115,6 +1115,13 @@ static void drive(int index, tCarElt* car, tSituation *s)
 	std::vector<float> input;
 	std::vector<float> output;
 
+	input.push_back(sensors->getSensorOut(6));
+	input.push_back(sensors->getSensorOut(5));
+	input.push_back(sensors->getSensorOut(4));
+	input.push_back(sensors->getSensorOut(3));
+	input.push_back(sensors->getSensorOut(2));
+	input.push_back(sensors->getSensorOut(1));
+	input.push_back(sensors->getSensorOut(0));
 	input.push_back(car->_trkPos.toMiddle);
 	input.push_back(segmentAngle);
 	input.push_back(targetAngle);
@@ -1127,14 +1134,23 @@ static void drive(int index, tCarElt* car, tSituation *s)
 	input.clear();
 	output.clear();
 
-	//input.push_back(car->_trkPos.toMiddle);
+	input.push_back(sensors->getSensorOut(6));
+	input.push_back(sensors->getSensorOut(5));
+	input.push_back(sensors->getSensorOut(4));
+	input.push_back(sensors->getSensorOut(3));
+	input.push_back(sensors->getSensorOut(2));
+	input.push_back(sensors->getSensorOut(1));
+	input.push_back(sensors->getSensorOut(0));
+	input.push_back(car->_trkPos.toMiddle);
 	input.push_back(segmentAngle);
 	input.push_back(targetAngle);
 	input.push_back(myCar->getSpeed());
+	input.push_back(car->ctrl.steer);
 
 	accelNetwork->Use(input, output);
 
-	car->ctrl.accelCmd = output[0];
+	car->ctrl.accelCmd = max(output[0], 0.0f);
+	car->ctrl.brakeCmd = max(output[0] * -1.0f, 0.0f);
 
 	//car->ctrl.gear = min(car->ctrl.gear, 2);
 
@@ -1145,6 +1161,8 @@ static void drive(int index, tCarElt* car, tSituation *s)
 	printf("--- PRINT SET ---\n");
 	printf("INPUT\n");
 	printf_s("DistC:\t%f\n", car->_trkPos.toMiddle);
+	printf_s("DistCL:\t%f\n", car->_trkPos.toLeft);
+	printf_s("DistCR:\t%f\n", car->_trkPos.toRight);
 	printf_s("SegAng:\t%f\n", segmentAngle);
 	printf_s("TarAng:\t%f\n", targetAngle);
 	printf_s("Speed:\t%f\n", myCar->getSpeed());

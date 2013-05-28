@@ -28,11 +28,11 @@
   </section>
 
   <section name="Practice">
-    <attnum name="laps" val="3"/>
+    <attnum name="laps" val="1"/>
     <attstr name="type" val="practice"/>
     <attstr name="starting order" val="drivers list"/>
     <attstr name="restart" val="yes"/>
-    <attstr name="display mode" val="normal"/>
+    <attstr name="display mode" val="results only"/>
     <attstr name="display results" val="yes"/>
     <attnum name="distance" unit="km" val="0"/>
     <section name="Starting Grid">
@@ -87,8 +87,8 @@
 
   <section name="Drivers Start List">
     <section name="1">
-      <attstr name="module" val="dandroid_2012"/>
-      <attnum name="idx" val="0"/>
+      <attstr name="module" val="human_Recorder"/>
+      <attnum name="idx" val="1"/>
     </section>
 
   </section>

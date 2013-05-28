@@ -373,13 +373,13 @@ void newrace(int index, tCarElt* car, tSituation *s)
 	timeSinceLastUpdate = 0.0;
 
 	sensor = new Sensors(car, 7);
-	sensor->setSensor(0, -90.0f, 100.0f);
-	sensor->setSensor(1, -60.0f, 100.0f);
-	sensor->setSensor(2, -30.0f, 100.0f);
-	sensor->setSensor(3, 0.0f, 100.0f);
-	sensor->setSensor(4, 30.0f, 100.0f);
-	sensor->setSensor(5, 60.0f, 100.0f);
-	sensor->setSensor(6, 90.0f, 100.0f);
+	sensor->setSensor(0, -90.0f, 100.0f);	//DistR
+	sensor->setSensor(1, -60.0f, 100.0f);	//DistFR
+	sensor->setSensor(2, -30.0f, 100.0f);	//DistFFR
+	sensor->setSensor(3, 0.0f, 100.0f);		//DistF
+	sensor->setSensor(4, 30.0f, 100.0f);	//DistFFL
+	sensor->setSensor(5, 60.0f, 100.0f);	//DistFL
+	sensor->setSensor(6, 90.0f, 100.0f);	//DistL
 
 	for (i = 0; i < MAX_GEARS; i++) {
 		if (car->_gearRatio[i] != 0) {
@@ -1222,6 +1222,8 @@ static void drive_at(int index, tCarElt* car, tSituation *s)
 
 		//Distance from center of track
 		outputFile<<"distC "<<car->_trkPos.toMiddle<<std::endl;
+		outputFile<<"distCL "<<car->_trkPos.toLeft<<std::endl;
+		outputFile<<"distCR "<<car->_trkPos.toRight<<std::endl;
 
 		//Angle toward the segment
 		outputFile<<"segmentAngle "<<segmentAngle<<std::endl;
