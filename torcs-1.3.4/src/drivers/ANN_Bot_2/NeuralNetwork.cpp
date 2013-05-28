@@ -1,179 +1,171 @@
 #include "NeuralNetwork.h"
 
-NeuralNetwork::NeuralNetwork()
+NeuralNetwork::NeuralNetwork(int nInputs, int nOutputs, int nHiddenLayers, int nNodesInHiddenLayers, const std::string& weightFile)
 {
+	this->zNInputs = nInputs;
+	this->zNOutputs = nOutputs;
+	this->zNLayers = nHiddenLayers + 2;
+	this->zNHiddenNodesPerLayer = nNodesInHiddenLayers;
 
-}
+	this->zWeightFile = weightFile;
 
-NeuralNetwork::NeuralNetwork(int nrOfInputs, int nrOfOutputs, int nrOfHiddenLayers, int nrOfHiddenNeurons)
-{
-	this->m_layers.push_back(NeuronLayer(nrOfInputs, 0));	//Create the input layer
-
-	for(int i = 0; i < nrOfHiddenLayers; i++)
-	{
-		this->m_layers.push_back(NeuronLayer(nrOfHiddenNeurons, this->m_layers.back().size()));
-	}
-
-	this->m_layers.push_back(NeuronLayer(nrOfOutputs, this->m_layers.back().size())); //Create the output layer
-
-	//Assign the input and output layer variables for easy access
-	this->m_inputLayer = &this->m_layers[0];
-	this->m_outputLayer = &this->m_layers[this->m_layers.size() - 1];
-}
-
-NeuralNetwork::NeuralNetwork(std::string path)
-{
-	this->importNetwork(path);
+	this->Init();
 }
 
 NeuralNetwork::~NeuralNetwork()
 {
+	/*for (unsigned int i = 0; i < this->zLayers.size(); i++)
+	{
+		this->zLayers[i].Clear();
+	}
+	this->zLayers.clear();*/
 }
 
-void NeuralNetwork::use(std::vector<float> &input, std::vector<float> &output)
+void NeuralNetwork::Init()
 {
-	this->m_inputLayer->setOutput(input);
+	this->zInputLayer = NULL;
+	this->zOutputLayer = NULL;
 
-	for(unsigned int i = 0; i < this->m_layers.size() - 1; i++)
+	this->zActType = ACT_BIPOLAR;
+	this->zOutputActType = ACT_BIPOLAR;
+
+	//this->zLearningRate = 0.00000117f; // Speed
+	this->zLearningRate = 0.0000117f; // Speed
+	this->zMomentum = 0.8f; //Speed
+
+	//error check
+	if(this->zNLayers < 2)
+		return;
+
+	//clear out the layers, in Case you're restarting the net
+	this->zLayers.clear();
+
+	//input layer
+	AddLayer(this->zNInputs, 1, NN_INPUT);
+
+	if (this->zNLayers > 2)
 	{
-		this->m_layers[i].propagate(this->m_layers[i+1]);
+		//First Hidden Layer connect back to inputs
+		AddLayer(this->zNHiddenNodesPerLayer, this->zNInputs, NN_HIDDEN);
+
+		//any other hidden layers connect to other hidden outputs
+		//-3 since the first layer was the inputs,
+		//the second (connected to inputs) was initialized above,
+		//and the last one (connect to outputs) will be initialized below
+		for (int i = 0; i < this->zNLayers - 3; i++)
+			AddLayer(this->zNHiddenNodesPerLayer, this->zNHiddenNodesPerLayer, NN_HIDDEN);
+
+		//Output layer connects to hidden
+		AddLayer(this->zNOutputs, this->zNHiddenNodesPerLayer, NN_OUTPUT);
+	}
+	else
+	{
+		//output layer connects to inputs
+		AddLayer(this->zNOutputs, this->zNInputs, NN_OUTPUT);
 	}
 
-	this->m_outputLayer->getOutput(output);
+	this->zInputLayer = &this->zLayers[0];
+	this->zOutputLayer = &this->zLayers[this->zNLayers - 1];
 }
 
-void NeuralNetwork::train(std::vector<float> &input, std::vector<float> &expectedOutput)
+void NeuralNetwork::AddLayer( int nNeurons, int nInputs, int type )
 {
-	//Propagate the values
-	this->m_inputLayer->setOutput(input);
+	NeuralLayer layer = NeuralLayer(nNeurons, nInputs, type);
+	this->zLayers.push_back(layer);
+}
 
-	for(unsigned int i = 0; i < this->m_layers.size() - 1; i++)
+void NeuralNetwork::Train( std::vector<float>& nInputs, std::vector<float>& nExpectedOutput )
+{
+	this->SetInputs(nInputs);
+	this->Propagate();
+	this->FindError(nExpectedOutput);
+	this->BackPropagate();
+}
+
+void NeuralNetwork::Use( std::vector<float>& nInputs, std::vector<float>& nOutputs )
+{
+	this->SetInputs(nInputs);
+	this->Propagate();
+	nOutputs.clear();
+
+	this->zOutputLayer->GetOutput(nOutputs);
+}
+
+void NeuralNetwork::SetInputs( std::vector<float>& inputs )
+{
+	this->zInputLayer->SetInput(inputs);
+}
+
+void NeuralNetwork::FindError( std::vector<float>& expectedOutput )
+{
+	this->zError = this->zOutputLayer->CalculateError(this->zActType, expectedOutput);
+}
+
+void NeuralNetwork::Propagate()
+{
+	for (int i = 0; i < this->zNLayers - 1; i++)
 	{
-		this->m_layers[i].propagate(this->m_layers[i+1]);
+		int type = (this->zLayers[i + 1].zLayerType == NN_OUTPUT) ? this->zOutputActType : this->zActType;
+		this->zLayers[i].Propagate(type, this->zLayers[i + 1]);
 	}
+}
 
-	//Find errors in the output layer
-	float totalError = this->m_outputLayer->calculateError(expectedOutput);
-
-	//Back propagate
-	for(unsigned int i = this->m_layers.size() - 1; i > 0; i--)
+void NeuralNetwork::BackPropagate()
+{
+	//BackPropagate the error
+	for (int i = this->zNLayers - 1; i > 0; i--)
 	{
-		this->m_layers[i - 1].backPropagate(this->m_layers[i]);
+		this->zLayers[i].BackPropagate(this->zActType, this->zLayers[i - 1]);
 	}
+	/*for (int i = this->zNLayers - 1; i > 0; i--)
+	{
+		this->zLayers[i - 1].BackPropagate(this->zActType, this->zLayers[i]);
+	}*/
 
 	//Adjust the weights
-	for(unsigned int i = 0; i < this->m_layers.size() - 1; i++)
+	for (int i = 0; i < this->zNLayers - 1; i++)
 	{
-		this->m_layers[i + 1].adjustWeights(this->m_layers[i], 0.8f, 0.00000001f);
+		this->zLayers[i + 1].AdjustWeights(this->zLayers[i], zLearningRate, zMomentum);
 	}
 }
 
-void NeuralNetwork::reset()
+void NeuralNetwork::WriteWeights()
 {
-	for(unsigned int i = 0; i < this->m_layers.size(); i++)
+	FILE* pFile;
+	fopen_s(&pFile, this->zWeightFile.c_str(), "w");
+	if (pFile == NULL)
+		return;
+
+	for (int i = 0; i < this->zNLayers; i++)
 	{
-		this->m_layers[i].reset();
-	}
-}
+		int numNeurons = this->zLayers[i].zNeurons.size();
 
-std::vector<std::vector<std::vector<float>>> NeuralNetwork::getNetworkWeights() const
-{
-	std::vector<std::vector<std::vector<float>>> networkWeights;
-
-	for(int i = 0; i < this->m_layers.size(); i++)
-	{
-		networkWeights.push_back(this->m_inputLayer[i].getWeights());
-	}
-
-	return networkWeights;
-}
-
-void NeuralNetwork::exportNetwork(std::string path)
-{
-	std::vector<std::vector<std::vector<float>>> networkWeights = this->getNetworkWeights();
-	std::ofstream output;
-
-	output.open(path);
-
-	if(output.is_open() == true)
-	{
-		for(int i = 0; i < networkWeights.size(); i++)
+		for (int j = 0; j < numNeurons; j++)
 		{
-			output << "LAYER_START" << std::endl;
-
-			for(int j = 0; j < networkWeights[i].size(); j++)
-			{
-				output << "NEURON_START" << std::endl;
-
-				for(int k = 0; k < networkWeights[i][j].size(); k++)
-				{
-					output << networkWeights[i][j][k] << std::endl;
-				}
-
-				output << "NEURON_END" << std::endl;
-			}
-
-			output << "LAYER_END" << std::endl;
+			int numWeights = this->zLayers[i].zNeurons[j]->zWeights.size();
+			for (int k = 0; k < numWeights; k++)
+				fprintf(pFile, "%f \n", this->zLayers[i].zNeurons[j]->zWeights[k]);
 		}
-
-		output.close();
 	}
+	fclose(pFile);
 }
 
-void NeuralNetwork::importNetwork(std::string path)
+void NeuralNetwork::ReadWeights()
 {
-	std::ifstream input;
+	FILE* pFile;
+	fopen_s(&pFile, this->zWeightFile.c_str(), "r");
+	if (pFile == NULL)
+		return;
 
-	input.open(path);
-
-	printf("Opening file.\n");
-
-	if(input.is_open() == true)
+	for(int i = 0; i < this->zNLayers; i++)
 	{
-		std::vector<std::vector<std::vector<float>>> networkWeights;
-		std::vector<std::vector<float>> layer;
-		std::vector<float> neuron;
-
-		printf("File opened.\n");
-
-		while(input.eof() == false)
+		int numNeurons = this->zLayers[i].zNeurons.size();
+		for(int j = 0; j < numNeurons; j++)
 		{
-			char buffer[1024];
-
-			input.getline(buffer, 1024);
-
-			if(strcmp(buffer, "LAYER_START") == 0)
-			{
-				layer.clear();
-			}
-			else if(strcmp(buffer, "LAYER_END") == 0)
-			{
-				networkWeights.push_back(layer);
-			}
-			else if(strcmp(buffer, "NEURON_START") == 0)
-			{
-				neuron.clear();
-			}
-			else if(strcmp(buffer, "NEURON_END") == 0)
-			{
-				layer.push_back(neuron);
-			}
-			else
-			{
-				float weight;
-				sscanf(buffer, "%f", &weight);
-				neuron.push_back(weight);
-			}
+			int numWeights = this->zLayers[i].zNeurons[j]->zWeights.size();
+			for(int k = 0; k < numWeights; k++)
+				fscanf(pFile,"%f ",&this->zLayers[i].zNeurons[j]->zWeights[k]);
 		}
-
-		input.close();
-
-		for(int i = 0; i < networkWeights.size(); i++)
-		{
-			this->m_layers.push_back(NeuronLayer(networkWeights[i]));
-		}
-
-		this->m_inputLayer = &this->m_layers[0];
-		this->m_outputLayer = &this->m_layers[this->m_layers.size() - 1];
 	}
+	fclose(pFile);
 }

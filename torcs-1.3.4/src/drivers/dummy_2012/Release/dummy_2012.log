@@ -1,0 +1,47 @@
+﻿Build started 5/28/2013 8:33:57 AM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\dummy_2012\dummy_2012.vcxproj" on node 5 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /Od /Ob2 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DUMMY_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt cubic.cpp cubiccurve.cpp danpath.cpp driver.cpp dummy_2012.cpp opponent.cpp path.cpp pidcontroller.cpp pit.cpp spline.cpp
+         cubic.cpp
+         cubiccurve.cpp
+         danpath.cpp
+     1>danpath.cpp(245): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>danpath.cpp(259): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+         driver.cpp
+     1>driver.cpp(122): warning C4244: '=' : conversion from 'tdble' to 'int', possible loss of data
+     1>driver.cpp(123): warning C4244: '=' : conversion from 'tdble' to 'int', possible loss of data
+     1>driver.cpp(124): warning C4305: 'argument' : truncation from 'double' to 'tdble'
+     1>driver.cpp(144): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>driver.cpp(1773): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>driver.cpp(1785): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+         dummy_2012.cpp
+         opponent.cpp
+         path.cpp
+         pidcontroller.cpp
+         pit.cpp
+     1>pit.cpp(31): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+         spline.cpp
+         Generating Code...
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release/dummy_2012.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../export/lib /LIBPATH:../../windows/lib tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBC /DEF:".\dummy_2012.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\Release/dummy_2012.pdb" /MAP:".\Release/dummy_2012.map" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release/dummy_2012.lib" /MACHINE:X86 /SAFESEH /DLL .\Release/cubic.obj
+         .\Release/cubiccurve.obj
+         .\Release/danpath.obj
+         .\Release/driver.obj
+         .\Release/dummy_2012.obj
+         .\Release/opponent.obj
+         .\Release/path.obj
+         .\Release/pidcontroller.obj
+         .\Release/pit.obj
+         .\Release/spline.obj
+            Creating library .\Release/dummy_2012.lib and object .\Release/dummy_2012.exp
+         dummy_2012.vcxproj -> D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\dummy_2012\.\Release\dummy_2012.dll
+       PostBuildEvent:
+         copy D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\dummy_2012\Release\*.dll D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\runtime\drivers\dummy_2012
+         :VCEnd
+         D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\dummy_2012\Release\dummy_2012.dll
+                 1 fil(er) kopierad(e).
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\dummy_2012\dummy_2012.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.33

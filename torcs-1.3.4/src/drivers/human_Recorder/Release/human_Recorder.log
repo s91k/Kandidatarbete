@@ -1,4 +1,4 @@
-﻿Build started 5/26/2013 2:46:29 AM.
+﻿Build started 5/28/2013 8:34:09 AM.
      1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\human_Recorder\human_Recorder.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D HUMAN_RECORDER_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt human_Recorder.cpp mycar.cpp pathfinder.cpp pref.cpp sensors.cpp spline.cpp trackdesc.cpp
@@ -39,4 +39,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.74
+Time Elapsed 00:00:04.22

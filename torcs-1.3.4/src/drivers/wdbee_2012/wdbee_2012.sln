@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C++ Express 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wdbee_2012", "wdbee_2012.vcproj", "{F27AA292-0738-4951-A3A1-EB9C7B92F8DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F27AA292-0738-4951-A3A1-EB9C7B92F8DF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F27AA292-0738-4951-A3A1-EB9C7B92F8DF}.Debug|Win32.Build.0 = Debug|Win32
+		{F27AA292-0738-4951-A3A1-EB9C7B92F8DF}.Release|Win32.ActiveCfg = Release|Win32
+		{F27AA292-0738-4951-A3A1-EB9C7B92F8DF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -42,13 +42,14 @@
 #include <raceman.h>
 #include <robottools.h>
 #include <robot.h>
+#include <vector>
 
 #include <playerpref.h>
 #include "pref.h"
 #include "ANN_Bot_2.h"
-#include "NeuralNetwork.h"
 #include "sensors.h"
 #include "mycar.h"
+#include "NeuralNetwork.h"
 
 #define DRWD 0
 #define DFWD 1
@@ -97,7 +98,7 @@ static tdble lastKeyUpdate = -10.0;
 static int	firstTime = 0;
 
 static NeuralNetwork *steeringNetwork = NULL;
-static NeuralNetwork *speedNetwork = NULL;
+static NeuralNetwork *accelNetwork = NULL;
 static Sensors *sensors = NULL;
 static MyCar *myCar = NULL;
 static TrackDesc *trackDesc = NULL;
@@ -136,10 +137,10 @@ shutdown(int index)
 		delete steeringNetwork;
 	}
 
-	printf("Deleting speed neural network.\n");
-	if(speedNetwork != NULL)
+	printf("Deleting accel neural network.\n");
+	if(accelNetwork != NULL)
 	{
-		delete speedNetwork;
+		delete accelNetwork;
 	}
 
 	printf("Deleting sensors.\n");
@@ -342,8 +343,11 @@ static void initTrack(int index, tTrack* track, void *carHandle, void **carParmH
 void newrace(int index, tCarElt* car, tSituation *s)
 {
 	printf("Creating the neural networks\n");
-	steeringNetwork = new NeuralNetwork("drivers/ANN_Bot_2/steerWeights.txt");
-	speedNetwork = new NeuralNetwork("drivers/ANN_Bot_2/speedWeights.txt");
+	steeringNetwork = new NeuralNetwork(4, 1, 0, 0, "drivers/ANN_Bot_2/steeringWeights.txt");
+	steeringNetwork->ReadWeights();
+
+	accelNetwork = new NeuralNetwork(3, 1, 0, 0, "drivers/ANN_Bot_2/accelWeights.txt");
+	accelNetwork->ReadWeights();
 
 	printf("Neural networks created.\n");
 
@@ -1112,30 +1116,43 @@ static void drive(int index, tCarElt* car, tSituation *s)
 	std::vector<float> output;
 
 	input.push_back(car->_trkPos.toMiddle);
-	input.push_back(targetAngle);
 	input.push_back(segmentAngle);
+	input.push_back(targetAngle);
+	input.push_back(myCar->getSpeed());
 
-	steeringNetwork->use(input, output);
+	steeringNetwork->Use(input, output);
 
 	car->ctrl.steer = output[0];
 
 	input.clear();
 	output.clear();
 
-	input.push_back(myCar->getSpeed());
-	input.push_back(targetAngle);
+	//input.push_back(car->_trkPos.toMiddle);
 	input.push_back(segmentAngle);
+	input.push_back(targetAngle);
+	input.push_back(myCar->getSpeed());
 
-	speedNetwork->use(input, output);
+	accelNetwork->Use(input, output);
 
-	car->ctrl.accelCmd = max(output[0], 0.0f);
-	car->ctrl.brakeCmd = max(output[0] * -1.0f, 0.0f);
+	car->ctrl.accelCmd = output[0];
 
 	//car->ctrl.gear = min(car->ctrl.gear, 2);
-	//car->ctrl.accelCmd = 0.3f;
 
 	if (HCtx[idx]->autoClutch && car->_clutchCmd == 0.0f)
 	    car->_clutchCmd = getAutoClutch(idx, car->_gear, car->_gearCmd, car);
+
+	//Print data from car
+	printf("--- PRINT SET ---\n");
+	printf("INPUT\n");
+	printf_s("DistC:\t%f\n", car->_trkPos.toMiddle);
+	printf_s("SegAng:\t%f\n", segmentAngle);
+	printf_s("TarAng:\t%f\n", targetAngle);
+	printf_s("Speed:\t%f\n", myCar->getSpeed());
+	printf("OUTPUT\n");
+	printf_s("Accel:\t%f\n", car->ctrl.accelCmd);
+	printf_s("Brake:\t%f\n", car->ctrl.brakeCmd);
+	printf_s("Steer:\t%f\n", car->ctrl.steer);
+
 }
 
 static int pitcmd(int index, tCarElt* car, tSituation *s)

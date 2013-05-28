@@ -1,0 +1,46 @@
+﻿Build started 5/28/2013 6:24:47 AM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\dandroid_2012\dandroid_2012.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /ZI /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D DUMMY_EXPORTS /D DEBUG /D DEBUG_OUT /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc110.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt cubic.cpp cubiccurve.cpp danpath.cpp driver.cpp dandroid_2012.cpp opponent.cpp path.cpp pidcontroller.cpp pit.cpp spline.cpp
+         cubic.cpp
+         cubiccurve.cpp
+         danpath.cpp
+     1>d:\simon\documents\github\kandidatarbete\torcs-1.3.4\src\drivers\dandroid_2012\danpath.cpp(245): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>d:\simon\documents\github\kandidatarbete\torcs-1.3.4\src\drivers\dandroid_2012\danpath.cpp(259): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+         driver.cpp
+     1>d:\simon\documents\github\kandidatarbete\torcs-1.3.4\src\drivers\dandroid_2012\driver.cpp(122): warning C4244: '=' : conversion from 'tdble' to 'int', possible loss of data
+     1>d:\simon\documents\github\kandidatarbete\torcs-1.3.4\src\drivers\dandroid_2012\driver.cpp(123): warning C4244: '=' : conversion from 'tdble' to 'int', possible loss of data
+     1>d:\simon\documents\github\kandidatarbete\torcs-1.3.4\src\drivers\dandroid_2012\driver.cpp(124): warning C4305: 'argument' : truncation from 'double' to 'tdble'
+     1>d:\simon\documents\github\kandidatarbete\torcs-1.3.4\src\drivers\dandroid_2012\driver.cpp(144): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\simon\documents\github\kandidatarbete\torcs-1.3.4\src\drivers\dandroid_2012\driver.cpp(1773): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>d:\simon\documents\github\kandidatarbete\torcs-1.3.4\src\drivers\dandroid_2012\driver.cpp(1785): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+         dandroid_2012.cpp
+         opponent.cpp
+         path.cpp
+         pidcontroller.cpp
+         pit.cpp
+     1>d:\simon\documents\github\kandidatarbete\torcs-1.3.4\src\drivers\dandroid_2012\pit.cpp(31): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+         spline.cpp
+         Generating Code...
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/dandroid_2012.dll" /INCREMENTAL /NOLOGO /LIBPATH:../../../export/libd /LIBPATH:../../windows/lib tgf.lib robottools.lib sg.lib ul.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBC /DEF:".\dandroid_2012.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:".\Debug/dandroid_2012.pdb" /MAP:".\Debug/dandroid_2012.map" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug/dandroid_2012.lib" /MACHINE:X86 /SAFESEH /DLL .\Debug/cubic.obj
+         .\Debug/cubiccurve.obj
+         .\Debug/danpath.obj
+         .\Debug/driver.obj
+         .\Debug/dandroid_2012.obj
+         .\Debug/opponent.obj
+         .\Debug/path.obj
+         .\Debug/pidcontroller.obj
+         .\Debug/pit.obj
+         .\Debug/spline.obj
+     1>cubic.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+     1>sg.lib(sgd.obj) : error LNK2026: module unsafe for SAFESEH image.
+     1>ul.lib(ulError.obj) : error LNK2026: module unsafe for SAFESEH image.
+            Creating library .\Debug/dandroid_2012.lib and object .\Debug/dandroid_2012.exp
+     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>.\Debug/dandroid_2012.dll : fatal error LNK1281: Unable to generate SAFESEH image.
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\dandroid_2012\dandroid_2012.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:05.98

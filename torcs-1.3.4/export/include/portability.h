@@ -74,4 +74,3 @@ static float round(float x)
 #endif 
 
 #endif // _TORCS_PORTABILITY_H_
-

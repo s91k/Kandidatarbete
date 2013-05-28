@@ -72,6 +72,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "human_Recorder", "src\drive
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ANN_Bot_2", "src\drivers\ANN_Bot_2\ANN_Bot_2.vcxproj", "{1D3971D6-2294-4EFA-ABB4-0D10D27D97D5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dandroid_2012", "src\drivers\dandroid_2012\dandroid_2012.vcxproj", "{C1D43136-8A90-487A-8841-5624BC78E6E3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dummy_2012", "src\drivers\dummy_2012\dummy_2012.vcxproj", "{E05A3063-6A6E-4CC8-BC5F-05D05666477A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wdbee_2012", "src\drivers\wdbee_2012\wdbee_2012.vcxproj", "{A1FB3B88-A3B8-4B98-9DE4-957AD99C8552}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -202,6 +208,18 @@ Global
 		{1D3971D6-2294-4EFA-ABB4-0D10D27D97D5}.Debug|Win32.Build.0 = Debug|Win32
 		{1D3971D6-2294-4EFA-ABB4-0D10D27D97D5}.Release|Win32.ActiveCfg = Release|Win32
 		{1D3971D6-2294-4EFA-ABB4-0D10D27D97D5}.Release|Win32.Build.0 = Release|Win32
+		{C1D43136-8A90-487A-8841-5624BC78E6E3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C1D43136-8A90-487A-8841-5624BC78E6E3}.Debug|Win32.Build.0 = Debug|Win32
+		{C1D43136-8A90-487A-8841-5624BC78E6E3}.Release|Win32.ActiveCfg = Release|Win32
+		{C1D43136-8A90-487A-8841-5624BC78E6E3}.Release|Win32.Build.0 = Release|Win32
+		{E05A3063-6A6E-4CC8-BC5F-05D05666477A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E05A3063-6A6E-4CC8-BC5F-05D05666477A}.Debug|Win32.Build.0 = Debug|Win32
+		{E05A3063-6A6E-4CC8-BC5F-05D05666477A}.Release|Win32.ActiveCfg = Release|Win32
+		{E05A3063-6A6E-4CC8-BC5F-05D05666477A}.Release|Win32.Build.0 = Release|Win32
+		{A1FB3B88-A3B8-4B98-9DE4-957AD99C8552}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A1FB3B88-A3B8-4B98-9DE4-957AD99C8552}.Debug|Win32.Build.0 = Debug|Win32
+		{A1FB3B88-A3B8-4B98-9DE4-957AD99C8552}.Release|Win32.ActiveCfg = Release|Win32
+		{A1FB3B88-A3B8-4B98-9DE4-957AD99C8552}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

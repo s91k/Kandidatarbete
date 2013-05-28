@@ -17,12 +17,6 @@
     <ClCompile Include="pref.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NeuralNetwork.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NeuronLayer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="sensors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -38,6 +32,15 @@
     <ClCompile Include="mycar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BackProp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNetwork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="ANN_Bot_2.def">
@@ -46,15 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pref.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NeuralNetwork.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Neuron.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NeuronLayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="sensors.h">
@@ -73,6 +67,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="mycar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BackProp.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuralLayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuralNetwork.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

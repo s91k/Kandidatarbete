@@ -1,32 +1,58 @@
 #pragma once
 
-#include "NeuronLayer.h"
-#include <vector>
-#include <fstream>
+#include "NeuralLayer.h"
+
+enum NN_TYPE
+{
+	NN_INPUT,
+	NN_HIDDEN,
+	NN_OUTPUT
+};
 
 class NeuralNetwork
 {
 private:
-	NeuronLayer *m_inputLayer;
-	NeuronLayer *m_outputLayer;
+	int zNInputs;
+	int zNOutputs;
+	int zNLayers;
+	int zNHiddenNodesPerLayer;
 
-	std::vector<NeuronLayer> m_layers;
+	std::vector<NeuralLayer> zLayers;
+	NeuralLayer* zInputLayer;
+	NeuralLayer* zOutputLayer;
+
+	float zLearningRate;
+	float zMomentum;
+	float zError;
+
+	std::string zWeightFile;
+
+	int zActType;
+	int zOutputActType;
+
+private:
+	void AddLayer(int nNeurons, int nInputs, int type);
 public:
-	NeuralNetwork();
-	NeuralNetwork(int nrOfInputs, int nrOfOutputs, int nrOfHiddenLayers, int nrOfHiddenNeurons);
-	NeuralNetwork(std::string path);
-	~NeuralNetwork();
+	NeuralNetwork(int nInputs, int nOutputs, int nHiddenLayers, int nNodesInHiddenLayers, const std::string& weightFile);
+	virtual ~NeuralNetwork();
+	void Init();
+	void Train(std::vector<float>& nInputs, std::vector<float>& nExpectedOutput);
+	void Use(std::vector<float>& nInputs, std::vector<float>& nOutputs);
 
-	//Send the input values though the network and return the values from the output layer
-	void use(std::vector<float> &input, std::vector<float> &output);
-	//Compare the expected output with output that is calculated by the network and adjust the weights based on that
-	void train(std::vector<float> &input, std::vector<float> &expectedOutput);
-	//Reset the neuron weights
-	void reset();
-	//Get a vector of vectors describing the network
-	std::vector<std::vector<std::vector<float>>> getNetworkWeights() const;
-	//Export
-	void exportNetwork(std::string path);
-	//Import
-	void importNetwork(std::string path);
+	void Propagate();
+	void BackPropagate();
+
+	void WriteWeights();
+	void ReadWeights();
+
+	void SetInputs(std::vector<float>& inputs);
+	void FindError(std::vector<float>& ouputs);
+
+	float GetError() {return this->zError;}
+
+	float GetLearningRate() {return this->zLearningRate;}
+	float GetMomentum() {return this->zMomentum;}
+
+	void SetLearningRate(float lRate) {this->zLearningRate = lRate;}
+	void SetMomentum(float momentum) {this->zMomentum = momentum;}
 };

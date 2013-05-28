@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b190b395-f7a4-4639-b498-8dfc07e5e979}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70a07907-8e9f-4b4b-87a7-50681778d529}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="unitcarparam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitcharacteristic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitclothoid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitcollision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitcommon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitcommondata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitcubic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitcubicspline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitdriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitfixcarparam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitlane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitlanepoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitlinalg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitlinreg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitopponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitparabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitparam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitpidctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitpit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitpitparam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitsection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitstrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitsysfoo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitteammanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unittmpcarparam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unittrack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitvec2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitvec3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wdbee_2012.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="unitcarparam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitcharacteristic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitclothoid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitcollision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitcommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitcommondata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitcubic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitcubicspline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitdriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitfixcarparam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitglobal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitlane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitlanepoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitlinalg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitlinreg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitopponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitparabel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitparam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitpidctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitpit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitpitparam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitsection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitstrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitsysfoo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitteammanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unittmpcarparam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unittrack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitvec2d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitvec3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
