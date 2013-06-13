@@ -49,10 +49,10 @@
   <section name="Drivers">
     <attnum name="maximum number" val="1"/>
     <attnum name="focused idx" val="0"/>
-    <attstr name="focused module" val="dandroid_2012"/>
+    <attstr name="focused module" val="blacky_2012"/>
     <section name="1">
       <attnum name="idx" val="0"/>
-      <attstr name="module" val="dandroid_2012"/>
+      <attstr name="module" val="blacky_2012"/>
     </section>
 
   </section>

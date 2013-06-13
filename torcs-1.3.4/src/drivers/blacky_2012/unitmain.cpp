@@ -316,8 +316,8 @@ extern "C" int wdbee(tModInfo *ModInfo)
   int I;
   for (I = 0; I < TDriver::NBBOTS; I++)
   {
-    ModInfo[I].name    = GetBotName(I);          // Tell customisable name
-    ModInfo[I].desc    = (char *) BotDesc[I];    // Tell customisable desc.
+    ModInfo[I].name    =  strdup(GetBotName(I));          // Tell customisable name
+    ModInfo[I].desc    =  strdup((char *) BotDesc[I]);    // Tell customisable desc.
     ModInfo[I].fctInit = InitFuncPt;             // Common used functions
     ModInfo[I].gfId    = ROB_IDENT;              // Robot identity
     ModInfo[I].index   = I;                      // Drivers index

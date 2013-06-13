@@ -1,5 +1,5 @@
-﻿Build started 5/28/2013 8:33:57 AM.
-     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\dummy_2012\dummy_2012.vcxproj" on node 5 (Rebuild target(s)).
+﻿Build started 6/13/2013 9:49:02 PM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\dummy_2012\dummy_2012.vcxproj" on node 4 (Rebuild target(s)).
      1>ClCompile:
          D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /Od /Ob2 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D DUMMY_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt cubic.cpp cubiccurve.cpp danpath.cpp driver.cpp dummy_2012.cpp opponent.cpp path.cpp pidcontroller.cpp pit.cpp spline.cpp
          cubic.cpp
@@ -44,4 +44,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:07.33
+Time Elapsed 00:00:06.54

@@ -1,4 +1,4 @@
-﻿Build started 5/28/2013 8:34:00 AM.
+﻿Build started 6/13/2013 9:49:24 PM.
      1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\wdbee_2012\wdbee_2012.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /Zi /nologo /W2 /WX- /O2 /Ob2 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D wdbee_2012_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt unitcarparam.cpp unitcharacteristic.cpp unitclothoid.cpp unitcollision.cpp unitcommon.cpp unitcommondata.cpp unitcubic.cpp unitcubicspline.cpp unitdriver.cpp unitfixcarparam.cpp unitlane.cpp unitlanepoint.cpp unitlinalg.cpp unitlinreg.cpp unitmain.cpp unitopponent.cpp unitparabel.cpp unitparam.cpp unitpidctrl.cpp unitpit.cpp unitpitparam.cpp unitsection.cpp unitstrategy.cpp unitsysfoo.cpp unitteammanager.cpp unittmpcarparam.cpp unittrack.cpp unitvec2d.cpp unitvec3d.cpp
@@ -75,4 +75,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:14.51
+Time Elapsed 00:00:14.46

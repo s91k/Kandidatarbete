@@ -18,7 +18,7 @@
         <attstr name="desc" val="Freddy Fox"></attstr>
         <attstr name="team" val="blacky_2012"></attstr>
         <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
-        <attstr name="car name" val="car7-trb1"></attstr>
+        <attstr name="car name" val="car4-trb1"></attstr>
         <attnum name="race number" val="55"></attnum>
         <attnum name="red" val="0.0"></attnum>
         <attnum name="green" val="0.0"></attnum>
@@ -29,7 +29,7 @@
         <attstr name="desc" val="Larry Lynx"></attstr>
         <attstr name="team" val="blacky_2012"></attstr>
         <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
-        <attstr name="car name" val="car7-trb1"></attstr>
+        <attstr name="car name" val="car4-trb1"></attstr>
         <attnum name="race number" val="56"></attnum>
         <attnum name="red" val="0.0"></attnum>
         <attnum name="green" val="0.0"></attnum>

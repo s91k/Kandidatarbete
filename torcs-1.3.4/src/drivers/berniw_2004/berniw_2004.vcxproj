@@ -105,7 +105,7 @@
       <OutputFile>.\Release\berniw_2004.dll</OutputFile>
       <ImportLibrary>.\Release\berniw_2004.lib</ImportLibrary>
       <AdditionalLibraryDirectories>../../../export/lib;../../windows/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>tgf.lib;robottools.lib;ssg_vs2008_32.lib;ul_vs2008_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>tgf.lib;robottools.lib;sg_vs2008_32.lib;ul_vs2008_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\berniw_2004.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>

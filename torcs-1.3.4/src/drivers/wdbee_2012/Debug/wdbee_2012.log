@@ -1,0 +1,76 @@
+﻿Build started 6/14/2013 1:10:20 AM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\wdbee_2012\wdbee_2012.vcxproj" on node 4 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /ZI /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D wdbee_2012_EXPORTS /D DEBUG /D DEBUG_OUT /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt unitcarparam.cpp unitcharacteristic.cpp unitclothoid.cpp unitcollision.cpp unitcommon.cpp unitcommondata.cpp unitcubic.cpp unitcubicspline.cpp unitdriver.cpp unitfixcarparam.cpp unitlane.cpp unitlanepoint.cpp unitlinalg.cpp unitlinreg.cpp unitmain.cpp unitopponent.cpp unitparabel.cpp unitparam.cpp unitpidctrl.cpp unitpit.cpp unitpitparam.cpp unitsection.cpp unitstrategy.cpp unitsysfoo.cpp unitteammanager.cpp unittmpcarparam.cpp unittrack.cpp unitvec2d.cpp unitvec3d.cpp
+         unitcarparam.cpp
+         unitcharacteristic.cpp
+         unitclothoid.cpp
+         unitcollision.cpp
+         unitcommon.cpp
+         unitcommondata.cpp
+         unitcubic.cpp
+         unitcubicspline.cpp
+         unitdriver.cpp
+         unitfixcarparam.cpp
+         unitlane.cpp
+         unitlanepoint.cpp
+         unitlinalg.cpp
+         unitlinreg.cpp
+         unitmain.cpp
+         unitopponent.cpp
+         unitparabel.cpp
+         unitparam.cpp
+         unitpidctrl.cpp
+         unitpit.cpp
+         Generating Code...
+         Compiling...
+         unitpitparam.cpp
+         unitsection.cpp
+         unitstrategy.cpp
+         unitsysfoo.cpp
+         unitteammanager.cpp
+         unittmpcarparam.cpp
+         unittrack.cpp
+         unitvec2d.cpp
+         unitvec3d.cpp
+         Generating Code...
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/wdbee_2012.dll" /INCREMENTAL /NOLOGO /LIBPATH:../../../export/libd /LIBPATH:../../windows/lib tgf.lib robottools.lib sg.lib ul.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBC /NODEFAULTLIB:LIBCMT /DEF:".\wdbee_2012.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:".\Debug/wdbee_2012.pdb" /MAP:".\Debug/wdbee_2012.map" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug/wdbee_2012.lib" /MACHINE:X86 /SAFESEH /DLL .\Debug/unitcarparam.obj
+         .\Debug/unitcharacteristic.obj
+         .\Debug/unitclothoid.obj
+         .\Debug/unitcollision.obj
+         .\Debug/unitcommon.obj
+         .\Debug/unitcommondata.obj
+         .\Debug/unitcubic.obj
+         .\Debug/unitcubicspline.obj
+         .\Debug/unitdriver.obj
+         .\Debug/unitfixcarparam.obj
+         .\Debug/unitlane.obj
+         .\Debug/unitlanepoint.obj
+         .\Debug/unitlinalg.obj
+         .\Debug/unitlinreg.obj
+         .\Debug/unitmain.obj
+         .\Debug/unitopponent.obj
+         .\Debug/unitparabel.obj
+         .\Debug/unitparam.obj
+         .\Debug/unitpidctrl.obj
+         .\Debug/unitpit.obj
+         .\Debug/unitpitparam.obj
+         .\Debug/unitsection.obj
+         .\Debug/unitstrategy.obj
+         .\Debug/unitsysfoo.obj
+         .\Debug/unitteammanager.obj
+         .\Debug/unittmpcarparam.obj
+         .\Debug/unittrack.obj
+         .\Debug/unitvec2d.obj
+         .\Debug/unitvec3d.obj
+     1>unitcarparam.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+     1>sg.lib(sgd.obj) : error LNK2026: module unsafe for SAFESEH image.
+     1>ul.lib(ulError.obj) : error LNK2026: module unsafe for SAFESEH image.
+            Creating library .\Debug/wdbee_2012.lib and object .\Debug/wdbee_2012.exp
+     1>.\Debug/wdbee_2012.dll : fatal error LNK1281: Unable to generate SAFESEH image.
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\wdbee_2012\wdbee_2012.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:13.17

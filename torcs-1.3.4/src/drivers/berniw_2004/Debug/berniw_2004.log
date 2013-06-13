@@ -1,0 +1,36 @@
+﻿Build started 6/14/2013 1:10:23 AM.
+     1>Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw_2004\berniw_2004.vcxproj" on node 4 (Build target(s)).
+     1>ClCompile:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../../export/include /I../../windows/include /I../../.. /ZI /nologo /W2 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D BERNIW_2004_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt berniw_2004.cpp mycar.cpp pathfinder.cpp spline.cpp trackdesc.cpp
+         trackdesc.cpp
+         spline.cpp
+         pathfinder.cpp
+         mycar.cpp
+         berniw_2004.cpp
+         Generating Code...
+       Link:
+         D:\Program\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\berniw_2004.dll" /INCREMENTAL /NOLOGO /LIBPATH:../../../export/libd /LIBPATH:../../windows/lib robottools.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBC /DEF:".\berniw_2004.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:".\Debug\berniw_2004.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\berniw_2004.lib" /MACHINE:X86 /SAFESEH /DLL .\Debug\berniw_2004.obj
+         .\Debug\mycar.obj
+         .\Debug\pathfinder.obj
+         .\Debug\spline.obj
+         .\Debug\trackdesc.obj
+     1>berniw_2004.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+            Creating library .\Debug\berniw_2004.lib and object .\Debug\berniw_2004.exp
+     1>berniw_2004.obj : error LNK2019: unresolved external symbol "char * __cdecl _tgf_win_strdup(char const *)" (?_tgf_win_strdup@@YAPADPBD@Z) referenced in function _berniw_2004
+     1>berniw_2004.obj : error LNK2019: unresolved external symbol "void * __cdecl GfParmReadFile(char const *,int)" (?GfParmReadFile@@YAPAXPBDH@Z) referenced in function "void __cdecl initTrack(int,struct tTrack *,void *,void * *,struct Situation *)" (?initTrack@@YAXHPAUtTrack@@PAXPAPAXPAUSituation@@@Z)
+     1>berniw_2004.obj : error LNK2019: unresolved external symbol "float __cdecl GfParmGetNum(void *,char const *,char const *,char const *,float)" (?GfParmGetNum@@YAMPAXPBD11M@Z) referenced in function "void __cdecl initTrack(int,struct tTrack *,void *,void * *,struct Situation *)" (?initTrack@@YAXHPAUtTrack@@PAXPAPAXPAUSituation@@@Z)
+     1>mycar.obj : error LNK2001: unresolved external symbol "float __cdecl GfParmGetNum(void *,char const *,char const *,char const *,float)" (?GfParmGetNum@@YAMPAXPBD11M@Z)
+     1>pathfinder.obj : error LNK2001: unresolved external symbol "float __cdecl GfParmGetNum(void *,char const *,char const *,char const *,float)" (?GfParmGetNum@@YAMPAXPBD11M@Z)
+     1>berniw_2004.obj : error LNK2019: unresolved external symbol "int __cdecl GfParmSetNum(void *,char const *,char const *,char const *,float)" (?GfParmSetNum@@YAHPAXPBD11M@Z) referenced in function "void __cdecl initTrack(int,struct tTrack *,void *,void * *,struct Situation *)" (?initTrack@@YAXHPAUtTrack@@PAXPAPAXPAUSituation@@@Z)
+     1>berniw_2004.obj : error LNK2019: unresolved external symbol "void __cdecl sgdMakeCoordMat4(double (* const)[4],double,double,double,double,double,double)" (?sgdMakeCoordMat4@@YAXQAY03NNNNNNN@Z) referenced in function "void __cdecl sgdMakeCoordMat4(double (* const)[4],double const * const,double const * const)" (?sgdMakeCoordMat4@@YAXQAY03NQBN1@Z)
+     1>mycar.obj : error LNK2001: unresolved external symbol "void __cdecl sgdMakeCoordMat4(double (* const)[4],double,double,double,double,double,double)" (?sgdMakeCoordMat4@@YAXQAY03NNNNNNN@Z)
+     1>pathfinder.obj : error LNK2001: unresolved external symbol "void __cdecl sgdMakeCoordMat4(double (* const)[4],double,double,double,double,double,double)" (?sgdMakeCoordMat4@@YAXQAY03NNNNNNN@Z)
+     1>trackdesc.obj : error LNK2001: unresolved external symbol "void __cdecl sgdMakeCoordMat4(double (* const)[4],double,double,double,double,double,double)" (?sgdMakeCoordMat4@@YAXQAY03NNNNNNN@Z)
+     1>mycar.obj : error LNK2019: unresolved external symbol "char const * __cdecl GfParmGetStr(void *,char const *,char const *,char const *)" (?GfParmGetStr@@YAPBDPAXPBD11@Z) referenced in function "public: __thiscall MyCar::MyCar(class TrackDesc *,struct CarElt *,struct Situation *)" (??0MyCar@@QAE@PAVTrackDesc@@PAUCarElt@@PAUSituation@@@Z)
+     1>pathfinder.obj : error LNK2001: unresolved external symbol "char const * __cdecl GfParmGetStr(void *,char const *,char const *,char const *)" (?GfParmGetStr@@YAPBDPAXPBD11@Z)
+     1>.\Debug\berniw_2004.dll : fatal error LNK1120: 6 unresolved externals
+     1>Done Building Project "D:\Simon\Documents\GitHub\Kandidatarbete\torcs-1.3.4\src\drivers\berniw_2004\berniw_2004.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:02.69

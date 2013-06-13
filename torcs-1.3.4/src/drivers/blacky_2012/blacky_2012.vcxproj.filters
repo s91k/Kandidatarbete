@@ -2,18 +2,21 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{369d37cc-d08c-47df-ad93-3377e2c5c6f2}</UniqueIdentifier>
+      <UniqueIdentifier>{8ca2588c-059b-4c60-ab00-a7b9a7438ecf}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{b936e531-1910-4349-922e-74157eb5d378}</UniqueIdentifier>
+      <UniqueIdentifier>{7fa3213b-e797-4e95-b15b-f9fcc8a3e16f}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="unitmain.cpp">
+    <None Include="blacky_2012.def">
       <Filter>Source Files</Filter>
-    </ClCompile>
+    </None>
+    <None Include="Makefile" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="unitcarparam.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -54,6 +57,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="unitlinreg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="unitopponent.cpp">
@@ -130,6 +136,9 @@
     <ClInclude Include="unitfixcarparam.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="unitglobal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="unitlane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -184,11 +193,5 @@
     <ClInclude Include="unitvec3d.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="blacky_2012.def">
-      <Filter>Source Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Makefile" />
   </ItemGroup>
 </Project>
