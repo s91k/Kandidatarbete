@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    file          : drivers/blacky_2012/car4-trb1/aalborg
+    created       : 11/04/12
+    last modified : 11/04/12
+    copyright     : (C) 2010 Wolf-Dieter Beelitz
+
+    SVN version   : $Id:$
+-->
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+<!DOCTYPE params SYSTEM "params.dtd">
+
+
+<params name="car4-trb1">
+  <section name="Front Wing">
+    <attnum name="angle" min="0" max="12" unit="deg" val="11.07"/>
+  </section>
+
+  <section name="Rear Wing">
+    <attnum name="angle" min="0" max="17" unit="deg" val="14.89"/>
+  </section>
+
+  <section name="Gearbox">
+    <section name="gears">
+      <section name="r">
+        <attnum name="ratio" min="-3" max="0" val="-2"/>
+      </section>
+
+      <section name="1">
+        <attnum name="ratio" min="0" max="5" val="3.8"/>
+      </section>
+
+      <section name="2">
+        <attnum name="ratio" min="0" max="5" val="2.8"/>
+      </section>
+
+      <section name="3">
+        <attnum name="ratio" min="0" max="5" val="1.85"/>
+      </section>
+
+      <section name="4">
+        <attnum name="ratio" min="0" max="5" val="1.45"/>
+      </section>
+
+      <section name="5">
+        <attnum name="ratio" min="0" max="5" val="1.25"/>
+      </section>
+
+      <section name="6">
+        <attnum name="ratio" min="0" max="5" val="1.08"/>
+      </section>
+
+    </section>
+
+  </section>
+
+  <section name="Rear Differential">
+    <attstr name="type" in="SPOOL,FREE, LIMITED SLIP" val="LIMITED SLIP"/>
+    <attnum name="ratio" min="0" max="10" val="4.187"/>
+  </section>
+
+  <section name="Brake System">
+    <attnum name="_front-rear brake repartition" min="0.5" max="0.7" val="0.5771"/>
+    <attnum name="front-rear brake repartition" min="0.5" max="0.7" val="0.7"/>
+    <attnum name="max pressure" min="25000" max="40000" unit="kPa" val="40000"/>
+  </section>
+
+  <section name="Front Right Wheel">
+    <attnum name="ride height" min="70" max="120" unit="mm" val="70"/>
+    <attnum name="toe" min="-5" max="5" unit="deg" val="0"/>
+    <attnum name="camber" min="-5" max="-3" unit="deg" val="-5"/>
+  </section>
+
+  <section name="Front Left Wheel">
+    <attnum name="ride height" min="70" max="120" unit="mm" val="70"/>
+    <attnum name="toe" min="-5" max="5" unit="deg" val="0"/>
+    <attnum name="camber" min="-5" max="-3" unit="deg" val="-5"/>
+  </section>
+
+  <section name="Rear Right Wheel">
+    <attnum name="ride height" min="70" max="120" unit="mm" val="70"/>
+    <attnum name="toe" min="0" max="0" unit="deg" val="0"/>
+    <attnum name="camber" min="-5" max="-2" unit="deg" val="-5"/>
+  </section>
+
+  <section name="Rear Left Wheel">
+    <attnum name="ride height" min="70" max="120" unit="mm" val="70"/>
+    <attnum name="toe" min="0" max="0" unit="deg" val="0"/>
+    <attnum name="camber" min="-5" max="-2" unit="deg" val="-5"/>
+  </section>
+
+  <section name="Front Anti-Roll Bar">
+    <attnum name="spring" min="0" max="5000" unit="lbs/in" val="361"/>
+  </section>
+
+  <section name="Rear Anti-Roll Bar">
+    <attnum name="spring" min="0" max="5000" unit="lbs/in" val="492"/>
+  </section>
+
+  <section name="Front Right Suspension">
+    <attnum name="spring" min="0" max="10000" unit="lbs/in" val="3984"/>
+    <attnum name="suspension course" min="0" max="0.2" unit="m" val="0.13"/>
+    <attnum name="bellcrank" min="0.1" max="5" val="1"/>
+    <attnum name="packers" min="0" max="10" unit="mm" val="5"/>
+    <attnum name="slow bump" min="0" max="1000" unit="lbs/in/s" val="143"/>
+    <attnum name="slow rebound" min="0" max="1000" unit="lbs/in/s" val="225"/>
+    <attnum name="fast bump" min="0" max="1000" unit="lbs/in/s" val="72"/>
+    <attnum name="fast rebound" min="0" max="1000" unit="lbs/in/s" val="102"/>
+  </section>
+
+  <section name="Front Left Suspension">
+    <attnum name="spring" min="0" max="10000" unit="lbs/in" val="3984"/>
+    <attnum name="suspension course" min="0" max="0.2" unit="m" val="0.13"/>
+    <attnum name="bellcrank" min="0.1" max="5" val="1"/>
+    <attnum name="packers" min="0" max="10" unit="mm" val="5"/>
+    <attnum name="slow bump" min="0" max="1000" unit="lbs/in/s" val="143"/>
+    <attnum name="slow rebound" min="0" max="1000" unit="lbs/in/s" val="225"/>
+    <attnum name="fast bump" min="0" max="1000" unit="lbs/in/s" val="72"/>
+    <attnum name="fast rebound" min="0" max="1000" unit="lbs/in/s" val="102"/>
+  </section>
+
+  <section name="Rear Right Suspension">
+    <attnum name="spring" min="0" max="10000" unit="lbs/in" val="4164"/>
+    <attnum name="suspension course" min="0" max="0.2" unit="m" val="0.12"/>
+    <attnum name="bellcrank" min="0.1" max="5" val="1"/>
+    <attnum name="packers" min="0" max="10" unit="mm" val="5"/>
+    <attnum name="slow bump" min="0" max="1000" unit="lbs/in/s" val="153"/>
+    <attnum name="slow rebound" min="0" max="1000" unit="lbs/in/s" val="317"/>
+    <attnum name="fast bump" min="0" max="1000" unit="lbs/in/s" val="75"/>
+    <attnum name="fast rebound" min="0" max="1000" unit="lbs/in/s" val="70"/>
+  </section>
+
+  <section name="Rear Left Suspension">
+    <attnum name="spring" min="0" max="10000" unit="lbs/in" val="4164"/>
+    <attnum name="suspension course" min="0" max="0.2" unit="m" val="0.12"/>
+    <attnum name="bellcrank" min="0.1" max="5" val="1"/>
+    <attnum name="packers" min="0" max="10" unit="mm" val="5"/>
+    <attnum name="slow bump" min="0" max="1000" unit="lbs/in/s" val="153"/>
+    <attnum name="slow rebound" min="0" max="1000" unit="lbs/in/s" val="317"/>
+    <attnum name="fast bump" min="0" max="1000" unit="lbs/in/s" val="75"/>
+    <attnum name="fast rebound" min="0" max="1000" unit="lbs/in/s" val="70"/>
+  </section>
+
+  <section name="wdbee private">
+    <attnum name="max fuel" min="0" max="95" val="95"/>
+    <attnum name="start fuel" min="-1" max="95" val="-1"/>
+    <attnum name="lookaheadfactor" min="0" max="0.5" val="0.074"/>
+    <attnum name="omegaaheadfactor" min="0" max="5" val="0.088"/>
+    <attnum name="length margin" min="0" max="3" val="2"/>
+    <attnum name="save plot" min="0" max="1" val="0"/>
+    <attnum name="save stat" min="0" max="1" val="0"/>
+    <attnum name="save sect" min="0" max="1" val="0"/>
+    <attnum name="show index" min="0" max="1" val="0"/>
+    <attnum name="pit test stop" min="0" max="1" val="0"/>
+    <attnum name="qualification" min="0" max="1" val="0"/>
+    <attnum name="reserve" min="0" max="20000" val="2000"/>
+    <attnum name="initial brake" min="0" max="1" val="1"/>
+    <attnum name="avoid width" min="0.5" max="20" val="0.5"/>
+    <attnum name="scale avoid" min="1" max="20" val="7.5"/>
+    <attnum name="fly level" min="0" max="1" val="0.031"/>
+    <attnum name="scale brakes" min="0" max="5" val="0.85"/>
+    <attnum name="scale speed" min="0" max="5" val="1.23"/>
+    <attnum name="scale bumps" min="0" max="5" val="0.353"/>
+    <attnum name="load learned" min="0" max="1" val="0"/>
+    <attnum name="min brake friction factor" min="0.75" max="1" val="0.95"/>
+    <attnum name="max brake friction factor" min="1" max="2" val="2"/>
+    <attnum name="min speed friction factor" min="0.75" max="1" val="0.95"/>
+    <attnum name="max speed friction factor" min="1" max="3" val="3"/>
+    <attnum name="apex" min="0.9" max="1.1" val="0.9911"/>
+    <attnum name="rlfactor" min="1" max="1.1" val="1.0167"/>
+
+    <attnum name="track param count" val="0"/>
+    <section name="param seg">
+      <section name="1">
+        <attnum name="dist from start" val="147"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="2">
+        <attnum name="dist from start" val="187"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="3">
+        <attnum name="dist from start" val="234"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="4">
+        <attnum name="dist from start" val="344"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="5">
+        <attnum name="dist from start" val="380"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="6">
+        <attnum name="dist from start" val="406"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="7">
+        <attnum name="dist from start" val="440"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="8">
+        <attnum name="dist from start" val="476"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="9">
+        <attnum name="dist from start" val="514"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="10">
+        <attnum name="dist from start" val="550"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="11">
+        <attnum name="dist from start" val="601"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="12">
+        <attnum name="dist from start" val="628"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="13">
+        <attnum name="dist from start" val="643"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="14">
+        <attnum name="dist from start" val="671"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="15">
+        <attnum name="dist from start" val="757"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="16">
+        <attnum name="dist from start" val="803"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="17">
+        <attnum name="dist from start" val="853"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="18">
+        <attnum name="dist from start" val="1006"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="19">
+        <attnum name="dist from start" val="1107"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="20">
+        <attnum name="dist from start" val="1169"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="21">
+        <attnum name="dist from start" val="1327"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="22">
+        <attnum name="dist from start" val="1365"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="23">
+        <attnum name="dist from start" val="1409"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="24">
+        <attnum name="dist from start" val="1516"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="25">
+        <attnum name="dist from start" val="1536"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="26">
+        <attnum name="dist from start" val="1550"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="27">
+        <attnum name="dist from start" val="1596"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="28">
+        <attnum name="dist from start" val="1636"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="29">
+        <attnum name="dist from start" val="1781"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="30">
+        <attnum name="dist from start" val="1867"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="31">
+        <attnum name="dist from start" val="1893"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="32">
+        <attnum name="dist from start" val="1935"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="33">
+        <attnum name="dist from start" val="1957"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="34">
+        <attnum name="dist from start" val="1991"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="35">
+        <attnum name="dist from start" val="2121"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="36">
+        <attnum name="dist from start" val="2144"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="0.5"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="37">
+        <attnum name="dist from start" val="2173"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="0.4"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="38">
+        <attnum name="dist from start" val="2217"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="0.7"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="39">
+        <attnum name="dist from start" val="2258"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="40">
+        <attnum name="dist from start" val="2282"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="41">
+        <attnum name="dist from start" val="2334"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+      <section name="42">
+        <attnum name="dist from start" val="2444"/>
+        <attnum name="border left" val="0"/>
+        <attnum name="border right" val="0"/>
+        <attnum name="factor" val="1.016700"/>
+        <attnum name="apex" val="0.991100"/>
+        <attnum name="scale friction" val="1"/>
+        <attnum name="scale braking" val="1"/>
+        <attnum name="scale bumps" val="1"/>
+        <attnum name="target speed" val="0"/>
+      </section>
+    </section>
+  </section>
+</params>

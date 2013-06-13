@@ -19,7 +19,7 @@
         <attstr name="desc" val=""></attstr>
         <attstr name="team" val="dandroid_2012"></attstr>
         <attstr name="author" val="Daniel Schellhammer"></attstr>
-          <attstr name="car name" val="car7-trb1"></attstr>
+        <attstr name="car name" val="car7-trb1"></attstr>
         <attnum name="race number" val="101"></attnum>
         <attnum name="red" val="1.0"></attnum>
         <attnum name="green" val="0.0"></attnum>
@@ -30,7 +30,7 @@
        <attstr name="desc" val=""></attstr>
        <attstr name="team" val="dandroid_2012"></attstr>
        <attstr name="author" val="Daniel Schellhammer"></attstr>
-          <attstr name="car name" val="car3-trb1"></attstr>
+       <attstr name="car name" val="car7-trb1"></attstr>
        <attnum name="race number" val="102"></attnum>
        <attnum name="red" val="1.0"></attnum>
        <attnum name="green" val="0.0"></attnum>

@@ -30,7 +30,7 @@
        <attstr name="desc" val=""></attstr>
        <attstr name="team" val="dummy_2012"></attstr>
        <attstr name="author" val="Daniel Schellhammer"></attstr>
-          <attstr name="car name" val="car1-trb1"></attstr>
+          <attstr name="car name" val="car7-trb1"></attstr>
        <attnum name="race number" val="12"></attnum>
        <attnum name="red" val="1.0"></attnum>
        <attnum name="green" val="1.0"></attnum>
