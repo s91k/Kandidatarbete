@@ -1150,7 +1150,7 @@ static void drive(int index, tCarElt* car, tSituation *s)
 	accelNetwork->Use(input, output);
 
 	car->ctrl.accelCmd = max(output[0], 0.0f);
-	car->ctrl.brakeCmd = max(output[0] * -1.0f, 0.0f);
+	//car->ctrl.brakeCmd = max(output[0] * -1.0f, 0.0f);
 
 	//car->ctrl.gear = min(car->ctrl.gear, 2);
 

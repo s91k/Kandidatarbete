@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE params SYSTEM "D:/Simon/Documents/GitHub/Kandidatarbete/torcs-1.3.4/runtime/config/params.dtd">
+<?xml-stylesheet type="text/xsl" href="file:///D:/Simon/Documents/GitHub/Kandidatarbete/torcs-1.3.4/runtime/config/style.xsl"?>
+
+<params name="Results">
+  <section name="Header">
+    <attnum name="date" val="1.37114e+009"/>
+  </section>
+
+  <section name="Current">
+    <attnum name="current track" val="1"/>
+    <attnum name="current race" val="1"/>
+    <attnum name="current driver" val="1"/>
+  </section>
+
+  <section name="Street 1">
+    <section name="Drivers">
+      <section name="1">
+        <attstr name="dll name" val="dandroid_2012"/>
+        <attnum name="index" val="0"/>
+      </section>
+
+    </section>
+
+    <section name="Results">
+      <section name="Practice">
+        <attstr name="driver name" val="dandroid_2012 1"/>
+        <section name="1">
+          <attnum name="time" val="85.472"/>
+          <attnum name="best lap time" val="85.472"/>
+          <attnum name="top speed" val="75.3094"/>
+          <attnum name="bottom speed" val="17.273"/>
+          <attnum name="dammages" val="0"/>
+        </section>
+
+        <section name="2">
+          <attnum name="time" val="80.424"/>
+          <attnum name="best lap time" val="80.424"/>
+          <attnum name="top speed" val="75.3231"/>
+          <attnum name="bottom speed" val="17.2792"/>
+          <attnum name="dammages" val="1"/>
+        </section>
+
+        <section name="3">
+          <attnum name="time" val="80.4"/>
+          <attnum name="best lap time" val="80.4"/>
+          <attnum name="top speed" val="75.3477"/>
+          <attnum name="bottom speed" val="17.2748"/>
+          <attnum name="dammages" val="2"/>
+        </section>
+
+      </section>
+
+    </section>
+
+  </section>
+
+</params>
